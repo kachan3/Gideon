@@ -83,37 +83,32 @@ Algunos Feats aparecen en múltiples criaturas de naturaleza similar — *Garras
 
 ## §G2.bis. ENTRENAMIENTO — Dote Genérico Universal
 
+*Podés gastar XP para acentuar tu entrenamiento y corregir tus fallas.*
+
 **Costo de adquisición:** 1 XP
 
 ### Marcas de Entrenamiento
 
-Se generan al usar una habilidad, con éxito o sin él. Se puede poseer **una sola Marca por habilidad o atributo** simultáneamente.
+Cuando el personaje **falla** una tirada de habilidad o atributo, anota una **Marca de Entrenamiento** en esa habilidad o atributo. Solo se puede poseer **una Marca por habilidad o atributo** simultáneamente.
 
-Las **Marcas de Atributo** se generan al:
-- Realizar una tirada de atributo por solicitud directa del DM, o
-- Poseer simultáneamente una Marca en **3 habilidades hijas** del mismo atributo — las Marcas hijas no se consumen al generarse la Marca de Atributo.
+Las **Marcas de Atributo** también se generan al poseer simultáneamente una Marca en **3 habilidades hijas** del mismo atributo. Las Marcas hijas no se consumen al generarse la Marca de Atributo.
 
-### Activación del Dote
+### Tiradas de Mejora
 
-Al activar Entrenamiento, el personaje puede gastar:
-- Hasta **5 Marcas de habilidad** para Tiradas de Mejora de habilidad
-- Hasta **2 Marcas de atributo** para Tiradas de Mejora de atributo
+Al tener este Dote, el personaje puede realizar **Tiradas de Mejora** gastando sus Marcas acumuladas **en cualquier momento**: hasta **5 de habilidad** y **2 de atributo**.
 
-### Tirada de Mejora
+**Mecánica:** tirar 1d100. El resultado debe ser **superior** al valor actual de la habilidad o atributo para mejorar.
 
-Tirar 1d100 contra el valor actual de la habilidad o atributo. Se necesita sacar **igual o más** que ese valor para mejorar.
+- Habilidad con valor **75 o menor**: sumar +1d6 al valor
+- Habilidad con valor **76 o mayor** y todo **Atributo**: sumar +1d4 al valor
 
-- Habilidad con valor **menor a 75**: mejora +1d6
-- Habilidad con valor **75 o más**: mejora +1d4
-- Atributo (cualquier valor): mejora +1d4
+Si la tirada falla, la Marca **no se consume**.
 
-Si la tirada falla, la Marca **no se gasta**.
+### Opción XP
 
-### Opción XP — Salvar una tirada fallida
+Si la Tirada de Mejora falla, el jugador puede gastar **1 XP** para consumir la Marca y asegurar la mejora, lanzando igualmente el dado correspondiente.
 
-Si la Tirada de Mejora falla, el jugador puede optar por gastar **1 XP** para convertir ese fallo en éxito. Se lanza entonces el dado de mejora correspondiente y la Marca se consume.
-
-> Si la tirada tiene éxito de forma natural, no se gasta XP. La XP solo entra en juego cuando el jugador decide rescatar un fallo.
+> La XP solo entra en juego cuando la tirada falla. Un éxito natural no gasta XP.
 
 ---
 
