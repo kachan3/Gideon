@@ -6,7 +6,7 @@ Sintetizado para escalado rápido. **Actualizado tras la vuelta de 46 aclaracion
 
 **🚨 Bloqueadores de jugabilidad (los que más urgen):**
 - **Aprendizaje y almacenamiento de conjuros** (INCONG #30 / #55). Sin esto, no se puede operar un lanzador en mesa. Hassan debe decidir si es repertorio fijo, libro de hechizos, slots por escuela, o repertorio flexible por proficiencia.
-- **Umbral de Comatoso con MH/2** (INCONG #51). Con el nuevo umbral de heridas graves, ¿Comatoso es ≥2 graves o se ajusta la fórmula de PG Reales?
+- ~~**Umbral de Comatoso con MH/2** (INCONG #51)~~ — **✅ RESUELTO (canon C-1, Hassan 2026-07-03): reducción ¼ MH por grave; Comatoso = 4 graves.**
 - **Mitigación de Necrótico / Radiante / Sónico** (INCONG #52). Restaurados como tipos pero sin fórmula de defensa.
 - **Conteo 12 vs 14 tipos de daño** (INCONG #53). Hay que cerrar la lista para que armas y conjuros tengan tipo definido.
 - **Números del Sacrificio Arcano** (INCONG #71). §13.10 sin rendimiento por víctima, multiplicadores por maestría, techos de PL ni tiempos de canalización. Bloquea PCs y Villanos diseñados sobre la ruta.

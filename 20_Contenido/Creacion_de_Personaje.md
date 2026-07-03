@@ -36,7 +36,7 @@ Elegir subespecie correspondiente. Ver §3 del Core.
 
 ## Paso 3 — Trasfondo
 
-Todo trasfondo se compone de tres elementos independientes: **Dedicación**, **Nacimiento** y **Regalo & Falencia**. Los tres se combinan libremente — un Nacimiento no limita qué Dedicación puede elegirse ni viceversa.
+Todo trasfondo se compone de tres elementos independientes: **Dedicación**, **Nacimiento** y **Regalo & Perjuicio**. Los tres se combinan libremente — un Nacimiento no limita qué Dedicación puede elegirse ni viceversa.
 
 ---
 
@@ -247,7 +247,7 @@ Algunos Regalos y Perjuicios tienen un **contrario temático** (Dotado ↔ Anti-
 
 ## Regla de Azar
 
-Si el jugador tira aleatoriamente los **tres elementos del trasfondo** (Dedicación, Nacimiento, y el par de Regalo & Falencia) sin elegir ninguno, recibe una **Especialización gratuita adicional** al finalizar la creación. Premia la incertidumbre sin afectar el balance de puntos.
+Si el jugador tira aleatoriamente los **tres elementos del trasfondo** (Dedicación, Nacimiento, y el par de Regalo & Perjuicio) sin elegir ninguno, recibe una **Especialización gratuita adicional** al finalizar la creación. Premia la incertidumbre sin afectar el balance de puntos.
 
 ---
 

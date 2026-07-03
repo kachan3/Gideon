@@ -49,9 +49,9 @@ Cada una tiene **versión básica** (sin gastar Reacción) y **mejorada** (gasta
 
 ## Fichas pre-hechas (Gideon 1e) — datos clave
 
-**1. Valor / Hijo del Viento** — Fue 50, Vit 40, Agi 45, Int 35, Melee 55; Vel 8. Espada Bastarda (daño 3 C/P, Versátil+1, Sparring); Jabalinas (2, Arrojadiza 60). Senda: *Espíritu Incansable* (gastar todo en atacar/mover/acciones Valor → sin Arrebatado si gastás 1 Stamina), *As Marcial*. Entrenamiento+: Atletismo 5, Cardio 10, Una Mano 10, Bloqueo 5, Guardia 5, Tenacidad 10, Coraje 10, Acrobacias 6, Evasión 5.
+**1. Valor / Hijo del Viento** — Fue 50, Vit 40, Agi 45, Int 35, Melee 55; Vel 8. Espada Bastarda (daño 3 C/P, Versátil+1, ~~Sparring~~ *[obsoleto → **Guardia**, C-2/C-10 2026-07-03]*); Jabalinas (2, Arrojadiza 60). Senda: *Espíritu Incansable* (gastar todo en atacar/mover/acciones Valor → sin Arrebatado si gastás 1 Stamina), *As Marcial*. Entrenamiento+: Atletismo 5, Cardio 10, Una Mano 10, Bloqueo 5, Guardia 5, Tenacidad 10, Coraje 10, Acrobacias 6, Evasión 5.
 
-**2. Arcanista / Hijo de las Estrellas** — Fue 20, Vit 35, Int 60, Melee 40. Cimitarra (3+4+NE, Sparring Ligera); Jabalina Arcana (1d4+4+NE). Senda: *Spellcasting* (3 trucos, 3 conjuros, 1 ritual, 1 Mística), *Herramienta de Lanzador* (usar Voluntad en vez de Fuerza para daño). Entrenamiento+: Historia 5, Medicina 5, Naturaleza 5, Alquimia 5, C. Mágico 5, Una mano 10, Naial 10, Cronibor 5.
+**2. Arcanista / Hijo de las Estrellas** — Fue 20, Vit 35, Int 60, Melee 40. Cimitarra (3+4+NE, ~~Sparring~~ *[obsoleto → **Guardia**]* Ligera); Jabalina Arcana (1d4+4+NE). Senda: *Spellcasting* (3 trucos, 3 conjuros, 1 ritual, 1 Mística), *Herramienta de Lanzador* (usar Voluntad en vez de Fuerza para daño). Entrenamiento+: Historia 5, Medicina 5, Naturaleza 5, Alquimia 5, C. Mágico 5, Una mano 10, Naial 10, Cronibor 5.
 
 **3. Hierofante / Hijo del Sol** — Vit 50, Melee 40, Car 50. Maza (2 Cont +4+NE, Penetración 2). *Iniciado en el Dogma del Bien Mayor (Amor Incondicional)*: 1 plegaria + 2 milagros; plegarias/milagros/intervenciones requieren chequeo de **Fe** y usan NE; gastar Omen = éxito automático con tu NE/NF original. Resist: Fuego 3, Frío 1. Entrenamiento+: Cardio 10, Fe 15, Tenacidad 5, Coraje 5, Bloqueo 5, Una Mano 10, Evasión 5, Percepción 5, Detectar Int. 5, Orientación 5.
 
@@ -71,7 +71,7 @@ Cada una tiene **versión básica** (sin gastar Reacción) y **mejorada** (gasta
 1. ✅ **NE.** Canónico = **dígito de decenas** (Core §11.1). La frase de la Canva ("÷10 redondeado arriba") era redacción imprecisa del mismo concepto. *(#162)*
 2. ✅ **Heridas graves.** Canónico = **½** del máximo (Core). El ¼ de la Canva fue un error; la hoja X (¼) queda por corregir. *(#163)*
 3. ✅ **Dureza vs tipos.** Canónico = **Core §11.5** (Dureza sí protege Fuego/Frío/Rayo). La versión de la Canva se descarta. *(#164)*
-4. ✅ **Skill defensiva.** Canónico = skill **Parry** (Core §11.2). "Guardia" queda solo como **rasgo de arma**; Deflectar/Parry usan la skill Parry. *(#165)*
+4. ✅ **Skill defensiva.** Canónico = skill **Parry** (Core §11.2). "Guardia" queda solo como **rasgo de arma**; Deflectar/Parry usan la skill Parry. *(#165)* **→ Corrección (C-10, 2026-07-03): la skill se renombró a "Paradas"; "Parry" es la reacción mejorada. Set final: Deflectar (básica) · Paradas (skill) · Parry (mejorada) · Guardia (rasgo de arma).**
 5. ✅ **Daño mágico.** Canónico = **`DG = PL × Nivel de Voluntad`** (Core §13.6.4). El "dado de clase × NE" de la Canva se descarta. *(#166)*
 6. ✅ **Iniciativa.** Canónico = **Canva** (jerarquía Emboscadores→…→Dormidos + enfrentado de Instinto). Integrado a Core §11.6. *(#167)*
 7. ✅ **Bono a distancia.** Canónico = **Canva** (a distancia sin bono; arrojadizas suman Fuerza). Integrado a Core §11.8. *(#168)*

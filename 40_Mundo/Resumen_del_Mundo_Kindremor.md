@@ -58,7 +58,7 @@ Las consecuencias fueron inmediatas y permanentes. Los templos dejaron de recono
 
 ## El Mundo Hoy — La Era DA
 
-Han pasado más de mil años desde la caída de Amaru. La civilización Dríade se reconstruyó, creció y floreció. A esta era se la llama **DA** —Después de Amaru— y es el presente del mundo.
+Han pasado más de cuatrocientos años desde la caída de Amaru *(~426 DA — corregido C-6, 2026-07-03)*. La civilización Dríade se reconstruyó, creció y floreció. A esta era se la llama **DA** —Después de Amaru— y es el presente del mundo.
 
 Naya'il, agotada y aún fragmentada, duerme en un retiro en la cima de la montaña más alta del mundo. Sus avatares aparecen ocasionalmente en momentos decisivos, pero la diosa en persona no ha sido vista desde el día de la batalla final.
 

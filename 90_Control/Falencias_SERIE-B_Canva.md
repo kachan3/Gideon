@@ -17,7 +17,7 @@ Para que Hassan decida la versión canónica. Numeradas según referencias `[INC
 
 3. ✅ **Naya'il viva, no despedazada — RESUELTA.** Hassan: *"Naya'il sigue viva pero dormitando; en lugar de 'restos' usa 'fragmentos' o 'aspectos'."* Aplicado en §1.1 y notas asociadas.
 
-4. ✅ **Lista de Primigenios — RESUELTA.** Lista canónica de 10 (Enclave del Eclipse): **Diana La Maga, Claudfield El Elementalista, Gawain El Honorable, Alioth La Furia, Mirra La Misericordiosa, Valian El Bravo, Gideon, Priscila La Cazadora, Rayan La Elocuente, El Oculto (Theledar).** *(Género de Rayan actualizado a femenino — Hassan 2026-06-10.)* Artimus, Eleanora y Percival quedan fuera del Enclave (esqueleto: decidir si se reciclan como figuras secundarias). Ver §1.5.
+4. ✅ **Lista de Primigenios — RESUELTA.** Lista canónica de 10 (Enclave del Eclipse): **Diana La Maga, Tanwyn El Elementalista *(ex "Claudfield" — C-11)*, Gawain El Honorable, Alioth La Furia, Mirra La Misericordiosa, Valian El Bravo, Gideon, Priscila La Cazadora, Rayan La Elocuente, El Oculto (Theledar).** *(Género de Rayan actualizado a femenino — Hassan 2026-06-10.)* Artimus, Eleanora y Percival quedan fuera del Enclave (esqueleto: decidir si se reciclan como figuras secundarias). Ver §1.5.
 
 5. ✅ **Sendas divinas vs no divinas — RESUELTA.** Hassan: las divinas son las que nacen de emociones mayores y tienen un primigenio con fragmento de alma asociado. Las **no divinas** (Monje, Bufón) son **mecánicamente iguales** pero sin primigenio; nacen de emociones indirectas. Ver §1.2. *(También resuelve #20.)*
 
@@ -207,13 +207,13 @@ Para que Hassan decida la versión canónica. Numeradas según referencias `[INC
 
 87. ✅ **Identidad actual de Gideon — RESUELTA.** Gideon vaga como **Arghaar**, vagabundo amnésico. Único marcador identificable: juventud eterna (falsificable por hechizos). Suplantadores históricos son comunes. **Restaurar su mente es plot principal.** Ver §2.1.
 
-88. ✅ **Estado de los 10 Primigenios — RESUELTO** *(actualizado 2026-06-13)*. Tabla canónica en §1.5.2: Alioth única original viva-operativa; Diana atrapada en Ciudadela; Claudfield retirado en montañas del sur; **Gawain vivo-no-muerto en catacumbas de Pircar** (maldición de Naya'il — reemplaza "devorado por Kraken"); Rayan muerta por heridas; Priscila muerta tras ballesta; Mirra en Demesteria; Theledar No Ser; Valian con esqueleto parcial; Gideon como Arghaar.
+88. ✅ **Estado de los 10 Primigenios — RESUELTO** *(actualizado 2026-06-13)*. Tabla canónica en §1.5.2: Alioth única original viva-operativa; Diana atrapada en Ciudadela; Tanwyn *(ex Claudfield)* retirado en montañas del sur; **Gawain vivo-no-muerto en catacumbas de Pircar** (maldición de Naya'il — reemplaza "devorado por Kraken"); Rayan muerta por heridas; Priscila muerta tras ballesta; Mirra en Demesteria; Theledar No Ser; Valian con esqueleto parcial; Gideon como Arghaar.
 
 89. ✅ **Coreografía del Golpe Final a Amaru — RESUELTA.** Nueve piezas coordinadas — ver §1.5.3. Mito popular ("Gideon mató a Amaru solo") es simplificación capa 1 de §1.6; verdad operativa requiere alineación total del Enclave.
 
 90. ✅ **Ciclo muerte → renacimiento de Primigenios — RESUELTO** como mecanismo + misterio. Ver §1.5.1: renacen con fragmento y talentos naturales, pero **olvidan toda experiencia y entrenamiento**. Cada muerte es un coste de memoria para el mundo.
 
-91. ✅ **Claudfield = fundador de Aurelia — RESUELTA.** Ver §4.1.1.
+91. ✅ **Tanwyn *(ex Claudfield)* = fundador de Aurelia — RESUELTA.** Ver §4.1.1.
 
 ### Falencias nuevas detectadas en la vuelta del No Ser y la magia intrínseca (Hassan, 2026-05-28)
 
@@ -221,7 +221,7 @@ Para que Hassan decida la versión canónica. Numeradas según referencias `[INC
 
 93. ✅ **El ritual del No Ser — RESUELTA como opacidad DELIBERADA Y PERMANENTE (Hassan 2026-05-28).** La ambigüedad no es esqueleto a llenar: es **parte canónica del setting**. El ritual no se aclarará nunca; pertenece al No Ser que el propio Theledar quiso producir. Ver §2.4.
 
-94. ✅ **Theledar y la culpa del parricidio — RESUELTA (Hassan 2026-06-05).** Theledar carga una culpa adicional específica: **sabe el secreto** (la Metacosmología §1.8) — sabe que Amaru no era el villano simple que la narrativa popular cuenta, y participó igualmente. El parricidio **sí se comparte entre todos los del Enclave**: la lectura ética canónica es que cooperar en la coreografía equivale a haber dado el golpe — que lo ejecutara Gideon no exime a nadie. Todos los del Enclave cargaron esa culpa en algún grado. **El retiro de Claudfield al sur NO tiene raíz en el parricidio** — tiene raíz propia: ver §2.8 Claudfield.
+94. ✅ **Theledar y la culpa del parricidio — RESUELTA (Hassan 2026-06-05).** Theledar carga una culpa adicional específica: **sabe el secreto** (la Metacosmología §1.8) — sabe que Amaru no era el villano simple que la narrativa popular cuenta, y participó igualmente. El parricidio **sí se comparte entre todos los del Enclave**: la lectura ética canónica es que cooperar en la coreografía equivale a haber dado el golpe — que lo ejecutara Gideon no exime a nadie. Todos los del Enclave cargaron esa culpa en algún grado. **El retiro de Tanwyn *(ex Claudfield)* al sur NO tiene raíz en el parricidio** — tiene raíz propia: ver §2.8 Tanwyn.
 
 95. ✅ **Pacto silencioso — RESUELTA (Hassan 2026-05-28).** El pacto se sostiene por **honor — pura lealtad a un hermano que tomó una decisión**. No hay institución que lo vigile ni magia coactiva: es lealtad entre los que quedan. Además, **los Silentes (§12.7) no pueden comprobar la existencia** del Oscuro/Olvidado — perciben los poderes tétricos sin poder atribuírselos a una entidad nombrable. Sin verificación desde abajo, el pacto se autosostiene casi sin esfuerzo. Ver §2.4.
 
@@ -432,7 +432,7 @@ Para que Hassan decida la versión canónica. Numeradas según referencias `[INC
 
 170. ✅ **Deflectar vs Sparring — RESUELTA (Hassan 2026-06-28).** La reacción básica de armas es **siempre Deflectar**; "Sparring" se descarta como nombre de la reacción. Las referencias de la senda Valor (§12.1) que usaban "sparring" como maniobra se alinearon a **Deflectar**.
 
-171. 🆕 **Propiedad de arma: Guardia vs Sparring — ABIERTA.** Las fichas de muestra de la Canva listan **"Sparring"** como propiedad de arma (Espada Bastarda, Cimitarra), mientras el Core usa **"Guardia"** como el rasgo que habilita Deflectar/Parry (§11.9, §14.4). Probablemente son la misma propiedad con dos nombres. **Pendiente:** ¿unificar "Sparring" (propiedad) dentro de **Guardia**, o son rasgos distintos?
+171. ✅ **Propiedad de arma: Guardia vs Sparring — RESUELTA (C-2/C-10, Hassan 2026-07-03).** **"Sparring" queda OBSOLETO en todos los contextos.** La propiedad de arma canónica que habilita Deflectar/Parry es **Guardia** (§14.4). Toda ficha o texto que diga "Sparring" se lee como Guardia.
 
 ---
 

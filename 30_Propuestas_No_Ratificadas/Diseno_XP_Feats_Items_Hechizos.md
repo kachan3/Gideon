@@ -83,32 +83,7 @@ Algunos Feats aparecen en múltiples criaturas de naturaleza similar — *Garras
 
 ## §G2.bis. ENTRENAMIENTO — Dote Genérico Universal
 
-*Podés gastar XP para acentuar tu entrenamiento y corregir tus fallas.*
-
-**Costo de adquisición:** 1 XP
-
-### Marcas de Entrenamiento
-
-Cuando el personaje **falla** una tirada de habilidad o atributo, anota una **Marca de Entrenamiento** en esa habilidad o atributo. Solo se puede poseer **una Marca por habilidad o atributo** simultáneamente.
-
-Las **Marcas de Atributo** también se generan al poseer simultáneamente una Marca en **3 habilidades hijas** del mismo atributo. Las Marcas hijas no se consumen al generarse la Marca de Atributo.
-
-### Tiradas de Mejora
-
-Al tener este Dote, el personaje puede realizar **Tiradas de Mejora** gastando sus Marcas acumuladas **en cualquier momento**: hasta **5 de habilidad** y **2 de atributo**.
-
-**Mecánica:** tirar 1d100. El resultado debe ser **superior** al valor actual de la habilidad o atributo para mejorar.
-
-- Habilidad con valor **75 o menor**: sumar +1d6 al valor
-- Habilidad con valor **76 o mayor** y todo **Atributo**: sumar +1d4 al valor
-
-Si la tirada falla, la Marca **no se consume**.
-
-### Opción XP
-
-Si la Tirada de Mejora falla, el jugador puede gastar **1 XP** para consumir la Marca y asegurar la mejora, lanzando igualmente el dado correspondiente.
-
-> La XP solo entra en juego cuando la tirada falla. Un éxito natural no gasta XP.
+> **✅ CANONIZADO Y MOVIDO (C-4, Hassan 2026-07-03).** La versión canónica única vive en **`20_Contenido/Feat_Entrenamiento.md`** (marcas al fallar; ≥ para mejorar; <76 → +1d6, ≥76 y atributos → +1d4; máximos 5/2 por sesión; la Marca no se consume al fallar; Opción XP). El texto que figuraba aquí queda absorbido por esa versión; las variantes v1/v2 previas están archivadas en `99_Archivo/`. *(Diferencia menor absorbida: aquí decía "superior"; el canon es "mayor o igual". El original de esta sección se preserva en el historial git y en 99_Archivo.)*
 
 ---
 

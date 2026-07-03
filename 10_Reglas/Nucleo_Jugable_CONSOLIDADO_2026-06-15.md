@@ -16,7 +16,7 @@
 **Del motor (sesión 2026-06-15, lo más fresco):**
 
 1. 🔎 **Piso de Ranking — inconsistencia.** Dijiste *"el tier superior tiene un éxito de 8 + NE real"*, pero el ejemplo del dragón (96 → éxito 9) sólo cuadra con un **piso de 8** (NE ≥ 8), no con una suma (+8 daría 17). Redactado como piso. **Confirmar:** ¿piso 8 o suma +8?
-2. 🔎 **Borde de la banda baja.** ¿Éxito automático **00–05** (6 valores) o **00–04** (5, simétrico con 95–99)?
+2. ~~🔎 **Borde de la banda baja.**~~ **✅ RESUELTO (C-7, 2026-07-03): 00–05 éxito crítico / 95–99 fallo crítico.**
 3. `[ESQUELETO]` **Empate-fallo en enfrentada.** Regla puesta: gana el menor NF. Pendiente el *wraparound* de unidades (un 60 tiene NF 0 pero está lejos del Valor) y los desempates de NF.
 4. `[ESQUELETO]` **Alcance del Ranking entre varios tiers.** ¿El "fallo = éxito vs tier inferior" vale contra todos los tiers menores? ¿El NE degrada por escalón?
 5. `[ESQUELETO]` **Pifia del tier superior.** ¿Se relee como éxito hacia abajo o "queda" como fallo para darle aire al inferior? (Con piso 8, hoy una Pifia daría NE ≥ 8 a 1 tier de diferencia.)
@@ -27,15 +27,15 @@
 7. 🔎 **Enfrentada de Voluntad en magia (§13.6.7.bis)** dice "gana el de mayor *resultado*", pero la regla general de enfrentadas es **mayor NE**. Unificar.
 8. 🔎 **Iniciativa (§11.6)** ordena por "más NE … más NF" con desempate por Instinto, mientras que la enfrentada general desempata por dado→habilidad. Alinear ambos criterios y decidir si la iniciativa usa el motor nuevo.
 9. 🔎 **Vocabulario de modificadores disperso.** Varias reglas ya existentes son, en realidad, las capas nuevas con otro nombre: "−3 NE por brazo herido", "aturdimiento = NE del impacto", "cada herida grave reduce 1 NE", la Acción Ayudar (suma/resta NE/NF). Conviene reexpresarlas como **Contrarreste/Refuerzo/Agravio/Mitigación**.
-10. 🔎 **"DIF 1" (Falencia Desagradable)** y "Muy Difícil/Fácil" (Airborne, Zonas) deben mapearse a la escala circunstancial nueva (y a "el mayor prevalece").
-11. 🔎 **Tabla §20.bis "Resolución de Tiradas"** todavía dice *"99 sin regla de máximos"* y no tiene las bandas 00–05 / 95–99 ni Portento/Pifia. Hay que actualizarla cuando se ratifique el motor.
+10. 🔎 **"DIF 1" (Perjuicio Desagradable — C-5)** y "Muy Difícil/Fácil" (Airborne, Zonas) deben mapearse a la escala circunstancial nueva (y a "el mayor prevalece").
+11. ~~🔎 **Tabla §20.bis "Resolución de Tiradas"**~~ **✅ Actualizada (C-7, 2026-07-03): bandas incorporadas y "99 sin máximos" superado.** Portento/Pifia siguen pendientes de ratificación.
 12. 🔎 **PL = 1 + NE** con NE hasta 10 (Portento) y con el **desborde >100** puede disparar PL muy alto. Confirmar techo o intención.
 
 **Esqueletos mecánicos ya marcados en el Core (siguen abiertos):**
 
 13. `[ESQUELETO]` Flujo completo de **ataque** (defensas, salvaciones, NE/NF → daño). §11.8.
 14. `[ESQUELETO]` **Golpe Poderoso** (combo sin describir). §11.10.
-15. `[ESQUELETO]` Umbral de **Comatoso** con MH/2 (¿≥2 graves?). §11.4.
+15. ~~`[ESQUELETO]` Umbral de **Comatoso**~~ — **✅ RESUELTO (C-1, 2026-07-03): reducción ¼ MH por grave; Comatoso = 4 graves.**
 16. `[ESQUELETO]` Mitigación de **Necrótico / Radiante / Sónico**; conteo final **12 vs 14** tipos de daño. §11.5.
 17. `[ESQUELETO]` "Cada herida grave/mortal reduce 1 NE" — confirmar. §11.3.
 18. `[ESQUELETO]` **Inspiración (Omen)**: ¿conserva las reglas detalladas de los viejos Puntos de Profecía o se simplifica? §11.13.
@@ -157,11 +157,11 @@ Escala de tier −2 … +3 (ver Parte IV / §11.1.bis del Core).
 
 ## II.3 Mejora de atributos y habilidades *(canónico)*
 
-- **Tirada de mejora:** 1d100 ≤ valor actual → mejora; si no, falla. *(🔎 ¿bandas/críticos aplican aquí? pendiente #6.)*
+- **Tirada de mejora *(canon C-4 — 2026-07-03)*:** 1d100 **≥** valor actual → mejora; si no, falla y la Marca no se consume. Fuente única: `20_Contenido/Feat_Entrenamiento.md`. *(🔎 ¿bandas/críticos aplican aquí? pendiente #6.)*
 - Durante la partida, marcás las habilidades que **uses y falles**; al subir de nivel intentás una mejora por cada una marcada.
-- **Puntos de entrenamiento:** 1 para re-tirar tras fallo; 2 para intentar mejorar algo no marcado.
+- ~~**Puntos de entrenamiento**~~ *(eliminados — C-4: reemplazados por la Opción XP del feat Entrenamiento)*.
 - Mejorar un **atributo** mejora automáticamente todas sus hijas.
-- **Incremento:** atributo → `1d4+1` o **+3** fijo; habilidad hija → `1d6+2` o **+5** fijo (más por hija porque sólo afecta a esa).
+- **Incremento *(canon C-4)*:** habilidad ≤75 → **+1d6**; habilidad ≥76 → **+1d4**; atributo → **+1d4**. ~~(1d4+1/+3, 1d6+2/+5)~~
 - `[ESQUELETO]` tabla de puntos de mejora iniciales por linaje/clase/edad/Voluntad.
 
 ## II.4 Especializaciones *(canónico)*
@@ -238,7 +238,7 @@ Toda reacción defensiva (Parry, Esquiva, Rodar, Bloqueo de escudo, Deflectar…
 - **Heridas ganadas** = `Daño − (Nivel de Vitalidad + Armadura)`.
 - **Dureza** = `Nivel de Vitalidad`.
 - **Herida Grave:** Daño ≥ **MH/2** *(Hassan; antes X decía MH/4)*. **Herida Mortal:** Daño ≥ **MH**.
-- **PG Reales** = `MH − (MH/2) × heridas_graves` → con 2 graves, PG Reales = 0.
+- **PG Reales** = `MH − (MH/4) × heridas_graves` → con **4 graves**, PG Reales = 0. *(✅ canon C-1 — Hassan 2026-07-03; corrige la versión ½/2-graves de este borrador.)*
 - **Localización (1d6)** sólo para heridas Graves/Mortales: 1 Pierna der · 2 Pierna izq · 3 Brazo der · 4 Brazo izq · 5 Torso · 6 Cabeza.
 - **Penalizaciones por zona** (Grave = temporal, Mortal = mutilación): Brazo **−3 NE** a acciones con esa mano; Pierna −10 ft; Torso −1 acción/turno; Cabeza gana **Aturdimiento = NE del impacto**; cabeza mutilada → muerte.
   - 🔎 *"−3 NE" y "Aturdimiento = NE del impacto" son Contrarreste/lecturas de NE; reexpresar con el vocabulario nuevo (pendiente #9).*
@@ -261,7 +261,7 @@ Daño Psíquico grave → **1d10** en Tabla de Traumas `[ESQUELETO]`.
 | **Activo** | PG Reales > Heridas activas, ninguna mortal |
 | **Desmayado** | Heridas al límite soportable, **sin mortal**. Recuperable. |
 | **Moribundo / Agonizando** | ≥1 herida **mortal** activa |
-| **Comatoso** | Tantas **graves** que no despertás (≥2 con MH/2), sin mortal; muere si lo abandonan `[ESQUELETO umbral exacto, pendiente #15]` |
+| **Comatoso** | **4 heridas graves** (reducción ¼ c/u), sin mortal; muere si lo abandonan *(✅ resuelto C-1 — 2026-07-03)* |
 
 - **Desmayado:** 5 h base; tirada **plana de Vitalidad** → NF suman tiempo, NE restan (mín. 5 min); luego restás 1 Herida y despertás.
 - **Moribundo:** tirada de Vitalidad → **falla = muerte**; **éxito** = seguís Moribundo tantos turnos como el **NE**; necesitás estabilización/−1 Herida en ese plazo o morís.
@@ -296,9 +296,9 @@ Coste en acciones variable (lo define el conjuro); si dura varios turnos, se inv
 
 **Personaje:** Nivel de Atributo = `INT(Valor/10)` · Habilidad hija = `Modificación + Atributo padre` · Generación = `(d4+d4+d4)×5`.
 
-**Vida:** MH = `Resistencia Linaje + (Nivel × Nivel Vit)` · Grave = `ROUNDUP(MH/2)` · Mortal = `MH` · PG Reales = `ROUNDUP(MH − (MH/2)×graves)` · Dureza = `Nivel Vit`.
+**Vida:** ~~MH = `Resistencia Linaje + (Nivel × Nivel Vit)`~~ *(pre-eliminación de NV 2026-06-28; canon: `Resistencia del Linaje + Nivel de Vitalidad` — y existe propuesta C-3, ver 30_Propuestas)* · Grave = `ROUNDUP(MH/2)` · Mortal = `MH` · PG Reales = `ROUNDUP(MH − (MH/4)×graves)` *(canon C-1 2026-07-03)* · Dureza = `Nivel Vit`.
 
-**Recursos:** Maná Máx = `Voluntad + (Nivel × Nivel Vol) − Daño Crónico` · Stamina = `Nivel + Nivel Vit − graves` · Límite Seguro Maná = `Nivel Vol + Nivel Vit`.
+**Recursos:** ~~Maná Máx = `Voluntad + (Nivel × Nivel Vol) − Daño Crónico` · Stamina = `Nivel + Nivel Vit − graves`~~ *(fórmulas pre-eliminación de NV 2026-06-28 — canon vigente en §20.bis; propuesta C-3 pendiente)* · Límite Seguro Maná = `Nivel Vol + Nivel Vit`.
 
 **Magia:** PL = `1 + NE` · Coste = `1 + PL` · DG = `PL × Nivel Vol` · Límite PL/aspecto = `Nivel Int`.
 

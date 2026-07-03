@@ -8,9 +8,15 @@
 
 **Resolución.** Tirada vs valor de habilidad: igual o menor → éxito; mayor → fallo.
 
+**Bandas automáticas *(canon C-7 — Hassan 2026-07-03)*:**
+- **00–05 → Éxito crítico automático** (éxito sin importar el Valor).
+- **95–99 → Fallo crítico automático** (fallo sin importar el Valor).
+
+> Las bandas priman sobre la comparación con el Valor. `[PENDIENTE: NE/NF que otorga la banda y su interacción con la capicúa — definir al consolidar el motor v2]`
+
 **Casos especiales en los extremos (canónicos):**
 - **00 → Éxito Seguro + Crítico.** Como **00 es el mínimo posible**, siempre es **éxito automático**. Además, al ser **capicúa** (00 → mismo dígito de decenas y unidades), es **crítico de éxito** (NE 10). *Prioriza esta regla siempre que aparezca.*
-- **99 → se resuelve por la regla general; su criticidad viene de la capicúa, no de ser el máximo.** *(canónico — Hassan 2026-06-03: "ignora la regla de máximos, esto es por capicúa")* **No existe regla de fallo automático por valor máximo.** Si 99 > habilidad → fallo, y al ser capicúa → **Fallo Crítico (NF 10)**. Con habilidad ≥ 99 sería éxito capicúa → Crítico de Éxito (NE 10). *[ESQUELETO resuelto]*
+- **99 → se resuelve por la regla general; su criticidad viene de la capicúa, no de ser el máximo.** *(canónico — Hassan 2026-06-03: "ignora la regla de máximos, esto es por capicúa")* ~~No existe regla de fallo automático por valor máximo.~~ **SUPERADO (canon C-7, Hassan 2026-07-03): 99 cae dentro de la banda 95–99 → fallo crítico automático.** Si 99 > habilidad → fallo, y al ser capicúa → **Fallo Crítico (NF 10)**. Con habilidad ≥ 99 sería éxito capicúa → Crítico de Éxito (NE 10). *[ESQUELETO resuelto]*
 
 **Niveles de Éxito y Fallo (NE/NF):**
 - **NE** = dígito de **decenas** de la tirada (si fue éxito).
@@ -204,15 +210,17 @@ Cada habilidad tiene valor 1–100. **Nivel de Habilidad** = valor / 10 redondea
 
 **Mejora de atributos y habilidades.**
 - **Puntos de mejora iniciales:** dependen de linaje, clase, ascendencia, edad y Nivel de Voluntad. `[ESQUELETO: tabla de puntos iniciales por combinación]`
-- **Tirada de mejora:** lanza 1d100. Si el resultado es menor o igual al valor actual → mejora exitosa; si no → falla.
-- **Durante la partida**, marca las habilidades que **uses y falles**. La mejora se intenta mediante el feat **Entrenamiento** (gastando Marcas), **no** "al subir de nivel" —el Nivel del personaje fue eliminado (Hassan 2026-06-28). Ver `GideonCore/Feat_Entrenamiento`.
-- **Puntos de entrenamiento:** 1 punto para re-tirar tras fallo. 2 puntos para intentar mejorar una habilidad o atributo **no marcado**.
+- **Tirada de mejora *(canon C-4 — Hassan 2026-07-03)*:** lanza 1d100. Si el resultado es **mayor o igual** al valor actual → mejora exitosa; si no → falla y la Marca **no se consume**. *(Excepción explícita al principio C-8 de "≤ = éxito": aquí tirar alto es bueno.)* Fuente única: `20_Contenido/Feat_Entrenamiento.md`.
+- **Durante la partida**, marca las habilidades que **uses y falles**. La mejora se intenta mediante el feat **Entrenamiento** (gastando Marcas), **no** "al subir de nivel" —el Nivel del personaje fue eliminado (Hassan 2026-06-28). Ver `20_Contenido/Feat_Entrenamiento.md`.
+- ~~**Puntos de entrenamiento**~~ *(eliminados — C-4, 2026-07-03: absorbidos por la Opción XP del feat Entrenamiento: 1 XP consume la Marca y asegura la mejora)*.
 - Una vez que una habilidad/atributo mejora en una instancia, **no puede volver a intentarse en ese mismo momento**.
 - **Mejorar un atributo principal mejora automáticamente todas sus habilidades hijas.**
 
-**Incremento al mejorar:**
-- Atributo principal → **1d4+1** o aumento fijo **+3**.
-- Habilidad hija → **1d6+2** o aumento fijo **+5**.
+**Incremento al mejorar *(canon C-4 — Hassan 2026-07-03)*:**
+- Habilidad con valor **75 o menos** → **+1d6**.
+- Habilidad con valor **76 o más** → **+1d4**.
+- Atributo → **+1d4**.
+- ~~1d4+1 / +3 fijo / 1d6+2 / +5 fijo~~ *(versiones anteriores eliminadas)*.
 
 > **Por qué el incremento de atributo es menor que el de habilidad.** Al mejorar un atributo principal, el incremento (1d4+1 / +3) se aplica automáticamente a todas sus habilidades hijas. El beneficio es amplio; la ganancia individual es menor. Al mejorar una habilidad hija directamente, el incremento (1d6+2 / +5) es mayor pero solo afecta a esa habilidad. El jugador elige entre crecer en amplitud (subir el padre) o en profundidad (subir la hija).
 
@@ -261,6 +269,8 @@ Si recibes más heridas que MH, entras en **agonía**.
 > - **Reducción por cada herida grave acumulada = ¼ MH.**
 >
 > Por eso hacen falta **4 heridas graves** para que tus PG Reales lleguen a 0; al llegar ahí (sin herida mortal) entrás en **Comatoso** —no podés levantarte. *(Resuelve el esqueleto del umbral de Comatoso y la INCONG #51.)*
+>
+> **✅ Ratificado como canon definitivo — C-1, Hassan 2026-07-03:** reducción de **¼ MH** por herida grave; **Comatoso = 4 heridas graves**. La versión divergente del §20.bis (½ / 2 graves) fue corregida. El umbral para *causar* una grave sigue siendo **½ MH** (son dos tasas distintas).
 
 **Dureza** *(fuente: X)*. La dureza natural (mitigación física básica) es:
 > **Dureza = Nivel de Vitalidad** *(`D24 = D9`)*
@@ -601,7 +611,7 @@ Antes de crear personajes, la mesa define el modo en que se jugará la campaña.
 1. Definir modo de campaña con la mesa (Enclave o Sandbox).
 2. Elegir especie (Dríade, Hombre Lagarto o Ser de la Sangre).
 3. Elegir subespecie.
-4. Elegir **Trasfondo** (§11.15.2): Dedicación, Nacimiento, y opcionalmente Regalo & Falencia.
+4. Elegir **Trasfondo** (§11.15.2): Dedicación, Nacimiento, y opcionalmente Regalo & Perjuicio.
 5. Elegir Senda.
 6. Elegir virtud y defecto (opcional — §16).
 7. Asignar atributos, habilidades y especializaciones.
@@ -611,37 +621,37 @@ Antes de crear personajes, la mesa define el modo en que se jugará la campaña.
 
 #### 11.15.2 Trasfondos (Orígenes) *(canónico — Hassan 2026-06-15)*
 
-Todo trasfondo se compone de **tres elementos**: Dedicación, Nacimiento, y Regalo & Falencia. Los tres son subsecciones de la creación de personaje, no mecánicas independientes.
+Todo trasfondo se compone de **tres elementos**: Dedicación, Nacimiento, y Regalo & Perjuicio. Los tres son subsecciones de la creación de personaje, no mecánicas independientes.
 
 **Dedicación.** El oficio, actitud o vocación que define al personaje antes de convertirse en aventurero. No es sinónimo de Senda —un campesino puede tomar la Senda del Valor, un mercader puede ser Arcanista. La Dedicación informa el pasado del personaje, sus contactos naturales y su relación con el mundo antes de la campaña. `[ESQUELETO: lista canónica de Dedicaciones disponibles — pendiente de Hassan]`
 
 **Nacimiento.** Tirada universal de 1d100, independiente de la Dedicación elegida, que determina el contexto de origen del personaje —familia, circunstancia natal, señal en el momento del nacimiento. La tabla es compartida por todas las Dedicaciones y tiene distribución ponderada: los resultados comunes son más amplios y los raros más acotados. Entre las entradas de baja probabilidad se encuentran condiciones de origen vinculadas a los Primigenios activos. `[ESQUELETO: tabla completa de Nacimiento (1d100) — pendiente de confirmación de Hassan]`
 
-**Regalos y Falencias.** Rasgos opcionales de origen. **Son independientes — NO forman pares obligatorios** *(corregido — Hassan 2026-06-29)*: podés tomar un Regalo sin Falencia, una Falencia sin Regalo, ambos o ninguno. El Regalo otorga una ventaja; la Falencia, una desventaja (incluidas las **discapacidades de origen** → estados de §18). Algunos tienen un contrario temático (Dotado↔Anti-Dotado), pero eso no obliga a tomar el opuesto ni todos lo tienen. La mesa puede excluir cualquier Falencia de tono pesado antes de empezar. *(Ver §11.15.2.bis.)*
+**Regalos y Perjuicios** *(terminología: "Falencia" → **Perjuicio**, canon C-5 — Hassan 2026-07-03)*. Rasgos opcionales de origen. **Son independientes — NO forman pares obligatorios** *(corregido — Hassan 2026-06-29)*: podés tomar un Regalo sin Perjuicio, un Perjuicio sin Regalo, ambos o ninguno. El Regalo otorga una ventaja; el Perjuicio, una desventaja (incluidas las **discapacidades de origen** → estados de §18). Algunos tienen un contrario temático (Dotado↔Anti-Dotado), pero eso no obliga a tomar el opuesto ni todos lo tienen. La mesa puede excluir cualquier Perjuicio de tono pesado antes de empezar. *(Ver §11.15.2.bis.)*
 
 ---
 
-#### 11.15.2.bis Regalos y Falencias disponibles *(canónico — Hassan 2026-06-15; corregido 2026-06-29)*
+#### 11.15.2.bis Regalos y Perjuicios disponibles *(canónico — Hassan 2026-06-15; corregido 2026-06-29; renombrado C-5 2026-07-03)*
 
-Regalos y Falencias son **independientes**: el jugador puede tomar solo un Regalo, solo una Falencia, ambos o ninguno. Los "contrarios" que se listan abajo son emparejamientos **sólo temáticos**, no obligatorios.
+Regalos y Perjuicios son **independientes**: el jugador puede tomar solo un Regalo, solo un Perjuicio, ambos o ninguno. Los "contrarios" que se listan abajo son emparejamientos **sólo temáticos**, no obligatorios.
 
 ---
 
-**Dotado (Regalo) ↔ Anti-Dotado (Falencia)** *(contrarios temáticos, no obligan)*
+**Dotado (Regalo) ↔ Anti-Dotado (Perjuicio)** *(contrarios temáticos, no obligan)*
 
 > **Dotado** *(Regalo)*. Al crear el personaje, tira 1d10 y súmalo a **todos** los atributos. Representa una excepcionalidad innata —el cuerpo y la mente del personaje nacieron fuera del rango ordinario.
 
-> **Anti-Dotado** *(Falencia)*. Al crear el personaje, tira 1d10 y réstalo de **todos** los atributos. El personaje nació en el extremo opuesto de la distribución: un cuerpo y una mente que parten en desventaja frente al promedio.
+> **Anti-Dotado** *(Perjuicio)*. Al crear el personaje, tira 1d10 y réstalo de **todos** los atributos. El personaje nació en el extremo opuesto de la distribución: un cuerpo y una mente que parten en desventaja frente al promedio.
 
 ---
 
-**Carismático (Regalo) ↔ Desagradable (Falencia)** *(contrarios temáticos, no obligan)*
+**Carismático (Regalo) ↔ Desagradable (Perjuicio)** *(contrarios temáticos, no obligan)*
 
 > **Carismático por Naturaleza** *(Regalo)*. El personaje suma **+5 a todas las tiradas de Elocuencia y de Engaño**. No es necesariamente guapo ni elocuente en el sentido clásico: hay algo en él que atrae, que convence, que desarma. La gente lo escucha sin saber muy bien por qué.
 
-> **Desagradable** *(Falencia)*. Todas las tiradas de Elocuencia y de Engaño del personaje tienen **DIF 1** —es decir, un grado de dificultad adicional. Además, dependiendo del lugar y del contexto, el personaje y sus compañeros pueden ser socialmente marginados por asociación. Lo desagradable no es necesariamente físico: el personaje suele ir mal vestido, la ropa se le ensucia con rapidez inexplicable, no contiene sus gases, se le puede ver sacándose los mocos o comiendo con la boca abierta. No es maldad ni ignorancia —es una condición que lo sigue.
+> **Desagradable** *(Perjuicio)*. Todas las tiradas de Elocuencia y de Engaño del personaje tienen **DIF 1** —es decir, un grado de dificultad adicional. Además, dependiendo del lugar y del contexto, el personaje y sus compañeros pueden ser socialmente marginados por asociación. Lo desagradable no es necesariamente físico: el personaje suele ir mal vestido, la ropa se le ensucia con rapidez inexplicable, no contiene sus gases, se le puede ver sacándose los mocos o comiendo con la boca abierta. No es maldad ni ignorancia —es una condición que lo sigue.
 >
-> **Nota de mesa.** La Falencia Desagradable puede tener impacto de tono pesado en algunos contextos sociales. Se recomienda que la mesa acuerde antes de empezar la campaña si quieren incluirla o descartarla.
+> **Nota de mesa.** El Perjuicio Desagradable puede tener impacto de tono pesado en algunos contextos sociales. Se recomienda que la mesa acuerde antes de empezar la campaña si quieren incluirla o descartarla.
 
 ### 11.16 Minions y Tropas *(canónico — Hassan 2026-06-10)*
 

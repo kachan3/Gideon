@@ -13,8 +13,11 @@
 | **Tanwyn** | ~~Claudfield~~ (placeholder), ~~Talwin~~ (typo) | Hassan 2026-06-17 / 2026-06-20 (#163 serie A, #180) |
 | **Moribundo** | Agonizando (sinónimo aceptado), ~~Derrotado~~ | Hassan — §11.4 |
 | **Rango** | Tier (alias inglés aceptado) | §11.1.bis |
-| **Paradas** (skill) | ~~Parry~~ como nombre de skill (Parry queda como nombre de la *reacción* mejorada) | Core §11.2 + hoja X 2026-06-29 |
-| **Deflectar** | ~~Sparring~~ | Resuelve #170 (serie B) |
+| **Paradas** (skill) | ~~Parry~~ como nombre de skill (Parry queda como nombre de la *reacción* mejorada) | Core §11.2 + hoja X 2026-06-29; **ratificado C-10, 2026-07-03** |
+| **Deflectar** (reacción básica) · **Parry** (reacción mejorada) · **Guardia** (rasgo de arma) | ~~Sparring~~ — **OBSOLETO en todo contexto** (reacción y propiedad de arma) | #170/#171 serie B + **C-2/C-10, Hassan 2026-07-03** |
+| **Perjuicio** | ~~Falencia~~ (como término de juego; el sentido "falencia lógica" del control de canon no cambia) | Creacion §3.3 2026-06-29; **ratificado C-5, 2026-07-03** |
+| **Bandas 00–05 / 95–99** (éxito crítico / fallo crítico automáticos) | ~~"99 sin regla de máximos"~~ | **C-7, Hassan 2026-07-03** |
+| **Éxito = d100 ≤ Valor** (el igual cuenta como éxito; principio por defecto del proyecto) | ~~`<` estricto~~ (Roller de la hoja X corregido) | **C-8, Hassan 2026-07-03** |
 | **Grado de Senda** = ⌊XP invertida ÷ 5⌋ | ~~Nivel de senda (nv X)~~ | Hassan 2026-06-28 (NV eliminado) |
 | **Regalo & …** (ver disputa Falencia/Perjuicio) | reemplaza ~~Virtudes y Desgracias~~ | Hassan 2026-06-29 — §16 eliminada |
 | **Guardia Dorada / Leones de Pircar** | mismo cuerpo, dos nombres de uso legítimo | §5.14 entrada unificada |
@@ -39,7 +42,7 @@ Toda aparición suelta de "Nivel" o "(nv X)" en documentos heredados debe re-exp
 
 | Concepto | Opción A | Opción B | Dónde choca |
 |---|---|---|---|
-| Desventaja de origen | **Falencia** (Core §16, rescate 2026-06-29; §11.15.2.bis "Regalo & Falencia") | **Perjuicio** (Creacion_de_Personaje §3.3, canónico 2026-06-29) | Misma fecha, dos documentos; la Regla de Azar del propio doc de Creación aún dice "Falencia" |
-| Crítico | **Crítico** (Core §11.1, §20.bis) | **Portento / Pifia** (Motor v2 borrador + Simulador) | Depende de ratificar el motor v2 |
+| ~~Desventaja de origen~~ | — | — | **✅ RESUELTO (C-5, 2026-07-03): Perjuicio.** Aplicado en Creacion, Core_11 §11.15 y Core_16 |
+| Crítico | **Crítico** (Core §11.1, §20.bis) | **Portento / Pifia** (Motor v2 borrador + Simulador) | Las **bandas** 00–05/95–99 ya son canon (C-7); el nombre Portento/Pifia y el NE/NF de banda siguen pendientes |
 | Inspiración | **Inspiración (Omen)** (T) | reglas viejas de **Puntos de Profecía (PP)** sin migrar | §11.13, pendiente #18 de nucleo_jugable |
-| Nombre de la mecánica de mejora | Tirada de Mejora / Roll for Improvement | — | Feat Entrenamiento v1 vs v2 (reglas además contradictorias, ver C-4) |
+| ~~Mecánica de mejora~~ | — | — | **✅ RESUELTO (C-4, 2026-07-03): versión canónica única en `20_Contenido/Feat_Entrenamiento.md`** |

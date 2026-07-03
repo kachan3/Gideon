@@ -14,6 +14,7 @@ Para que Hassan decida la versión canónica. Numeradas según referencias `[INC
 ### Resueltas en esta vuelta de canon (Hassan, ratificación de 46 puntos)
 
 1. ✅ **Años desde la caída de Amaru — RESUELTA.** Hassan: *"Usa más de mil años."* La cifra exacta queda pendiente; la fórmula canónica es **"más de mil años"** (descarta el 1225 DA específico de L). Ver §0.7.
+   **→ SUPERADA (Hassan 2026-06-14; ratificado C-6 2026-07-03):** el canon vigente es **~426 DA** — la fórmula es **"más de cuatrocientos años"**. Los ~1000 años corresponden a la Era del Exilio *previa* a la caída. Esta entrada se conserva como registro histórico de una decisión descartada.
 
 2. ✅ **Sub-eras DA — PENDIENTE FORMAL.** Hassan: *"DA después de Amaru. Las fechas exactas y los términos para diferenciar las eras son un tema a desarrollar; anótalo como trabajo pendiente."* Esqueleto explícito en §0. **Era de los Héroes y Mártires** queda situada **dentro de la Era de la Guerra vs Amaru** (no en DA — ver #23).
 
@@ -117,7 +118,7 @@ Para que Hassan decida la versión canónica. Numeradas según referencias `[INC
 
 50. ✅ **Consecuencias de traer a Mirra de vuelta — RESUELTA (Hassan 2026-06-05).** Traer a Mirra implica: (a) Demesteria **pierde su emisaria dríade** — el canal se debilita. (b) Sin embargo, mientras haya Daemonis activos en Kindremor, los seres de Demesteria **seguirán apoyando** porque es parte de la **guerra cósmica** — aunque de forma más débil. (c) **La memoria de Mirra no importa**: lo que importa es su espíritu — el fragmento Amor viaja con el alma, no con la experiencia. Mirra renace sin memoria pero con el fragmento intacto y la senda despertada.
 
-51. 🔶 **Umbral de Comatoso con nuevo MH/2 — POSIBLEMENTE OBSOLETA.** Contexto: §11.3 canoniza que Herida Grave = daño ≥ MH/2, y que PG Reales = MH − (MH/2 × heridas graves activas). Con esa fórmula, **2 heridas graves ya llevan PG Real a 0**. La vieja regla "Comatoso = 4+ heridas graves" venía de cuando el umbral era MH/4 (descartado). La pregunta es: ¿el estado Comatoso se dispara automáticamente con PG Real = 0, o tiene condición propia adicional? Hassan señala que puede ser una regla vieja ya obsoleta. Ver §11.4. *Pendiente revisar si §11.4 ya lo resuelve implícitamente.*
+51. ✅ **Umbral de Comatoso — RESUELTA (canon C-1, Hassan 2026-07-03).** Son **dos tasas distintas**: el umbral para **causar** una Herida Grave es **½ MH**; la **reducción acumulada** de PG Reales es **¼ MH por grave**. Por lo tanto **Comatoso = 4 heridas graves** (PG Reales = 0), sin mortal. *(La redacción previa de esta entrada atribuía erróneamente a §11.3 una reducción de ½; §20.bis fue corregida en la misma fecha. La hoja X ya implementaba ¼ y ≥4 — estaba correcta.)* Ver §11.3/§11.4.
 
 52. 🆕 **Mitigación de Necrótico / Radiante / Sónico.** Restaurados como tipos aparte, pero **no tienen fórmula de mitigación canónica** todavía. Esqueletos en §11.5. Hassan deberá definirlos antes de que sean utilizables en mesa.
 

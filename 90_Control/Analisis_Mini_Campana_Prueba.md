@@ -101,7 +101,7 @@ Lo que un grupo que viene de D&D/Pathfinder/Runequest/Symbaroum esperaría encon
 
 ## 3. Nota de consolidación (lo más importante de atacar primero)
 
-El **motor** (bloqueante #6) es la pieza de la que cuelga todo lo demás: armas, sendas y conjuros se redactarán distinto según cómo queden bandas, NE/NF, tiers y capas de modificadores. Mientras el Core §11.1 y el borrador 2026-06-15 digan cosas distintas, **cualquier contenido nuevo nace contra una base movediza**. Conviene ratificar el motor (y volcarlo al Core, hoy desactualizado: la hoja X aún usa MH/4 y Comatoso ≥4; la tabla §20.bis aún dice "99 sin regla de máximos").
+El **motor** (bloqueante #6) es la pieza de la que cuelga todo lo demás: armas, sendas y conjuros se redactarán distinto según cómo queden bandas, NE/NF, tiers y capas de modificadores. Mientras el Core §11.1 y el borrador 2026-06-15 digan cosas distintas, **cualquier contenido nuevo nace contra una base movediza**. Conviene ratificar el motor (y volcarlo al Core, hoy desactualizado: la hoja X aún usa MH/4 y Comatoso ≥4; la tabla §20.bis aún dice "99 sin regla de máximos"). **[Actualización 2026-07-03: C-1 ratificó ¼ y Comatoso 4 — la hoja X estaba correcta y §20.bis fue corregida; C-7 ratificó las bandas 00–05/95–99; C-8 ratificó ≤. El resto del bloqueante #6 (Portento/Pifia, capas, tiers) sigue abierto.]**
 
 **Mínimo viable para una prueba jugable** (los que de verdad cortan el *loop*): #3 (Vida), #4 (competencias), #7 (ataque→daño), #8 (daño de armas), #9 (estados de combate), #22 (algún enemigo). Con eso —y fijando el nivel para esquivar #20— se puede correr una sesión de combate y exploración básica.
 
