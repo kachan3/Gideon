@@ -1,6 +1,6 @@
 # ENTRENAMIENTO
 **Tipo:** Feat Universal Genérico (Se puede adquirir multiples veces)
-**Costo de adquisición:** 1 XP
+**Costo de adquisición:** 1 XP **por compra** *(gasto repetible de XP — D-8, 2026-07-03)*
 
 > **✅ CANON — C-4, Hassan 2026-07-03.** Esta versión **supersede toda implementación previa**: la v1 (marcas que se borraban por sesión), la v2 (marcas al tener éxito) y el §G2.bis del documento de XP. Las versiones anteriores están archivadas en `99_Archivo/`.
 
@@ -12,6 +12,8 @@ Cuando el personaje **falla** una tirada de habilidad o de atributo, gana una **
 
 Solo puede existir **una Marca simultánea** por cada habilidad o atributo.
 
+**Marca por Herida Grave *(D-5 — Hassan 2026-07-03)*:** al **sufrir una Herida Grave**, el personaje gana inmediatamente una **Marca de Entrenamiento de Vitalidad**.
+
 **Marcas de Atributo.** Se obtienen por cualquiera de estas dos vías:
 - **Fallar una tirada directa del atributo** solicitada por el DM; o
 - Poseer Marcas de Entrenamiento en **tres habilidades hijas** del mismo atributo.
@@ -22,7 +24,9 @@ Solo puede existir **una Marca simultánea** por cada habilidad o atributo.
 
 Al adquirir este feat se realizan las **Tiradas de Mejora**.
 
-**Máximo por sesión:**
+**No es una pasiva permanente *(D-8 — Hassan 2026-07-03)*.** Cada compra cuesta **1 XP** y otorga el derecho a realizar las Tiradas de Mejora de **esa sesión**. Al agotarse las tiradas disponibles —o al terminar la sesión— el feat **queda agotado**. Para volver a mejorar en una sesión futura hay que **comprarlo de nuevo** (1 XP). Debe tratarse como un **gasto repetible de XP**, nunca como un rasgo permanente que se compra una vez y se usa para siempre.
+
+**Máximo por sesión (por compra):**
 
 | Elemento | Máximo |
 |---|---|
@@ -35,7 +39,7 @@ Al adquirir este feat se realizan las **Tiradas de Mejora**.
 
 Tira **1d100**. El resultado debe ser **mayor o igual** al valor actual de la habilidad o atributo.
 
-*(Excepción explícita al principio general C-8 "d100 ≤ Valor = éxito": en la mejora, tirar alto es bueno — a mayor valor actual, más difícil seguir mejorando.)*
+*(Excepción explícita al principio general C-8 "d100 ≤ Valor = éxito": en la mejora, tirar alto es bueno — a mayor valor actual, más difícil seguir mejorando. Las bandas 00–05/95–99 **no** aplican a esta tirada — D-6.)*
 
 **Si tiene éxito:**
 
@@ -57,4 +61,4 @@ Si la Tirada de Mejora falla, el jugador puede gastar **1 XP** para **consumir l
 
 ---
 
-*Canon C-4 — Hassan 2026-07-03. Reemplaza el trigger de mejora de §11.2 ("al subir de nivel"), los Puntos de Entrenamiento y los incrementos fijos (+3/+5).*
+*Canon C-4 — Hassan 2026-07-03. Reemplaza el trigger de mejora de §11.2 ("al subir de nivel"), los Puntos de Entrenamien

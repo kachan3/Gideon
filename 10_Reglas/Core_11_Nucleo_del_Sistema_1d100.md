@@ -8,15 +8,16 @@
 
 **Resolución.** Tirada vs valor de habilidad: igual o menor → éxito; mayor → fallo.
 
-**Bandas automáticas *(canon C-7 — Hassan 2026-07-03)*:**
-- **00–05 → Éxito crítico automático** (éxito sin importar el Valor).
-- **95–99 → Fallo crítico automático** (fallo sin importar el Valor).
-
-> Las bandas priman sobre la comparación con el Valor. `[PENDIENTE: NE/NF que otorga la banda y su interacción con la capicúa — definir al consolidar el motor v2]`
+**Bandas automáticas *(canon C-7 + D-1/D-6; aclaración final de Hassan 2026-07-03)*:**
+- **00–05 → Éxito Automático** (éxito sin importar el Valor).
+- **95–99 → Fallo Automático** (fallo sin importar el Valor).
+- La banda **no trae ninguna mecánica adicional**: solo fija el éxito o el fallo. El NE/NF se calcula **normal** (decenas/unidades): 04 → éxito, NE 0 · 97 → fallo, NF 7.
+- **La capicúa opera igual que en cualquier otro caso** — banda y capicúa son **capas independientes** *(aclarado por Hassan 2026-07-03)*: **00** = éxito automático **y capicúa → Portento (NE 10)**; **99** = fallo automático **y capicúa → Pifia (NF 10)**.
+- **Alcance (D-6):** aplican **solo** a **chequeos de habilidad, tiradas de ataque y tiradas enfrentadas**. **No** aplican a Tiradas de Mejora, iniciativa, creación de personaje, Nacimiento (1d100) ni a ningún otro subsistema salvo que se declare explícitamente.
 
 **Casos especiales en los extremos (canónicos):**
-- **00 → Éxito Seguro + Crítico.** Como **00 es el mínimo posible**, siempre es **éxito automático**. Además, al ser **capicúa** (00 → mismo dígito de decenas y unidades), es **crítico de éxito** (NE 10). *Prioriza esta regla siempre que aparezca.*
-- **99 → se resuelve por la regla general; su criticidad viene de la capicúa, no de ser el máximo.** *(canónico — Hassan 2026-06-03: "ignora la regla de máximos, esto es por capicúa")* ~~No existe regla de fallo automático por valor máximo.~~ **SUPERADO (canon C-7, Hassan 2026-07-03): 99 cae dentro de la banda 95–99 → fallo crítico automático.** Si 99 > habilidad → fallo, y al ser capicúa → **Fallo Crítico (NF 10)**. Con habilidad ≥ 99 sería éxito capicúa → Crítico de Éxito (NE 10). *[ESQUELETO resuelto]*
+- **00 → Éxito Automático + Portento.** 00 cae en la banda 00–05 (éxito automático) y es capicúa → **Portento (NE 10)**. *(Vigente — confirmado por Hassan 2026-07-03; la lectura transitoria "NE 0" queda descartada.)*
+- **99 → se resuelve por la regla general; su criticidad viene de la capicúa, no de ser el máximo.** *(canónico — Hassan 2026-06-03: "ignora la regla de máximos, esto es por capicúa")* ~~No existe regla de fallo automático por valor máximo.~~ **SUPERADO (C-7, Hassan 2026-07-03): 99 cae dentro de la banda 95–99 → Fallo Automático; y al ser capicúa es además Pifia (NF 10) — confirmado por Hassan 2026-07-03.** Si 99 > habilidad → fallo, y al ser capicúa → **Fallo Crítico (NF 10)**. Con habilidad ≥ 99 sería éxito capicúa → Crítico de Éxito (NE 10). *[ESQUELETO resuelto]*
 
 **Niveles de Éxito y Fallo (NE/NF):**
 - **NE** = dígito de **decenas** de la tirada (si fue éxito).
@@ -32,7 +33,9 @@
 - Tirada **capicúa** (ambos dados con mismo valor: 00, 11, 22, 33, 44, 55, 66, 77, 88, 99) → **crítico**.
 - **Crítico de éxito** → NE 10 (si la tirada fue éxito o si es 00, que siempre lo es).
 - **Crítico de fallo** → NF 10 (si la tirada fue fallo).
-- Ejemplo: tirada 33 con habilidad 65 → éxito crítico con NE 10. Tirada 00 con habilidad 5 → éxito crítico (00 es mínimo y capicúa). Tirada 99 con habilidad 95 → fallo crítico (99 supera a 95 y es capicúa). *[Resuelve INCONG #28]*
+- Ejemplo: tirada 33 con habilidad 65 → **Portento** (éxito capicúa) con NE 10. Tirada 00 → **Éxito Automático (banda) + Portento (capicúa, NE 10)**. Tirada 99 → **Fallo Automático (banda) + Pifia (capicúa, NF 10)**. *(Vigencia confirmada por Hassan 2026-07-03 — banda y capicúa son capas independientes.)* *[Resuelve INCONG #28]*
+
+> **✅ Aclaración final (Hassan 2026-07-03):** la capicúa opera **en todos los casos**, también dentro de las bandas — la banda fija el éxito/fallo, la capicúa fija el crítico. **Portento** (capicúa en éxito → NE 10) y **Pifia** (capicúa en fallo → NF 10) quedan como **nombres canónicos** del crítico por capicúa; "Crítico de Éxito/Fallo" es alias.
 
 ### 11.1.bis Rango (Tier) *(canónico — Hassan 2026-06-03)*
 
@@ -50,6 +53,8 @@
 | +3 | Dragones adultos |
 
 **Regla de interacción.** Cuando una tirada **falla**, igualmente cuenta como **éxito contra un tier inferior**; el **NE se determina igual** (dígito de decenas). Es decir: el resultado de un mismo d100 se *lee distinto* según el tier del oponente — no hay tiradas separadas.
+
+**Ventaja de tier *(canon D-3 — aprobado por Hassan 2026-07-03)*:** en enfrentamientos contra un tier inferior, el tier superior **suma +8 NE** a su resultado. *(Reemplaza las variantes previas: "piso de NE 8" del borrador del motor y "+10/+5" del Simulador — ambas obsoletas; el Simulador fue actualizado a +8.)*
 
 **Daño por diferencia de tier.** Al golpear a una criatura con **tier de Vitalidad menor**, se suma **+10 de daño plano por cada 1 de diferencia**.
 
@@ -210,8 +215,8 @@ Cada habilidad tiene valor 1–100. **Nivel de Habilidad** = valor / 10 redondea
 
 **Mejora de atributos y habilidades.**
 - **Puntos de mejora iniciales:** dependen de linaje, clase, ascendencia, edad y Nivel de Voluntad. `[ESQUELETO: tabla de puntos iniciales por combinación]`
-- **Tirada de mejora *(canon C-4 — Hassan 2026-07-03)*:** lanza 1d100. Si el resultado es **mayor o igual** al valor actual → mejora exitosa; si no → falla y la Marca **no se consume**. *(Excepción explícita al principio C-8 de "≤ = éxito": aquí tirar alto es bueno.)* Fuente única: `20_Contenido/Feat_Entrenamiento.md`.
-- **Durante la partida**, marca las habilidades que **uses y falles**. La mejora se intenta mediante el feat **Entrenamiento** (gastando Marcas), **no** "al subir de nivel" —el Nivel del personaje fue eliminado (Hassan 2026-06-28). Ver `20_Contenido/Feat_Entrenamiento.md`.
+- **Tirada de mejora *(canon C-4 — Hassan 2026-07-03)*:** lanza 1d100. Si el resultado es **mayor o igual** al valor actual → mejora exitosa; si no → falla y la Marca **no se consume**. *(Excepción explícita al principio C-8 de "≤ = éxito": aquí tirar alto es bueno. Las bandas 00–05/95–99 **no** aplican a esta tirada — D-6.)* Fuente única: `20_Contenido/Feat_Entrenamiento.md`.
+- **Durante la partida**, marca las habilidades que **uses y falles**. La mejora se intenta mediante el feat **Entrenamiento** (gastando Marcas), **no** "al subir de nivel" —el Nivel del personaje fue eliminado (Hassan 2026-06-28). **El feat es una compra repetible (D-8, 2026-07-03):** cada compra cuesta 1 XP y habilita las Tiradas de Mejora de **esa sesión**; se agota al usarse o al terminar la sesión — **no es una pasiva permanente**. Además, **sufrir una Herida Grave otorga inmediatamente una Marca de Entrenamiento de Vitalidad** (D-5, 2026-07-03). Ver `20_Contenido/Feat_Entrenamiento.md`.
 - ~~**Puntos de entrenamiento**~~ *(eliminados — C-4, 2026-07-03: absorbidos por la Opción XP del feat Entrenamiento: 1 XP consume la Marca y asegura la mejora)*.
 - Una vez que una habilidad/atributo mejora en una instancia, **no puede volver a intentarse en ese mismo momento**.
 - **Mejorar un atributo principal mejora automáticamente todas sus habilidades hijas.**
@@ -549,6 +554,43 @@ Los combates en Gideon ocurren rápido y en simultáneo. Cuando una criatura es 
 - Puedes realizar **1 acción** antes de caer.
 - Tras esa acción, impactas contra el suelo y recibes **todo el daño de caída correspondiente**.
 
+### 11.11.bis Monturas *(canónico — Hassan 2026-07-13)*
+
+Montar una criatura tiene **tres procedimientos** según su disposición: **Dócil**, **Aliada** u **Hostil**. La habilidad **Montar** (hija de Agilidad) se tira cuando cabalgar exige control bajo presión.
+
+**Acción "Montar" (Dócil o Aliada).** Cuesta **2 PA**: podés moverte hasta **toda tu velocidad** y montar una criatura voluntariosa. *(Como consume 2 de tus 3 PA, el turno en que montás es de acomodo: no llegás a Galopar ese mismo turno.)*
+
+**Montura Dócil** *(p. ej. un caballo).* No tiene turno propio (funciona como vehículo). En tu turno **empleás su velocidad en lugar de la tuya** y ganás la acción **Galope**: por **2 PA**, te movés **3 veces**. Tus demás acciones las usás con normalidad. *(PA = Punto de Acción; ver `Acciones_Genericas.md`.)*
+
+**Montura Aliada** *(p. ej. un dragón, un grifo, o el bárbaro del grupo).* Ambos **pierden la acción básica de Moverse** y **ganan "Movimiento en Equipo"**. El desplazamiento se vuelve un **recurso compartido** igual al número de acciones de la montura (**normalmente 3**): jinete y montura conservan su turno y sus demás acciones, pero **sólo pueden desplazarse gastando "Movimiento en Equipo"**, y entre los dos **no pueden superar ese total**. El pool es compartido a propósito para que **el jinete no tenga que esperar el turno de la montura para desplazarse** *(ratificado — Hassan 2026-07-13)*.
+
+> *Ejemplo (grifo, 3 acciones): en tu turno te movés 2 veces con él y das 1 ataque; en el turno del grifo, éste se mueve 1 vez (completa el pool de 3) y da 2 zarpazos.*
+
+**Montura Hostil / Involuntaria** *(canónico — Hassan 2026-07-13).* Montás a una criatura **contra su voluntad** —monstruos u otras criaturas que montás para golpear—. Mantiene **turno independiente**.
+
+*Regla básica:*
+- La criatura debe ser **un tamaño mayor** que vos.
+- Tirás un check de **Escalar (Fuerza)** con **ambas manos libres** (coste **1 PA**, default).
+- Con éxito **te adherís** y **te movés con ella**. A partir de ahí debés mantener siempre **al menos una mano** sujetándote y **ambas piernas**.
+
+*Mecánicas aledañas:*
+- **Armas que cuentan como mano libre.** Algunas armas —p. ej. las **dagas**— cuentan como mano libre para **iniciar o mantener** la montura (las clavás para sujetarte). Esto te deja golpear mientras cabalgás a la fuerza.
+- **Sacudirse.** Como parte de un movimiento **una vez por turno**, o gastando **1 PA**, la criatura puede sacudirse: **repetís el check de Escalar** o caés.
+- **Grapleo.** Si la criatura **puede alcanzarte** (llegar de algún modo a donde estás), puede intentar **Graplearte** para desmontarte.
+- **Caída.** Si fallás el check, **caés** y recibís daño de caída **igual a la altura de la criatura** (en metros; ver §11.11.ter).
+
+> **Estado de las dependencias (2026-07-13).** (1) **Oposición del Escalar:** en debate — la propuesta de Hassan es que la escalada base **no tenga dificultad** y que, si acaso, la oposición sea la **Evasión (Esquivar) de la criatura** (baja en bestias grandes). Pendiente de cerrar; ver nota de diseño. (2) **Daño de caída:** ✅ resuelto en **§11.11.ter**. (3) **Graplear:** la ofensiva es **Atletismo** (ya definido como "sometimiento de otro cuerpo… tirada enfrentada"), la defensa/escape es **Firmeza** o Atletismo/Acrobacias, y la acción base es **Forcejear** (1 PA); sólo falta el **efecto del estado Agarrado/Restringido** (§18 esqueleto). *(Nota: "Escalada" del aporte = skill canónico **Escalar**.)*
+
+**Carga del jinete.** **Toda** montura (Dócil, Aliada u Hostil) debe poder **cargar el peso completo del jinete**; si no puede hacerlo con comodidad, **sus acciones se ven afectadas**. `[Depende del sistema de Peso/Sobrecarga aún NO definido: hace falta una capacidad de carga por criatura para resolver esto — cruce marcado.]`
+
+> **Acciones básicas de desplazamiento.** La acción básica **Moverse** (te desplazás tu velocidad a pie; rasgo **Movimiento**) y las demás quedan definidas en **`Acciones_Genericas.md`**.
+
+### 11.11.ter Daño de Caída *(canónico — Hassan 2026-07-13)*
+
+Una caída inflige **daño contundente físico igual a los metros caídos**, y sólo **a partir de 3 metros** (caídas menores no dañan). Desde los 3 m, quien cae puede tirar **Acrobacias** para **reducir el daño en tanto como su NE**. Este daño **se mitiga con la Dureza (Toughness) pero NO con la armadura** (blindaje/protecciones físicas no aplican a la caída).
+
+> **Falencias marcadas (Hassan a resolver).** (a) ¿El daño son los **metros totales** o sólo los **metros por encima de 3**? Lo interpreté como **metros totales**, aplicando sólo si la caída es ≥3 m. (b) **Sin tope máximo:** una caída de 40 m = 40 contundente —sin Dureza puede ser letal, con Dureza alta trivial—; falta decidir si hay techo/curva. (c) **Solapamiento de skill:** el **abanico de guerra** (§14) ya reducía caídas con **Artes Marciales**, y esta regla general usa **Acrobacias** —dos habilidades para lo mismo; conviene unificar.
+
 ### 11.12 Descansos
 
 **Descanso Corto:**
@@ -558,8 +600,8 @@ Los combates en Gideon ocurren rápido y en simultáneo. Cuando una criatura es 
 
 **Descanso Largo:**
 - 6 h de sueño.
-- 1 ración o fuente considerable de 500 g de comida.
-- Bebida limpia.
+- 1 ración o fuente considerable de 500 g de comida. *(Comer aquí reinicia el reloj de hambre del Agotamiento §18; media ración cuenta como media ración a esos efectos.)*
+- Bebida limpia. *(Hidratarse reinicia el reloj de sed del Agotamiento §18.)*
 - Sólo se puede realizar **1 descanso largo al día**. Puedes elegir dar por terminado el día y esperar al próximo descanso largo.
 - No sufrir amenaza ni daño.
 - Lugar seco y a temperatura ambiente para montar cama.

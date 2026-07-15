@@ -22,14 +22,14 @@
 | `Core_11_Nucleo_del_Sistema_1d100.md` | §11: resolución, tiers, atributos, daño/heridas, estados críticos, combate, creación (pasos), minions | 🟡 — motor viejo; contiene además §11.15 (creación → debería vivir en 20_Contenido) |
 | `Core_13_Sistema_de_Magia_y_Energia.md` | §13: Maná/Stamina, flujos, Spellcasting v2, Sacrificio Arcano | 🟡 |
 | `Core_18_Estados_Alterados.md` | §18: estados y condiciones | 🔴 (mayoría en esqueleto) |
-| `Motor_v2_BORRADOR_2026-06-15.md` | Motor nuevo: bandas 00-05/95-99, Portento/Pifia, 5 capas de modificadores, Exigencia/Salvataje, tiers | 🔴 **no ratificado** — decide el futuro de §11.1 |
+| `Motor_v2_BORRADOR_2026-06-15.md` | Motor nuevo — **D-2:** solo bandas/≤/+8 son canon; Portento/Pifia, capas, Exigencia/Salvataje siguen siendo propuesta | 🔴 propuesta parcialmente canonizada |
 | `Nucleo_Jugable_CONSOLIDADO_2026-06-15.md` | Todo lo que depende del d100 en una pasada + índice de 20 pendientes | 🔴 no ratificado; **fórmulas de la Parte VI aún con NV (pre-2026-06-28)** |
 
 ## 20_Contenido — Usa las reglas
 | Archivo | Qué es | Madurez |
 |---|---|---|
 | `Creacion_de_Personaje.md` | Chargen: techo 80, modos de campaña, Dedicaciones, Nacimiento, Regalos/Perjuicios (C-5 aplicado) | 🟡 (skills garantizadas mayormente esqueleto) |
-| `Feat_Entrenamiento.md` | **Feat canónico de mejora** (marcas al fallar; ≥; 5/2 por sesión) — canon C-4, 2026-07-03 | 🟢 |
+| `Feat_Entrenamiento.md` | **Feat canónico de mejora** (marcas al fallar; ≥; 5/2 por sesión; **compra repetible 1 XP por sesión — D-8**; Marca de Vitalidad al sufrir Herida Grave — D-5) — canon C-4, 2026-07-03 | 🟢 |
 | `Core_12_Sendas_Mecanicas.md` | §12: las 10 sendas | 🟡 (niveles 3+/4+ en esqueleto; Honor vacía) |
 | `Core_14_Equipamiento.md` | §14: armas, armaduras x/y/z, escudos | 🔴 (tablas de armas vacías) |
 | `Core_15_Talentos_y_Dotes.md` | §15: talentos mágicos y de senda | 🔴 (varios "olvidados" pendientes de re-escala 1d100) |
@@ -42,7 +42,7 @@
 |---|---|---|
 | `Diseno_XP_Feats_Items_Hechizos.md` | XP monedero 5, feats por descubrimiento, sintonía de ítems — con [INVENTADO]/[PENDIENTE] | 🔴 propuesta |
 | `Diseno_Muerte_y_Sucesion.md` | Backups, herencia de XP (principio Dark Souls) | 🔴 propuesta |
-| `Propuesta_C3_Atributos_Derivados.md` | Nuevas fórmulas propuestas de MH/Stamina/Maná + mapa de migración (2026-07-03) | 🔴 propuesta |
+| ~~Propuesta_C3_Atributos_Derivados~~ | **DESCARTADA (D-5, Hassan 2026-07-03)** → `99_Archivo/`; las fórmulas actuales quedan como canon definitivo | ⚫ |
 | ~~Feat_Entrenamiento v1/v2~~ | **Canonizado (C-4, 2026-07-03)** → `20_Contenido/Feat_Entrenamiento.md`; versiones viejas en `99_Archivo/` | ✅ resuelto |
 
 ## 40_Mundo — Lore
@@ -64,16 +64,16 @@
 | Archivo | Qué es | Madurez |
 |---|---|---|
 | `Auto Character Sheet.xlsx` | **Fuente X** — ficha automática. PG Reales ¼ y Comatoso 4 **ratificados por C-1**; Roller corregido a `<=` (C-8, 2026-07-03). Quedan bugs menores (ver Informe) | 🟡 |
-| `Simulador_Tiradas_Enfrentadas.xlsx` | Cálculo exhaustivo de enfrentadas — implementa el motor v2 **no ratificado** (bandas, Portento/Pifia, tier +10/+5) | 🟡 |
+| `Simulador_Tiradas_Enfrentadas.xlsx` | Cálculo exhaustivo de enfrentadas — bandas ✓ canon; **ventaja de tier corregida a +8** (D-3, 2026-07-03); Portento/Pifia sigue siendo propuesta (D-2) | 🟡 |
 
 ## 90_Control — Canon y diagnóstico
 | Archivo | Qué es | Madurez |
 |---|---|---|
 | `Core_20_Incongruencias.md` | §20: INCONGs #1–#181, **serie A** (numeración del Core) | 🟢 vivo |
-| `Core_20bis_Formulas_Canonicas.md` | §20.bis: hoja de fórmulas — **corregida por C-1 (¼/4 graves) y C-7 (bandas)**, 2026-07-03 | 🟢 |
+| `Core_20bis_Formulas_Canonicas.md` | §20.bis: hoja de fórmulas — corregida por C-1 (¼/4 graves), C-7/D-1 (bandas automáticas, NE/NF normal) y D-3 (+8); **restaurada tras truncamiento el 2026-07-03** | 🟢 |
 | `Core_21_Esqueletos_Prioritarios.md` | §21: esqueletos priorizados, bloqueadores de jugabilidad | 🟢 vivo |
 | `Falencias_SERIE-B_Canva.md` | Ex `GideonCore/Falencias.md`. ⚠️ **Serie B**: #162–#171 colisionan con serie A (ver `Catalogo_INCONG_Duplicadas.md`); Claudfield→Tanwyn aplicado (C-11); #171-B resuelta (Sparring obsoleto) | 🟡 divergente |
-| `Catalogo_INCONG_Duplicadas.md` | **C-2**: catálogo de los duplicados #162–#171 con referencias e impacto de renumerar — decisión pendiente de Hassan | 🟢 (vivo) |
+| `Catalogo_INCONG_Duplicadas.md` | **C-2/D-4**: catálogo de los duplicados #162–#171 — se mantiene sin renumerar; resolución manual futura | 🟢 (vivo) |
 | `Canva_Guia_Rapida_1e.md` | Transcripción Canva 1e + 8 contradicciones resueltas (cita numeración serie B) | 🟢 |
 | `Analisis_Mini_Campana_Prueba.md` | Diagnóstico 2026-06-28: 23 falencias para mini-campaña, mecánicas faltantes del género | 🟢 |
 

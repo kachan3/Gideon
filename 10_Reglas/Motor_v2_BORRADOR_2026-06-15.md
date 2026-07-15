@@ -1,6 +1,8 @@
 # §11 — NÚCLEO DEL SISTEMA DE JUEGO (1d100)
 
 > **Borrador para evaluación — 2026-06-15.** Consolida todo lo trabajado en sesión. Las **🔎 NOTAS DE EVALUACIÓN** marcan decisiones pendientes o una inconsistencia detectada. Los `[ESQUELETO]` son piezas que referenciaste pero dejaste para desarrollar más adelante. Nada de esto reemplaza el Core hasta que lo ratifiques.
+>
+> **Estado D-2 (Hassan 2026-07-03):** de este borrador son canon: las **bandas 00–05/95–99** (Éxito/Fallo **Automático**; la capicúa aplica aparte y siempre — 00 = Portento, 99 = Pifia, aclarado 2026-07-03), el criterio **≤** (C-8), la **ventaja de tier +8 NE** (D-3) y los **nombres Portento/Pifia** para el crítico por capicúa. Las capas de modificadores, Exigencia/Salvataje y la anulación de "NE<0 transforma" **siguen siendo propuesta** y no deben fusionarse al Core sin aprobación explícita.
 
 ---
 
@@ -25,7 +27,7 @@ Por encima de cualquier comparación con el Valor, el dado tiene dos bandas que 
 
 Las bandas son absolutas a tu propio tier (ver §11.8): **bipasean Salvataje y Exigencia**. Ni la protección contra fallos ni el umbral de éxito pueden alterarlas. Esto garantiza que incluso un maestro puede fallar (~5%) y que casi cualquiera puede tener un golpe de suerte.
 
-> 🔎 **NOTA DE EVALUACIÓN — borde de la banda baja.** La dejé en **00–05** (6 valores) frente a 95–99 (5 valores). Si querías simetría exacta 5/5, debería ser **00–04**. Confirmá cuál.
+> ~~🔎 **NOTA DE EVALUACIÓN — borde de la banda baja.**~~ **✅ RESUELTO (C-7/D-1, 2026-07-03): 00–05.** *(La capicúa aplica aparte: 00 = Portento.)*
 
 ---
 
@@ -127,9 +129,9 @@ Las bandas siguen vigentes: aun con Valor 145, un **95–99 falla**.
 
 El **Ranking** es la escala de tier (−2 … +3, ver §11.1.bis) que permite que en una misma tirada de d100 convivan desde una hormiga hasta un dragón. Cuando colisionan criaturas de **distinto tier**, se aplica esta capa por encima de las reglas normales.
 
-**Diferencia de 1 tier.** Se hace la enfrentada normal, pero el resultado del de **mayor tier se lee hacia abajo**: aunque su tirada sea un fallo —incluso un fallo automático de 95–99— cuenta como **éxito contra el tier inferior**, con el NE leído igual (decena). Además, el de mayor tier tiene un **piso de NE de 8** en la oposición. Así, el inferior sólo gana si el superior saca muy bajo *y* él saca muy alto (NE 9) o un Portento.
+**Diferencia de 1 tier.** Se hace la enfrentada normal, pero el resultado del de **mayor tier se lee hacia abajo**: aunque su tirada sea un fallo —incluso un fallo automático de 95–99— cuenta como **éxito contra el tier inferior**, con el NE leído igual (decena). ~~Además, el de mayor tier tiene un **piso de NE de 8** en la oposición.~~ **✅ D-3 (Hassan 2026-07-03): el tier superior suma +8 NE** — la redacción de piso y el razonamiento siguiente quedan obsoletos.
 
-- *Ejemplo (con piso):* Gigante **Fuerza 20%, tier +1** vs Bárbaro **Fuerza 90%, tier 0**. Sin piso, el gigante casi siempre "falla" y el bárbaro casi siempre tiene éxito, así que el duelo se decidiría casi sólo por el dado —azaroso e injusto para una diferencia de tamaño real. Con el piso de 8, el gigante domina salvo que saque pésimo y el bárbaro saque excelente.
+- *Ejemplo (con piso — OBSOLETO por D-3, se conserva como registro):* Gigante **Fuerza 20%, tier +1** vs Bárbaro **Fuerza 90%, tier 0**. Sin piso, el gigante casi siempre "falla" y el bárbaro casi siempre tiene éxito, así que el duelo se decidiría casi sólo por el dado —azaroso e injusto para una diferencia de tamaño real. Con el piso de 8, el gigante domina salvo que saque pésimo y el bárbaro saque excelente.
 - *Ejemplo (lectura hacia abajo):* Dragón **tier +1** saca **96**. Para él es fallo, pero frente a un humano (tier 0) cuenta como **éxito NE 9**; el humano sólo gana con un **Portento (NE 10)**.
 
 **Diferencia de 2 o más tiers.** El de mayor tier **gana sin necesidad de tirar**. Si el Director lo cree oportuno puede dejar tirar, y sólo un **96–99** del superior abre una **ventana estrecha** para el inferior (o el Director directamente decide que no se tira). *Flavor:* el titán está por aplastarte, pero quedás en un bolsillo de aire entre los dedos de su pie.
@@ -138,6 +140,6 @@ El **Ranking** es la escala de tier (−2 … +3, ver §11.1.bis) que permite qu
 
 **Daño por diferencia de tier.** Al golpear a una criatura con tier de Vitalidad menor, se suma **+10 de daño plano por cada tier de diferencia** *(ya canon, §11.1.bis)*.
 
-> 🔎 **NOTA DE EVALUACIÓN — inconsistencia del piso.** Escribiste *"el tier superior tiene un éxito de 8 + NE real"*. Tomado literal, el dragón del ejemplo (96 → NE 9) tendría 8 + 9 = **17**, pero antes dijiste que ese 96 era **éxito 9**. Lo único coherente con **ambas** cosas es un **piso de 8**: el NE del tier superior es **al menos 8**, y su NE real sólo cuenta si lo supera (es decir, 9). Redacté con esa lectura (piso 8). **Confirmá:** ¿piso de 8, o de verdad querías sumar +8?
+> 🔎 **NOTA DE EVALUACIÓN — inconsistencia del piso.** Escribiste *"el tier superior tiene un éxito de 8 + NE real"*. Tomado literal, el dragón del ejemplo (96 → NE 9) tendría 8 + 9 = **17**, pero antes dijiste que ese 96 era **éxito 9**. Lo único coherente con **ambas** cosas es un **piso de 8**: el NE del tier superior es **al menos 8**, y su NE real sólo cuenta si lo supera (es decir, 9). Redacté con esa lectura (piso 8). **Confirmá:** ¿piso de 8, o de verdad querías sumar +8? → **✅ RESUELTO (D-3, Hassan 2026-07-03): suma +8 NE.** La redacción "piso 8" de este borrador queda obsoleta.
 
-> `[ESQUELETO]` (1) ¿La lectura "fallo = éxito vs tier inferior" vale contra **todos** los tiers menores, y el NE degrada por cada escalón? (2) ¿Una **Pifia** del tier superior se relee igual como éxito, o "queda" como fallo para darle aire al inferior? Con el piso de 8, hoy hasta una Pifia del superior daría NE ≥ 8 en un duelo de 1 tier de diferencia.
+> `[ESQUELETO]` (1) ¿La lectura "fallo = éxito vs tier inferior" vale contra **todos** los tiers menores, y el NE degrada por cada escalón? (2) ¿Una **Pifia** del tier superior se relee igual como éxito, o "queda" como fallo para darle aire al inferior? *(Nota D-3 2026-07-03: con la suma +8 la pregunta sigue abierta — un fallo releído sumaría igualmente +8.)*

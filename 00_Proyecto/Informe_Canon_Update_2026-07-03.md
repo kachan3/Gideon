@@ -80,4 +80,23 @@ Greps de reglas obsoletas sobre todo el repo (excluyendo `99_Archivo/` y citas h
 5. **Tier (tras aprobar C-9)** — un encuentro de práctica humano vs criatura tier +1 para validar la ventana del piso 8.
 
 ---
-*Aplicado y verificado 2026-07-03. C-2 (renumeración), C-3 (ratificación) y C-9 (aprobación) quedan en tus manos.*
+
+## Addendum — Decisiones D-1…D-8 (mismo día, segunda vuelta)
+
+| D | Decisión | Aplicado en |
+|---|---|---|
+| **D-1** | Las bandas 00–05/95–99 son **Éxito/Fallo Automático**, NO críticos; NE/NF se calculan normal (00 → NE 0; 99 → NF 9); sin mecánica adicional | `Core_11` §11.1 · `Core_20bis` · `Nucleo_Jugable` · `Motor_v2` · `Vocabulario`. **⚠️ Conflicto flaggeado (no ignorado):** la capicúa canónica de §11.1 daba 00 = NE 10 y 99 = NF 10 (INCONG #28); D-1 la anula **dentro** de las bandas. → **resuelto por la aclaración de abajo: la capicúa aplica siempre, también dentro de las bandas** |
+| **D-2** | Del motor v2 solo son canon: bandas, ≤, y ahora +8 de tier. El resto NO se fusiona al Core | Nota de estado en `Motor_v2_BORRADOR`; la regla vieja "NE<0 transforma" de §11.1 sigue siendo canon |
+| **D-3** | **Ventaja de tier = +8 NE (aprobado)** | `Core_11` §11.1.bis (regla nueva) · `Core_20bis` (fila Tiers) · `Motor_v2` y `Nucleo_Jugable` (piso 8 → obsoleto, notas ✅) · **Simulador: C34/C35 = 8/8** (antes 10/5) con rótulos actualizados |
+| **D-4** | Sin renumerar; catálogo se mantiene; "#160 inline" se ignora por ahora | Nota final en `Catalogo_INCONG_Duplicadas.md` |
+| **D-5** | **Propuesta C-3 descartada** — fórmulas actuales = canon definitivo. Además: **sufrir Herida Grave otorga una Marca de Entrenamiento de Vitalidad inmediata** | Propuesta → `99_Archivo/Propuesta_C3_..._DESCARTADA_2026-07-03.md`; avisos de §20.bis y Nucleo_Jugable actualizados; regla de Marca en `Feat_Entrenamiento.md` y `Core_11` §11.2 |
+| **D-6** | Alcance de las bandas: **solo chequeos de habilidad, ataques y enfrentadas** (no Mejora, iniciativa, creación, Nacimiento) | `Core_11` §11.1 y §11.2 · `Core_20bis` · `Nucleo_Jugable` (pendiente #6 → ✅) · `Feat_Entrenamiento` |
+| **D-7** | "Marca forzada" descartada intencionalmente; su ausencia no es inconsistencia | Verificado: no aparece en ningún documento vigente (solo en la v2 archivada) |
+| **D-8** | Entrenamiento = **gasto repetible**: 1 XP por compra, habilita las Tiradas de Mejora de esa sesión, se agota al usarse o al terminar la sesión; nunca pasiva permanente | `Feat_Entrenamiento.md` (sección nueva) · `Core_11` §11.2 · puntero §G2.bis · `Indice_General` |
+
+**Incidencia detectada y reparada:** `Core_20bis_Formulas_Canonicas.md` se encontró **truncado a mitad de la tabla de Resolución** (edición externa); se restauró el tramo perdido (resto de la tabla + sección Magia) desde la versión previa, con D-1/D-3 aplicadas, y quedó anotado en el propio archivo.
+
+**Aclaración final de Hassan (2026-07-03) — cuestión cerrada:** no había contradicción — la banda solo fija el éxito/fallo automático y **la capicúa opera igual que en cualquier caso, también dentro de las bandas**: 00 = Éxito Automático + **Portento** (NE 10); 99 = Fallo Automático + **Pifia** (NF 10). Los ejemplos transitorios "00 → NE 0 / 99 → NF 9" quedan descartados. **Portento/Pifia** quedan como nombres canónicos del crítico por capicúa. Documentos corregidos: §11.1, §20.bis, Nucleo_Jugable, Motor_v2, Vocabulario.
+
+---
+*Aplicado y verificado 2026-07-03 (tres vueltas). Queda en tus manos: renumeración manual (D-4) y el resto del motor v2 (D-2: capas de modificadores, Exigencia/Salvataje, transformación NE<0).*

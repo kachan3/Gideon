@@ -83,7 +83,7 @@ Algunos Feats aparecen en múltiples criaturas de naturaleza similar — *Garras
 
 ## §G2.bis. ENTRENAMIENTO — Dote Genérico Universal
 
-> **✅ CANONIZADO Y MOVIDO (C-4, Hassan 2026-07-03).** La versión canónica única vive en **`20_Contenido/Feat_Entrenamiento.md`** (marcas al fallar; ≥ para mejorar; <76 → +1d6, ≥76 y atributos → +1d4; máximos 5/2 por sesión; la Marca no se consume al fallar; Opción XP). El texto que figuraba aquí queda absorbido por esa versión; las variantes v1/v2 previas están archivadas en `99_Archivo/`. *(Diferencia menor absorbida: aquí decía "superior"; el canon es "mayor o igual". El original de esta sección se preserva en el historial git y en 99_Archivo.)*
+> **✅ CANONIZADO Y MOVIDO (C-4, Hassan 2026-07-03).** La versión canónica única vive en **`20_Contenido/Feat_Entrenamiento.md`** (marcas al fallar; ≥ para mejorar; <76 → +1d6, ≥76 y atributos → +1d4; máximos 5/2 por sesión; la Marca no se consume al fallar; Opción XP; **compra repetible: 1 XP por sesión de uso — D-8**; **Marca de Vitalidad al sufrir Herida Grave — D-5**). El texto que figuraba aquí queda absorbido por esa versión; las variantes v1/v2 previas están archivadas en `99_Archivo/`. *(Diferencia menor absorbida: aquí decía "superior"; el canon es "mayor o igual". El original de esta sección se preserva en el historial git y en 99_Archivo.)*
 
 ---
 

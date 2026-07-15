@@ -13,7 +13,25 @@
 - **Agonizante.** *(referenciado por heridas mortales §11.4)* Mueres al cabo de NE turnos sin tratamiento.
 - **Derrotado.** *(ver §11.4)* 5 horas base, modificable por tirada de Vitalidad.
 - **Coma Indefinido.** *(ver §11.4)* Sin recuperación natural.
-- **Cansancio (niveles).** `[ESQUELETO: tabla de efectos por nivel — M la cita pero no detalla salvo en interacciones puntuales]`
+- **Cansancio / Agotamiento.** *(canónico — Hassan 2026-07-13; desarrolla y reemplaza el antiguo esqueleto "Cansancio (niveles)".)* Debuff **mayor**: personaje mermado física y mentalmente por esfuerzo extremo o condiciones muy adversas. Tiene **3 niveles**; **acumular un 4.º punto = muerte**. **Cada nivel resta 1 acción** por turno — encaja con la economía de 3 acciones (§11.7):
+
+  | Nivel | Acciones/turno | Efecto |
+  |---|---|---|
+  | 1 | 2 | — |
+  | 2 | 1 | — |
+  | 3 | 0 | No podés actuar; sin acción sobrante **nunca podés reaccionar** → quedás indefenso (equivalente a Arrebatado permanente) |
+  | 4.º punto | — | **Muerte** |
+
+  **Fuentes básicas (1 punto cada una):**
+  - **Cada minuto sin respirar.** Se deja de acumular reposando **½ minuto** para retomar el aire.
+  - **Cada día sin beber.** Se deja de acumular **rehidratándose durante 1 hora**. Bebiendo **½ litro/día** se **duplica el plazo** (1 punto cada 2 días).
+  - **Cada semana sin comer.** Recuperación tras volver a comer: **1 punto por día**; si llegaste **al borde de la inanición**, la recuperación es más lenta: **1 punto cada 3 días**.
+
+  **Recuperación — regla general.** Se recobra 1 punto de Agotamiento por período tras normalizar la causa (½ min de aire · 1 h de hidratación · 1 día comiendo, o 3 días si venías al borde de la inanición). La **pérdida permanente de Fuerza/Vitalidad NO se recupera** al volver a comer: queda.
+
+  **Inanición (pérdida permanente):** cada **3 días sin comer** se pierde **1 punto de Fuerza y 1 de Vitalidad, permanentes**. Con **media ración diaria** el Agotamiento por hambre se ralentiza y **nunca alcanza el 4.º punto letal** —con media ración **no se muere de Agotamiento**—, pero **se siguen perdiendo capacidades motrices** (Fuerza/Vitalidad). **La muerte por inanición llega cuando la Fuerza o la Vitalidad llegan a 0.** Lo mismo aplica al agua con **½ litro/día** (duplica el plazo de deshidratación).
+
+  > **Constitución → Vitalidad (ratificado — Hassan 2026-07-13).** El aporte original decía "Constitución"; ese atributo no existe (los 10 son Fuerza, Vitalidad, Agilidad, Instinto, Voluntad, Inteligencia, Carácter, Melee, Proyectiles, Arcana). El aguante físico es **Vitalidad** —encaja con `MH = Resistencia del Linaje + Nivel de Vitalidad`—.
 - **Torpe (X).** *(Canónico — Hassan 2026-06-28.)* Estado de efecto que puede ser rasgo de una criatura o de un ataque específico. La criatura o el ataque con **Torpe (X)** impone como **dificultad máxima de las Reacciones Defensivas (Evadir/Rodar, Deflectar/Parry, Interceptar/Cubrirse — §11.9)** el valor X, independientemente del NE real del ataque. Si el NE del ataque supera X, el defensor solo debe alcanzar **NE X** para evadir con éxito. El NE del ataque sigue operando con normalidad para todos los efectos que requieran conocerlo (daño, efectos secundarios, estados adicionales).
 
   > *Ejemplo: una criatura con Torpe 2 golpea con NE 5. El defensor solo necesita NE 2 en su Reacción Defensiva (p. ej. Evadir) para evitar el ataque — pero si falla, recibe el impacto con NE 5.*

@@ -47,4 +47,4 @@
 
 **Opción 3 — Sin renumerar, con prefijo (162-A / 162-B):** cero renumeración; cada cita existente se anota con su serie (como ya hice en Vocabulario). Costo: la ambigüedad queda para siempre y toda cita futura debe llevar sufijo.
 
-*Decisión pendiente de Hassan. Nada fue renumerado.*
+*Decisión de Hassan (D-4, 2026-07-03): **mantener este catálogo y NO renumerar por ahora** — la numeración se resolverá manualmente más adelante. La limpieza del flag "#160 inline" en Core_01 queda deliberadamente pospuesta. Nada fue renumerado.*

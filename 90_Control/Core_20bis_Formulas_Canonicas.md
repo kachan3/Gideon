@@ -24,7 +24,7 @@ Referencia rápida para validar cálculos de personaje sin abrir el .xlsx.
 
 ### Recursos
 
-> ⚠️ **Propuesta C-3 (2026-07-03, NO ratificada):** existen nuevas fórmulas propuestas para MH, Stamina y Maná — ver `30_Propuestas_No_Ratificadas/Propuesta_C3_Atributos_Derivados.md`. Las fórmulas de esta tabla siguen siendo el **canon vigente** hasta que Hassan ratifique.
+> **✅ Propuesta C-3 DESCARTADA (Hassan 2026-07-03, D-5):** las fórmulas de esta tabla son el **canon definitivo**; no se migra a la versión experimental. La propuesta quedó archivada en `99_Archivo/`.
 
 | Item | Fórmula |
 |---|---|
@@ -63,19 +63,21 @@ Referencia rápida para validar cálculos de personaje sin abrir el .xlsx.
 
 | Caso | Resultado |
 |---|---|
-| **00–05** | **Éxito crítico** — banda automática, éxito sin importar el Valor *(canon C-7, Hassan 2026-07-03)* |
-| **95–99** | **Fallo crítico** — banda automática, fallo sin importar el Valor *(canon C-7, 2026-07-03)* |
-| 00 (mínimo + capicúa) | **Éxito automático + Crítico** (NE 10) — siempre |
+| **00–05** | **Éxito Automático** — éxito sin importar el Valor; NE normal (04 → NE 0). La capicúa aplica como capa aparte: **00 = además Portento (NE 10)** *(C-7 + aclaración Hassan 2026-07-03)* |
+| **95–99** | **Fallo Automático** — fallo sin importar el Valor; NF normal (97 → NF 7). La capicúa aplica como capa aparte: **99 = además Pifia (NF 10)** *(C-7 + aclaración Hassan 2026-07-03)* |
+| 00 (mínimo + capicúa) | **Éxito Automático + Portento (NE 10)** — banda y capicúa son capas independientes *(confirmado Hassan 2026-07-03)* |
 | Éxito | `d100 ≤ valor_habilidad` |
 | Fallo | `d100 > valor_habilidad` |
 | NE (éxito) | dígito de **decenas** de la tirada |
 | NF (fallo) | dígito de **unidades** de la tirada |
-| Capicúa en éxito | Crítico de Éxito → NE 10 |
-| Capicúa en fallo | Crítico de Fallo → NF 10 |
-| ~~99~~ | ~~**Sin regla de máximos**: resuelve normal; si falla, crítico por capicúa~~ **SUPERADO (canon C-7, 2026-07-03):** 99 cae en la banda 95–99 → **fallo crítico automático** |
-| Tiers distintos | Un **fallo** cuenta como **éxito vs tier inferior** (NE = decenas, igual) — ver §11.1.bis |
+| Capicúa en éxito | **Portento** (Crítico de Éxito) → NE 10 — aplica **en todos los casos**, también dentro de las bandas *(Hassan 2026-07-03)* |
+| Capicúa en fallo | **Pifia** (Crítico de Fallo) → NF 10 — aplica **en todos los casos**, también dentro de las bandas *(Hassan 2026-07-03)* |
+| ~~99~~ | ~~Sin regla de máximos: resuelve normal~~ **SUPERADO (C-7, 2026-07-03):** 99 cae en la banda 95–99 → **Fallo Automático + Pifia (NF 10)** *(capicúa confirmada — Hassan 2026-07-03)* |
+| Tiers distintos | Un **fallo** cuenta como **éxito vs tier inferior** (NE = decenas, igual); el tier superior suma **+8 NE** en enfrentadas *(canon D-3, 2026-07-03)* — ver §11.1.bis |
 
-> `[PENDIENTE: NE/NF que otorgan las bandas 00–05 / 95–99 y su interacción con la capicúa (Portento/Pifia del motor v2) — definir al consolidar el motor]`
+> **✅ RESUELTO (D-1/D-6 + aclaración final, Hassan 2026-07-03):** las bandas solo fijan el éxito/fallo automático (NE/NF normales, sin mecánica adicional); la **capicúa es una capa independiente que aplica siempre** — **Portento** (NE 10) / **Pifia** (NF 10), también dentro de las bandas. **Alcance de las bandas (D-6):** solo chequeos de habilidad, ataques y enfrentadas — NO aplican a Mejora, iniciativa, creación ni Nacimiento.
+
+> *(Nota de integridad — 2026-07-03: el archivo se encontró truncado a mitad de esta tabla; la sección de Resolución y la de Magia fueron restauradas de la versión previa, con las decisiones D-1/D-3 aplicadas.)*
 
 ### Magia (Spellcasting v2)
 | Item | Fórmula |

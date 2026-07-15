@@ -15,12 +15,12 @@
 
 **Del motor (sesión 2026-06-15, lo más fresco):**
 
-1. 🔎 **Piso de Ranking — inconsistencia.** Dijiste *"el tier superior tiene un éxito de 8 + NE real"*, pero el ejemplo del dragón (96 → éxito 9) sólo cuadra con un **piso de 8** (NE ≥ 8), no con una suma (+8 daría 17). Redactado como piso. **Confirmar:** ¿piso 8 o suma +8?
-2. ~~🔎 **Borde de la banda baja.**~~ **✅ RESUELTO (C-7, 2026-07-03): 00–05 éxito crítico / 95–99 fallo crítico.**
+1. ~~🔎 **Piso de Ranking — inconsistencia.**~~ **✅ RESUELTO (D-3, Hassan 2026-07-03): suma +8 NE.** El ejemplo del dragón de este borrador queda obsoleto; el Simulador fue actualizado a +8.
+2. ~~🔎 **Borde de la banda baja.**~~ **✅ RESUELTO (C-7 + D-1, 2026-07-03): 00–05 Éxito Automático / 95–99 Fallo Automático (NE/NF normales). La capicúa aplica aparte y siempre: 00 = Portento (NE 10), 99 = Pifia (NF 10) — aclarado por Hassan.**
 3. `[ESQUELETO]` **Empate-fallo en enfrentada.** Regla puesta: gana el menor NF. Pendiente el *wraparound* de unidades (un 60 tiene NF 0 pero está lejos del Valor) y los desempates de NF.
 4. `[ESQUELETO]` **Alcance del Ranking entre varios tiers.** ¿El "fallo = éxito vs tier inferior" vale contra todos los tiers menores? ¿El NE degrada por escalón?
-5. `[ESQUELETO]` **Pifia del tier superior.** ¿Se relee como éxito hacia abajo o "queda" como fallo para darle aire al inferior? (Con piso 8, hoy una Pifia daría NE ≥ 8 a 1 tier de diferencia.)
-6. 🔎 **¿A qué tiradas se aplican bandas, Portentos/Pifias y NE/NF?** Sólo a resolución de tareas, o también a tiradas no-enfrentadas como **mejora de habilidad**, **Nacimiento (1d100)** e **iniciativa**. Hay que fijar el alcance.
+5. `[ESQUELETO]` **Pifia del tier superior.** ¿Se relee como éxito hacia abajo o "queda" como fallo para darle aire al inferior? (Nota D-3 2026-07-03: la ventaja canónica es ahora **suma +8 NE**; la pregunta sobre la Pifia sigue abierta.)
+6. 🔎 **¿A qué tiradas se aplican bandas, Portentos/Pifias y NE/NF?** → **✅ Bandas: RESUELTO (D-6, 2026-07-03) — solo chequeos de habilidad, ataques y enfrentadas; NO aplican a Mejora, iniciativa, creación ni Nacimiento.** La capicúa (**Portento/Pifia**, nombres ya canónicos) aplica en todas las tiradas que calculan NE/NF (Hassan 2026-07-03).
 
 **Inconsistencias de terminología/regla con el resto del Core (a unificar):**
 
@@ -56,8 +56,8 @@ El d100 se simula con dos d10 (decenas + unidades). Siempre se leen **dos cifras
 
 ## I.2 Bandas automáticas
 
-- **00–05 → Éxito automático.** *(🔎 borde a confirmar: 00–05 o 00–04)*
-- **95–99 → Fallo automático.**
+- **00–05 → Éxito Automático.** *(✅ D-1: la banda solo fija el éxito; 00 es además Portento por capicúa — Hassan 2026-07-03)*
+- **95–99 → Fallo Automático.** *(✅ D-1: la banda solo fija el fallo; 99 es además Pifia por capicúa — Hassan 2026-07-03)*
 
 Absolutas a tu propio tier: **bipasean Salvataje y Exigencia**. Garantizan que un maestro pueda fallar (~5%) y que cualquiera tenga una chance.
 
@@ -121,7 +121,7 @@ Las decenas que exceden la centena se suman como **NE plano a todos los éxitos*
 
 Escala de tier −2 … +3 (ver Parte IV / §11.1.bis del Core).
 
-- **1 tier de diferencia:** enfrentada normal, pero el de **mayor tier lee su resultado hacia abajo** — incluso un fallo (o un fallo automático 95–99) cuenta como **éxito vs el tier inferior**, NE leído igual. Además tiene un **piso de NE de 8**. El inferior sólo gana sacando NE 9 cuando el superior saca bajo, o un Portento. *(🔎 piso 8 vs +8, pendiente #1.)*
+- **1 tier de diferencia:** enfrentada normal, pero el de **mayor tier lee su resultado hacia abajo** — incluso un fallo (o un fallo automático 95–99) cuenta como **éxito vs el tier inferior**, NE leído igual. ~~Además tiene un **piso de NE de 8**~~ → **✅ canon D-3 (2026-07-03): el tier superior suma +8 NE.** *(pendiente #1 resuelto)*
   - *Ej.:* Dragón tier +1 saca 96 → para él es fallo, vs humano tier 0 es **éxito NE 9**; el humano gana sólo con Portento (NE 10).
 - **2+ tiers de diferencia:** el de mayor tier **gana sin tirar**. El DM puede dejar tirar; sólo un **96–99** del superior abre una ventana estrecha (o el DM directamente no deja tirar).
 - **Justificación:** el dado es suerte y circunstancias; el coloso siempre domina; si el inferior gana, el superior resbaló o se dejó. A interpretación del DM.
@@ -157,7 +157,7 @@ Escala de tier −2 … +3 (ver Parte IV / §11.1.bis del Core).
 
 ## II.3 Mejora de atributos y habilidades *(canónico)*
 
-- **Tirada de mejora *(canon C-4 — 2026-07-03)*:** 1d100 **≥** valor actual → mejora; si no, falla y la Marca no se consume. Fuente única: `20_Contenido/Feat_Entrenamiento.md`. *(🔎 ¿bandas/críticos aplican aquí? pendiente #6.)*
+- **Tirada de mejora *(canon C-4 — 2026-07-03)*:** 1d100 **≥** valor actual → mejora; si no, falla y la Marca no se consume. Fuente única: `20_Contenido/Feat_Entrenamiento.md`. *(✅ D-6: las bandas NO aplican a la Tirada de Mejora; críticos/capicúa pendiente.)*
 - Durante la partida, marcás las habilidades que **uses y falles**; al subir de nivel intentás una mejora por cada una marcada.
 - ~~**Puntos de entrenamiento**~~ *(eliminados — C-4: reemplazados por la Opción XP del feat Entrenamiento)*.
 - Mejorar un **atributo** mejora automáticamente todas sus hijas.
@@ -296,9 +296,9 @@ Coste en acciones variable (lo define el conjuro); si dura varios turnos, se inv
 
 **Personaje:** Nivel de Atributo = `INT(Valor/10)` · Habilidad hija = `Modificación + Atributo padre` · Generación = `(d4+d4+d4)×5`.
 
-**Vida:** ~~MH = `Resistencia Linaje + (Nivel × Nivel Vit)`~~ *(pre-eliminación de NV 2026-06-28; canon: `Resistencia del Linaje + Nivel de Vitalidad` — y existe propuesta C-3, ver 30_Propuestas)* · Grave = `ROUNDUP(MH/2)` · Mortal = `MH` · PG Reales = `ROUNDUP(MH − (MH/4)×graves)` *(canon C-1 2026-07-03)* · Dureza = `Nivel Vit`.
+**Vida:** ~~MH = `Resistencia Linaje + (Nivel × Nivel Vit)`~~ *(pre-eliminación de NV 2026-06-28; canon: `Resistencia del Linaje + Nivel de Vitalidad` — propuesta C-3 DESCARTADA, D-5 2026-07-03)* · Grave = `ROUNDUP(MH/2)` · Mortal = `MH` · PG Reales = `ROUNDUP(MH − (MH/4)×graves)` *(canon C-1 2026-07-03)* · Dureza = `Nivel Vit`.
 
-**Recursos:** ~~Maná Máx = `Voluntad + (Nivel × Nivel Vol) − Daño Crónico` · Stamina = `Nivel + Nivel Vit − graves`~~ *(fórmulas pre-eliminación de NV 2026-06-28 — canon vigente en §20.bis; propuesta C-3 pendiente)* · Límite Seguro Maná = `Nivel Vol + Nivel Vit`.
+**Recursos:** ~~Maná Máx = `Voluntad + (Nivel × Nivel Vol) − Daño Crónico` · Stamina = `Nivel + Nivel Vit − graves`~~ *(fórmulas pre-eliminación de NV 2026-06-28 — canon vigente en §20.bis; propuesta C-3 descartada — D-5 2026-07-03)* · Límite Seguro Maná = `Nivel Vol + Nivel Vit`.
 
 **Magia:** PL = `1 + NE` · Coste = `1 + PL` · DG = `PL × Nivel Vol` · Límite PL/aspecto = `Nivel Int`.
 
