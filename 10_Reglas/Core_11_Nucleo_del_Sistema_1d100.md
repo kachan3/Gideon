@@ -430,16 +430,21 @@ Hassan ratifica **cuatro estados distintos**, cada uno con condición específic
 - **Evasión.** Todos los ataques contra ti con desventaja hasta el inicio de tu próximo turno; ventaja en tiradas de Evasión.
 - **Escape.** No provocas AdO hasta inicio de tu próximo turno. Movimiento completo.
 
-### 11.8 Combate — Atacar
+### 11.8 Combate — Atacar (Golpear y Disparar)
 
-Atacar con un arma que poseas suele consumir **una acción**. Objetivo en rango. Tirada: **1d100** comparado con tu skill correspondiente (melee → cuerpo a cuerpo; distancia → proyectiles; mágico → la habilidad arcana del flujo). Para melee: `Melee + Habilidad Correspondiente + Especialización`.
+Atacar con un arma que poseas suele consumir **una acción** (1 PA). El sistema diferencia mecánicamente los ataques cuerpo a cuerpo de los ataques a distancia mediante dos **Acciones Genéricas** distintas (ver `Acciones_Genericas.md` para sus reglas completas de targeting y trayectoria):
+- **Golpear:** Ataque cuerpo a cuerpo. Tirada: **1d100** vs skill de **Melee**.
+- **Disparar:** Ataque a distancia o arrojadizo. Tirada: **1d100** vs skill de **Proyectiles**.
+*(Los ataques mágicos se resuelven con la habilidad arcana del flujo correspondiente).*
 
-**Resolución e impacto *(canónico — Canva 1e / Hassan 2026-06-28)*.** Si tenés éxito y el objetivo **no se defiende** (no le quedan Reacciones, está Arrebatado, sorprendido o sin Sentido Preciso sobre la fuente), el golpe **impacta**. Si el objetivo reacciona, se resuelve con las **Reacciones Defensivas** (§11.9): Evadir/Rodar, Deflectar/Parry o Interceptar/Cubrirse, en enfrentada — si el defensor gana, evita el golpe.
+**Resolución e impacto *(canónico — Hassan 2026-07-22)*.** Si tenés éxito y el objetivo **no se defiende** (no le quedan Reacciones, está Arrebatado, sorprendido o sin Sentido Preciso sobre la fuente), el ataque **impacta**. Si el objetivo reacciona, se resuelve con las **Reacciones Defensivas** (§11.9) en tirada enfrentada:
+- Contra **Golpear** (cuerpo a cuerpo): El defensor puede usar **Evadir/Rodar**, **Deflectar/Parry**, o **Interceptar/Cubrirse**.
+- Contra **Disparar** (rango): **Los ataques a rango NO se pueden esquivar ni hacer Parry.** El defensor solo puede protegerse si usa la acción **Cubrirse** (con escudo). Evadir/Rodar y Deflectar/Parry no aplican.
 
 **Daño al impactar.** De la tirada de ataque se toman los **NE**:
-> **Daño = NE + Daño del Arma + Nivel de Fuerza** (cuerpo a cuerpo y arrojadizas)
-> · **+ Nivel de Voluntad** en lugar de Fuerza para **ataques mágicos**
-> · **las armas a distancia NO suman bono de habilidad** *(cierra INCONG #168)*
+> **Daño (Golpear y Arrojadizas) = NE + Daño del Arma + Nivel de Fuerza**
+> **Daño (Disparar regular) = NE + Daño del Arma** *(no suman bono de atributo)*
+> **Daño (Ataques mágicos) = NE + Daño del Hechizo + Nivel de Voluntad** *(en lugar de Fuerza)*
 
 Luego se aplica **mitigación** (Dureza + protecciones por tipo, §11.5) y el resultado se convierte en **heridas** (§11.3). La **zona** se determina según §11.8.bis.
 
@@ -570,16 +575,17 @@ Montar una criatura tiene **tres procedimientos** según su disposición: **Dóc
 
 *Regla básica:*
 - La criatura debe ser **un tamaño mayor** que vos.
-- Tirás un check de **Escalar (Fuerza)** con **ambas manos libres** (coste **1 PA**, default).
-- Con éxito **te adherís** y **te movés con ella**. A partir de ahí debés mantener siempre **al menos una mano** sujetándote y **ambas piernas**.
+- **Subirse** es una **tirada enfrentada de Escalar (Fuerza) contra la Evasión de la criatura**, con **ambas manos libres** (coste **1 PA**). No lleva penalización de dificultad, pero **no es éxito automático**: tirás tu Escalar (con 50% caés la mitad de las veces; con 75%, un cuarto) y la criatura tiene su **chance de esquivarte** —no es tan fácil subirse a un elefante—.
+- Con éxito **te adherís** y **te movés con ella**, manteniendo siempre **al menos una mano** sujetándote y **ambas piernas**.
+- **Mantener el agarre cuesta 1 PA por turno**: mientras sigas montado a la fuerza invertís 1 PA cada turno en sostenerte (te quedan 2 PA para actuar).
 
 *Mecánicas aledañas:*
 - **Armas que cuentan como mano libre.** Algunas armas —p. ej. las **dagas**— cuentan como mano libre para **iniciar o mantener** la montura (las clavás para sujetarte). Esto te deja golpear mientras cabalgás a la fuerza.
-- **Sacudirse.** Como parte de un movimiento **una vez por turno**, o gastando **1 PA**, la criatura puede sacudirse: **repetís el check de Escalar** o caés.
-- **Grapleo.** Si la criatura **puede alcanzarte** (llegar de algún modo a donde estás), puede intentar **Graplearte** para desmontarte.
-- **Caída.** Si fallás el check, **caés** y recibís daño de caída **igual a la altura de la criatura** (en metros; ver §11.11.ter).
+- **Sacudirse (Acción Épica).** La criatura puede sacudirse para arrojar a quienes la agarran, ejecutándolo como **Acción Épica** (`Acciones_Genericas.md`, `[ESQUELETO]`). Al hacerlo, **todos los que la estén agarrando** deben superar una tirada de **Escalar Difícil** o **caer**.
+- **Grapleo.** Si la criatura **puede alcanzarte** (llegar de algún modo a donde estás), puede intentar **Graplearte** para desmontarte (motor de agarre: **Atletismo** vs **Firmeza**; efecto del estado Agarrado aún pendiente, §18).
+- **Caída.** Al caer recibís daño **igual a la altura de la criatura** en metros (§11.11.ter).
 
-> **Estado de las dependencias (2026-07-13).** (1) **Oposición del Escalar:** en debate — la propuesta de Hassan es que la escalada base **no tenga dificultad** y que, si acaso, la oposición sea la **Evasión (Esquivar) de la criatura** (baja en bestias grandes). Pendiente de cerrar; ver nota de diseño. (2) **Daño de caída:** ✅ resuelto en **§11.11.ter**. (3) **Graplear:** la ofensiva es **Atletismo** (ya definido como "sometimiento de otro cuerpo… tirada enfrentada"), la defensa/escape es **Firmeza** o Atletismo/Acrobacias, y la acción base es **Forcejear** (1 PA); sólo falta el **efecto del estado Agarrado/Restringido** (§18 esqueleto). *(Nota: "Escalada" del aporte = skill canónico **Escalar**.)*
+> **Nota de diseño (2026-07-13).** Se usa **Escalar** —no Firmeza/Resistir— porque lo que se evalúa es **aferrarte a una superficie difícil**, no resistir un empuje. Pendiente: (a) definir la **Acción Épica** (esqueleto en `Acciones_Genericas.md`); (b) el **efecto del estado Agarrado/Restringido** para el grapleo (§18).
 
 **Carga del jinete.** **Toda** montura (Dócil, Aliada u Hostil) debe poder **cargar el peso completo del jinete**; si no puede hacerlo con comodidad, **sus acciones se ven afectadas**. `[Depende del sistema de Peso/Sobrecarga aún NO definido: hace falta una capacidad de carga por criatura para resolver esto — cruce marcado.]`
 
@@ -587,9 +593,9 @@ Montar una criatura tiene **tres procedimientos** según su disposición: **Dóc
 
 ### 11.11.ter Daño de Caída *(canónico — Hassan 2026-07-13)*
 
-Una caída inflige **daño contundente físico igual a los metros caídos**, y sólo **a partir de 3 metros** (caídas menores no dañan). Desde los 3 m, quien cae puede tirar **Acrobacias** para **reducir el daño en tanto como su NE**. Este daño **se mitiga con la Dureza (Toughness) pero NO con la armadura** (blindaje/protecciones físicas no aplican a la caída).
+Una caída inflige **daño contundente físico igual a los metros totales caídos** (los primeros 3 m cuentan), y sólo se aplica **a partir de 3 metros** (caídas menores no dañan). **Techo: 400 m** = velocidad terminal de caída libre (daño máximo 400). Desde los 3 m, quien cae puede tirar **Acrobacias** para **reducir el daño en tanto como su NE**. Este daño **se mitiga con la Dureza (Toughness) pero NO con la armadura** (blindaje/protecciones físicas no aplican a la caída).
 
-> **Falencias marcadas (Hassan a resolver).** (a) ¿El daño son los **metros totales** o sólo los **metros por encima de 3**? Lo interpreté como **metros totales**, aplicando sólo si la caída es ≥3 m. (b) **Sin tope máximo:** una caída de 40 m = 40 contundente —sin Dureza puede ser letal, con Dureza alta trivial—; falta decidir si hay techo/curva. (c) **Solapamiento de skill:** el **abanico de guerra** (§14) ya reducía caídas con **Artes Marciales**, y esta regla general usa **Acrobacias** —dos habilidades para lo mismo; conviene unificar.
+> **Alternativa por equipo (intencional).** El **abanico de guerra** (§14) reduce caídas con **Artes Marciales** en lugar de Acrobacias: es una **opción a propósito** para quien porta esa arma, permitiéndole usar una habilidad más entrenada. No es duplicación a corregir.
 
 ### 11.12 Descansos
 
@@ -675,7 +681,7 @@ Todo trasfondo se compone de **tres elementos**: Dedicación, Nacimiento, y Rega
 
 #### 11.15.2.bis Regalos y Perjuicios disponibles *(canónico — Hassan 2026-06-15; corregido 2026-06-29; renombrado C-5 2026-07-03)*
 
-Regalos y Perjuicios son **independientes**: el jugador puede tomar solo un Regalo, solo un Perjuicio, ambos o ninguno. Los "contrarios" que se listan abajo son emparejamientos **sólo temáticos**, no obligatorios.
+Regalos y Perjuicios son **independientes**: el jugador puede tomar solo un Regalo, solo un Perjuicio, ambos o ninguno. Algunos Regalos y Perjuicios son **opuestos y mutuamente excluyentes** (los "contrarios" que se listan abajo): no puedes tomar a la vez un Regalo y su Perjuicio contrario.
 
 ---
 

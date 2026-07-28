@@ -20,7 +20,7 @@ El motor quedó casi cerrado tras las decisiones del 2026-07-03. Lo que impide j
 
 | # | Pendiente | Tipo | Qué falta exactamente | ¿Sustituible por provisional? |
 |---|---|---|---|---|
-| C1 | **Resistencia del Linaje (número por subraza)** | [Motor] | Base de `MH = Resistencia del Linaje + Nivel de Vitalidad`. La tabla §3.1 lista resistencias a *tipos de daño*, no este número; la hoja X lo tiene en **0** → hoy la Vida de todo personaje sale mal | Sí — **[PROVISIONAL]** valor plano **10** para todos los linajes durante el playtest (Vit 40 → MH 14; con umbral ½ = 7). Decidir la tabla real es una fila de 6 números |
+| C1 | **Escalado Vital del Linaje (factor multiplicador por subraza)** | [Motor] | Base de `MH = ROUNDUP(Escalado Vital × Nivel de Vitalidad)`. | Resuelto — **[CANON]** Factor 2 (Viento/Río), 2.5 (Estrellas/Bosque/Luna), 3 (Hielo/Tierra/Sol), 5 (Jottun). |
 | C2 | **Valor numérico de las Competencias** (Novicio/Entrenado/Experto/Maestro/Leyenda) | [Motor] | Cada senda reparte competencias y hay fórmulas que suman "Competencia de entrenado", pero nunca se cuantificó en la escala 00–99 | Sí — **[PROVISIONAL]** Novicio +0 · Entrenado +10 · Experto +20 · Maestro +30 · Leyenda +40 (sujeto al techo 80 en creación) |
 | C3 | **Daño de armas** (tablas §14.2/§14.3 vacías) | [Contenido] | Ningún arma tiene daño/peso/precio en el Core | Sí — **[PROVISIONAL]** usar el catálogo de las fichas 1e como tabla mínima: Espada Bastarda 3 C/P (Versátil +1) · Cimitarra 3 · Maza 2 Cont (Penetración 2) · Daga 2 P/C (Ágil, Ligera, Arrojadiza) · Arco Corto 4 P (Rango 20) · Jabalina (Arrojadiza 60). Añadir 3–4 genéricas a ojo del DM |
 | C4 | **Statblock de criaturas + bestiario mínimo** | [Contenido] | No existe formato de enemigo ni un solo adversario. Solo Minions/Tropas (§11.16) | Parcial — **[PROVISIONAL]** construir enemigos como "personajes rápidos" con la hoja X (atributos 3d4×5, Resistencia provisional, 1 arma) + regla de Minions para grupos. Alcanza para el playtest; el formato real sigue pendiente |
@@ -109,6 +109,21 @@ Lo que el diseño real de Gideon exige para una aventura completa (y nada más):
 
 **Preparación:** 11 ✅ + 7 🟡 + 10 🔴 sobre 28 → **(11 + 7×0,5) / 28 ≈ 52 % en canon puro**.
 **Con los provisionales de este documento aprobados:** los 7 críticos y 4 de los 🔴 restantes quedan cubiertos → **≈ 85 % listo para mesa**. La distancia real al Playtest A es **una tanda de decisiones de números + una tarde de redacción**, no meses de diseño.
+
+### Añadidos 2026-07-13 (sesión de reglas físicas)
+
+| Elemento | Estado | Nota |
+|---|---|---|
+| Agotamiento / Cansancio | ✅ | §18 — 3 niveles, −1 acción/nivel, inanición |
+| Monturas (Dócil / Aliada / Involuntaria) | ✅ | §11.11.bis (Involuntaria cierra el ex-esqueleto Hostil) |
+| Daño de caída | ✅ | §11.11.ter — metros totales, techo 400 m |
+| Acciones genéricas + acción Moverse / notación PA | ✅ | `Acciones_Genericas.md` |
+| Forcejeo (motor de agarre) | ✅ | Atletismo enfrentado; impone Cegado/Silenciado/Tumbado/Agarrado |
+| Estado **Silenciado** (nuevo) / **Tumbado** | ✅ | §18 definidos |
+| **Estado Agarrado — EFECTOS/penalizaciones** | 🔴 | ⚠️ **CLAVE (Hassan lo pidió):** el escape está definido (1 PA/intento, Atletismo enfrentado) pero faltan las penalizaciones de estar Agarrado |
+| Acción Épica (categoría de criatura) | 🔴 | Esqueleto — depende del statblock (C4) |
+| Sistema de cobertura por niveles | 🔴 | Invocado por Tumbado; no existe aún |
+| Peso / Sobrecarga (capacidad de carga) | 🔴 | Pendiente; bloquea la "carga del jinete" de monturas |
 
 ## 6. Hoja de Ruta recomendada (motor primero, contenido después)
 

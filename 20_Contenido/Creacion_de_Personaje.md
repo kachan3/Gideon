@@ -26,11 +26,24 @@ La mesa define el modo antes de crear personajes. El modo afecta el peso del tra
 
 ---
 
-## Paso 2 — Especie y Subespecie
+## Paso 2 — Especie y Linaje (Subespecie)
 
-**Especies jugables por el momento: Dríade y Jottun.** *(Canónico — Hassan 2026-06-15. Hombre Lagarto y Ser de la Sangre están diseñados en el Core §3 pero no están disponibles como PC en esta etapa — balance y presentación de contenido pendientes.)*
+Para esta demo, la única especie jugable es el **Dríade**, y el jugador debe elegir uno de los siguientes linajes, los cuales determinan el **Escalado Vital** para calcular sus puntos de vida máximos (MH = Escalado Vital × Nivel de Vitalidad):
 
-Elegir subespecie correspondiente. Ver §3 del Core.
+- **Hijos del Viento (WindChilds):** Escalado Vital × 2
+- **Seres del Río (Riverdwellers):** Escalado Vital × 2
+- **Hijos de las Estrellas (Starchilds):** Escalado Vital × 2.5
+- **Hijos del Bosque (Forestkind):** Escalado Vital × 2.5
+- **Hijos de la Luna (Moonchilds):** Escalado Vital × 2.5
+- **Hijos del Hielo (FrostChilds):** Escalado Vital × 3
+- **Hijos de la Tierra (Earthfolks):** Escalado Vital × 3
+- **Hijos del Sol (Sunchilds):** Escalado Vital × 3
+
+*(Ver §3 del Core para detalles estadísticos y narrativos de cada linaje).*
+
+**Personajes Alternativos (Otro tipo de Ser):** 
+Existen otras especies que operan dentro del mismo sistema de juego pero poseen elementos que varían drásticamente (por ejemplo, pueden no tener Senda o poseer estadísticas y progresiones diferentes). Se deben elegir como un "tipo distinto de personaje" desde la primera etapa de creación. 
+**Entre ellos están los Jottun (Escalado Vital × 5, sin Senda), Hombres Lagarto y Magos de Sangre. Por el momento, NO serán jugables en esta demo.** *(Canónico — Hassan 2026-07-23).*
 
 ---
 

@@ -22,11 +22,11 @@
 - **Danza Dragón.** Acción de turno completo, requiere arma cuerpo a cuerpo. Sólo puedes tomar AdO o parry como reacciones; pero puedes tomar tantas como el doble de tus acciones normales. AdO también cuando alguien entre a tu rango de ataque.
 - **Reflejos.** Sin armadura pesada: suma tu Nivel de Instinto a tu **Evasión**.
 - **Hostigador.** 1/turno, como parte de un ataque a distancia, te mueves la mitad de tu velocidad sin provocar AdO.
-- **Maestro Lanzador.** Lanzar armas y objetos no diseñados para ser lanzados. Hacha de Batalla, Mazo de Guerra, Lanza, Gran Hacha y Gran Maza ganan Arrojadiza 30/60 ft. Objetos cotidianos (lápices, botellas, cubiertos, platos) → armas arrojadizas 1d4. Usas Fuerza, Destreza o Instinto. Competencia maestra al lanzar objetos cotidianos.
+- **Maestro Lanzador.** Lanzar armas y objetos no diseñados para ser lanzados. Hacha de Batalla, Mazo de Guerra, Lanza, Gran Hacha y Gran Maza ganan Arrojadiza 30/60 ft. Objetos cotidianos (lápices, botellas, cubiertos, platos) → armas arrojadizas 1d4. Usas Fuerza, Destreza o Instinto. `[ESQUELETO: bono o ventaja al lanzar objetos cotidianos]`
 - **Estilo de Combate.** Elige uno; re-elegible para conocer varios (sólo uno activo). Una hora de calentamiento (descanso corto o largo) para intercambiar.
   - ~~**Defensivo:**~~ *(Olvidado por Hassan 2026-05-23 — usaba CA, pendiente de reformulación.)*
   - **Combate Dual:** Suma ½ (arriba) del modificador al segundo ataque en combate dual; penalización pasa a -2. Combinable con Combate con Armas Arrojadizas.
-  - **Duelista:** Arma en una mano, otra libre → suma un bono al daño. *(Magnitud del bono olvidada por Hassan 2026-05-23 — pendiente de redefinir sin "bono de competencia".)*
+
   - ~~**Interceptor:**~~ *(Olvidado por Hassan 2026-05-23 — usaba CA, pendiente de reformulación.)*
   - **Armas Pesadas:** Cada dado de daño <3 cuenta como 3.
   - **Combate a Rango:** sumas un bono al ataque con armas a distancia. *(Bono +2 olvidado por Hassan 2026-05-23 — pendiente de redefinir en escala 1d100.)*

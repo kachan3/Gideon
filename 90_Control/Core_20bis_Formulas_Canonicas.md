@@ -15,7 +15,7 @@ Referencia rápida para validar cálculos de personaje sin abrir el .xlsx.
 ### Vida y Heridas *(canónico Hassan — umbrales actualizados)*
 | Item | Fórmula |
 |---|---|
-| MH / PG Máximos | `Resistencia del Linaje + Nivel de Vitalidad` *(NV eliminado 2026-06-28)* |
+| MH / PG Máximos | `ROUNDUP(Escalado Vital del Linaje × Nivel de Vitalidad)` *(Reemplaza la fórmula de Resistencia plana + NV. — Hassan 2026-07-23)* |
 | **Umbral Herida Grave** | `ROUNDUP(MH / 2)` *(½ MH — Hassan; reemplaza la versión X de MH/4)* |
 | Umbral Herida Mortal | `MH` |
 | **PG Reales** | `ROUNDUP(MH − (MH/4) × heridas_graves)` *(cada grave resta **¼ de MH**; hacen falta **4 graves** para llegar a 0 — **canon C-1, Hassan 2026-07-03**; coincide con la hoja X. La versión ½/2-graves que figuraba aquí queda corregida.)* |

@@ -2,14 +2,14 @@
 
 ## 18. ESTADOS ALTERADOS
 
-- **Terror / Aterrado.** Cuando estás aterrado de una criatura: desventaja en ataques y pruebas de habilidad mientras la criatura o fuente de miedo esté presente; no puedes acercarte a dicha criatura/fuente.
+- **Miedo (Pavoroso, Asustado, Aterrado, Pánico).** *(ver §19 Miedo y Coraje)*
 - **Airborne** *(ver §11.11)*. Suspendido en el aire sin control de equilibrio. Tiradas Muy Difíciles; ataques a Rango contra ti Muy Difíciles; cuerpo a cuerpo contra ti Fáciles. Velocidad 0 (salvo Vuelo). 1 acción al inicio de tu turno antes de caer y recibir daño completo de caída.
 - **Sorprendido** *(ver §11.6)*. En tu primer turno no puedes actuar ni reaccionar.
 - **Arrebatado.** *(canónico — Canva 1e / Hassan 2026-06-28)* Estado de quien **gastó todas las acciones de su turno** sin dejar ninguna sin usar. Mientras estés Arrebatado **no podés ejecutar Reacciones** (incluidas las Reacciones Defensivas: Evadir/Rodar, Deflectar/Parry, Interceptar/Cubrirse), por lo que quedás expuesto. Gestionar la última acción del turno de forma defensiva (p. ej. Cubrirse) evita quedar Arrebatado. Ciertos rasgos (arma Ágil §14.4, "Espíritu Incansable" de Valor) permiten no quedar Arrebatado bajo condiciones.
-- **Aturdimiento.** *(causado por heridas en cabeza §11.3)* Ganas tantos contadores como el NE del impacto. `[ESQUELETO: qué hace cada contador]`
-- **Asustado.** *(referenciado por Concentración Demandante §13.6.7)* `[ESQUELETO]`
-- **Incapacitado.** *(referenciado por Bloqueo §11.9 y Concentración Exhaustiva §13.6.7)* `[ESQUELETO]`
-- **Pánico / Miedo** *(card de T sin desarrollo; tarjeta vacía)* `[ESQUELETO]`
+- **Aturdimiento.** *(causado por heridas en cabeza §11.3)* Ganas tantos contadores de Aturdimiento como el NE del impacto. Cada contador se consume y **descuenta automáticamente** al inicio de tu turno para **cancelar 1 de tus acciones (1 PA)**; no puedes optar por no consumirlos. Si terminas tu turno con al menos un contador de aturdimiento sobrante (porque el golpe te quitó más acciones de las que tenías), entras en estado **Incapacitado**.
+
+- **Incapacitado.** Estado genérico de indefensión. *(Referenciado por Bloqueo §11.9, Concentración Exhaustiva §13.6.7 y exceso de Aturdimiento)*. El personaje **no puede accionar o reaccionar de forma alguna**. Cualquier ataque dirigido contra un objetivo incapacitado es **Muy Fácil** de impactar, y los intentos de Forcejeo para **Agarrarlo (grapple) tienen éxito automáticamente**.
+
 - **Agonizante.** *(referenciado por heridas mortales §11.4)* Mueres al cabo de NE turnos sin tratamiento.
 - **Derrotado.** *(ver §11.4)* 5 horas base, modificable por tirada de Vitalidad.
 - **Coma Indefinido.** *(ver §11.4)* Sin recuperación natural.
@@ -41,6 +41,12 @@
 - **Inmovilizado (piernas).** No podés caminar; te desplazás arrastrándote a media velocidad y quedás Tumbado. Podés cabalgar con normalidad. *(rescatado de §16 — ex "Parálisis")*
 - **Miembro Amputado.** Un brazo/mano (o pierna) queda inutilizable de forma permanente. *(rescatado de §16)*
 - **Debilitado.** Desventaja en tiradas de **Vitalidad** y **Fuerza** para resistir empujes, derribos o inmovilizaciones. *(rescatado de §16 — ex "Débil")*
-- `[ESQUELETO general: Atontado, Aletargado, Inconsciente, Envenenado, Enfermo, Sangrando, Agarrado, Restringido, Tumbado, Petrificado, etc.]`
+- **Agarrado.** *(Hassan 2026-07-26 — impuesto por Forcejeo, ver `Acciones_Genericas.md`.)* Estás sujeto/retenido por quien te agarró. 
+  - **Efectos:** Tu Velocidad se reduce a 0 (no podés Moverte). Todas tus tiradas de **Melee y Proyectiles** son **Muy Difíciles**. Además, **no podés usar componentes Somáticos** de magia (aunque sí podés usar componentes Somáticos Finos si el conjuro lo permite).
+  - **Break free:** gastás **1 acción (1 PA) por intento** y tirás **enfrentada de Atletismo** contra el captor; **cada intento cuesta una acción**. Es tu única vía de escape físico.
+- **Silenciado.** *(NUEVO — Hassan 2026-07-13; impuesto por Forcejeo.)* Se te impide emitir voz: **no podés hablar, gritar ni comunicarte por palabra, y no podés usar componentes verbales de magia** (§13). *(Efecto intencional — Hassan.)*
+- **Tumbado.** *(Hassan 2026-07-13; por Forcejeo, caída u otra causa.)* Estás en el suelo. **No podés Moverte normalmente**; tu única acción de desplazamiento es **Arrastrarse**, a **media velocidad**. Todas tus tiradas de **Melee y Proyectiles son Difíciles**. **Atacarte desde más de 2 bloques (casillas) de distancia es Difícil**, y **mejorás en uno tu nivel de cobertura**. *(Efecto neto: vulnerable en cuerpo a cuerpo, más difícil de alcanzar a distancia.)* `[Dependencia: "nivel de cobertura" asume un sistema de cobertura por niveles que aún NO existe en el proyecto — pendiente. "bloque" = "casilla" (≈5 pies).]`
+- **Cegado** puede imponerse también por Forcejeo (ya definido arriba).
+- `[ESQUELETO general: Atontado, Aletargado, Inconsciente, Envenenado, Enfermo, Sangrando, Restringido, Petrificado, etc.]`
 
 ---

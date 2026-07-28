@@ -7,17 +7,17 @@ Seres orgullosos y temperamentales; expresan emociones de forma directa. Poseen 
 
 **Subrazas (linajes):**
 
-| Linaje | Estadísticas | Velocidad | Tamaño | Resistencia | Debilidad | Rasgos clave |
+| Linaje | Velocidad | Tamaño | Resistencias | Escalado Vital | Debilidad | Rasgos clave |
 |---|---|---|---|---|---|---|
-| Hijos de la Tierra | `[ESQUELETO]` | `[ESQUELETO]` | `[ESQUELETO]` | — | — | Numerosos, versátiles. `[ESQUELETO: rasgos mecánicos]` |
-| Hijos de las Estrellas | +2/+1 o +1/+1/+1 | 30 ft | Mediano | — | — | Premonición (no sorprendibles), Guía 3/día, Profecía (3 preguntas al DM con respuesta Propenso/Ambiguo/Improbable) |
-| Hijos del Bosque | +2/+1 o +1/+1/+1 | 30 ft | Mediano | Inmunidad veneno, enfermedades | Fuego | Afinidad forestal, Sangre venenosa, Puntería natural |
-| Hijos del Sol | +2/+1 o +1/+1/+1 | 30 ft | Mediano | Fuego | `[ESQUELETO]` | Emitir luz (30 ft), Reacción Eruptiva (1d6→2d6 según herida) |
-| Hijos de la Luna | +2/+1 o +1/+1/+1 | 30 ft | Mediano | Psíquico | Radiante | Ilusiones menores, Visión que desvela ilusiones a la luz lunar, Visión en la oscuridad *(ver §4.0.3)* |
-| Hijos del Hielo | `[ESQUELETO]` | 30 ft | Mediano | Frío | `[ESQUELETO]` | Absorber elementos (reducir herida fuego/frío/rayo), Cristalización (crioestasis al agonizar) |
-| Jotunkind / Jottun *(ver §3.2.bis)* | +4 Fuerza | 30 ft | Grande (3–4 m) | A elegir | Veneno + **Magia** (Grilletes) | Fuerza descomunal (límite 24, +4 al subir nivel), Golpes lentos (+1 PA al atacar), Afinidad elemental, Banquete necesario (7× raciones de un Dríade), Runas |
-| Seres del Río | +2/+1 o +1/+1/+1 | `[ESQUELETO]` | `[ESQUELETO]` | Trueno | Rayo | Anfibio, Piel escamosa (+1 de Armadura física), Acondicionamiento acuático |
-| Hijos del Viento | +2/+1 o +1/+1/+1 | 40 ft | Mediano | Trueno | Fuego | Paso del Viento (medio mov. extra/turno), Ligereza (resistencia caída, daño desde 20 ft) |
+| Hijos de la Tierra | 6m + Atletismo | `[ESQUELETO]` | — | **×3** | — | Numerosos, versátiles. `[ESQUELETO: rasgos mecánicos]` |
+| Hijos de las Estrellas | 6m + Atletismo | Mediano | — | **×2.5** | — | Premonición (no sorprendibles), Guía 3/día, Profecía (3 preguntas al DM con respuesta Propenso/Ambiguo/Improbable) |
+| Hijos del Bosque | 6m + Atletismo | Mediano | Inmunidad veneno, enfermedades | **×2.5** | Fuego | Afinidad forestal, Sangre venenosa, Puntería natural |
+| Hijos del Sol | 6m + Atletismo | Mediano | Fuego | **×3** | `[ESQUELETO]` | Emitir luz (30 ft), Reacción Eruptiva (1d6→2d6 según herida) |
+| Hijos de la Luna | 6m + Atletismo | Mediano | Psíquico | **×2.5** | Radiante | Ilusiones menores, Visión que desvela ilusiones a la luz lunar, Visión en la oscuridad *(ver §4.0.3)* |
+| Hijos del Hielo | 6m + Atletismo | Mediano | Frío | **×3** | `[ESQUELETO]` | Absorber elementos (reducir herida fuego/frío/rayo), Cristalización (crioestasis al agonizar) |
+| Jotunkind / Jottun *(ver §3.2.bis)* | 6m + Atletismo | Grande (3–4 m) | A elegir | **×5** | Veneno + **Magia** (Grilletes) | Fuerza descomunal (límite 24, +4 al subir nivel), Golpes lentos (+1 PA al atacar), Afinidad elemental, Banquete necesario (7× raciones de un Dríade), Runas |
+| Seres del Río | 6m + Atletismo | `[ESQUELETO]` | Trueno | **×2** | Rayo | Anfibio, Piel escamosa (+1 de Armadura física), Acondicionamiento acuático |
+| Hijos del Viento | 8m + Atletismo | Mediano | Trueno | **×2** | Fuego | Paso del Viento (medio mov. extra/turno), Ligereza (resistencia caída, daño desde 20 ft) |
 
 > **Naturaleza canónica de los Hijos de la Luna — ciclo circadiano** *(canónico — Hassan 2026-06-09)*. Los MoonChild son **nocturnos por naturaleza**. Pueden invertir su ciclo de sueño —vivir de día, dormir de noche— pero con los mismos efectos que un humano que vive habitualmente a la inversa: malestar progresivo y problemas de salud a largo plazo. **Sin impacto mecánico en campañas ni aventuras**; es información de lore y caracterización. Ver §4.0.3 para la relación de las Lunas con la magia y los sueños.
 

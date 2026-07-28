@@ -40,7 +40,7 @@ Niveles 1-10. Las nv 1 son improvisadas de madera y piedra; las nv 10 son maravi
 - **Arrojadiza (X / Y)** — Rango óptimo X normal, rango extendido Y desventaja.
 - **Imprecisa (X)** — Apuntar es difícil. Sin X de Instinto, la tirada será Muy Difícil o mayor.
 - **A Distancia (X / Y)** — Ataque con Instinto. Rango óptimo X normal, extendido Y desventaja.
-- **Compleja** — Suma bonificador por competencia al daño además de al ataque.
+- **Compleja** — Premian mucho su uso correcto: suman 2 de daño por cada Nivel de Éxito (NE) en la tirada de ataque, en lugar de 1.
 - **Ágil** — Si en el turno sólo usaste armas ágiles, no hiciste más de 2 ataques y la última acción fue ataque con arma ágil, no sufres el estado *Arrebatado*. `[ESQUELETO: definir el estado Arrebatado]`
 - **Lenta (X)** — Requiere X acciones adicionales para atacar. Sólo aplica un modificador Lento; si hay varios, se usa el mayor.
 - **Guardia** — Rasgo de arma que habilita las maniobras defensivas con arma: **Deflectar** y **Parry** (§11.9).

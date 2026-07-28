@@ -32,6 +32,7 @@
 | `Feat_Entrenamiento.md` | **Feat canónico de mejora** (marcas al fallar; ≥; 5/2 por sesión; **compra repetible 1 XP por sesión — D-8**; Marca de Vitalidad al sufrir Herida Grave — D-5) — canon C-4, 2026-07-03 | 🟢 |
 | `Core_12_Sendas_Mecanicas.md` | §12: las 10 sendas | 🟡 (niveles 3+/4+ en esqueleto; Honor vacía) |
 | `Core_14_Equipamiento.md` | §14: armas, armaduras x/y/z, escudos | 🔴 (tablas de armas vacías) |
+| `DMs_Blacksmit.md` | Herrería del DM: arma base (palo), 3 categorías (Burda/Cotidiana/Militar), sistema de puntos de balance ±1, plantilla para armar armas a pedido — canon 2026-07-15 | 🟡 (clasificación +/− de propiedades pendiente) |
 | `Core_15_Talentos_y_Dotes.md` | §15: talentos mágicos y de senda | 🔴 (varios "olvidados" pendientes de re-escala 1d100) |
 | `Core_16_Virtudes_y_Desgracias_ELIMINADA.md` | §16: sistema eliminado (histórico; rescates migrados a §18) | ⚫ |
 | `Core_17_Ritos.md` | §17: Fénix, Vínculo Dragón, 4 ritos en esqueleto | 🔴 |

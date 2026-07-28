@@ -261,15 +261,15 @@ Bastones, varitas y otros dispositivos arcanos son **Artefactos**, creados por l
 - `[ESQUELETO: el resto de conjuros de Naial nv 1]`
 
 #### 13.9.3 Yrgramar — Filacteria y Ritual de Aprisionamiento
-Al aprender Yrgramar obtienes conocimiento para fabricar una **filacteria** sintonizada contigo. Almacena almas. *(Capacidad numérica olvidada por Hassan 2026-05-23 — pendiente de redefinir sin "bono de competencia".)*
+Al aprender Yrgramar obtienes conocimiento para fabricar una **filacteria** sintonizada contigo. Almacena almas. `[ESQUELETO: Capacidad numérica olvidada por Hassan 2026-05-23 — pendiente de redefinir sin usar sistema de niveles d20.]`
 
 **Ritual de Aprisionamiento** (1/día durante descanso corto o largo): llenas tu filacteria tirando 1d100. Por cada múltiplo de 10 → 1 alma. **Si sale 90+ → alma consciente** (proporciona información y mantiene competencia en una escuela de magia o marcial). Usar esa alma para crear un no-muerto le otorga esa misma competencia.
 
 La filacteria sólo almacena **1 alma consciente** simultánea (ocupa un espacio igual al resto). Pierde la mayoría de sus recuerdos tras 1d10 días (secreto del DM).
 
-**Espíritus controlables.** *(Estadísticas mecánicas eliminadas por Hassan 2026-05-23 — pendiente de reformulación sin CA / bono de competencia.)* Se desvanecen al recibir herida. Umbral 5. Resistencia a daño físico no mágico. Inmunes al veneno. 1 acción y velocidad 40 ft (volando). No provocan AdO.
+**Espíritus controlables.** `[ESQUELETO: Estadísticas mecánicas eliminadas por Hassan 2026-05-23 — ya no poseen CA; definir stats de evasión/dodge en formato de statblock.]` Se desvanecen al recibir herida. Umbral 5. Resistencia a daño físico no mágico. Inmunes al veneno. 1 acción y velocidad 40 ft (volando). No provocan AdO.
 
-**Conjuros Nv 1 — Invocar Espíritu:** Rango 5 ft libre. V, S, un alma que se consume. 2 PA. Duración = competencia en Yrgramar (en Leyenda dura hasta que sean derrotados). Elige:
+**Conjuros Nv 1 — Invocar Espíritu:** Rango 5 ft libre. V, S, un alma que se consume. 2 PA. Duración = Tantos minutos como tu Nivel de Éxito (NE) en la tirada de conjuro de Yrgramar. Elige:
 - **Envidioso.** Muerde con tu bonificador de ataque mágico. 1d8 + bono de Voluntad de daño necrótico.
 - **Fastidioso.** Asusta a una criatura (salvación de Voluntad o aterrada hasta fin de su próximo turno). Puede usar reacción para restar 1d4 a un ataque enemigo. Debe estar cuerpo a cuerpo.
 - **Combativo.** Posee un arma; brilla en tono verdoso opaco, frío sepulcral. +1 ataque y daño con esa arma. Requiere invertir puntos de influencia para la posesión. `[ESQUELETO: ¿qué son los "puntos de influencia"?]`

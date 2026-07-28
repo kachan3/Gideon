@@ -17,7 +17,6 @@ Al morir, Amaru se fragmentó causando lluvia de sangre. Algunos Dríades, drago
 
 | Nombre | Estado en docs |
 |---|---|
-| Gultarion | `[ESQUELETO]` |
 | Palgia | `[ESQUELETO]` |
 | Robus | `[ESQUELETO]` |
 | Falange | `[ESQUELETO]` |
@@ -53,6 +52,9 @@ Al morir, Amaru se fragmentó causando lluvia de sangre. Algunos Dríades, drago
 **Por qué es de los más temidos.** Es el Señor de la Sangre que más carne consumió de Amaru. Su poder y control de la magia de sangre y los cuerpos es muy superior al promedio. Con una gota puede doblegar a un dragón adulto.
 
 ### 7.4 Gorath — *Las Tripas de Amaru*
+
+> **Fusión canónica (Hassan 2026-07-28).** El antiguo esqueleto **Gultarion** ha sido absorbido en Gorath — son la misma entidad. Cualquier referencia previa a Gultarion debe entenderse como Gorath.
+
 **Identidad canónica (Hassan 2026-05-25).** Gorath es el Señor de la Sangre nacido de **las entrañas (las Tripas) de Amaru**. Cada Señor de la Sangre encarna una pieza del cuerpo del dios caído (las ratas comieron una pierna, los lobos una mandíbula, la mantis la otra pierna, el cerebro fue devorado por T'rarlathotep) — Gorath corresponde a **las vísceras**. Eso explica su naturaleza chthónica, parasitaria y digestiva: corrompe lo que entra en su dominio como un intestino que descompone y reabsorbe.
 
 **Origen.** Las entrañas de Amaru aterrizaron en un foso y reposaron hasta ganar conciencia y autonomía. Con las pocas fuerzas que tenían se adentraron más y más en la tierra hasta encontrar las raíces de un árbol y alimentarse — formando un **vínculo parasitario con el mismo**. Reposó mucho tiempo; comenzó a fusionarse con las raíces y la tierra a su alrededor. Cuando ganó fuerza, devoró un ratón vagabundo y lo expulsó como criatura mutada y completamente leal.
