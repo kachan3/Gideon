@@ -105,21 +105,66 @@ Hoy Frendamor es **EL CENTRO DE ESTUDIO Y MAESTRÍA DE LA MAGIA FÍSICA (Gelmir)
 
 `[ESQUELETO: ubicación en el mapa; vida sobre islas flotantes; jerarquía académica; legado/cadáver de Baffold; si las rocas tienen efectos arcanos residuales peligrosos]`
 
-### 4.2 Pircar — *Capital de los Dríades, Ciudad Base de Kindremor*
+### 4.2 Pircar — *Ciudad-Templo del Eclipse, Descanso Soberano de Gideon*
 
-**Rol canónico (Hassan 2026-05-25).** Pircar es la **ciudad capital de los Dríades** y la **ciudad base del mundo**: cosmopolita, situada en el **centro de Kindremor**, encrucijada política, comercial y arcana entre todas las Arcanópolis. Es el punto de referencia desde el cual se miden las distancias narrativas y las relaciones de poder del setting.
+**Pircar — el núcleo cerrado** *(canónico — Hassan 2026-07-28; reemplaza y expande la definición de 2026-05-25)*. Pircar es la **ciudad-templo cerrada** del Enclave del Eclipse, construida alrededor del **Descanso Soberano de Gideon** (§1.10). Ubicada en el **centro-oeste de Kindremor**, apoyada contra la **costa Oeste** del continente (Kindremor es más largo de norte a sur que de este a oeste). Funciona como **pilar y eje simbólico** del imperio: una estructura análoga al **Vaticano** — solo entran recursos, solo salen órdenes. **Muy pocos tienen permitido el acceso** al núcleo; cuando la gente habla de "la capital" se refiere usualmente a los **distritos periféricos**, no a Pircar en sí.
 
-**Sede de:**
+**Origen.** Tras la épica derrota de Amaru, Gideon fue elevado a figura cuasi-divina — ninguno de sus hermanos pudo explicar cómo lo hizo (§2.1). Gideon había formado a su gente alrededor de su Descanso Soberano; Pircar se edificó como ciudad-templo para **preservar todo lo que se pudiera saber de su legado y sus formas**, tomándolas como palabra sagrada.
+
+**La tragedia central.** Los Dríades de Pircar **no comprenden el mensaje fundamental de Gideon**: igualdad, humildad y comunidad. Su legado se convirtió en un **símbolo de exclusión**. Y Gideon mismo, vagando como Arghaar (§2.1), **no puede entrar a su propia ciudad** — lo cómico y lo trágico conviven: el hombre que ajusta su ritmo al del más lento tiene una ciudad que excluye a la mayoría.
+
+**Residentes permanentes autorizados del núcleo:**
+- **Percival** (§5.14) — el impostor que se hace pasar por Gawain, primigenio del Honor. Único primigenio (o suplantador) que **reside** permanentemente. Los demás primigenios **pueden ingresar** pero no residen.
+- Máximas autoridades de la **Casta Hierofántica** (nombre institucional canónico del cuerpo de hierofantes de Mirra, §12.5).
+- **Archimagos** de la Ecola Malikancia (§5.11).
+- **Guardia central** de los Leones de Pircar (§5.14) — el grueso de la orden opera desde los distritos periféricos.
+- Las **Estrellas Vigías** — representantes de máxima autoridad de los Corps del imperio con residencia en el núcleo. `[ESQUELETO: composición, número, funciones, relación con el Enclave — pendiente Hassan]`
+
+**Sede de (dentro del núcleo y los distritos):**
 - **La Capilla de Mirra** — sede religiosa principal del culto a Mirra, alberga el **Sancta Sanctorum** donde residen **Los Corderos** (§5.15).
 - **Los Leones de Pircar** (§5.14) — guardia de caballeros del honor; tomaron relevancia institucional tras el Alzamiento de los Cherax.
-- **Los Hierofantes** — el cuerpo de hierofantes de Mirra (§12.5) tiene aquí su centro de coordinación.
+- **La Casta Hierofántica** — el cuerpo de hierofantes de Mirra (§12.5) tiene aquí su centro de coordinación.
 - **Los Pecadores** (§5.4) — centro de operaciones.
-- **La Guardia Dorada** (§5.9) — policía local.
 - **Las Marcas de Pircar** — territorio fronterizo donde opera el clan **Valshideran** (§6) — `[ESQUELETO: extensión, gobierno político]`
+
+> **Nota: Guardia Dorada = Leones de Pircar** — son la misma organización bajo dos nombres (§5.9 / §5.14). "Guardia Dorada" es el nombre popular; "Leones de Pircar" es el nombre institucional y militar.
+
+---
+
+**Los 6 Distritos Periféricos — "la Capital"** *(canónico — Hassan 2026-07-28)*. De Pircar brotan **seis distritos periféricos** que son lo que la gente usualmente llama "la capital". Cada distrito posee habitantes y comercios internos pero está centrado en una profesión o estilo de vida:
+
+1. **Distrito Marítimo Norte** — uno de los dos flancos costeros.
+2. **Distrito Marítimo Sur** — el otro flanco costero. *(La ciudad se apoya contra la costa Oeste, con un distrito marítimo en cada extremo de la línea costera.)*
+3. **Distrito Comercial** — cara Este, mirando al interior de Kindremor. Encrucijada de las rutas comerciales terrestres.
+4. **Distrito Militar** — gestión de las fuerzas armadas del imperio.
+5. **Distrito de Producción** — manufactura e industria; desde aquí se gestiona la maquinaria del imperio.
+6. **Distrito Educativo** — centro académico y de formación.
+
+`[ESQUELETO: nombres propios de cada distrito; fronteras internas; gobierno local de cada uno; relación jerárquica entre distritos — pendiente Hassan]`
+
+**Periferia agrícola.** En las periferias más lejanas, más allá de los seis distritos, se extiende la **población agrícola**, que corresponde al **~80% del territorio**. El campo alimenta a los distritos y al núcleo — y eso le otorga un **poder político silencioso** a quien controle la tierra cultivable (ver el Alzamiento de los Cherax, §0.1, donde el corte de suministros forzó a Pircar a negociar en 30 días).
+
+---
+
+**Sistema de gobierno — Colegiado** *(canónico — Hassan 2026-07-28)*. El gobierno de Pircar — y por extensión del "imperio" (Kindremor y las Arcanópolis aliadas) — es un **sistema colegiado** nacido de la necesidad, no del diseño.
+
+**Origen del sistema.** Tras la guerra contra Amaru, los Dríades tuvieron que formarse y arreglar el mundo tal como estaba. Los **Primigenios supervivientes** servían inicialmente como **aristócratas y teócratas**. Cuando fueron perdiéndose o dejando actividad, el control lo tomaron las **instituciones preexistentes** (Leones, Casta Hierofántica, Ecola Malikancia, etc.) usando su **jerarquía propia**. Kindremor nunca tuvo tiempo para sentarse a planear un sistema de gobierno post-guerra — el método actual está, de cierta forma, **"atado con alambre"**: no fue diseñado sino ensamblado con las piezas que había.
+
+**Funcionamiento.** Sin embargo, es **funcional, efectivo y pragmático**. Las órdenes fluyen desde Pircar hacia los distritos y de ahí al imperio. Los movimientos de ejércitos, la producción de alimento y la administración son **órdenes de arriba** que funcionan en la mayoría de los casos. Si hay **conflicto de intereses**, se resuelve **puertas adentro**.
+
+**Mecanismo de desempate** *(canónico — Hassan 2026-07-28)*:
+- **Criterio primario: expertise.** Se evalúa quién es el más apto para la decisión en cuestión.
+- **Última instancia:** si no hay acuerdo, se recurre a **Percival / "Gawain el Justo"** para que tome la decisión final. *(Irónicamente, la última palabra recae sobre un impostor que suplanta al primigenio real — §5.14.)*
+
+**Dinámica de opacidad.** Los Dríades comunes están acostumbrados a **no terminar de entender quién dirige** o manda las órdenes desde la capital. Esto no es conspiración: es el resultado natural de un sistema donde **múltiples instituciones negocian entre sí**, cada una con su jerarquía interna, sin una cabeza visible. Refuerza la **Pirámide de conocimiento** (§1.6): cuanto más lejos del núcleo, menos se sabe sobre cómo funciona realmente el poder.
+
+> **La etiqueta "Imperio".** Las Arcanópolis y Kindremor se consideran un "imperio" — pero no hay emperador. El nombre es una **herencia cultural** del tiempo de los Primigenios (cuando sí había figuras de autoridad divina). Nadie se molestó en cambiarlo.
+
+---
 
 **Sacrificio Arcano institucionalizado.** En el año **~500 DA** Pircar aplicaba la misma práctica que **Aurelia** (§4.1.1): criminales, prisioneros de guerra e indeseables consumidos como combustible mágico (ver §13.10). Esa práctica colapsó con el **Alzamiento de los Cherax** (§0.1), cuando los **Archimagas de la Ecola Malikancia** (§5.11) abusaron del sistema para acusar falsamente a gente de bajos recursos y enemigos políticos y usarlos en experimentos arcanos. La guerra civil resultante reformuló el sistema de sacrificio: la sangre marginal y arbitraria fue reemplazada por la casta institucionalizada y consensuada de **Los Corderos** (§5.15), y los **Hierofantes** + **Leones** ganaron poder político como salvaguardas contra la repetición del abuso.
 
-**Reliquias: dos Martillos de Durnn** *(canónico, Hassan 2026-05-28)*. Pircar posee el **Martillo de Madera** y el **Martillo de Bronce** de Durnn el Creador (§1.9.1). Esta doble posesión es coherente con — y refuerza estructuralmente — su rol de capital cosmopolita: el **Martillo de Madera** sostiene la producción mundana abundante (barcos, casas, herramientas, cuero) que abastece su economía cotidiana, y el **Martillo de Bronce** explica su preeminencia como **centro académico y de conocimiento** (la Ecola Malikancia §5.11, las bibliotecas, los corpora doctrinales como el Lexicón Marcial §2.8 que aquí se conserva). Que dos Martillos coexistan en una misma ciudad es excepcional y parte de lo que hace de Pircar el nodo central de Kindremor.
+**Reliquias: dos Martillos de Durnn** *(canónico, Hassan 2026-05-28)*. Pircar posee el **Martillo de Madera** y el **Martillo de Bronce** de Durnn el Creador (§1.9.1). Esta doble posesión es coherente con — y refuerza estructuralmente — su rol de capital: el **Martillo de Madera** sostiene la producción mundana abundante (barcos, casas, herramientas, cuero) que abastece su economía cotidiana, y el **Martillo de Bronce** explica su preeminencia como **centro académico y de conocimiento** (la Ecola Malikancia §5.11, las bibliotecas, los corpora doctrinales como el Lexicón Marcial §2.8 que aquí se conserva). Que dos Martillos coexistan en una misma ciudad es excepcional y parte de lo que hace de Pircar el nodo central de Kindremor.
 
 > **Ortografía.** Canónica: **Pircar** (ratificado por Hassan, no "Pyrcar"). ✅
 
@@ -163,5 +208,27 @@ Segundo continente. **Refugio de dragones supervivientes y cultistas que huyeron
 **Nº de dragones que huyeron:** "no demasiados"; cifra exacta **desconocida** por el momento *(canónico — Hassan 2026-06-04)*.
 
 `[ESQUELETO: geografía interna, ciudades/cultos, jerarquía dragónica, relación con Bruja Azara (§2.5/§7.6) y sus cultos de sangre, cuándo exactamente huyeron (¿post-Cataclismo?)]`
+
+---
+
+### 4.7 El Laberinto — La Red Subterránea de Túneles *(canónico — Hassan 2026-07-29)*
+
+Los Dríades sabían que sus enemigos principales serían **aéreos** — los dragones. Como método de defensa, idearon una **red subterránea de túneles** que fue construida y perfeccionada a lo largo de un **milenio de desarrollo**. Estos túneles conectan literalmente **todas las ciudades** que aún siguen en pie y las que hoy están en ruinas.
+
+**Protecciones mágicas.** Los túneles estaban protegidos con magia diseñada para **expulsar a criaturas con la sangre "corrupta" de Amaru**, manteniendo los pasadizos limpios de aberraciones, dragones y sus derivados.
+
+**Infraestructura.** Los **Jottun** (§3.1.bis) construyeron los **grandes salones** de la red, donde se almacenaba comida y se refugiaban civiles durante las incursiones. Hasta el día de hoy se siguen utilizando y hay **varios canales seguros** en funcionamiento.
+
+**El problema: el Blood Brand.** Tras la llegada del **Blood Brand** (§10.1), la sangre de todo Dríade quedó contaminada con la de Amaru. Las protecciones mágicas que antaño distinguían aliado de enemigo **ya no pueden diferenciar**: la sangre de un Dríade ahora dispara las mismas alertas que la de un dragón. Los túneles que antaño eran su **mejor fortaleza** ahora son **terreno neutral y hostil** — tanto para Dríades como para cualquier monstruo o criatura que decida arraigarse.
+
+> **Nota.** Las cuevas subterráneas que son **dominio de Gorath** (§7.4) — donde criaturas son transformadas en aberraciones — son un fenómeno **separado** del Laberinto: Gorath parasitó las raíces del mundo con las entrañas de Amaru, creando su propio dominio subterráneo. Sin embargo, es posible que **en ciertos puntos las cuevas de Gorath y los túneles del Laberinto se intersecten**, lo que haría la navegación del Laberinto aún más peligrosa. `[ESQUELETO: puntos de intersección Gorath–Laberinto, si los hay]`
+
+**Los Grandes Elevadores.** Dentro de la red hay accesos de diferentes tamaños. Los más grandes se llaman **Grandes Elevadores** — se usaban para ingresar **maquinaria o grandes volúmenes de comida** de forma cómoda a las guaridas subterráneas. Son las entradas más estratégicas de toda la red.
+
+**Relevancia estratégica actual.** Si una fuerza enemiga — como la avanzada del Continente Rojo liderada por Farlanax — toma posesión de un acceso con Grandes Elevadores, podrá causar **invasiones desde dentro de los bastiones** sin previo aviso. Es el peor escenario posible: el enemigo ya no necesita sobrevolar murallas — entra por debajo.
+
+**Nombre actual.** La red se conoce hoy simplemente como **"El Laberinto"**. El nombre formal original se ha perdido; la denominación popular refleja la realidad: sin las protecciones mágicas funcionando a favor, recorrer los túneles es una apuesta mortal.
+
+`[ESQUELETO: mapa esquemático de rutas principales conocidas; qué tramos siguen siendo "seguros" y cuáles colapsaron o fueron invadidos; si existe algún esfuerzo por restaurar las protecciones; quién controla los accesos principales hoy; relación con la entrada de Pozo Pedraforte]`
 
 ---

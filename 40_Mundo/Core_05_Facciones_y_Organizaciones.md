@@ -7,6 +7,8 @@ Leyenda: un enclave liderado por un consejo formado por un seguidor de cada send
 
 **Hoy.** Sigue en pie con enorme poder e influencia. Defensor del mundo civilizado leal a Naya'il. Asegura cohesión entre reinos, derechos y leyes mínimas. Sus métodos pueden ser cuestionables. Su interés principal son sus **aventureros registrados** (principales agentes).
 
+**Sede.** La sede del Enclave es **Pircar** (§4.2) — una **ciudad-templo cerrada** construida alrededor del **Descanso Soberano de Gideon** (§1.10). Funciona como núcleo político y simbólico del imperio bajo un sistema de **gobierno colegiado** (§4.2): acceso ultra-restringido, solo entran recursos y solo salen órdenes. La cúpula del Enclave reside y opera desde allí.
+
 ### 5.2 Matriarcado de Alioth / La Familia / Ursinos del Sur
 Terror de dragones y abominaciones. Primera y última línea de defensa contra Amaru. Guerreros dedicados únicamente al entrenamiento y al combate; viven como si estuvieran en la primera gran guerra, cazando y exigiendo comida a los pueblos que se cruzan en su camino.
 
@@ -103,7 +105,9 @@ El loto es flor sagrada porque mantiene pureza impecable sin importar dónde ger
 
 > **Una sola organización, dos nombres.** "Guardia Dorada" es el nombre popular y el que conocen las capas externas; "Leones de Pircar" es el nombre institucional y militar. Son la misma orden. *(Unifica §5.9 y §5.14 — Hassan 2026-06-13.)*
 
-Orden de caballeros de pesada armadura que sigue la **Senda del Honor** (§12.2). Cuerpo de élite asentado en **Pircar** (§4.2). Tomaron relevancia institucional **tras el Alzamiento de los Cherax** (§0.1) como salvaguarda estructural contra el abuso de los Archimagas. Su primigenio fundacional es **Gawain el Honorable** (§2.8) —no Orión, no Percival.
+Orden de caballeros de pesada armadura que sigue la **Senda del Honor** (§12.2). Cuerpo de élite asentado en **Pircar** (§4.2). Tomaron relevancia institucional **tras el Alzamiento de los Cherax** (§0.1) como salvaguarda estructural contra el abuso de los Archimagas. Su primigenio fundacional es **Gawain el Honorable / el Justo / el Sabio** (§2.8) —no Orión, no Percival.
+
+**Despliegue** *(canónico — Hassan 2026-07-28)*. La **guardia central** de los Leones tiene residencia dentro del núcleo cerrado de Pircar (la ciudad-templo), donde custodia el Descanso Soberano y las instituciones del corazón del imperio. El **grueso de la orden** opera desde los **distritos periféricos** (§4.2) y las rutas del imperio.
 
 **Función.** Ejercen como **policía y sistema legal de Pircar**, porción central del mundo civilizado de Kindremor. Su autoridad pesa mucho más allá de la ciudad. Funciones concretas: guardia jurada de la capital, sus instituciones y los individuos bajo protección del código del Honor (incluyendo Los Corderos §5.15); y persecución de alimañas —criminales, bestias y abominaciones que amenazan el orden de Pircar.
 

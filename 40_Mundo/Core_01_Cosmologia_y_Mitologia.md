@@ -480,7 +480,7 @@ Diosa Servidora de las **estaciones**. **Calibra el Horno Madre** —el **Horno 
 
 > ⚠️ **INCONG #159 (nueva):** ¿hay correspondencia fija **trono ↔ Primigenio** (cada Descanso ligado a una emoción/senda — §1.3), o cualquier Primigenio sirve en cualquier trono? Importa para el plot de despertar a Naya'il: si los tronos son nominativos, faltar **un solo** Primigenio (p. ej. Gideon-Arghaar dañado, o Mirra en Demesteria) **bloquea toda la Comunión**. — *Pendiente de Hassan.*
 
-> ⚠️ **INCONG #160 (nueva):** Gideon **no tiene fragmento mayor** de Naya'il (§1.3) — es el décimo "fuera del esquema de los 9 Semidioses". ¿Tiene aun así un Descanso Soberano propio (son diez tronos para diez hijos), o los tronos son sólo los **nueve** de los portadores de emoción? El número "diez tronos / diez hijos" sugiere que Gideon sí tiene el suyo pese a no portar emoción. — *Pendiente de Hassan.*
+> ⚠️ **INCONG #160 — RESUELTA (Hassan 2026-07-28).** Gideon **sí tiene su propio Descanso Soberano** — son diez tronos para diez hijos, sin excepción. Pese a no portar fragmento mayor de Naya'il (§1.3), Gideon formó a su gente alrededor de su trono tras la guerra. Cuando su épica derrota de Amaru lo elevó a figura cuasi-divina, la ciudad de **Pircar** (§4.2) se construyó alrededor de este Descanso Soberano como ciudad-templo, preservando su legado como palabra sagrada. El trono de Gideon es el **corazón arquitectónico y simbólico de Pircar**.
 
 ### 1.11 El Mundo de Bolsillo y los Ejes Reguladores de los Flujos *(canónico, Hassan 2026-06-17)*
 

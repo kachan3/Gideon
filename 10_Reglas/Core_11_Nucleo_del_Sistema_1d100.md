@@ -68,7 +68,9 @@
 
 Cada habilidad tiene valor 1–100. **Nivel de Habilidad** = valor / 10 redondeado para abajo.
 
-**Los 10 atributos del sistema:**
+**Los 10 atributos del sistema se dividen en dos categorías:**
+
+**Atributos Normales:**
 - **Fuerza**
 - **Vitalidad**
 - **Agilidad**
@@ -76,6 +78,8 @@ Cada habilidad tiene valor 1–100. **Nivel de Habilidad** = valor / 10 redondea
 - **Voluntad**
 - **Inteligencia**
 - **Carácter**
+
+**Atributos de Combate:**
 - **Melee**
 - **Proyectiles**
 - **Arcana**
@@ -205,13 +209,16 @@ Cada habilidad tiene valor 1–100. **Nivel de Habilidad** = valor / 10 redondea
 | Ignamor | Flujo del calor y la energía térmica. |
 | Gelmir | Flujo de las leyes físicas y la materia. |
 
-**Asignación inicial de atributos.** Dos métodos:
-1. **Recomendado / Aleatorio.** *(fuente: X — Auto Character Sheet)* Tira **3d4 × 5** por cada atributo. Si eliges este método, ganas **un Dote de Origen extra**.
-2. **Valores fijos.** Reparte: **50, 45, 40, 35, 30, 30, 30, 20, 20, 15**.
+**Asignación inicial de atributos.** Existen dos métodos:
+1. **Valores fijos.** Reparte libremente: **50, 45, 40, 35, 30, 30, 30, 20, 20, 15**.
+2. **Aleatorio (3d4 × 5).** Tiras por cada uno de los 10 atributos. Si asignas los resultados **libremente**, funcionas normal. Pero si te comprometes a **asignarlos estrictamente en el orden en que salen** (el primer resultado a Fuerza, el segundo a Vitalidad, etc.), ganas **+1 XP inicial extra** (comenzando con 2 XP).
+   - *Mulligan (Re-asignación):* Si te comprometiste al orden estricto pero tu tirada es un desastre (No tienes al menos dos atributos >40, tienes más de tres atributos <20, y ningún atributo de combate >40), puedes cancelar el acuerdo. Pierdes el +1 XP extra y puedes reasignar esos números libremente, usar el arreglo fijo, o re-rolear.
 
 > **Nota cronológica.** M decía 50, 45, 40, 35, **35**, 30, 30, 20, 20, 15. T cambió el quinto valor de 35 → 30. **X confirma la versión de T.**
 >
 > **Tirada canónica de generación (Hassan): 3d4 × 5 → rango 15–60.** T traía "2d6 × 5" (10-60); **X y Hassan canonizan 3d4 × 5** (15-60, distribución triangular concentrada en 35-40). *[Resuelve INCONG #39]*
+
+**Integración de la Senda (Clase).** Una vez asignados los atributos base, el personaje distribuye el **Pool de Combate** (+20, +15, +10, +5) y el **Pool Normal** (+50) otorgados por su Senda directamente a sus **Habilidades Hijas**. Ninguna de las bonificaciones aplicadas durante la creación puede romper el Techo de Creación de **80** (ver Creación de Personaje).
 
 **Mejora de atributos y habilidades.**
 - **Puntos de mejora iniciales:** dependen de linaje, clase, ascendencia, edad y Nivel de Voluntad. `[ESQUELETO: tabla de puntos iniciales por combinación]`
@@ -614,25 +621,19 @@ Una caída inflige **daño contundente físico igual a los metros totales caído
 - Protección de los elementos.
 - Relativo silencio.
 
-### 11.13 Inspiración (Omen) *(fuente: T — "Inspiración (Omen)"; reemplaza a "Puntos de Profecía" de M)*
+### 11.13 Inspiración (Omen)
 
-La Inspiración se gana **realizando acciones que colaboren de alguna forma con lo especificado en tu Omen**. Algunas habilidades requieren Omen para usarse.
+La Inspiración se gana **realizando acciones que colaboren de alguna forma con lo especificado en el Omen de tu personaje**.
 
-> **Nota canónica.** M traía el concepto de "Puntos de Profecía" con reglas detalladas (máximo 2 PP, narración temporal, PP Railroad). T lo renombra a **Inspiración (Omen)** y mantiene sólo el principio nuclear (acciones según Omen). Hassan: **decidir si las reglas detalladas de PP siguen vigentes con el nuevo nombre, o si Omen es un sistema más simple/distinto**. Por ahora se conserva la idea pero queda como `[ESQUELETO: integrar reglas detalladas de PP de M (uso para re-rolear, máximo simultáneo, narración temporal, etc.) dentro del nuevo nombre Inspiración (Omen), o reescribirlas]`.
+**Usos de los Puntos de Omen:**
+- **Suerte de Héroe:** Puedes gastar un punto de Omen en cualquier momento para **ignorar totalmente una instancia de Daño**.
+- **Éxito Asegurado:** Al gastar un punto, obtienes un éxito automático con tu NE/NF en una tirada.
+- **Activar Habilidades:** Algunas habilidades y poderes específicos de senda requieren gastar puntos de Omen para activarse.
 
-**Mantengo aquí el contenido previo como propuesta, hasta tu confirmación:**
-
-**Posibles usos heredados de PP:**
-- Repetir una tirada (ataque, salvación, habilidad).
-- Activar poderes específicos de senda que requieran Inspiración.
-- Tomar control narrativo momentáneo (NPC reaction, botín deseado, resultado de acción creativa).
-
-**Posibles reglas heredadas de PP:**
-- Máximo simultáneo: 2.
-- Una vez otorgado, no obtienes otro de la misma manera hasta ganar un nivel.
-- El punto sólo se gasta cuando la acción acordada se realiza; si el DM la invalida, no se consume.
-- Si beneficia a todos los jugadores, todos los beneficiados gastan un punto.
-- "Railroad": en aventuras lineales, el DM puede otorgar puntos artificialmente.
+**Reglas de los Puntos de Omen:**
+- **Máximo simultáneo:** 2.
+- El punto solo se consume si la acción para la que se gasta es validada por el DM.
+- *(Nota de diseño: El antiguo uso de "control narrativo" o Puntos de Profecía fue eliminado para no entorpecer el ritmo de la mesa ni poner presión indebida en el Director de Juego).*
 
 ### 11.14 Tamaños
 

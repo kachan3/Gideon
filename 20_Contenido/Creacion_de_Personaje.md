@@ -4,19 +4,22 @@
 
 ---
 
-## Techo de Creación
+## Flujo de Creación y Techo Numérico
 
-> **Ninguna skill puede superar 80% al finalizar la creación de personaje**, sin importar la combinación de puntos, bonos de background, Regalos o cualquier otro modificador. Este techo aplica a la suma final de todos los factores.
+> **Ninguna skill puede superar 80 al finalizar la creación de personaje**, sin importar la combinación de puntos, bonos de background, Regalos o cualquier otro modificador. Este techo aplica a la suma final de todos los factores.
 
-El techo aplica en dos capas en orden: primero se verifica el techo de **atributos**, luego el techo de **skills hijas**. Ninguno puede superar 80 al finalizar la creación. *(Canónico — Hassan 2026-06-15.)*
+Para asegurar que los bonos se apliquen correctamente y respeten el techo de 80, los personajes deben crearse siguiendo este estricto orden matemático:
 
-**Dotado aplica después de distribuir los puntos de creación.** Si la tirada de 1d10 empuja uno o más atributos por encima de 80, el exceso no se pierde — la buena suerte se recompensa. *(Canónico — Hassan 2026-06-15.)*
-
-`[ESQUELETO: definir qué recibe el jugador por el exceso de Dotado sobre el techo — ¿puntos de skill, Especializaciones, bonos de inicio? — pendiente de Hassan]`
+1. **Paso 1: Atributos Base.** Asignar el arreglo base (o tirada) a los atributos. Las Habilidades Hijas heredan este valor.
+2. **Paso 2: Linaje.** Se suman los bonos específicos de la subespecie.
+3. **Paso 3: Origen (Trasfondo).** Se chequean los mínimos garantizados de la Dedicación contra los valores actuales (Base + Linaje). Si la habilidad lo supera, se considera **Destacada** y recibe **+5**. Si no, sube al mínimo.
+4. **Paso 4: Senda (Clase).** Asignar el **Pool de Combate** (+20, +15, +10, +5) y el **Pool Normal** (+50 puntos). 
+5. **Paso 5: Regalo y Desgracia.** Se verifica el **Techo de 80** (puntos excedentes se pierden). Luego se aplican los Regalos y Desgracias (ej. el Regalo *Dotado* tira 1d10 y se suma a todo, ignorando explícitamente el techo de 80).
+6. **Paso 6: Compra de XP.** Asignación de la experiencia inicial y resolución del Mulligan.
 
 ---
 
-## Paso 1 — Modo de Campaña
+## Paso 0 — Modo de Campaña
 
 La mesa define el modo antes de crear personajes. El modo afecta el peso del trasfondo y la relación del grupo con el Enclave del Eclipse.
 
@@ -26,18 +29,30 @@ La mesa define el modo antes de crear personajes. El modo afecta el peso del tra
 
 ---
 
-## Paso 2 — Especie y Linaje (Subespecie)
+## Paso 1 — Atributos Base
 
-Para esta demo, la única especie jugable es el **Dríade**, y el jugador debe elegir uno de los siguientes linajes, los cuales determinan el **Escalado Vital** para calcular sus puntos de vida máximos (MH = Escalado Vital × Nivel de Vitalidad):
+El núcleo numérico del personaje está compuesto por 10 Atributos: **Normales** (Fuerza, Vitalidad, Agilidad, Instinto, Voluntad, Inteligencia, Carácter) y **de Combate** (Melee, Proyectiles, Arcana).
+Todas tus **Habilidades Hijas** nacerán con el mismo valor que su Atributo Padre.
 
-- **Hijos del Viento (WindChilds):** Escalado Vital × 2
-- **Seres del Río (Riverdwellers):** Escalado Vital × 2
-- **Hijos de las Estrellas (Starchilds):** Escalado Vital × 2.5
-- **Hijos del Bosque (Forestkind):** Escalado Vital × 2.5
-- **Hijos de la Luna (Moonchilds):** Escalado Vital × 2.5
-- **Hijos del Hielo (FrostChilds):** Escalado Vital × 3
-- **Hijos de la Tierra (Earthfolks):** Escalado Vital × 3
-- **Hijos del Sol (Sunchilds):** Escalado Vital × 3
+Existen dos métodos para obtener los números de tus atributos base:
+
+1. **Valores Fijos (Arreglo):** Repartes libremente los siguientes 10 valores entre tus atributos: **50, 45, 40, 35, 30, 30, 30, 20, 20, 15**.
+2. **Aleatorio (3d4 × 5):** Tiras 3d4 y multiplicas el resultado por 5 para cada uno de los 10 atributos. (Este método habilita bonos especiales en el Paso 6 de Experiencia Inicial).
+
+---
+
+## Paso 2 — Especie y Linaje
+
+Para esta demo, la única especie jugable es el **Dríade**, y el jugador debe elegir uno de los siguientes linajes. El linaje determina el **Escalado Vital** para calcular los puntos de vida máximos (MH = Escalado Vital + Nivel de Vitalidad) y otorga **Bonos de Creación** a ciertas habilidades:
+
+- **Hijos del Viento (WindChilds):** Escalado Vital × 2. **Bono:** +10 a Evasión y +5 a Saltar.
+- **Seres del Río (Riverdwellers):** Escalado Vital × 2. **Bono:** `[ESQUELETO: bono pendiente]`
+- **Hijos de las Estrellas (Starchilds):** Escalado Vital × 2.5. **Bono:** +5 a Cronibor.
+- **Hijos del Bosque (Forestkind):** Escalado Vital × 2.5. **Bono:** +5 a cualquier habilidad de Proyectiles.
+- **Hijos de la Luna (Moonchilds):** Escalado Vital × 2.5. **Bono:** +5 a Sigilo y +5 a Ivganny (Ilusión).
+- **Hijos del Hielo (FrostChilds):** Escalado Vital × 3. **Bono:** +5 a Ignamor.
+- **Hijos de la Tierra (Earthfolks):** Escalado Vital × 3. **Bono:** +5 a una habilidad a elección de Melee, Proyectiles o Arcana.
+- **Hijos del Sol (Sunchilds):** Escalado Vital × 3. **Bono:** +5 a Ignamor.
 
 *(Ver §3 del Core para detalles estadísticos y narrativos de cada linaje).*
 
@@ -47,7 +62,7 @@ Existen otras especies que operan dentro del mismo sistema de juego pero poseen 
 
 ---
 
-## Paso 3 — Trasfondo
+## Paso 3 — Origen (Trasfondo)
 
 Todo trasfondo se compone de tres elementos independientes: **Dedicación**, **Nacimiento** y **Regalo & Perjuicio**. Los tres se combinan libremente — un Nacimiento no limita qué Dedicación puede elegirse ni viceversa.
 
@@ -221,7 +236,17 @@ La tabla usa categorías abstractas universales: el mismo resultado tiene nombre
 
 ---
 
-### 3.3 Regalos y Perjuicios
+## Paso 4 — Senda (Clase)
+
+En este paso, el jugador elige la Senda de su personaje. Como se detalla en el Core (ver §12 Sendas Mecánicas), el jugador recibe sus dos pools de creación:
+- **Pool de Combate:** Asigna los valores fijos +20, +15, +10 y +5 a cuatro Habilidades Hijas de combate distintas (de Melee, Proyectiles o Arcana).
+- **Pool Normal:** Reparte 50 puntos entre las Habilidades Hijas normales, con un máximo de +20 a una sola habilidad.
+
+*(Nota: Los dotes y rasgos específicos de la Senda se eligen también en este punto).*
+
+---
+
+## Paso 5 — Regalo y Desgracia (Perjuicios)
 
 > **Terminología *(canónico — Hassan 2026-06-29)*.** Lo que antes se llamaba "Falencia" pasa a llamarse **Perjuicio** —término neutro—: una **desventaja de origen**, no un defecto de carácter (una discapacidad no es una falla individual).
 
@@ -242,7 +267,7 @@ Algunos Regalos y Perjuicios tienen un **contrario temático** (Dotado ↔ Anti-
 
 **Dotado (Regalo) ↔ Anti-Dotado (Perjuicio)** — *contrarios temáticos; NO obligan a tomarse juntos (canónico — Hassan 2026-06-15)*
 
-> **Dotado** *(Regalo)*. Al crear el personaje, tirá 1d10 y sumalo a **todos** los atributos. Representa una excepcionalidad innata: el cuerpo y la mente del personaje nacieron fuera del rango ordinario.
+> **Dotado** *(Regalo)*. Al crear el personaje, tirá 1d10 y sumalo a **todos** los atributos. Representa una excepcionalidad innata: el cuerpo y la mente del personaje nacieron fuera del rango ordinario. **Nota:** Este bono ignora el techo de 80, permitiendo que las estadísticas lo superen en la creación.
 
 > **Anti-Dotado** *(Perjuicio)*. Al crear el personaje, tirá 1d10 y restalo de **todos** los atributos. El personaje nació en el extremo opuesto: cuerpo y mente que parten en desventaja estructural frente al promedio.
 
@@ -275,4 +300,22 @@ El +5 forma parte del total sujeto al techo de 80%.
 
 ---
 
-*Canonizado — Hassan 2026-06-15*
+## Paso 6 — Compra de XP (Experiencia Inicial)
+
+Todo personaje comienza con **1 XP** por defecto.
+
+**Bono por Aleatoriedad Extrema (+1 XP extra):** 
+Si el jugador elige generar sus atributos base tirando dados (3d4×5) y **los asigna estrictamente en el orden en el que salieron** (es decir, el primer resultado a Fuerza, el segundo a Vitalidad, y así sucesivamente), obligándose a idear el personaje de forma totalmente aleatoria, el personaje comienza el juego con **2 XP** en total en lugar de 1. 
+*Filosofía:* Esto fuerza al jugador a sacar provecho de situaciones atípicas (ej. un personaje con mucha Arcana y Melee, pero poca Inteligencia y Voluntad), recompensando el rolplay adaptativo.
+
+**Regla de Re-asignación (Mulligan):**
+La única forma de arrepentirse tras comprometerse a asignar en orden es si la tirada cumple con el criterio de **extrema mala suerte**:
+- **NO** tienes al menos dos atributos por encima de 40.
+- **Y** tienes más de tres atributos por debajo de 20.
+- **Y** ningún atributo de combate (Melee, Proyectiles, Arcana) está por encima de 40.
+
+Si se cumplen todas estas condiciones a la vez, puedes solicitar una re-asignación. Al hacerlo, pierdes el bono de +1 XP extra (volviendo a 1 XP) y puedes optar por: ir al arreglo fijo por defecto, reasignar libremente esos mismos atributos que tiraste, o re-rolear los dados por completo.
+
+---
+
+*Canonizado — Hassan 2026-07-30*

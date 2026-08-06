@@ -24,7 +24,16 @@
 
 > **Aviso.** La frase "Cada personajes," que precede a la descripción de Valor en M quedó cortada. `[ESQUELETO: completar la regla]`
 
-### 12.0 Premisa de Senda y Dedicación *(fuente: T)*
+### 12.0 Asignación de Pools en Creación *(canónico — Hassan 2026-07-30)*
+
+La Senda no dicta un rol estricto. Para garantizar que todos los personajes sean competentes tanto en combate como en otras áreas, y para permitir construcciones versátiles (como un Berserker lanzador de conjuros o un Heraldo artemarcialista), **la elección de la Senda otorga al personaje dos "Pools" de puntos en la creación**, los cuales se reparten libremente en sus **Habilidades Hijas**:
+
+- **Pool de Combate:** El jugador dispone de los valores **+20, +15, +10 y +5**. Debe asignar cada uno de estos valores a una habilidad distinta perteneciente a los Atributos de Combate (Melee, Proyectiles, Arcana).
+- **Pool Normal:** El jugador dispone de **50 puntos** para repartir libremente entre las Habilidades Hijas de los Atributos Normales (Fuerza, Vitalidad, Agilidad, Instinto, Voluntad, Inteligencia, Carácter). **Límite:** Ninguna habilidad puede recibir más de +20 puntos de este pool.
+
+*(Nota: Estos bonos se aplican **antes** de chequear los mínimos garantizados por la Dedicación, ver Creación de Personaje).*
+
+### 12.0.bis Premisa de Senda y Dedicación *(fuente: T)*
 
 **Dedicación.** Las **especializaciones** no son nada más que **Dotes de Clase entrelazados**. Pueden o no requerir pertenencia a una clase para tomarse, y suelen requerir el dote anterior necesario como prerrequisito.
 

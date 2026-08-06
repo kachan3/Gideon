@@ -95,7 +95,7 @@ Lo que el diseño real de Gideon exige para una aventura completa (y nada más):
 | Sendas nivel 1–2 | 🟡 | Honor vacía; dependen de C2 |
 | Dedicaciones / Nacimiento / Regalos & Perjuicios | 🟡 | Solo 2 Dedicaciones con mínimos (I5) |
 | Listas de conjuros | 🟡 | Mínimas (fichas 1e + §13.9 parcial) |
-| Omen/Inspiración | 🟡 | Funcional por Canva (I8) |
+| Omen/Inspiración | ✅ | Actualizado en §11.13 (sin control narrativo, añade ignorar daño) |
 | Curación natural | 🔴 | I3 — provisional fácil |
 | Resistencia del Linaje (número) | 🔴 | **C1 — crítico** |
 | Valores de Competencia | 🔴 | **C2 — crítico** |

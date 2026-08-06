@@ -37,6 +37,7 @@
 | `Core_16_Virtudes_y_Desgracias_ELIMINADA.md` | §16: sistema eliminado (histórico; rescates migrados a §18) | ⚫ |
 | `Core_17_Ritos.md` | §17: Fénix, Vínculo Dragón, 4 ritos en esqueleto | 🔴 |
 | `Core_19_Milagro_y_Pecado.md` | §19: marco narrativo, sin mecánicas | 🔴 |
+| `Core_22_Mantenimiento_y_Exploracion.md` | §22: Contadores de Ruptura, Reforje, Alert Lv y Buildings — canon 2026-08-03 | 🟢 |
 
 ## 30_Propuestas_No_Ratificadas
 | Archivo | Qué es | Madurez |

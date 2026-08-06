@@ -26,7 +26,11 @@ Las Eras son siete, en orden:
 
 **230 DA — El Alzamiento de los Cherax.** *(Canónico — Hassan 2026-05-25; año corregido a 230 DA — Hassan 2026-06-14.)* En **Pircar** (§4.2) la práctica de **Sacrificio Arcano** institucional (§13.10) — heredada del modelo aureliano de "criminales y prisioneros como combustible mágico" — se descontrola. Los **Archimagas de la Ecola Malikancia** (§5.11) "se sebaron" y comienzan a **acusar falsamente** a gente de bajos recursos y a sus enemigos políticos para entregarlos como material de **experimentos arcanos**.
 
-**Detonante:** la **Casa Cherax**, una de las casas nobles de Pircar (§6), **se opuso públicamente a la Escuela de Malik** denunciando la práctica. La Casa Cherax fue **ejecutada en represalia** por los Archimagas. Sus **Banderizos** — los clanes y casas menores vinculados por juramento a Cherax — **se alzaron en armas contra Pircar**: de ahí el nombre del evento. El alzamiento escaló a **guerra civil** de proporciones capitales.
+**Detonante:** la **Casa Cherax**, una de las casas nobles de Pircar (§6), **se opuso públicamente a la Escuela de Malik** denunciando la práctica. La Casa Cherax fue **ejecutada en represalia** por los Archimagas. Sus **Banderizos** — los clanes y casas menores vinculados por juramento a Cherax — **se alzaron contra Pircar**: de ahí el nombre del evento.
+
+**La mecánica del asedio** *(canónico — Hassan 2026-07-28)*. El Alzamiento no fue una guerra convencional. Los Banderizos **controlaron las rutas de acceso a Pircar** y ejecutaron una estrategia de **asedio económico**: instruyeron a los **campesinos** a que vivieran la buena vida, comieran lo que producían, guardaran el resto y **se olvidaran del tributo**. Además, **caballeros errantes** protegían a las poblaciones rurales de los monstruos — tarea que Pircar no podía cumplir por estar bajo presión del asedio. La periferia agrícola (~80% del territorio, §4.2) demostró ser la **verdadera fuente de poder**: sin campo, la capital se asfixia.
+
+**Duración y resolución.** En **30 días**, Pircar se vio obligada a **abrir negociaciones**. El resultado: se dejó de elegir sacrificios a dedo (el modelo arbitrario que los Archimagas habían corrompido) y se creó la casta de **Los Corderos** (§5.15), los cuales viven en el **Sancta Sanctorum** de la Capilla de Mirra (§4.2).
 
 **Consecuencias canónicas del Alzamiento:**
 - La práctica de "combustible humano arbitrario" en Pircar **se desmantela**.
@@ -35,7 +39,7 @@ Las Eras son siete, en orden:
 - La **Ecola Malikancia** (§5.11) queda con su reputación tocada `[ESQUELETO: qué les pasa institucionalmente — ¿purgas internas? ¿reforma? ¿exilio de archimagas? — pendiente de Hassan]`.
 - La **Casa Cherax** queda como mártir político fundacional del orden post-Alzamiento. `[ESQUELETO: emblema, escudo, dominios previos, posibles descendientes ocultos o reconocidos — pendiente de Hassan]`
 
-`[ESQUELETO: año exacto, duración del alzamiento, líderes nominales de los Banderizos, costo en vidas, tratado de cierre — pendiente de Hassan]`
+`[ESQUELETO: líderes nominales de los Banderizos, costo en vidas, tratado de cierre formal — pendiente de Hassan]`
 
 ### 0.2 El Arco de la Segunda Gran Guerra — hoja de ruta canónica del autor *(canónico, Hassan 2026-06-04 — SPOILER nivel DM/autor; plot fundacional, uno de los primeros que dieron semilla a este mundo)*
 
