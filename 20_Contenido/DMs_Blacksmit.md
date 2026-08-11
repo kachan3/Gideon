@@ -108,3 +108,120 @@ Punto de partida solicitado por Hassan: **las propiedades ya definidas en `Core_
 **F-5 — No es falencia (decisión de diseño).** El sistema **no prohíbe la mala optimización**; la permite. Un arma en > 0 es simplemente subóptima, no inválida (p. ej. un costal de harina = Pesada sin ventajas). Registrado en §5.
 
 **F-6 — No es falencia.** Hassan no se opone a los niveles como concepto aplicado a cosas distintas de los jugadores (armas, equipo). El uso de "nivel 1–10" para armas es correcto.
+
+---
+
+## 9. La Herrería de Armaduras *(canonizado por Hassan 2026-08-10)*
+
+> Este módulo complementa la Herrería de Armas (§§1–8) con el sistema equivalente para **diseñar y balancear armaduras** a pedido de los jugadores. Las reglas canónicas completas están en `Core_14_Equipamiento.md` §14.6.
+
+### 9.1 Principio de diseño
+
+Las armaduras, al igual que las armas, son **piezas clave de Gideon**. El motor de armaduras permite **construir cualquier armadura** a partir de una fórmula simple, sin necesidad de un catálogo exhaustivo. La variedad nace del mismo motor.
+
+### 9.2 Las tres categorías
+
+| Categoría | Puntos Asignables | General (base por tipo) | Lectura |
+|---|---|---|---|
+| **Ligera** | **1** | 0.5 | Protección básica; liviana, barata, compatible con Dotes ágiles. |
+| **Mediana** | **2** | 1.0 | Balance entre protección y movilidad; accesible a todos. |
+| **Pesada** | **3** | 1.5 | Máxima protección; requiere Dote y Carga suficiente. |
+
+- **General** se aplica automáticamente a los tres tipos de daño (S/P/B).
+- **Puntos Asignables** se distribuyen libremente (pueden fraccionarse) entre **S** (Cortante), **P** (Punzante) y **B** (Contundente) al momento de diseñar la armadura.
+
+### 9.3 La fórmula
+
+> **Multiplicador de un tipo = General + Puntos asignados a ese tipo**
+>
+> **Reducción de Daño = Multiplicador × Nivel de Equipo (round down)**
+
+El jugador anota en su ficha los **tres números finales** (ej. S:7 / P:2 / B:2). En combate solo consulta esos valores.
+
+### 9.4 Nivel de Equipo (1–10)
+
+Mismo concepto que en armas (§3): representa la **calidad y estatus** de la pieza.
+
+| Nivel | Significado |
+|---|---|
+| 1 | Improvisado, mala calidad |
+| 5 | Estándar militar |
+| 10 | Mítico / divino |
+
+### 9.5 Requisitos de portado
+
+**Ligeras y medianas:** sin restricciones. Cualquier personaje puede portarlas.
+
+**Pesada:** requiere cumplir **ambas** condiciones:
+
+1. **Dote: Entrenado en Armadura Pesada** (varias clases lo otorgan de base).
+2. **Nivel de Carga ≥ Nivel de Equipo** de la armadura.
+
+**Sin cumplir cualquiera:** el personaje obtiene la protección pero sufre:
+
+- Tiradas de **Fuerza, Agilidad, Melee y Proyectiles** → **Difícil**.
+- **No puede realizar componentes somáticos**.
+- **Pierde una acción** por turno.
+
+**Penalizaciones inherentes de la pesada** (incluso cumpliendo requisitos): desventaja en **sigilo**, posibles modificadores a discreción del DM.
+
+### 9.6 Plantilla para construir una armadura a pedido
+
+1. Elegir **categoría** → fija los Puntos Asignables y el General.
+2. Elegir **Nivel de Equipo (1–10)** → determina la potencia y los requisitos (en pesada: Carga ≥ NE).
+3. **Distribuir los Puntos Asignables** entre S, P y B (pueden fraccionarse).
+4. Calcular **Multiplicador** de cada tipo = General + Asignado.
+5. Calcular **Reducción** de cada tipo = Multiplicador × Nivel de Equipo (round down).
+6. Anotar los tres valores finales en la ficha.
+
+### 9.7 Ejemplos de diseño
+
+#### Ejemplo A — Gambesón acolchado (ligera, NE 3, anti-contundente)
+
+Un jugador quiere un gambesón barato que amortigüe golpes. Nivel 3 (artesano local).
+
+| Tipo | General | Asignado | Mult | × NE 3 | **Reducción** |
+|---|---|---|---|---|---|
+| S | 0.5 | 0 | 0.5 | 1.5 | **1** |
+| P | 0.5 | 0 | 0.5 | 1.5 | **1** |
+| B | 0.5 | 1 | 1.5 | 4.5 | **4** |
+
+**Ficha:** S:1 / P:1 / B:4
+
+#### Ejemplo B — Cota de malla (mediana, NE 5, anti-cortante y punzante)
+
+Armadura estándar militar. El jugador distribuye: 1 en S, 1 en P, 0 en B.
+
+| Tipo | General | Asignado | Mult | × NE 5 | **Reducción** |
+|---|---|---|---|---|---|
+| S | 1.0 | 1 | 2.0 | 10 | **10** |
+| P | 1.0 | 1 | 2.0 | 10 | **10** |
+| B | 1.0 | 0 | 1.0 | 5 | **5** |
+
+**Ficha:** S:10 / P:10 / B:5
+
+#### Ejemplo C — Armadura de placas ceremonial (pesada, NE 7, balanceada)
+
+Un paladín con el Dote y Carga 7. Distribuye: 1 en S, 1 en P, 1 en B.
+
+| Tipo | General | Asignado | Mult | × NE 7 | **Reducción** |
+|---|---|---|---|---|---|
+| S | 1.5 | 1 | 2.5 | 17.5 | **17** |
+| P | 1.5 | 1 | 2.5 | 17.5 | **17** |
+| B | 1.5 | 1 | 2.5 | 17.5 | **17** |
+
+**Ficha:** S:17 / P:17 / B:17
+
+#### Ejemplo D — Armadura especializada anti-lanza (pesada, NE 5, concentrada en P)
+
+Un guerrero que enfrenta piqueros. Concentra: 0 en S, 3 en P, 0 en B.
+
+| Tipo | General | Asignado | Mult | × NE 5 | **Reducción** |
+|---|---|---|---|---|---|
+| S | 1.5 | 0 | 1.5 | 7.5 | **7** |
+| P | 1.5 | 3 | 4.5 | 22.5 | **22** |
+| B | 1.5 | 0 | 1.5 | 7.5 | **7** |
+
+**Ficha:** S:7 / P:22 / B:7
+
+> **Nota para el DM.** Concentrar todos los puntos en un solo tipo genera armaduras muy especializadas. Esto es intencional: el jugador sacrifica protección general a cambio de supremacía contra un tipo de daño. El entorno (enemigos, campaña) determina si esa apuesta es sabia o temeraria.

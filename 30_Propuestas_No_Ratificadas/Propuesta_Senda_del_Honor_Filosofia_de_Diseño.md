@@ -1,8 +1,9 @@
 # Propuesta — Filosofía de Diseño: Senda del Honor
 
-> **Estado:** PRE-CANON — Propuesta de diseño en análisis. NO incorporar al Core hasta aprobación final.
+> **Estado:** ✅ INCORPORADO AL CORE — 2026-08-06. Los elementos canónicos fueron trasladados a `20_Contenido/Senda_Honor/` y los archivos Core fueron actualizados.
 > **Autor del diseño:** Hassan
 > **Fecha de inicio:** 2026-08-03
+> **Fecha de incorporación:** 2026-08-06
 > **Documento generado por:** Sesión de diseño colaborativo (Hassan + Antigravity)
 
 ---
@@ -167,20 +168,18 @@ Cada combinación genera un arquetipo distinto (Duelista, Guardián, Comandante,
 ### Mecánica Base
 
 - El personaje **declara en voz alta** qué va a lograr.
-- Usa **Honor en lugar de otra habilidad** para checks relacionados con el voto.
-- **Cuesta Mana** — moldear la realidad con palabras es un acto cuasi-divino que desgasta el alma.
-- Solo puede tener **1 Compromiso Solemne activa** a la vez. Declarar una nueva reemplaza la anterior (con penalización, ver §4.7).
+- **Coste Dinámico:** Moldear la realidad cuesta **Maná igual a tu Nivel de Honor**.
+- Solo puede tener **1 Compromiso Solemne activo** a la vez. Declarar uno nuevo reemplaza el anterior (con penalización, ver §4.7).
+- **Acción Gratuita — "¡Mi Honor lo Exige!":** Mientras el compromiso esté activo, obtienes acceso a esta Free Action (una vez por turno). Si fallas una tirada relacionada con cumplir tu compromiso, puedes usarla para lanzar una **tirada de Honor**. Si tienes éxito, este éxito reemplaza al fallo anterior.
+- **Reserva de Usos:** Tienes un número de usos de "¡Mi Honor lo Exige!" igual a tu **Nivel de Honor**.
+- **Recarga Castigadora:** Si agotas tus usos antes de cumplir el voto, para recuperar usos debes declarar un Nuevo Compromiso, lo que cuenta como un **Abandono** del anterior.
 
-### §4.1 Coste de Mana
+### §4.1 Coste de Mana Dinámico
 
-Usar un Compromiso Solemne es esencialmente canalizar una fracción del poder de Veritae — la voluntad del mundo no se dobla gratis. El alma del Honor actúa como conducto.
+Usar un Compromiso Solemne es esencialmente canalizar una fracción del poder de Veritae. El sistema se auto-regula mediante economía de recursos:
+Declarar un Compromiso Solemne cuesta un **Punto de Maná por cada Nivel de Honor** que tenga el personaje (Ej. Nivel 4 = 4 Maná).
 
-| Opción | Coste | Notas |
-|---|---|---|
-| **Coste fijo** | X puntos de Mana al declarar | Simple, predecible, fácil de balancear |
-| **Restar NE del Mana** | Los NE obtenidos en checks bajo el Compromiso Solemne se restan del Mana | Elegante: cuanto mejor te sale, más te cuesta |
-
-> **[DECISIÓN PENDIENTE]** ¿Coste fijo o restar NE?
+A mayor Honor, tus palabras te otorgan más usos mecánicos (Nivel de Honor), pero tienen un coste espiritual mucho más pesado.
 
 ### §4.2 Restricciones Formales
 
@@ -276,11 +275,11 @@ Se puede hacer. Pero la primera tirada fallida — cualquier check que no pase �
 
 > *"Juro que derrotaré al Dragón Ancestral."* (el villano final de la campaña)
 
-Esto es **legal** y **poderoso**: el jugador puede usar Honor para todos los checks relacionados con perseguir y derrotar al Dragón. Pero tiene un coste enorme:
+Esto es **legal** y **poderoso**: otorga usos de "¡Mi Honor lo Exige!" para checks contra el Dragón. Pero tiene un coste enorme:
 
 - **No recibirá la recompensa de Honor hasta que lo logre** — posiblemente la campaña entera.
-- **Su Compromiso Solemne está bloqueada** — no puede declarar otra.
-- Si abandona, sufre penalización ×2 del voto épico (−2d10).
+- **Su Compromiso Solemne está bloqueada** — una vez que gaste sus usos, no tendrá más recargas sin penalización.
+- Si abandona o recarga declarando otro compromiso, sufre penalización ×2 del voto épico (−2d10).
 
 **Esto NO es un bug — es una feature.** Representa al héroe que apuesta TODO a una causa. Es temáticamente perfecto (Gawain apostó todo en Alta Roca).
 
@@ -313,9 +312,9 @@ Esto es **legal** y **poderoso**: el jugador puede usar Honor para todos los che
 | | Fácil de cumplir | Difícil de cumplir |
 |---|---|---|
 | **Recompensa** | Baja (+1d4) | Alta (+1d10) |
-| **Duración** | Corta (libera el slot rápido) | Larga (bloquea por sesiones/campaña) |
-| **Riesgo** | Bajo | Alto (más tiempo = más oportunidades de fallar) |
-| **Uso táctico** | Breve | Prolongado |
+| **Duración** | Corta (consume usos rápidamente) | Larga (bloquea el slot a largo plazo) |
+| **Riesgo** | Bajo | Alto (riesgo de agotar usos sin poder recargar) |
+| **Uso táctico** | Breve | Prolongado pero finito |
 
 **Matriz 2×2 combinada:**
 

@@ -83,9 +83,11 @@ Bípedos humanoides corpulentos. **Son tan inteligentes como los Dríades** y po
 
 **Mecánica especial: Placenta artificial.** Pueden vomitar voluntariamente una placenta artificial, llenarla de sangre e incubarse dentro. En ese estado pueden mutar u obtener habilidades extravagantes (toque eléctrico, saliva venenosa/ácida, octocamuflaje, etc.).
 
-**Cuatro especies:**
+**Seis especies:**
 - Diablos de las arenas — `[ESQUELETO]`
 - Gekko — `[ESQUELETO]`
+- Hombres Sapo — `[ESQUELETO]`
+- Hombres Tortuga — `[ESQUELETO]`
 - Nagas — `[ESQUELETO]`
 - Saurios — `[ESQUELETO]`
 

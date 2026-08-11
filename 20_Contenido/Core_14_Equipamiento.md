@@ -57,39 +57,52 @@ Niveles 1-10. Las nv 1 son improvisadas de madera y piedra; las nv 10 son maravi
   - Cuando tengas un abanico de guerra puedes **intentar amortiguar caídas**. Se resuelve con una **tirada de Artes Marciales vs el ataque/daño de la caída**: si la superas, reduces o anulas el daño.
   - Los maestros pueden utilizarlo para **reposicionarse en el aire**.
 
-### 14.6 Armaduras
+### 14.6 Armaduras *(reescrito — canonizado por Hassan 2026-08-10)*
 
-Tres categorías: ligeras, medianas, pesadas. Necesitas competencia para portarlas. Una a la vez. Tamaño adecuado. Para tamaños distintos al normal: precio se duplica/divide según corresponda.
+Tres categorías: **ligeras**, **medianas** y **pesadas**. Solo se puede portar **una a la vez** y debe ser de **tamaño adecuado** (para tamaños distintos al normal: precio se duplica/divide según corresponda).
 
-**Medianas y pesadas:** suman al **Blindaje**, reducen la **Evasión** (sin pasar a negativos).
+#### 14.6.1 Motor de Armaduras — Multiplicadores S/P/B × Nivel de Equipo
 
-**Sin competencia:**
-- **Media:** desventaja al ataque y a las tiradas de Evasión.
-- **Pesada:** ½ velocidad, desventaja en todas las tiradas de Fuerza, Vitalidad y Agilidad (Voluntad y Carácter se salvan), desventaja en ataques y pruebas de Fuerza/Agilidad/Instinto. +1 cansancio por hora puesta a menos que estés sentado (máx. 3 niveles).
+Toda armadura se define por **tres multiplicadores** correspondientes a los tres tipos de daño físico:
 
-**Armadura pesada:** desventaja en sigilo y posibles modificadores a otras pruebas. **Tres adaptaciones** elegibles (una contra cortante, otra contra punzante, otra contra contundente). Composición: Yelmo, Coraza, dos Guanteletes, Grebas — cada parte aumenta el umbral en su parte del cuerpo.
+> **S / P / B = Cortante (Slashing) / Punzante (Piercing) / Contundente (Bludgeoning)**
 
-**Umbral L/N/G** — ligero/normal/grave.
+Cada categoría de armadura otorga:
 
-**Resistencia.** Si recibes esa cantidad de daño, la armadura se rompe perdiendo 1 de todas sus protecciones; al llegar Blindaje a 0, queda inutilizable.
+| | Puntos Asignables | General (base por tipo) |
+|---|---|---|
+| **Ligera** | **1** | 0.5 |
+| **Mediana** | **2** | 1.0 |
+| **Pesada** | **3** | 1.5 |
 
-| Armadura | Categoría | Blindaje | Evasión | Umbral | Resistencia | Precio |
-|---|---|---|---|---|---|---|
-| Gambesón | Ligera | +1 | — | 1/0 | 12 | 10 |
-| Cuero | Ligera | +2 | — | 1/1/0 | 15 | 45 |
-| Cuero Endurecido | Ligera | +3 | — | 1/2 | 18 | 75 |
-| Cuero Remachado | Media | +4 | −1 | 1/2 | 20 | 150 |
-| Cuero Reforzado | Media | +5 | −2 | 2/3 | 22 | 250 |
-| Cuero y Malla | Media | +6 | −3 | 2/3 | 25 | 400 |
-| Cota de Malla | Pesada | +6 | −4 | 2/4 | — | 750 |
-| Armadura de Láminas | Pesada | +7 | −5 | 3/4/5 | — | 1,500 |
-| Armadura de Placas | Pesada | +8 | −6 | 3/5 | — | 2,500 |
+- **General** es un valor base que se aplica a los **tres tipos de daño** por igual.
+- **Puntos Asignables** se distribuyen libremente (pueden fraccionarse) entre S, P y B al momento de **diseñar o forjar** la armadura.
 
-#### 14.6.1 Sistema canónico de armaduras x/y/z + Nivel *(ratificado por Hassan)*
+El **multiplicador final** de cada tipo es:
 
-Los valores **x/y/z** que aparecen en la columna "Umbral" son los tres tipos de daño físico, **en este orden**:
+> **Multiplicador = General + Puntos asignados a ese tipo**
 
-> **x / y / z = Cortante / Punzante / Contundente**
+La **Reducción de Daño** efectiva para cada tipo es:
+
+> **Reducción = Multiplicador × Nivel de Equipo (round down)**
+
+**Ejemplo — Armadura ligera, 1 punto asignado a Cortante, Nivel de Equipo 5:**
+
+| Tipo | General | Asignado | Multiplicador | × NE 5 | **Reducción** |
+|---|---|---|---|---|---|
+| S (Cortante) | 0.5 | 1 | **1.5** | 7.5 | **7** |
+| P (Punzante) | 0.5 | 0 | **0.5** | 2.5 | **2** |
+| B (Contundente) | 0.5 | 0 | **0.5** | 2.5 | **2** |
+
+**Ejemplo — Armadura pesada, distribución 1/1/1, Nivel de Equipo 5:**
+
+| Tipo | General | Asignado | Multiplicador | × NE 5 | **Reducción** |
+|---|---|---|---|---|---|
+| S (Cortante) | 1.5 | 1 | **2.5** | 12.5 | **12** |
+| P (Punzante) | 1.5 | 1 | **2.5** | 12.5 | **12** |
+| B (Contundente) | 1.5 | 1 | **2.5** | 12.5 | **12** |
+
+> **Nota de diseño.** El jugador anota en su ficha los **tres números finales de Reducción** (ej. 7/2/2). Los multiplicadores solo se usan al diseñar o adquirir la armadura; en combate, se consultan los tres valores directamente.
 
 Cada armadura tiene además un **Nivel de Equipo** (1–10) que representa su **calidad y estatus**:
 
@@ -99,22 +112,56 @@ Cada armadura tiene además un **Nivel de Equipo** (1–10) que representa su **
 | 5 | Estándar militar |
 | 10 | Mítico / divino |
 
-**Cómo escalan los valores x/y/z.** El **número** x/y/z es la **protección por categoría de daño**, y **escala con el nivel del equipo**. Ejemplos canónicos:
-- **Nivel 5 (estándar militar)** con perfil **1/1/0** → armadura normal.
-- **Nivel 5** con perfil **2/2/1** → armadura de calidad espectacular para su nivel.
+#### 14.6.2 Requisitos de Portado *(canonizado por Hassan 2026-08-10)*
 
-**Requisitos de portado.** En las **armaduras pesadas** el **Nivel de Equipo** determina los requisitos para portarlas (Fuerza, Vitalidad u otros condicionantes). A mayor nivel, mayores requisitos.
+**Armaduras ligeras y medianas:** cualquier personaje puede portarlas sin requisitos especiales.
 
-**Idea de balance (matriz de resolución):**
-- **Nivel del arma** se enfrenta al **Nivel de la armadura** (calidad vs calidad).
-- **Nivel de Fuerza** del atacante se enfrenta al **Nivel de Vitalidad** del defensor.
-- El **NE** (Nivel de Éxito) de la tirada decide quién gana el enfrentamiento.
+> **¿Por qué elegir ligera sobre mediana?** Peso menor, precio menor, y ciertos **Dotes** requieren armadura ligera para activarse.
 
-> **Notas operativas:**
-> - Las **Tres adaptaciones** mencionadas arriba (cortante/punzante/contundente) son los tres slots x/y/z.
-> - La **composición de la armadura pesada** (Yelmo, Coraza, dos Guanteletes, Grebas) aumenta el umbral en la zona corporal correspondiente al impactar.
-> - La columna "Resistencia" en las pesadas queda **omitida hasta ratificación**: si el balance corre por el NE, puede que la Resistencia simplemente sea función del Nivel de Equipo (p.ej. `Resistencia = Nivel × constante`). `[ESQUELETO: fórmula exacta de Resistencia por Nivel — pendiente]`
-> - El cambio canoniza que **los valores numéricos antiguos en la tabla** (1/1/0, 2/3, 3/4/5, etc.) representan **el perfil x/y/z** de una armadura **a su nivel de catálogo**. El nivel implícito del catálogo de M es ~5 (estándar militar) salvo que se diga otra cosa.
+**Armadura pesada:** requiere cumplir **dos condiciones** para portarla con comodidad:
+
+1. **Dote: Entrenado en Armadura Pesada.** Varias clases lo obtienen de base.
+2. **Nivel de Carga ≥ Nivel de Equipo** de la armadura.
+
+**Sin cumplir cualquiera de las dos condiciones** (o ambas), el personaje obtiene los beneficios defensivos de la armadura pero sufre las siguientes penalizaciones:
+
+- Todas las tiradas de **Fuerza, Agilidad, Melee y Proyectiles** se consideran **Difícil**.
+- **No puede realizar componentes somáticos** para lanzar hechizos.
+- **Pierde una acción** por turno.
+
+| Categoría | Requisitos | Sin cumplir requisitos |
+|---|---|---|
+| **Ligera** | Ninguno | N/A |
+| **Mediana** | Ninguno | N/A |
+| **Pesada** | Dote: Entrenado en Armadura Pesada + Nivel de Carga ≥ NE | Difícil en FUE/AGI/Melee/Proyectiles, sin somáticos, −1 acción |
+
+**Armadura pesada (penalizaciones inherentes incluso con requisitos cumplidos):** desventaja en **sigilo** y posibles modificadores a otras pruebas a discreción del DM.
+
+#### 14.6.3 Composición de Armadura Pesada
+
+Las armaduras pesadas se componen de piezas: **Yelmo, Coraza, dos Guanteletes, Grebas**. Cada parte aumenta el umbral en su zona corporal correspondiente.
+
+#### 14.6.4 Resistencia
+
+Si recibes una cantidad de daño igual o superior a la **Resistencia** de la armadura, esta se rompe perdiendo 1 de todas sus protecciones; al llegar la Reducción a 0 en todos los tipos, queda inutilizable.
+
+> `[ESQUELETO: fórmula exacta de Resistencia por Nivel de Equipo — pendiente. Posible: Resistencia = Nivel × constante.]`
+
+#### 14.6.5 Catálogo de referencia (tabla legado, NE implícito ~5)
+
+> **Nota:** Los valores de esta tabla representan armaduras a **Nivel de Equipo ~5** (estándar militar). Con el nuevo motor, estos valores se recalcularían usando los multiplicadores correspondientes. La tabla se conserva como referencia de catálogo.
+
+| Armadura | Categoría | Blindaje (legado) | Evasión (legado) | Perfil S/P/B (legado) | Resistencia | Precio |
+|---|---|---|---|---|---|---|
+| Gambesón | Ligera | +1 | — | 1/0/0 | 12 | 10 |
+| Cuero | Ligera | +2 | — | 1/1/0 | 15 | 45 |
+| Cuero Endurecido | Ligera | +3 | — | 1/2/0 | 18 | 75 |
+| Cuero Remachado | Media | +4 | −1 | 1/2/0 | 20 | 150 |
+| Cuero Reforzado | Media | +5 | −2 | 2/3/0 | 22 | 250 |
+| Cuero y Malla | Media | +6 | −3 | 2/3/0 | 25 | 400 |
+| Cota de Malla | Pesada | +6 | −4 | 2/4/0 | — | 750 |
+| Armadura de Láminas | Pesada | +7 | −5 | 3/4/5 | — | 1,500 |
+| Armadura de Placas | Pesada | +8 | −6 | 3/5/0 | — | 2,500 |
 
 *[Resuelve INCONG #21]*
 

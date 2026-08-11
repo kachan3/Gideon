@@ -189,6 +189,21 @@ Patriarca protector de los hombres lagarto. **Su mito no coincide con su realida
 
   Su figura pública es **Percival**, figura heroica que la sociedad y la mayoría de los Leones adoran como primigenio del Honor. Solo el círculo interno —los **Paladines** (y **Alioth**, que lo descubrió por el olfato — §5.14)— conoce la verdad. Ver §5.14.
 
+  **Gawain y la Voluntad Superior** *(canónico — Hassan 2026-08-03).* Gawain en muchas formas era similar a Gideon y era **el más cercano a lograr alinearse con la voluntad superior** del mundo — la misma fuerza que hoy canaliza la Senda del Honor (ver `20_Contenido/Senda_Honor/Honor_00_Filosofia_de_Diseño.md`). Lo único que le faltó fue **Flexibilidad y Humildad**. Su rigidez — la misma que lo hizo inquebrantable en Alta Roca — fue lo que le impidió trascender. La Senda del Honor hereda esa **grandeza incompleta**: poder inmenso, pero con una fragilidad inherente.
+
+  **El Mito de la Quimera de Baltia y las Cuatro Escuelas** *(canónico — Hassan 2026-08-10).*
+  En el Siglo III, luego de que Amaru fuera desterrado a la luna y mientras los dríades intentaban colonizar Kindremor, Gawain dejó momentáneamente su **Trono Soberano** en las regiones del este (actual Continente Rojo, entonces llamado *Baltia* o "Lejos" en idioma dríade) para atender otros asuntos. Al regresar 20 años después, encontró a su asentamiento diezmado y aterrado por una poderosa Quimera que se escondía en el monte Praxia: un monstruo con cuerpo y cabeza de león, cabezas adicionales de cabra y dragón, alas y cola de serpiente.
+  
+  La Quimera representaba los instintos más bajos e impulsivos del ser humano. Gawain, como un héroe mitológico, fue a enfrentarla, pero en lugar de usar fuerza bruta **logró dominarla con engaños**. Apeló a la arrogancia de la bestia y la guió para enfrentarse a uno de los dragones primigenios, "Naladaran", engañándola al decirle que él mismo lo había derrotado en el pasado `[ESQUELETO: Detallar el ardid exacto de Gawain como muestra de la supuesta derrota del dragón]`.
+  
+  Tres años después, Gawain regresó a su Trono Soberano **montado sobre la fiera domada**. De este acto de dominio sobre los bajos instintos nacen las **Cuatro Escuelas de Caballería** del Honor:
+  - **Los Leones:** La cara visible, orgullosos e imponentes. Hacen cumplir la ley y transforman el instinto de Orgullo en respeto y dignidad.
+  - **Las Cabras:** Representan el trabajo constante, duro y la perseverancia incansable.
+  - **Los Dragones:** Representan la fuerza aplastante y la capacidad destructiva (la capacidad de matar) redirigida exclusivamente hacia los injustos y quienes amenazan a los reinos dríades.
+  - **Las Serpientes:** Representan la sutileza. Para mantener la paz y el orden, a veces se debe mantener el control desde lo invisible, mediante influencias, leyes y acciones que "no se ven". Las Serpientes recuerdan a todos los caballeros que siguen los pasos de Gawain que **el verdadero honor es el que realizas cuando nadie te ve**, el que cargas en secreto; y no por ello es menos firme o fiable.
+
+  **El Voto Inconcluso a la Quimera.** Con los años, bestia y hombre formaron una genuina amistad. Cuando la guerra contra Amaru recrudeció, Gawain debió partir de Baltia para reforzar las defensas de Kindremor. Antes de irse, **le juró a la Quimera que volvería a verla** cuando la guerra terminara. Es una promesa que no ha podido cumplir, atrapado como está en su maldición de no-muerte en Pircar. Hoy en día, la Quimera sigue esperándolo en las ruinas del Trono Soberano, custodiándolo celosamente de cualquier intruso. En la actualidad, toda esa región del Continente Rojo es considerada una **mega-dungeon**, y la Quimera milenaria actúa como un obstáculo de escala narrativa (una fuerza de la naturaleza y el dolor motivada por la lealtad) más que como un simple enemigo mecánico.
+
 - **Valian el Bravo** — Primigenio del Valor *(probable, confirmar)*. **Mejor amigo de Gideon** (ver §2.1). *(Canónico — Hassan 2026-05-28.)*
   **Rol en el Golpe Final.** **Le cortó la cola a Amaru** durante el vuelo de Gideon para que no pudiera golpearlo al pasar — pieza 4 de la coreografía de §1.5.3.
   **Estado actual.** `[ESQUELETO — Hassan]`

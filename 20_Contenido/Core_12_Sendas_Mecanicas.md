@@ -91,7 +91,14 @@ Cuando entres en la pose, si eliges entrar en modo Salto de la Pluma, debes atac
 
 **Castigar** (cita): *"Si hay algo que le gusta más a los muchachos que salvaguardar a los inocentes es fustigar a las alimañas." ~ Clayton Siredal, Mariscal de los Leones de Pircar*
 
-`[ESQUELETO: proficiencias iniciales, niveles 1, 2, 3+ — sólo aparece el flavor. T también la lista vacía: pendiente de redacción]`
+> **Mecánicas completas de la Senda del Honor** desarrolladas en la carpeta dedicada `20_Contenido/Senda_Honor/`. La Senda del Honor posee un sistema propio con tres pilares mecánicos únicos:
+> - **Atributo Honor (0–99)** — Atributo extra exclusivo, mejora solo por decisión del DM (no por XP). Ver `Senda_Honor/Honor_01_Atributo_Honor.md`.
+> - **Juramento Declarado** — Sistema de feats que construyen un juramento progresivo con ventajas mecánicas y narrativas. Ver `Senda_Honor/Honor_02_Juramento_Declarado.md`.
+> - **Compromiso Solemne** — Declaración in-game que permite usar Honor en lugar de otra habilidad. Cuesta Mana. Ver `Senda_Honor/Honor_03_Compromiso_Solemne.md`.
+>
+> Filosofía de diseño y conexión con Veritae en `Senda_Honor/Honor_00_Filosofia_de_Diseño.md` y `Senda_Honor/Honor_04_Veritae_y_Multiclase.md`.
+
+**Nota filosófica.** A diferencia de las demás Sendas, el Honor no demanda bondad ni virtud — demanda **honestidad y carácter**. El atributo Honor mide la alineación entre palabra y acción, no moralidad. Un tirano que cumple sus promesas gana Honor; un héroe que miente lo pierde. Los seguidores de esta Senda son **conductos de la voluntad del mundo**: la realidad misma guía sus acciones cuando sus palabras son verdaderas. *(Canónico — Hassan 2026-08-03.)*
 
 ### 12.3 Berserker
 **Lore.** La furia y la sed de venganza guían este camino. Definida por la ira y el odio, impulsada por un pánico desesperado por perder lo más preciado.

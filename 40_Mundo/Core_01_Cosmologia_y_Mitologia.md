@@ -2,8 +2,11 @@
 
 ## 1. COSMOLOGÍA Y MITOLOGÍA
 
-### 1.1 Los Dos Dioses
+### 1.1 Los Dos Dioses y El Creador Original
 
+**El Creador Original** — La mente unida de la que se dividieron Amaru y Naya'il. De este ente primordial no queda forma física ni presencia activa en los asuntos cósmicos, excepto por un eco persistente: **El Errante**.
+
+> **El Errante.** Es una figura misteriosa que incluso para los propios dioses hermanos resulta un enigma. Se manifiesta como un **anciano con túnicas moradas encapuchadas**, apareciendo en los momentos más inoportunos. Sus mensajes e interacciones son tan extraños que no queda claro si son anécdotas, leyendas rurales o mitos populares. Sin embargo, lo que despierta la atención de los más trotamundos es que en todos los rincones de Kindremor, las personas más inesperadas afirman haber tenido un encuentro con él. El Errante no es un dios activo, sino **el eco de la mentalidad unida del Creador original**.
 **Naya'il** — Hija de las estrellas, nacida del éter. Es el alma, el deseo y la esperanza personificada; encarna el bien y el mal, el amor y el odio, el miedo y el valor. **Encarna el polo Mente / alma del eje Mente–Cuerpo de Kindremor** (ver §1.4.0). Descubre la magia. Andrógina pero suele tomar aspecto femenino. **Sigue viva, pero dormitando**: tras la fractura descansa en su **Retiro Astronómico**, en la cima de **la montaña más alta del mundo**, rodeada por una fortaleza ilusoria. Allí **sólo sueña y mira las estrellas**, intentando leer un futuro y meditando sobre qué hacer a continuación — **mientras sus hijos sangran en la tierra** *(canónico, Hassan 2026-06-04)*.
 
 > **El Retiro Astronómico NO es la Ciudadela Flotante** *(resuelve INCONG #141 — Hassan 2026-06-04)*. Son **dos lugares distintos**: el **Retiro Astronómico** es el lecho actual de Naya'il (cima de la montaña más alta, fortaleza ilusoria, solo de ella); la **Ciudadela Flotante** (§4.0.2) es el hogar ancestral de **ambos** dioses, hoy suspendido en el aire, donde **Diana** está atrapada (§2.8). La opción "mismo lugar" queda **descartada**. Lo que Amaru le arrancó no son "restos" (no murió) sino **fragmentos** (o **aspectos**) de su alma. Cada nacimiento de Dríade le cuesta un fragmento de su alma, y todas las almas vuelven a ella en la muerte. A veces pasea por Kindremor a través de Avatares, cuyas apariciones cargadas de simbolismo guían a individuos a momentos decisivos. Los Dríades suelen confundir a estos Avatares con espíritus, fantasmas o ilusiones.
@@ -22,7 +25,9 @@
 
 > **Cúpula debilitada.** Su sueño tiene una consecuencia cósmica directa: la cúpula que protegía a Kindremor del exterior se ha debilitado, permitiendo la irrupción de fuerzas extranjeras desde planos con ejes ajenos (Bien/Mal, Caos/Orden, etc.) — ver §1.4.0 y §1.4.
 
-**Amaru el Creador** — Carne personificada, padre de todos los cuerpos vivos. **Encarna el polo Cuerpo / carne del eje Mente–Cuerpo de Kindremor** (ver §1.4.0). Aspecto físico desconocido: su forma es decisión momentánea. De niño moldeaba muñecos de barro a los que Naya'il insuflaba vida. Tras lo que la mitología popular llama "la traición" declaró guerra a los Dríades. Murió por la mano de Gideon, estallando en mil pedazos cuya sangre llovió sobre el mundo. Su sangre sigue dentro de cada Dríade, buscando recomponerse — por eso los Dríades son los más vulnerables a la magia de sangre.
+**Amaru el Creador** — Carne personificada, padre de todos los cuerpos vivos. **Encarna el polo Cuerpo / carne del eje Mente–Cuerpo de Kindremor** (ver §1.4.0). De niño, Amaru era un chico robusto y sano, con una apariencia ligeramente bovina y humana (como un ternero de forma cuadrada pero con bordes redondos). Tenía un flequillo desordenado que le tapaba completamente los ojos, y su presencia, asociada a una vibrante paleta de verde y rosa, emanaba la esencia de un "gigante noble". De niño moldeaba muñecos de barro a los que Naya'il insuflaba vida. Tras lo que la mitología popular llama "la traición" declaró guerra a los Dríades. Murió por la mano de Gideon, estallando en mil pedazos cuya sangre llovió sobre el mundo. Su sangre sigue dentro de cada Dríade, buscando recomponerse — por eso los Dríades son los más vulnerables a la magia de sangre.
+
+> **Juventud y Naturaleza A-Moral (canon, Hassan).** Para entender la tragedia de Amaru, hay que comprender que en esencia es un gigante noble. **PERO**, es crucial destacar que en su adolescencia y adultez es un ser **A-Moral** (que no Inmoral). Simplemente carece de los mismos preceptos humanos; para él, conceptos como el sexo, la desnudez, u otras formas de mesura social y moral son construcciones sin ningún sentido ni razón de ser. Él es la naturaleza pura e instintiva.
 
 > **Naturaleza real de Amaru (capa iniciática — ver §1.1.bis).** Amaru **NO es un dios que desee sufrimiento ni aniquilación**. Es dios de **la Naturaleza, la Vida y la Prosperidad**. La narrativa popular ("declaró guerra a los Dríades por traición") es **versión oficial de capa 1–3** (§1.6). La verdad operativa que sólo conocen Gideon y el Oscuro/Olvidado (Theledar) es otra — ver §1.1.bis "El Secreto".
 
@@ -133,6 +138,22 @@ Los nueve **fragmentos mayores** del alma de Naya'il tienen conciencia propia. C
 **Paradero de los Semidioses (canónico — Hassan 2026-05-25).** *Mirra es la única primigenia que está en otro plano* (Demesteria, §1.4.1 / §2.3). Todos los demás están en Kindremor. **Gideon** vaga por la tierra como **vagabundo**, con **daño cerebral** por el golpe que Amaru le propinó antes de morir — apenas recuerda quién fue (ver §2.1). El paradero **individual** del resto (Alioth, Valian, Gawain, Theledar, Diana, Tanwyn, Rayan, Priscila) queda como esqueleto narrativo a desarrollar: están en el mundo, no fuera de él. *(Resuelve INCONG #59.)*
 
 `[ESQUELETO: paraderos específicos, personalidades y relación de cada Semidiós con su receptáculo — pendiente, pero queda confirmado que ninguno salvo Mirra está fuera del plano Mente–Cuerpo]`
+
+#### 1.3.1 Herencia de las Sendas — Regla Cosmológica *(canónico — Hassan 2026-08-03)*
+
+Las Sendas son **heredadas** de los Primigenios a los Dríades. Actos que sucedieron en vida, muerte o reencarnaciones de los Primigenios **repercuten mecánicamente** en los seguidores de su Senda. Esto formaliza por qué cada Senda tiene el "sabor" y las capacidades específicas que posee:
+
+| Senda | Primigenio | Evento clave | Efecto heredado por los seguidores |
+|---|---|---|---|
+| Sombra / Silente | Theledar (No Ser) | Ritual de suicidio → cuerpo muerto, alma persistente en las sombras | Manipulación de sombras |
+| Honor | Gawain (Vivo-no-muerto) | Maldición de Naya'il + años sin morir defendiendo | Resistencia sobrenatural |
+| Hierofante | Mirra (Demesteria) | Cruzó a otro plano como emisaria | Canalización divina a distancia planar |
+| Heraldo | Rayan la Elocuente | Redactó el Lexicón Marcial | Corpus doctrinal = fuente de poder táctico |
+| Monje | Gideon (vagabundo amnésico) | Descubrió la Senda no-divina; vive sin fragmento mayor | Independencia de lo divino |
+
+> **Consecuencia viva:** Si un Primigenio sufre un cambio significativo (ej. Gawain es liberado de su maldición, Theledar regresa del No Ser), la Senda correspondiente podría **mutar** — alterando las capacidades de todos sus seguidores. `[ESQUELETO: definir mecánica de mutación de Senda y ejemplos concretos]`
+
+`[DECISIÓN PENDIENTE: ¿Esta regla aplica retroactivamente a TODAS las Sendas, o solo a las que tienen Primigenio tutor? El Monje (Gideon) es no-divino — ¿los monjes heredan algo de la amnesia/vagabundeo de Gideon, o su independencia es justamente la herencia?]`
 
 ### 1.4 Planos Exteriores: Demesteria y los Daemonis
 
