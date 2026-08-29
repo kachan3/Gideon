@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<armas>
+  <arma id="espada_corta">
+    <nombre>Espada Corta</nombre>
+    <categoria>Una Mano</categoria>
+    <atributo_combate>Melee</atributo_combate>
+    <habilidad_hija>Una Mano</habilidad_hija>
+    <dado_dano>1d6</dado_dano>
+    <tipo_dano>Cortante</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Sutil"/>
+      <propiedad nombre="Guardia"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="espada_larga">
+    <nombre>Espada Larga</nombre>
+    <categoria>Una Mano</categoria>
+    <atributo_combate>Melee</atributo_combate>
+    <habilidad_hija>Una Mano</habilidad_hija>
+    <dado_dano>1d8</dado_dano>
+    <tipo_dano>Cortante</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Versátil" valor="2"/>
+      <propiedad nombre="Guardia"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="gran_hacha">
+    <nombre>Gran Hacha</nombre>
+    <categoria>A Dos Manos</categoria>
+    <atributo_combate>Melee</atributo_combate>
+    <habilidad_hija>A Dos Manos</habilidad_hija>
+    <dado_dano>2d6</dado_dano>
+    <tipo_dano>Cortante</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Pesada" valor="30"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="daga">
+    <nombre>Daga</nombre>
+    <categoria>Una Mano</categoria>
+    <atributo_combate>Melee</atributo_combate>
+    <habilidad_hija>Una Mano</habilidad_hija>
+    <dado_dano>1d4</dado_dano>
+    <tipo_dano>Punzante</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Sutil"/>
+      <propiedad nombre="Ágil"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="lanza">
+    <nombre>Lanza</nombre>
+    <categoria>Una Mano</categoria>
+    <atributo_combate>Melee</atributo_combate>
+    <habilidad_hija>Una Mano</habilidad_hija>
+    <dado_dano>1d8</dado_dano>
+    <tipo_dano>Punzante</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Versátil" valor="2"/>
+      <propiedad nombre="Alcance"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="mazo_de_guerra">
+    <nombre>Mazo de Guerra</nombre>
+    <categoria>Una Mano</categoria>
+    <atributo_combate>Melee</atributo_combate>
+    <habilidad_hija>Una Mano</habilidad_hija>
+    <dado_dano>1d8</dado_dano>
+    <tipo_dano>Contundente</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Versátil" valor="2"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="arco_corto">
+    <nombre>Arco Corto</nombre>
+    <categoria>Arcos</categoria>
+    <atributo_combate>Proyectiles</atributo_combate>
+    <habilidad_hija>Arcos</habilidad_hija>
+    <dado_dano>1d6</dado_dano>
+    <tipo_dano>Punzante</tipo_dano>
+    <propiedades>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="arco_largo">
+    <nombre>Arco Largo</nombre>
+    <categoria>Arcos</categoria>
+    <atributo_combate>Proyectiles</atributo_combate>
+    <habilidad_hija>Arcos</habilidad_hija>
+    <dado_dano>1d8</dado_dano>
+    <tipo_dano>Punzante</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Pesada" valor="25"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+  <arma id="baston">
+    <nombre>Bastón</nombre>
+    <categoria>A Dos Manos</categoria>
+    <atributo_combate>Melee</atributo_combate>
+    <habilidad_hija>A Dos Manos</habilidad_hija>
+    <dado_dano>1d6</dado_dano>
+    <tipo_dano>Contundente</tipo_dano>
+    <propiedades>
+      <propiedad nombre="Guardia"/>
+    </propiedades>
+    <nivel_equipo>1</nivel_equipo>
+  </arma>
+</armas>

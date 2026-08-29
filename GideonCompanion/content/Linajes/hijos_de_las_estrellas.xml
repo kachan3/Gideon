@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linaje id="hijos_de_las_estrellas">
+  <nombre>Hijos de las Estrellas</nombre>
+  <nombre_en>Starchilds</nombre_en>
+  <especie>Dríade</especie>
+  <escalado_vital>2.5</escalado_vital>
+  <bonos>
+    <bono habilidad="Cronibor" valor="5"/>
+  </bonos>
+  <descripcion>Short description</descripcion>
+</linaje>

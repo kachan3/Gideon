@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<epifanias>
+  <!-- Las Epifanías son Feats que desbloquean hechizos, rituales, místicas, trucos y pasivas.
+       Los Dríades obtienen su repertorio mágico invirtiendo XP en Epifanías.
+       Contenido pendiente de definición. -->
+  <epifania id="placeholder_evocacion_basica" estado="placeholder">
+    <nombre>Evocación Básica</nombre>
+    <coste_xp>1</coste_xp>
+    <descripcion>Placeholder — El personaje despierta su afinidad con un flujo arcano, desbloqueando trucos básicos.</descripcion>
+    <desbloquea>
+      <hechizo tipo="truco" nombre="Placeholder Truco"/>
+    </desbloquea>
+  </epifania>
+</epifanias>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<perjuicios>
+  <perjuicio id="anti_dotado">
+    <nombre>Anti-Dotado</nombre>
+    <contrario>dotado</contrario>
+    <efecto>Al crear el personaje, tira 1d10 y réstalo de TODOS los atributos.</efecto>
+    <mecanica tipo="penalizacion_todos_atributos" dado="1d10"/>
+  </perjuicio>
+  <perjuicio id="desagradable">
+    <nombre>Desagradable</nombre>
+    <contrario>carismatico</contrario>
+    <efecto>DIF 1 en todas las tiradas de Elocuencia y Engaño. Marginación social por asociación.</efecto>
+    <mecanica tipo="dificultad_extra">
+      <penalizacion habilidad="Elocuencia" dificultad="1"/>
+      <penalizacion habilidad="Engañar" dificultad="1"/>
+    </mecanica>
+  </perjuicio>
+  <perjuicio id="ciego">
+    <nombre>Ciego</nombre>
+    <efecto>Discapacidad visual de origen. Aplica estado Cegado (§18).</efecto>
+    <mecanica tipo="estado" estado="cegado"/>
+  </perjuicio>
+  <perjuicio id="sordo">
+    <nombre>Sordo</nombre>
+    <efecto>Discapacidad auditiva de origen. Aplica estado Ensordecido (§18).</efecto>
+    <mecanica tipo="estado" estado="ensordecido"/>
+  </perjuicio>
+  <perjuicio id="amputacion">
+    <nombre>Amputación</nombre>
+    <efecto>Pérdida de extremidad de origen. Aplica estado Amputación (§18).</efecto>
+    <mecanica tipo="estado" estado="amputacion"/>
+  </perjuicio>
+  <perjuicio id="inmovilidad">
+    <nombre>Inmovilidad Motriz</nombre>
+    <efecto>Discapacidad motriz de origen. Aplica estado Inmovilidad Motriz (§18).</efecto>
+    <mecanica tipo="estado" estado="inmovilidad_motriz"/>
+  </perjuicio>
+</perjuicios>

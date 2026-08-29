@@ -90,7 +90,7 @@ La **Mística** es algo que rodea a los conocedores de lo arcano. La conexión c
 
 **Niveles de proficiencia en flujo:** Novicio (Sentir), Entrenado (Influenciar), Experto (Manipular), Maestro (Denegar), Leyenda (Alterar). *(de M; aplican como grados de cuánto puede el mortal forzar el aspecto del mundo asociado al flujo)*
 
-#### 13.3.1 Naial — Refinamiento *(fuente: T — "Nayal Escuela de magia")*
+#### 13.3.1 Naial — Refinamiento *(fuente: T — "Nayal Escuela de magia"; expandido Hassan 2026-08-18)*
 
 > **No confundir con Ivganny: esto no son ilusiones, son manifestaciones de la voluntad representadas con emociones.**
 
@@ -104,13 +104,44 @@ La escuela de Naial se basa en el alma y en la manifestación de las emociones m
 
 Naial es la escuela que más permite **variar el tipo de hechizos**.
 
+**Diseño intencional: Naial como "la escuela más genérica" *(canónico — Hassan 2026-08-18).*** Naial es deliberadamente la escuela más amplia y cómoda. Muchos hechizos que son difíciles de ubicar temáticamente en otro flujo pueden ir aquí, porque Naial opera sobre una **evocación pura**: el lanzador siente una emoción → la emoción se manifiesta como efecto tangible en la realidad. *"Te odio → quiero dañarte → salen los virotes para manifestar tu deseo de destruir."* Los efectos de Naial son **visibles, tangibles y físicamente reales**: constructos, proyectiles, barreras, entidades. Son creaciones del alma materializadas en el mundo.
+
+#### 13.3.2 Ivganny — Refinamiento *(canónico — Hassan 2026-08-18)*
+
+> **Ivganny es la escuela de la manipulación invisible.**
+
+Mientras Naial es un **output** (lo que el alma del lanzador evoca hacia afuera como manifestación tangible), Ivganny es un **input** (lo que el lanzador introduce en la mente, los sentidos y la percepción de otros).
+
+**Ivganny no crea nada tangible ni físico.** Nada viene a golpearte, nada te atrapa, nada se materializa. Lo que cambia es **lo que percibes, lo que crees y lo que decides**. Ivganny embota los sentidos del enemigo, mueve hilos más profundos y altera la interpretación de la realidad sin alterar la realidad misma.
+
+**Propiedad fundamental: Magia Invisible.** Los efectos de Ivganny son **invisibles por defecto** — a menos que la intención del lanzador sea hacerlos visibles (por ejemplo, una ilusión diseñada para ser vista). No hay destellos, no hay marcas arcanas, no hay evidencia externa de que se ha lanzado un conjuro. La víctima no sabe que está siendo manipulada, salvo que tenga los medios para detectar intrusión mental.
+
+**Ejemplos de aplicación:**
+- *"No soy tu enemigo, no hace falta que me ataques."* → el objetivo te percibe como aliado o neutral.
+- *"Todos aquí te odian. No sabes a quién atacar. Golpea a cualquiera."* → el objetivo ataca indiscriminadamente a amigos y enemigos.
+- *"No hay nada ahí."* → el objetivo no percibe un objeto, una persona o un pasaje.
+- *"Te duele profundamente."* → dolor fantasma sin herida real, pero el cuerpo reacciona como si la hubiera.
+
+**Distinción operativa con Naial:**
+
+| | **Naial** | **Ivganny** |
+|---|---|---|
+| **Vector** | OUTPUT — del alma hacia la realidad | INPUT — del lanzador hacia la mente del objetivo |
+| **Visibilidad** | Visible y tangible | **Invisible por defecto** |
+| **Mecanismo** | Evocación pura: emoción → manifestación real | Manipulación: percepción, cognición, sentidos |
+| **Daño** | Físicamente real (el proyectil existe, la barrera golpea) | No tangible (dolor fantasma, confusión, incapacitación mental) |
+| **Ejemplo ofensivo** | "Te odio" → virotes de energía que te impactan | "Todos te odian" → atacas a tus propios aliados |
+| **Ejemplo defensivo** | "Cautela" → barrera etérea visible | "No estoy aquí" → el enemigo no te percibe |
+
+
+
 ### 13.4 Herramientas Arcanas
 Lanzar sin herramienta = pintar con los dedos. Sin herramienta: −3 NE y +5 NF (salvo Rasgo Hechicero, lanzadores natos).
 
 **Si dominas al menos una herramienta, puedes usar todas — pero sólo obtienes los beneficios particulares de la herramienta dominada.**
 
 - **El Arma.** Si tu herramienta es un arma: al atacar con ella, suma tu Nivel de Voluntad al daño.
-- **El Libro (Fuente de Conocimiento).** Corrige fallos y pule técnica. Al lanzar, puedes optar por *con perfección* (+1 NE) o *con cuidado* (-1 NF).
+- **El Libro (Fuente de Conocimiento).** Corrige fallos y pule técnica. Al lanzar, puedes optar por *con perfección* (+1 NE) o *con cuidado* (-1 NF). **Todo o Nada** *(rasgo de Fuente de Conocimiento — migrado desde §12.6, Hassan 2026-08-17)*: cuando lanzas un conjuro y fallas, puedes optar por **re-rolear** o **interrumpir el casteo**. Si interrumpes, pierdes **1 PM** pero nada más sucede. Si re-roleas, debes quedarte con el resultado final (aunque sea peor).
 - **El Amuleto (Símbolo de Poder).** Cuando lanzas con el amuleto, tu fervor se ve incrementado. `[ESQUELETO: beneficio mecánico — la oración queda cortada en M]`
 - `[ESQUELETO: otras herramientas — bastón, cristal, etc.]`
 
@@ -140,6 +171,16 @@ Manifestar un hechizo es el acto básico mediante el cual una criatura usa los c
 - De los **NE obtenidos** se determina el PL:
   > **PL = 1 + NE**
 - Algunos hechizos requieren un mínimo de NE para ser lanzados; si no se alcanza, falla automáticamente.
+
+#### 13.6.2bis Hechizos Multi-Flujo *(canónico — Hassan 2026-08-19)*
+
+Un hechizo puede involucrar **uno o más Flujos Arcanos** para ser lanzado. Cuando un conjuro requiere más de un flujo, se aplican las siguientes reglas:
+
+- **Listado de Flujos:** El hechizo lista todas las escuelas requeridas (ej.: *Cronibor + Yrgramar* para un conjuro de reanimación temporal).
+- **Prerrequisito de Epifanías:** Lanzar un hechizo multi-flujo **suele requerir poseer las Epifanías correspondientes** a cada flujo listado. Sin acceso a una de las escuelas involucradas, el lanzador no puede ejecutar el conjuro.
+- **Una sola tirada:** Se realiza **una única tirada de Arcana** para manifestar el hechizo. De todos los flujos listados, se emplea como valor de referencia **el flujo en el que el lanzador posea el valor más bajo**. El hechizo es tan fuerte como el eslabón más débil de la cadena.
+
+> *Ejemplo: un hechizo de "Despertar Temporal" requiere Cronibor (tiempo) + Yrgramar (muerte). El lanzador tiene Cronibor 45 y Yrgramar 30. La tirada se hace contra **30** (el valor más bajo). Si obtiene éxito, el PL se calcula normalmente.*
 
 #### 13.6.3 Inversión de PL
 

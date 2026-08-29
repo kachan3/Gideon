@@ -101,29 +101,18 @@ Cuando entres en la pose, si eliges entrar en modo Salto de la Pluma, debes atac
 **Nota filosófica.** A diferencia de las demás Sendas, el Honor no demanda bondad ni virtud — demanda **honestidad y carácter**. El atributo Honor mide la alineación entre palabra y acción, no moralidad. Un tirano que cumple sus promesas gana Honor; un héroe que miente lo pierde. Los seguidores de esta Senda son **conductos de la voluntad del mundo**: la realidad misma guía sus acciones cuando sus palabras son verdaderas. *(Canónico — Hassan 2026-08-03.)*
 
 ### 12.3 Berserker
-**Lore.** La furia y la sed de venganza guían este camino. Definida por la ira y el odio, impulsada por un pánico desesperado por perder lo más preciado.
+**Lore.** La furia y la sed de venganza guían este camino. Los Berserkers son seres emocionales cuya furia nace de un agravio profundo — daño a ellos o a aquellos que aman. La injusticia no puede quedar impune. A diferencia de Valor u Honor, están íntimamente ensañados con sus enemigos.
 
 *"Nuestra Ira es la justicia, Nuestra Furia es nuestra Armadura, Nuestra Rabia es nuestra Herramienta y Vuestra muerte nuestra Paz." ~ Alioth*
 
 **Proficiencias iniciales:** Atletismo, Supervivencia, Coacción (1 experto, 2 entrenadas) + 1 arte marcial entrenada.
 
-**Nivel 1:**
-- **Furia.** Generas una carga cuando tú o un aliado reciben daño. Máximo: bono de Voluntad + **Grado de Berserker** (`⌊XP en Berserker ÷ 5⌋`). *(NV eliminado 2026-06-28)*
-- **Desquite.** 1/turno, gasta 1 carga para +1d6 (1d8 nv 4, 1d10 nv 8) del mismo tipo en un ataque cualquiera. Si en el d6 sale 1, el arma se rompe. Si lo combinas con Ataque Temerario, se rompe con un 1 en cualquiera de los dos dados; si usas Temerario para anular desventaja y tiras normalmente, se rompe con 1 o 2.
-- **Trance.** 1 minuto o hasta que no percibas enemigos. No detenible voluntariamente. Usos/día = Nivel de Voluntad (mín. 1). Tu furia no decrece, ignoras penalizadores de heridas normales (no graves), pero **pierdes tus reacciones defensivas** (Evadir/Rodar, Deflectar/Parry, Interceptar/Cubrirse — §11.9) durante el Trance. No puedes lanzar conjuros. Nv 4+: ventaja en tiradas de Vitalidad y Fuerza; el daño no rompe concentración en hechizos.
-
-**Nivel 2:**
-- **Ataque Temerario.** Primer ataque del turno: ventaja en cuerpo a cuerpo y armas arrojadizas; los enemigos tienen ventaja para atacarte hasta el inicio de tu próximo turno.
-- **Enemigo Declarado** (acción, declaración interna). Beneficios:
-  - +10 ft velocidad acercándote a ese enemigo.
-  - Desquite no consume Furia contra él.
-  - El miedo no puede impedirte acercarte.
-  - El vínculo se rompe sólo si muere; si sigue vivo, debes pasar un descanso largo meditando para cortar el vínculo.
-  - Nv 6+: tus armas obtienen propiedad Ágil al atacarlo.
-
-**Nivel 3:** Elige un **talento** (marcial si tienes arte marcial, o mágico si tienes escuela de magia). *(Antes decía "talento universal", pero la categoría Talentos Universales fue eliminada — §15.3. Pendiente Hassan: decidir si los talentos de Senda (§15.2) cubren este hueco, o si hay que reintroducir una categoría general.)* `[ESQUELETO]`
-
-`[ESQUELETO: niveles 4+]`
+> **Mecánicas completas de la Senda del Berserker** desarrolladas en la carpeta dedicada `20_Contenido/Senda_Berserker/`. La Senda del Berserker posee un sistema propio de gameplay **High-Risk / High-Reward** con tres pilares mecánicos:
+> - **Pool de Ira** — Recurso que se acumula cuando tú o aliados reciben heridas graves/mortales. Máximo = Nivel de Voluntad. Ver `Senda_Berserker/Berserker_01_Ira_y_Trance.md`.
+> - **Furia Desatada / Desquite** — Dos formas de usar la Ira: Furia Desatada suma Ira a todos los ataques del turno a cambio de quedar Arrebatado; Desquite gasta 1 carga para +1d6 en un golpe puntual. Ver `Senda_Berserker/Berserker_01_Ira_y_Trance.md`.
+> - **Trance** — Se activa al llenar la Pool de Ira. Dura Nivel de Voluntad × 2 turnos. Ignora penalizaciones por heridas y Miedo, pero pierde reacciones defensivas y no puede conjurar. Post-Trance: Ira a 0, no acumula Ira por 3 turnos. Ver `Senda_Berserker/Berserker_01_Ira_y_Trance.md`.
+>
+> Dotes de Senda en `Senda_Berserker/Berserker_02_Dotes_de_Senda.md`. Enemigo Declarado en `Senda_Berserker/Berserker_03_Enemigo_Declarado.md`. Multiclase en `Senda_Berserker/Berserker_04_Multiclase_e_Integracion.md`.
 
 ### 12.4 Elementalista
 **Lore.** Fuego, agua, viento y tierra son los elementos del mundo. Suelen ser muy leales a una facción y mostrar simpatía a otros elementalistas (comprenden el balance del mundo).
@@ -180,28 +169,24 @@ Cuando entres en la pose, si eliges entrar en modo Salto de la Pluma, debes atac
 
 ### 12.6 Arcanista
 
-**Dote Insignia — Todo o Nada** *(T)*. Los Arcanistas estudian arduamente para lanzar sus conjuros y que no les sean contraproducentes; una de las lecciones más fundamentales es **interrumpir el lanzamiento del conjuro cuando las cosas no son las esperadas**.
-- Cuando lances un conjuro y falles, puedes optar por **re-rolear** o **interrumpir el casteo**.
-- Si **interrumpes** el casteo, pierdes **1 de Maná** pero nada más sucede.
-- Si **re-roleas**, debes quedarte con el resultado final (aunque sea peor).
-
----
-
 *"No temo los horrores tras el velo, temo la ignorancia sobre nuestro verdadero potencial." ~ Diana*
+
+**Lore.** Estudiantes y maestros de lo arcano. Nacen de la curiosidad y buscan poder en el conocimiento, maestría y perfección de las mil cosas — ya sea que se dediquen a la espada o a la hechicería. Su Primigenia es **Diana la Maga**, portadora de la Curiosidad de Naya'il.
 
 **Proficiencias iniciales:** Arcana, Lingüística, Arqueología (2 entrenadas, 1 experta) + 1 escuela de magia entrenada.
 
-**Nivel 1:**
-- **Conocimiento Prestado.** Al dormir entras en conciencia colectiva → competencia novicio durante un día en un tópico que te interese.
-- **Trucos.** Elige 3 trucos de la lista. Trucos = conjuros simples sin esfuerzo de lanzamiento.
+> **Mecánicas completas de la Senda del Arcanista** desarrolladas en la carpeta dedicada `20_Contenido/Senda_Arcanista/`. La Senda del Arcanista posee tres Habilidades Insignia:
+> - **Eficiencia** — Reduce el coste de Maná al manifestar hechizos y activar artefactos (por cada 3 PM de coste, paga 2). El Maná post-Eficiencia es el definitivo para todos los cálculos incluyendo Límite Seguro y Daño Crónico. Ver `Senda_Arcanista/Arcanista_01_Habilidades_Insignia.md`.
+> - **Herencia** — Otorga los dotes "Lanzador de Conjuros" (acceso a §13.6 Manifestar Hechizo) y "La Herramienta Correcta" (vínculo íntimo con herramienta de lanzador, §13.4 — incluye Retorno Destinado). Ver `Senda_Arcanista/Arcanista_01_Habilidades_Insignia.md`.
+> - **Epifanía Original** — Elige una Epifanía (desbloquea repertorio mágico inicial incluyendo trucos) y recibe un Artefacto Arcano. Ver `Senda_Arcanista/Arcanista_01_Habilidades_Insignia.md`.
+>
+> Dotes de Senda en `Senda_Arcanista/Arcanista_02_Dotes_de_Senda.md`. Epifanías y Artefactos en `Senda_Arcanista/Arcanista_03_Epifanias_y_Artefactos.md`. Multiclase en `Senda_Arcanista/Arcanista_04_Multiclase_e_Integracion.md`. Filosofía de diseño en `Senda_Arcanista/Arcanista_00_Filosofia_de_Diseño.md`.
 
-**Nivel 2:**
-- **Recuperación Superior.** Meditas en vez de dormir. 1 PM por hora meditando. No puedes meditar con fatiga mágica activa ni si mantienes concentración.
-- **Expansión de Entendimiento.** Suma nivel de profesión Novicio en una escuela mágica que no conozcas.
-
-**Nivel 3:** Elige un talento elegible.
-
-`[ESQUELETO: niveles 4+]`
+> **Dotes deprecados de la versión anterior de §12.6 (Hassan 2026-08-17):**
+> - ~~**Todo o Nada**~~ — **Migrado** a rasgo de la Herramienta "Fuente de Conocimiento" (§13.4).
+> - ~~**Conocimiento Prestado**~~ — **Descartado.** Facilitaba transmisión instantánea de información.
+> - ~~**Recuperación Superior**~~ — **En cuarentena.**
+> - ~~**Expansión de Entendimiento**~~ — **Descartado.** Referenciaba proficiencia "Novicio", obsoleta en el sistema 00-99.
 
 ### 12.7 Sombra
 **Lore.** Senda de especialistas o espías. Buscan cumplir objetivos con rapidez, eficacia y discreción. Suelen moverse en silencio y dentro de organizaciones secretas. Honor, fama y reconocimiento son vergonzosos para ellos: su camino es el de los olvidados.

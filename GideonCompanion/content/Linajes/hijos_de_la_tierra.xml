@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linaje id="hijos_de_la_tierra">
+  <nombre>Hijos de la Tierra</nombre>
+  <nombre_en>Earthfolks</nombre_en>
+  <especie>Dríade</especie>
+  <escalado_vital>3</escalado_vital>
+  <bonos>
+    <bono habilidad="CombatSkillPlaceholder" valor="5" seleccionable="true"/>
+  </bonos>
+  <descripcion>Short description</descripcion>
+</linaje>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linaje id="hijos_del_bosque">
+  <nombre>Hijos del Bosque</nombre>
+  <nombre_en>Forestkind</nombre_en>
+  <especie>Dríade</especie>
+  <escalado_vital>2.5</escalado_vital>
+  <bonos>
+    <bono habilidad="ProyectilesPlaceholder" valor="5"/>
+  </bonos>
+  <descripcion>Short description</descripcion>
+</linaje>

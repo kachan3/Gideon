@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dedicacion id="soldado">
+  <nombre>Soldado</nombre>
+  <descripcion>Short description</descripcion>
+  <skills_garantizadas>
+    <skill nombre="Melee" minimo="35"/>
+  </skills_garantizadas>
+  <estado>completo</estado>
+</dedicacion>

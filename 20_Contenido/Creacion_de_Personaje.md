@@ -25,14 +25,37 @@ La mesa define el modo antes de crear personajes. El modo afecta el peso del tra
 
 **Enclave.** Campaña estructurada. Los personajes firman un contrato formal con el Enclave del Eclipse que establece obligaciones, límites de actuación y condiciones de remuneración. El trasfondo de cada personaje tiene peso mecánico y narrativo: el Enclave recluta según el origen del individuo. `[ESQUELETO: cláusulas tipo del contrato, instancias de ruptura y consecuencias — pendiente de Hassan]`
 
+### El Labor Imperial (Modo Eclipse / Enclave)
+
+En las campañas jugadas en **Modo Eclipse** (o para personajes que se adhieran formalmente al Enclave del Eclipse, ya que pueden unirse o retirarse a lo largo del juego, siendo esto una decisión trascendental), existe un apartado extra en las Hojas de Personaje denominado **"El Labor Imperial"**.
+
+Cada Senda tiene un rol que cumplen en sus misiones, especialmente en los asentamientos. En este ámbito poseen una autoridad bastante certera, operando como emisarios de la voluntad imperial. Esta autoridad **está por encima de las autoridades locales**, a menos que dichas autoridades locales pertenezcan también a una Senda.
+
+- **Senda del Honor (Labor de la Justicia):** Cuando los acontecimientos son poco claros y debe tomarse un accionar para restaurar la paz o elegir una sentencia, la Senda del Honor (especialmente el miembro de mayor rango) sirve como juez provisional.
+- **Senda del Silente (Labor del Secretismo y el Orden):** Se encarga de evaluar y ocultar cosas que podrían ser perjudiciales para el mundo civilizado de una forma u otra. Su deber es resolver cómo mantener el secretismo y el orden para que los engranajes de la sociedad sigan girando.
+- **Senda del Arcanista (Labor de la Preservación):** Se encarga de preservar, recuperar y evaluar qué destino o importancia pueden tener reliquias, objetos mágicos o artefactos desconocidos, determinando qué tanto vale la pena asegurarlos y resguardarlos.
+- **Senda del Elementalista (Labor del Bienestar a Largo Plazo):** Tiene el deber de decidir sobre el bienestar y la salud a largo plazo de una población.
+- **Senda del Hierofante (Labor de la Salud Inmediata y Purgación):** Decide sobre la salud inmediata de pacientes afligidos o poblaciones enfermas, y sobre cómo detener o truncar los planes de Agentes Daemonis en este mundo. Tiene autoridad total en ese criterio, siempre que beneficie al imperio y al mundo civilizado.
+- **Senda del Heraldo (Labor de la Estrategia y Mediación):** Decide sobre cuestiones estratégicas y logísticas (si es correcto abandonar o trasladar una posición, o si tomar defensas y acuartelarse). Cuando los líderes locales son incompetentes, es su deber poner en marcha a todos los ciudadanos y aldeanos de Kindremor. Además, actúa como mediador entre todos los demás compañeros que pertenecen a las Sendas para recordarles el deber mayor.
+- **Senda del Valor (Labor de la Esperanza y el Mando Militar):** Tiene la responsabilidad de traer calma y esperanza general, así como liderar cargas, entrenar milicianos y decidir qué objetivos vale la pena derrotar o cuáles se consideran imposibles. Es un experto militar que sabe qué peleas se pueden ganar aunque parezcan imposibles.
+- **Senda del Berserker (Labor de las Medidas Desesperadas):** Es el responsable de tomar las decisiones difíciles y de "cortar el nudo gordiano" cuando hace falta. Guía a la gente a maniobras suicidas, purga poblaciones y se sacrifica a sí mismo (o a otros) por el bien mayor. Es el encargado de hacer lo que nadie quiere, "romper la máquina para seguir adelante", y si hace falta, traer la furia del imperio a cualquier enemigo.
+- **Senda del Cazador (Labor de la Inteligencia e Investigación):** Se encarga de reunir información sobre amenazas y problemas a futuro, y evaluar los estados generales cuando faltan piezas. Opera como detective e investigador de campo; sus agudos sentidos no deben ser subestimados.
+- **Senda del Monje (Labor de la Sabiduría):** No posee un labor imperial oficial (o no está aclarado en los registros formales). Sin embargo, asumen el deber extraoficial de ser sabios y buscar la solución más lógica y coherente, usando su cabeza fría y su temple para actuar con rectitud ante cualquier situación.
+
 **Sandbox.** Campaña libre. Sin contrato ni estructura central. Las motivaciones son individuales o grupales. El trasfondo es punto de partida narrativo sin implicaciones institucionales.
 
 ---
 
 ## Paso 1 — Atributos Base
 
-El núcleo numérico del personaje está compuesto por 10 Atributos: **Normales** (Fuerza, Vitalidad, Agilidad, Instinto, Voluntad, Inteligencia, Carácter) y **de Combate** (Melee, Proyectiles, Arcana).
-Todas tus **Habilidades Hijas** nacerán con el mismo valor que su Atributo Padre.
+El núcleo numérico del personaje está compuesto por 10 Atributos, divididos en tres categorías formales más un atributo excepcional *(canónico — Hassan 2026-08-17)*:
+
+* **Mentales:** Inteligencia, Carácter, Instinto.
+* **Físicos:** Fuerza, Agilidad, Vitalidad.
+* **Marciales:** Melee, Proyectiles, Arcana.
+* **Espiritual:** Voluntad (es un atributo íntegro y simbólico de la chispa del alma, que existe en su propia categoría).
+
+Todas tus **Habilidades Hijas** nacerán con el mismo valor que su Atributo Padre correspondiente.
 
 Existen dos métodos para obtener los números de tus atributos base:
 
@@ -243,6 +266,16 @@ En este paso, el jugador elige la Senda de su personaje. Como se detalla en el C
 - **Pool Normal:** Reparte 50 puntos entre las Habilidades Hijas normales, con un máximo de +20 a una sola habilidad.
 
 *(Nota: Los dotes y rasgos específicos de la Senda se eligen también en este punto).*
+
+### Dotes Insignia *(canónico — Hassan 2026-08-17)*
+
+Los **Dotes Insignia** son los dotes que vienen de base al elegir una Senda. Son las habilidades fundamentales e íntimas de la clase.
+
+- **No se pueden reemplazar** ni optar por no poseer. Son inseparables de la Senda.
+- **No son exclusivos** de la Senda. A diferencia de los **Rasgos** (que son exclusivos de la clase y únicamente de la clase), los Dotes Insignia pueden obtenerse también por **Linaje, Origen o Don**. Lo que los hace "insignia" es que la Senda los garantiza, no que los monopolice.
+- **Duplicado = +1 XP extra.** Si por tu Linaje, Origen o Don **ya posees** un dote que tu Senda te otorgaría como Insignia, recibes **+1 XP extra** para tu personaje en lugar del dote duplicado.
+
+> *Ejemplo: el Origen "Erudito" otorga el dote "Lanzador de Conjuros". Si además eliges la Senda del Arcanista (cuya Herencia incluye "Lanzador de Conjuros"), ya lo tenés — recibes +1 XP extra.*
 
 ---
 

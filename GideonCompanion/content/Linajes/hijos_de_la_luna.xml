@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linaje id="hijos_de_la_luna">
+  <nombre>Hijos de la Luna</nombre>
+  <nombre_en>Moonchilds</nombre_en>
+  <especie>Dríade</especie>
+  <escalado_vital>2.5</escalado_vital>
+  <bonos>
+    <bono habilidad="Sigilo" valor="5"/>
+    <bono habilidad="Ivganny" valor="5"/>
+  </bonos>
+  <descripcion>Short description</descripcion>
+</linaje>

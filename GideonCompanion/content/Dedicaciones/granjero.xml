@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dedicacion id="granjero">
+  <nombre>Granjero</nombre>
+  <descripcion>Short description</descripcion>
+  <skills_garantizadas>
+  </skills_garantizadas>
+  <estado>esqueleto</estado>
+</dedicacion>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dedicacion id="medico">
+  <nombre>Médico</nombre>
+  <descripcion>Short description</descripcion>
+  <skills_garantizadas>
+    <skill nombre="Medicina" minimo="20"/>
+    <skill nombre="Inteligencia" minimo="20"/>
+  </skills_garantizadas>
+  <estado>completo</estado>
+</dedicacion>

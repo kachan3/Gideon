@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linaje id="seres_del_rio">
+  <nombre>Seres del Río</nombre>
+  <nombre_en>Riverdwellers</nombre_en>
+  <especie>Dríade</especie>
+  <escalado_vital>2</escalado_vital>
+  <bonos>
+    <!-- placeholder - pendiente de diseño -->
+  </bonos>
+  <descripcion>Short description</descripcion>
+</linaje>

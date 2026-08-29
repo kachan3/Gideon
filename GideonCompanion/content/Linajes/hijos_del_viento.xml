@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linaje id="hijos_del_viento">
+  <nombre>Hijos del Viento</nombre>
+  <nombre_en>WindChilds</nombre_en>
+  <especie>Dríade</especie>
+  <escalado_vital>2</escalado_vital>
+  <bonos>
+    <bono habilidad="Evasión" valor="10"/>
+    <bono habilidad="Saltar" valor="5"/>
+  </bonos>
+  <descripcion>Short description</descripcion>
+</linaje>

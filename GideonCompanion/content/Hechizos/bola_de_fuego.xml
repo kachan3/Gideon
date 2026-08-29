@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hechizo id="bola_de_fuego">
+  <nombre>Bola de Fuego</nombre>
+  <escuela>Ignamor</escuela>
+  <coste_acciones>3</coste_acciones>
+  <componentes>Verbal, Somático</componentes>
+  <descripcion>Una bola de fuego que explota en un área de efecto.</descripcion>
+</hechizo>

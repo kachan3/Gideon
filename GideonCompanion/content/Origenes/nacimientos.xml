@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nacimientos>
+  <nacimiento rango_min="1" rango_max="28" id="campesina">
+    <nombre>Familia Campesina</nombre>
+    <descripcion>Trabajo de la tierra/ganadería, escasos recursos.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="29" rango_max="43" id="artesana">
+    <nombre>Familia Artesana</nombre>
+    <descripcion>Oficio familiar transmitido, clase media-baja.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="44" rango_max="55" id="mercader">
+    <nombre>Familia Mercader</nombre>
+    <descripcion>Comercio, movilidad, contactos.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="56" rango_max="65" id="militar">
+    <nombre>Familia Militar</nombre>
+    <descripcion>Tradición armada, disciplina y lealtad.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="66" rango_max="73" id="linaje_comprometido">
+    <nombre>Linaje Comprometido</nombre>
+    <descripcion>Servicio jurado a una casa o señor.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="74" rango_max="78" id="estirpe_elevada">
+    <nombre>Estirpe Elevada</nombre>
+    <descripcion>Nobleza o clase dirigente.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="79" rango_max="86" id="huerfano_institucional">
+    <nombre>Huérfano Institucional</nombre>
+    <descripcion>Criado por gremio, orfanato, capilla u orden.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="87" rango_max="92" id="origen_ilegitimo">
+    <nombre>Origen Ilegítimo</nombre>
+    <descripcion>Fuera del reconocimiento formal.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="93" rango_max="97" id="sin_raiz">
+    <nombre>Sin Raíz</nombre>
+    <descripcion>Familia nómada o viajera.</descripcion>
+  </nacimiento>
+  <nacimiento rango_min="98" rango_max="100" id="enigmatico">
+    <nombre>Enigmático</nombre>
+    <descripcion>Origen desconocido (sin efecto mecánico).</descripcion>
+  </nacimiento>
+</nacimientos>

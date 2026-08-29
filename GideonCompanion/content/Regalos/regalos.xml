@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<regalos>
+  <regalo id="dotado">
+    <nombre>Dotado</nombre>
+    <contrario>anti_dotado</contrario>
+    <efecto>Al crear el personaje, tira 1d10 y súmalo a TODOS los atributos. Ignora el techo de 80.</efecto>
+    <mecanica tipo="bono_todos_atributos" dado="1d10" ignora_techo="true"/>
+  </regalo>
+  <regalo id="carismatico">
+    <nombre>Carismático por Naturaleza</nombre>
+    <contrario>desagradable</contrario>
+    <efecto>+5 a todas las tiradas de Elocuencia y Engaño.</efecto>
+    <mecanica tipo="bono_habilidades">
+      <bono habilidad="Elocuencia" valor="5"/>
+      <bono habilidad="Engañar" valor="5"/>
+    </mecanica>
+  </regalo>
+</regalos>

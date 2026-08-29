@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<senda id="heraldo">
+  <nombre>Senda del Heraldo</nombre>
+  <descripcion>Líder y estratega.</descripcion>
+  <proficiencias>
+    <proficiencia habilidad="Persuasión" nivel="experto"/>
+    <proficiencia habilidad="Engaño" nivel="entrenado"/>
+    <proficiencia habilidad="Perspicacia" nivel="entrenado"/>
+    <proficiencia habilidad="Arte Marcial o Escuela de Magia" nivel="entrenado" seleccionable="true"/>
+  </proficiencias>
+  <pool_combate>
+    <asignacion valor="20" descripcion="+20 a una habilidad de combate"/>
+    <asignacion valor="15" descripcion="+15 a una habilidad de combate"/>
+    <asignacion valor="10" descripcion="+10 a una habilidad de combate"/>
+    <asignacion valor="5" descripcion="+5 a una habilidad de combate"/>
+  </pool_combate>
+  <pool_normal total="50" max_por_habilidad="20"/>
+  <dado_senda_inicial>1d4</dado_senda_inicial>
+</senda>

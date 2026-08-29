@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<armaduras>
+  <armadura id="armadura_de_cuero">
+    <nombre>Armadura de Cuero</nombre>
+    <categoria>Ligera</categoria>
+    <base_general>0.5</base_general>
+    <puntos_asignables>1</puntos_asignables>
+    <nivel_equipo>1</nivel_equipo>
+    <requiere_dote>false</requiere_dote>
+    <requiere_carga>0</requiere_carga>
+    <penalizaciones>
+    </penalizaciones>
+    <descripcion>Armadura ligera de cuero.</descripcion>
+  </armadura>
+  <armadura id="armadura_de_cuero_tachonado">
+    <nombre>Armadura de Cuero Tachonado</nombre>
+    <categoria>Ligera</categoria>
+    <base_general>0.5</base_general>
+    <puntos_asignables>1</puntos_asignables>
+    <nivel_equipo>2</nivel_equipo>
+    <requiere_dote>false</requiere_dote>
+    <requiere_carga>0</requiere_carga>
+    <penalizaciones>
+    </penalizaciones>
+    <descripcion>Armadura ligera de cuero tachonado.</descripcion>
+  </armadura>
+  <armadura id="cota_de_malla">
+    <nombre>Cota de Malla</nombre>
+    <categoria>Mediana</categoria>
+    <base_general>1.0</base_general>
+    <puntos_asignables>2</puntos_asignables>
+    <nivel_equipo>3</nivel_equipo>
+    <requiere_dote>false</requiere_dote>
+    <requiere_carga>0</requiere_carga>
+    <penalizaciones>
+    </penalizaciones>
+    <descripcion>Armadura mediana de cota de malla.</descripcion>
+  </armadura>
+  <armadura id="coraza">
+    <nombre>Coraza</nombre>
+    <categoria>Mediana</categoria>
+    <base_general>1.0</base_general>
+    <puntos_asignables>2</puntos_asignables>
+    <nivel_equipo>4</nivel_equipo>
+    <requiere_dote>false</requiere_dote>
+    <requiere_carga>0</requiere_carga>
+    <penalizaciones>
+    </penalizaciones>
+    <descripcion>Armadura mediana tipo coraza.</descripcion>
+  </armadura>
+  <armadura id="armadura_de_placas">
+    <nombre>Armadura de Placas</nombre>
+    <categoria>Pesada</categoria>
+    <base_general>1.5</base_general>
+    <puntos_asignables>3</puntos_asignables>
+    <nivel_equipo>5</nivel_equipo>
+    <requiere_dote>true</requiere_dote>
+    <requiere_carga>5</requiere_carga>
+    <penalizaciones>
+      <penalizacion tipo="sigilo" descripcion="Desventaja en Sigilo"/>
+    </penalizaciones>
+    <descripcion>Armadura pesada de placas completas.</descripcion>
+  </armadura>
+
+  <escudo id="broquel">
+    <nombre>Broquel</nombre>
+    <blindaje_pasivo>0</blindaje_pasivo>
+    <blindaje_activo>1</blindaje_activo>
+    <descripcion>Escudo pequeño para desviar golpes.</descripcion>
+  </escudo>
+  <escudo id="escudo_estandar">
+    <nombre>Escudo Estándar</nombre>
+    <blindaje_pasivo>1</blindaje_pasivo>
+    <blindaje_activo>2</blindaje_activo>
+    <descripcion>Escudo de tamaño medio equilibrado.</descripcion>
+  </escudo>
+  <escudo id="escudo_torre">
+    <nombre>Escudo Torre</nombre>
+    <blindaje_pasivo>2</blindaje_pasivo>
+    <blindaje_activo>4</blindaje_activo>
+    <descripcion>Gran escudo pesado.</descripcion>
+  </escudo>
+</armaduras>

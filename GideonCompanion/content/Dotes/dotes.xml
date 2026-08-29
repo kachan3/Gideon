@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dotes>
+  <!-- Dotes de Senda y universales. Contenido en desarrollo. -->
+  <dote id="golpe_dual" estado="definido">
+    <nombre>Golpe Dual</nombre>
+    <tipo>Senda</tipo>
+    <descripcion>Al equipar dos armas con la propiedad Dual, atacas con ambas simultáneamente sumando sus dados de daño.</descripcion>
+  </dote>
+  <dote id="reflejos" estado="definido">
+    <nombre>Reflejos</nombre>
+    <tipo>Senda</tipo>
+    <descripcion>Si no portas armadura pesada, sumas tu Nivel de Instinto a tu valor de Evasión.</descripcion>
+  </dote>
+  <dote id="estilo_combate" estado="definido">
+    <nombre>Estilo de Combate</nombre>
+    <tipo>Senda</tipo>
+    <descripcion>Elige un estilo de combate. Re-elegible. Requiere 1 hora de calentamiento para intercambiar.</descripcion>
+  </dote>
+  <dote id="entrenado_armadura_pesada" estado="definido">
+    <nombre>Entrenado en Armadura Pesada</nombre>
+    <tipo>Universal</tipo>
+    <descripcion>Requisito para portar armaduras pesadas sin penalización.</descripcion>
+  </dote>
+</dotes>

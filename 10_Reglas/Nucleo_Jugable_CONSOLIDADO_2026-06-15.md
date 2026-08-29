@@ -133,7 +133,13 @@ Escala de tier −2 … +3 (ver Parte IV / §11.1.bis del Core).
 
 ## II.1 Atributos y habilidades *(canónico)*
 
-10 atributos: **Fuerza, Vitalidad, Agilidad, Instinto, Voluntad, Inteligencia, Carácter, Melee, Proyectiles, Arcana.** Cada habilidad vale 1–100. **Nivel** = `INT(Valor/10)`. Las habilidades hijas empiezan con el valor de su atributo padre.
+10 atributos divididos en cuatro categorías formales *(canónico — Hassan 2026-08-17)*:
+- **Mentales:** Inteligencia, Carácter, Instinto.
+- **Físicos:** Fuerza, Agilidad, Vitalidad.
+- **Marciales:** Melee, Proyectiles, Arcana.
+- **Espiritual:** Voluntad (categoría propia; representa la fuerza de la chispa del alma).
+
+Cada habilidad vale 1–100. **Nivel** = `INT(Valor/10)`. Las habilidades hijas empiezan con el valor de su atributo padre.
 
 | Atributo | Habilidades hijas |
 |---|---|

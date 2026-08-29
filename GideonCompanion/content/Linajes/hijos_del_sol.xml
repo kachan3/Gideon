@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<linaje id="hijos_del_sol">
+  <nombre>Hijos del Sol</nombre>
+  <nombre_en>Sunchilds</nombre_en>
+  <especie>Dríade</especie>
+  <escalado_vital>3</escalado_vital>
+  <bonos>
+    <bono habilidad="Ignamor" valor="5"/>
+  </bonos>
+  <descripcion>Short description</descripcion>
+</linaje>
