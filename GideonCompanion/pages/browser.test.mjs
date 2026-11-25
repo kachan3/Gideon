@@ -27,7 +27,7 @@ try{
  const context=await browser.newContext({acceptDownloads:true}),page=await context.newPage(),errors=[];
  diagnosticPage=page;
  page.on('pageerror',e=>errors.push(e.message));
- await page.goto(url);await page.locator('#pages-toolbar').waitFor();
+ await page.goto(url);await page.locator('#pages-toolbar[data-ready=true]').waitFor();
  assert(await page.getByRole('heading',{name:'Creá tu personaje de Gideon'}).isVisible());
  await page.getByRole('button',{name:'Crear mi personaje',exact:true}).click();
  await page.locator('[name=nombre]').fill('Exploradora de Pages');
@@ -47,13 +47,13 @@ try{
  }
  await page.locator('#next').click();await page.getByRole('button',{name:'Crear y guardar personaje'}).click();
  await page.getByRole('heading',{name:'Exploradora de Pages',exact:true}).waitFor();
- await page.evaluate(()=>sessionStorage.clear());await page.reload();await page.locator('#pages-toolbar').waitFor();
+ await page.evaluate(()=>sessionStorage.clear());await page.reload();await page.locator('#pages-toolbar[data-ready=true]').waitFor();
  await page.getByRole('heading',{name:'Exploradora de Pages',exact:true}).waitFor();
  assert(await page.locator('#pages-status').textContent());
  const [download]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Descargar copia',exact:true}).click()]);
  const bytes=await readFile(await download.path()),backup=JSON.parse(bytes.toString());assert.equal(backup.characters[0].nombre,'Exploradora de Pages');
  const other=await browser.newContext(),visitor=await other.newPage();visitor.on('pageerror',e=>errors.push(e.message));
- await visitor.goto(url);await visitor.locator('#pages-toolbar').waitFor();assert.equal(await visitor.locator('#pages-characters button').count(),0,'Cada visitante debe tener sus propias fichas');
+ await visitor.goto(url);await visitor.locator('#pages-toolbar[data-ready=true]').waitFor();assert.equal(await visitor.locator('#pages-characters button').count(),0,'Cada visitante debe tener sus propias fichas');
  await visitor.locator('#pages-file').setInputFiles({name:'gideon.json',mimeType:'application/json',buffer:bytes});
  await visitor.getByRole('heading',{name:'Exploradora de Pages',exact:true}).waitFor();
  await page.locator('#pages-file').setInputFiles({name:'gideon.json',mimeType:'application/json',buffer:bytes});
@@ -62,6 +62,6 @@ try{
  assert.deepEqual(networkAPI,[],'No debe existir una API HTTP para jugar');assert.deepEqual(errors,[]);
  console.log('OK: creación real con WebAssembly, Pages en subcarpeta, guardado, recarga, visitantes aislados, copia portable, importación sin pérdida y móvil.');
 }catch(error){
- if(diagnosticPage)console.error('Estado de la página:',await diagnosticPage.evaluate(()=>({url:location.href,error:document.querySelector('#error')?.textContent,connection:document.querySelector('#connection')?.textContent,step:document.querySelector('#step-label')?.textContent})).catch(()=>null));
+ if(diagnosticPage)console.error('Estado de la página:',await diagnosticPage.evaluate(()=>({url:location.href,error:document.querySelector('#error')?.textContent,connection:document.querySelector('#connection')?.textContent,status:document.querySelector('#pages-status')?.textContent,step:document.querySelector('#step-label')?.textContent})).catch(()=>null));
  throw error;
 }finally{await browser?.close();await new Promise(r=>server.close(r));}

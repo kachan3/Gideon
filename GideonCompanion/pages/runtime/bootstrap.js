@@ -9,7 +9,7 @@ const scope=root.pathname,activeKey='gideon.pages.active:'+scope;
 let collection,engine,handler,library,manifest,SQL,queue=Promise.resolve(),storageFailed=false;
 const notice=document.createElement('p');notice.id='pages-status';notice.setAttribute('role','status');
 function report(text,bad=false){notice.textContent=text;notice.classList.toggle('failure',bad);}
-function download(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);}
+function download(value,name){const url=URL.createObjectURL(new Blob([JSON.stringify(value)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=name;a.hidden=true;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);}
 async function loadSQLite(){
  // GitHub Actions includes both files in the published site. The pinned CDN is
  // only a fallback for preparing a local build without an npm installation.
@@ -59,7 +59,7 @@ function renderLibrary(){
  for(const p of collection.characters)select.append(new Option(p.nombre,String(p.id)));
  select.value=previous;select.hidden=!collection.characters.length;
 }
-async function exportBackup(){await queue;download({format:'gideon-pages-backup',version:1,manifest:collection.manifest,characters:collection.characters,selected:collection.selected,files:exportFiles(),database:bytesToBase64(engine.export()),exported:new Date().toISOString()},'gideon-personajes-'+new Date().toISOString().slice(0,10)+'.json');}
+async function exportBackup(){await queue;download({format:'gideon-pages-backup',version:1,manifest:collection.manifest,characters:collection.characters,selected:collection.selected,files:exportFiles(),database:bytesToBase64(engine.export()),exported:new Date().toISOString()},'gideon-personajes-'+new Date().toISOString().slice(0,10)+'.json');report('Copia descargada. Guardala para conservar tus fichas.');}
 async function importBackup(file){
  if(!file||file.size>38_000_000)throw Error('Elegí una copia de Gideon de menos de 38 MB.');
  const data=JSON.parse(await file.text()),bytes=validateArchive(data,manifest),candidate=new DatabaseSync(new SQL.Database(bytes));
@@ -78,6 +78,7 @@ async function setupUI(){
  document.body.classList.add('static-mode');
  const toolbar=document.createElement('section');toolbar.id='pages-toolbar';toolbar.setAttribute('aria-label','Tus fichas');
  toolbar.innerHTML='<div class="pages-tools"><strong>Gideon · Mesa de prueba</strong><select id="pages-collection" aria-label="Colección de personajes"></select><select id="pages-character" aria-label="Abrir un personaje"></select><button id="pages-export">Descargar copia</button><button id="pages-import">Importar copia</button><input id="pages-file" type="file" accept=".json,application/json" hidden></div><p>Las fichas se guardan en este navegador. Descargá una copia para conservarlas o llevarlas a otro dispositivo.</p>';
+ toolbar.setAttribute('aria-busy','true');for(const element of toolbar.querySelectorAll('button,select,input'))element.disabled=true;
  toolbar.append(notice);$('#sql-app header').after(toolbar);
  const home=document.createElement('div');home.id='pages-home';home.className='panel';home.innerHTML='<h1>Creá tu personaje de Gideon</h1><p>Elegí un linaje y una Senda, distribuí tus atributos y prepará tu ficha para jugar.</p><button id="pages-create" class="primary">Crear mi personaje</button><h2>Mis personajes</h2><div id="pages-characters" class="pages-characters"></div>';
  $('#access').prepend(home);
@@ -90,6 +91,7 @@ async function setupUI(){
  $('#logout').textContent='Cambiar personaje';
  $('#sql-app footer').textContent='Gideon · Fichas guardadas en este dispositivo · Sin cuenta ni instalación';
  renderLibrary();
+ for(const element of toolbar.querySelectorAll('button,select,input'))element.disabled=false;toolbar.dataset.ready='true';toolbar.setAttribute('aria-busy','false');
 }
 try{
  $('#connection').textContent='Preparando tus fichas…';
