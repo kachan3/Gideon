@@ -47,13 +47,14 @@ try{
  }
  await page.locator('#next').click();await page.getByRole('button',{name:'Crear y guardar personaje'}).click();
  await page.getByRole('heading',{name:'Exploradora de Pages',exact:true}).waitFor();
+ const gear=page.locator('dialog.gear-dialog[open]');await gear.waitFor();
+ await gear.getByRole('button',{name:'Comenzar aventura',exact:true}).click();await gear.waitFor({state:'hidden'});
  await page.evaluate(()=>sessionStorage.clear());await page.reload();await page.locator('#pages-toolbar[data-ready=true]').waitFor();
  await page.getByRole('heading',{name:'Exploradora de Pages',exact:true}).waitFor();
  assert(await page.locator('#pages-status').textContent());
- console.log('Control de copia:',await page.locator('#pages-export').evaluate(b=>({disabled:b.disabled,handler:typeof b.onclick,html:b.outerHTML,rect:b.getBoundingClientRect().toJSON(),dialogs:document.querySelectorAll('dialog[open]').length})));
  const downloading=page.waitForEvent('download');downloading.catch(()=>{});
  await page.getByRole('button',{name:'Descargar copia',exact:true}).click({timeout:10000});
- console.log('Clic de copia enviado');const download=await downloading;
+ const download=await downloading;
  const bytes=await readFile(await download.path()),backup=JSON.parse(bytes.toString());assert.equal(backup.characters[0].nombre,'Exploradora de Pages');
  const other=await browser.newContext(),visitor=await other.newPage();visitor.on('pageerror',e=>errors.push(e.message));
  await visitor.goto(url);await visitor.locator('#pages-toolbar[data-ready=true]').waitFor();assert.equal(await visitor.locator('#pages-characters button').count(),0,'Cada visitante debe tener sus propias fichas');
