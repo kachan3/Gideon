@@ -20,7 +20,7 @@ const server=createServer(async(req,res)=>{
  }catch{res.writeHead(404);res.end();}
 });
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
-const url='http://127.0.0.1:'+server.address().port+'/Gideon/';
+const url=process.env.GIDEON_PAGES_URL||'http://127.0.0.1:'+server.address().port+'/Gideon/';
 let browser,diagnosticPage;
 try{
  browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH});
@@ -66,6 +66,6 @@ try{
  assert.deepEqual(networkAPI,[],'No debe existir una API HTTP para jugar');assert.deepEqual(errors,[]);
  console.log('OK: creación real con WebAssembly, Pages en subcarpeta, guardado, recarga, visitantes aislados, copia portable, importación sin pérdida y móvil.');
 }catch(error){
- if(diagnosticPage)console.error('Estado de la página:',await diagnosticPage.evaluate(()=>({url:location.href,error:document.querySelector('#error')?.textContent,connection:document.querySelector('#connection')?.textContent,status:document.querySelector('#pages-status')?.textContent,step:document.querySelector('#step-label')?.textContent})).catch(()=>null));
+ if(diagnosticPage)console.error('Estado de la página:',await diagnosticPage.evaluate(()=>({url:location.href,title:document.title,body:document.body.innerText.slice(0,600),error:document.querySelector('#error')?.textContent,connection:document.querySelector('#connection')?.textContent,status:document.querySelector('#pages-status')?.textContent,step:document.querySelector('#step-label')?.textContent})).catch(()=>null));
  throw error;
 }finally{await browser?.close();await new Promise(r=>server.close(r));}

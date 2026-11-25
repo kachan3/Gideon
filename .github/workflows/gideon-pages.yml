@@ -41,3 +41,35 @@ jobs:
       - name: Publicar
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Comprobar los archivos publicados
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+        run: |
+          for attempt in 1 2 3 4 5 6; do
+            if curl --fail --silent --show-error -H 'Cache-Control: no-cache' "${SITE_URL}?release=${GITHUB_SHA}" -o /tmp/gideon-index.html && grep -q 'runtime/bootstrap.js' /tmp/gideon-index.html; then
+              echo "La URL pública entrega el creador de personajes."
+              exit 0
+            fi
+            echo "Esperando a que la URL pública entregue el creador (intento ${attempt})."
+            head -c 500 /tmp/gideon-index.html || true
+            sleep 10
+          done
+          exit 1
+  verify-live:
+    needs: deploy
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: npm install --ignore-scripts --no-audit --no-fund
+        working-directory: GideonCompanion/pages
+      - run: node GideonCompanion/pages/build.mjs
+      - run: node node_modules/playwright-core/cli.js install --with-deps chromium
+        working-directory: GideonCompanion/pages
+      - name: Crear y recuperar una ficha en el sitio público
+        run: node GideonCompanion/pages/browser.test.mjs
+        env:
+          GIDEON_PAGES_URL: https://kachan3.github.io/Gideon/?release=${{ github.sha }}
