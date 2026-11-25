@@ -59,7 +59,7 @@ function renderLibrary(){
  for(const p of collection.characters)select.append(new Option(p.nombre,String(p.id)));
  select.value=previous;select.hidden=!collection.characters.length;
 }
-async function exportBackup(){await queue;download({format:'gideon-pages-backup',version:1,manifest:collection.manifest,characters:collection.characters,selected:collection.selected,files:exportFiles(),database:bytesToBase64(engine.export()),exported:new Date().toISOString()},'gideon-personajes-'+new Date().toISOString().slice(0,10)+'.json');report('Copia descargada. Guardala para conservar tus fichas.');}
+async function exportBackup(){report('Preparando copia…');await queue;download({format:'gideon-pages-backup',version:1,manifest:collection.manifest,characters:collection.characters,selected:collection.selected,files:exportFiles(),database:bytesToBase64(engine.export()),exported:new Date().toISOString()},'gideon-personajes-'+new Date().toISOString().slice(0,10)+'.json');report('Copia descargada. Guardala para conservar tus fichas.');}
 async function importBackup(file){
  if(!file||file.size>38_000_000)throw Error('Elegí una copia de Gideon de menos de 38 MB.');
  const data=JSON.parse(await file.text()),bytes=validateArchive(data,manifest),candidate=new DatabaseSync(new SQL.Database(bytes));
