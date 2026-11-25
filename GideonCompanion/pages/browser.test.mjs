@@ -21,10 +21,11 @@ const server=createServer(async(req,res)=>{
 });
 await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const url='http://127.0.0.1:'+server.address().port+'/Gideon/';
-let browser;
+let browser,diagnosticPage;
 try{
  browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH});
  const context=await browser.newContext({acceptDownloads:true}),page=await context.newPage(),errors=[];
+ diagnosticPage=page;
  page.on('pageerror',e=>errors.push(e.message));
  await page.goto(url);await page.locator('#pages-toolbar').waitFor();
  assert(await page.getByRole('heading',{name:'Creá tu personaje de Gideon'}).isVisible());
@@ -60,4 +61,7 @@ try{
  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Desborde en móvil');
  assert.deepEqual(networkAPI,[],'No debe existir una API HTTP para jugar');assert.deepEqual(errors,[]);
  console.log('OK: creación real con WebAssembly, Pages en subcarpeta, guardado, recarga, visitantes aislados, copia portable, importación sin pérdida y móvil.');
+}catch(error){
+ if(diagnosticPage)console.error('Estado de la página:',await diagnosticPage.evaluate(()=>({url:location.href,error:document.querySelector('#error')?.textContent,connection:document.querySelector('#connection')?.textContent,step:document.querySelector('#step-label')?.textContent})).catch(()=>null));
+ throw error;
 }finally{await browser?.close();await new Promise(r=>server.close(r));}
