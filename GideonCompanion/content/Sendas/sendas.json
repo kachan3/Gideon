@@ -129,7 +129,7 @@
       "rasgos": [
         {
           "nombre": "Atributo Honor",
-          "descripcion": "Honor es un atributo exclusivo de esta Senda, de 0 a 99. Mide la coherencia entre tu palabra y tus actos. Hacé sus tiradas con 1d100 como las de los demás atributos. Tu Nivel de Honor es Honor dividido por 10, redondeado hacia arriba; con Honor 0, su Nivel es 0.\n\nAl crear el personaje, elegí una orden o Caballero Herrante:\n• Orden del Dragón Valeroso: Honor 50, un Combo marcial y Portador de Armadura Pesada.\n• Leones de Pircar: Honor 60, un Combo marcial y Portador de Armadura Pesada.\n• Gran Orden Armada de Tolfan: Honor 55, Luchador de Escudo y Portador de Armadura Pesada.\n• Caballero Herrante: Honor 30 + 5d6, un Combo marcial y Portador de Armadura Pesada.\n\nNo podés comprar Honor con XP. Mejora cuando el narrador lo autoriza por tus actos, mediante una Tirada de Mejora: +1d6, o +1d4 si ya tenés al menos 76. Mentir o romper tu palabra puede reducirlo: un desliz resta 1d4; una mentira, 1d6; una traición menor, 2d6; una traición mayor, de 3d6 a 5d6. Traicionar tu Juramento Declarado puede reducirlo a 0.",
+          "descripcion": "Honor es un atributo exclusivo de esta Senda, de 0 a 99. Mide la coherencia entre tu palabra y tus actos. Hacé sus tiradas con 1d100 como las de los demás atributos. Tu Nivel de Honor es Honor dividido por 10, redondeado hacia arriba; con Honor 0, su Nivel es 0.\n\nTu Orden se elige en su propio paso de creación y determina tu Honor y tus dotes iniciales.\n\nNo podés comprar Honor con XP. Mejora cuando el narrador lo autoriza por tus actos, mediante una Tirada de Mejora: +1d6, o +1d4 si ya tenés al menos 76. Mentir o romper tu palabra puede reducirlo: un desliz resta 1d4; una mentira, 1d6; una traición menor, 2d6; una traición mayor, de 3d6 a 5d6. Traicionar tu Juramento Declarado puede reducirlo a 0.",
           "xp_requerida": 0,
           "fuente": "20_Contenido/Senda_Honor/Honor_01_Atributo_Honor.md"
         },
@@ -147,9 +147,7 @@
         }
       ],
       "dotes": [],
-      "elecciones": [
-        "Elegí una orden de caballería o Caballero Herrante para determinar tu Honor y tus dotes iniciales."
-      ],
+      "elecciones": [],
       "notas": [
         "Tu Nivel de Honor es Honor dividido por 10, redondeado hacia arriba."
       ]

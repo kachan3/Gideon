@@ -1,3 +1,4 @@
+import {ensureOrders,orderCatalogue,validateOrderCreation,recordOrderCreation,orderState,oathState,saveOath} from './orders.mjs';
 import {purchase,assignGear,finishEquipment} from './market.mjs';
 import {migrateInitialEpiphanies} from './epiphanies.mjs';
 import {migrateEyesForTheAges} from './eyes-for-the-ages.mjs';
@@ -242,6 +243,7 @@ export function openDatabase(path=resolve(SQL,'gideon_companion.db')) {
   }
   transaction(db,()=>{
     if(!one(db,'SELECT 1 FROM schema_migrations WHERE version=40'))migrateBerserker(db);
+    ensureOrders(db);
     synchronizeCore(db);
   });
   return db;
@@ -382,6 +384,7 @@ export function catalogue(db) {
     result.elecciones_rasgos=traitChoiceCatalogue(db);
     result.dotes_tags=rows(db,'SELECT * FROM dotes_tags');
   }
+  result.ordenes_y_juramento=orderCatalogue(db);
   result.regalos_perjuicios=[];
   return result;
 }
@@ -391,6 +394,7 @@ export function createCharacter(db,b,internal=false){
   if(typeof b.nombre!=='string'||!b.nombre.trim()||b.nombre.length>80)fail('Indica un nombre de hasta 80 caracteres');
   for(const [key,table] of [['linaje_id','linajes'],['clase_id','clases'],['dedicacion_id','dedicaciones'],['nacimiento_id','nacimientos']])if(!get(db,table,integer(b[key],1)))fail('Selección de creación inválida');
   if(get(db,'clases',b.clase_id).disponible_demo===0)fail('Esta Senda no está disponible en la demo');
+  if(one(db,"SELECT 1 FROM sqlite_schema WHERE name='personajes_ordenes'"))validateOrderCreation(db,b);
   const choices = validateCreationChoices(
     one(db,"SELECT name FROM sqlite_master WHERE name='preguntas_rasgos_senda'") ? pathQuestions(db) : [],
     b.clase_id, b.elecciones_senda
@@ -443,12 +447,14 @@ export function createCharacter(db,b,internal=false){
     if(Object.keys(b.elecciones_rasgos).some(c=>!initial.some(e=>e.codigo===c)))fail('La elección no pertenece a tus Rasgos iniciales');
     for(const e of initial)recordTraitChoice(db,character(db,id),{codigo:e.codigo,valor:b.elecciones_rasgos[e.codigo]},v=>log(db,id,v));
   }
+  if(one(db,"SELECT 1 FROM sqlite_schema WHERE name='personajes_ordenes'"))recordOrderCreation(db,id,b,v=>log(db,id,v));
   const created=character(db,id);
   if(one(db,"SELECT name FROM sqlite_master WHERE name='personajes_accesos'"))created.token_acceso=issueCharacterToken(db,id);
   return created;
 }
 export function character(db,id){
   const p=get(db,'personajes',id);if(!p)fail('Personaje no encontrado');
+  p.orden=orderState(db,id);p.juramento=oathState(db,id);
   p.linaje=get(db,'linajes',p.linaje_id);p.sendas=rows(db,'SELECT c.* FROM clases c JOIN personajes_clases pc ON pc.clase_id=c.id WHERE pc.personaje_id=?',id);
   p.dedicaciones=rows(db,'SELECT d.* FROM dedicaciones d JOIN personajes_dedicaciones p ON p.dedicacion_id=d.id WHERE p.personaje_id=?',id);p.nacimientos=rows(db,'SELECT n.* FROM nacimientos n JOIN personajes_nacimientos p ON p.nacimiento_id=n.id WHERE p.personaje_id=?',id);p.regalos=rows(db,'SELECT r.* FROM regalos_perjuicios r JOIN personajes_regalos_perjuicios p ON p.regalo_perjuicio_id=r.id WHERE p.personaje_id=?',id);
   p.trasfondo=one(db,"SELECT name FROM sqlite_master WHERE name='personajes_trasfondo'")?rows(db,'SELECT a.*,q.numero,q.dedicacion_id FROM personajes_trasfondo a JOIN dedicaciones_preguntas q ON q.id=a.pregunta_id WHERE a.personaje_id=? ORDER BY q.dedicacion_id,q.numero',id):[];
@@ -609,6 +615,10 @@ export function makeServer(db,{random100,catalogueToken=process.env.GIDEON_CATAL
         }
         return send(405,{error:'Operación no admitida'});
       }
+      const oathRoute=path.match(/^\/api\/personajes\/(\d+)\/juramento$/);
+      if(oathRoute&&req.method==='POST')return send(200,transaction(db,()=>{
+        const id=Number(oathRoute[1]);saveOath(db,id,body.juramento);return character(db,id);
+      }));
       const choiceRoute=path.match(/^\/api\/personajes\/(\d+)\/elecciones-rasgos$/);
       if(choiceRoute&&req.method==='POST')return send(200,transaction(db,()=>{
         const id=Number(choiceRoute[1]);recordTraitChoice(db,character(db,id),body,v=>log(db,id,v));return character(db,id);

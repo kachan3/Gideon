@@ -1,3 +1,4 @@
+import {creationOrders,bindCreationOrders,validateCreationOrders,ordersSheet,bindOrdersSheet} from './orders-ui.js';
 import {setupNPCViews} from './npcs.js';
 import {creationTraitChoices,bindCreationTraitChoices,validateInitialTraitChoices,traitChoicesSheet,bindTraitChoicesSheet} from './trait-choices-ui.js';
 import {openGear,gearLauncher} from './gear-market.js';
@@ -23,7 +24,8 @@ import {currentToken,savedCharacters,saveAccess,selectAccess,clearAccess,accessH
 const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalog,character,step=0,draft={nombre:'',modo_campana:'enclave',atributos:{},pools:{}};
-const steps=['Identidad y linaje','Atributos','Trasfondo','Senda y habilidades','Confirmar'];
+const needsOrder=()=>draft.clase_id===catalog?.ordenes_y_juramento?.clase_honor_id;
+const steps=['Identidad y linaje','Atributos','Trasfondo','Senda y habilidades','Orden y juramento','Confirmar'];
 let attributeRoll=null;
 function orderedAttributes(){return catalog.skills.filter(s=>s.tipo==='Atributo').sort((a,b)=>ATTRIBUTE_ORDER.indexOf(a.nombre)-ATTRIBUTE_ORDER.indexOf(b.nombre));}
 function attributePool(){return (draft.generacion_modo??'Fijo')==='Fijo'?FIXED_VALUES:(attributeRoll?.valores??[]);}
@@ -114,7 +116,7 @@ function renderSheet(){
  ${lineageSheet(p)}
  ${professionsSheet(p)}
  ${traitSheet(p,catalog)}
- ${pathTraitsSheet(p)}
+ ${pathTraitsSheet(p)}${ordersSheet(p)}
  ${devotionSheet(p)}${traitChoicesSheet(p)}
  <div class="layout"><div>
  <section class="panel"><h2>Atributos y habilidades</h2><div class="skill-grid">${groups.map(attr=>{const val=p.skills.find(s=>s.id===attr.id)?.valor??0;return `<div class="skill-group"><button type="button" class="skill-title skill-roll" data-roll-skill="${attr.id}" aria-label="Tirar ${esc(attr.nombre)} ${val}"><span>${esc(attr.nombre)}</span><span>${val} · Nv ${Math.floor(val/10)}</span></button>${p.skills.filter(s=>s.padre_id===attr.id).map(s=>`<button type="button" class="skill-row skill-roll" data-roll-skill="${s.id}" aria-label="Tirar ${esc(s.nombre)} ${s.valor}"><span>${esc(s.nombre)}</span><strong>${s.valor}</strong></button>`).join('')}</div>`;}).join('')}</div><h3 style="margin-top:20px">Skills extra y especiales</h3>${p.skills.filter(s=>['Extra','Especial'].includes(s.tipo)).map(s=>`<button type="button" class="skill-row skill-roll" data-roll-skill="${s.id}" aria-label="Tirar ${esc(s.nombre)} ${s.valor}"><span>${esc(s.nombre)}</span><strong>${s.valor}</strong></button>`).join('')||'<p class="muted">Sin habilidades extra registradas.</p>'}<details><summary>Registrar cambio de habilidad</summary><form id="skill-form" class="stack"><label>Habilidad<select name="skill_id" required>${options(catalog.skills,null)}</select></label><div class="grid"><label>Cambio<select name="change"><option>Add</option><option>Subtract</option></select></label><label>Puntos<input name="valor" type="number" min="1" max="99" value="5" required></label><label>XP gastada<input name="xp_gastada" type="number" min="0" max="${p.xp_disponible}" value="0" required></label></div><button>Registrar</button></form><p class="muted">El narrador determina el coste y las mejoras permitidas.</p></details></section>
@@ -151,6 +153,7 @@ function renderSheet(){
  document.querySelectorAll('[data-attune]').forEach(b=>b.onclick=guard(()=>mutate('progresion','POST',{tipo:'Adquisicion',item_id:Number(b.dataset.attune)})));
  document.querySelectorAll('[data-invest]').forEach(b=>b.onclick=guard(async()=>{const a=character.adquisiciones.find(a=>a.id===Number(b.dataset.invest));await investXP({name:a.elemento?.nombre??'Elemento adquirido',available:character.xp_disponible,suggested:2,onSubmit:xp=>mutate('progresion','POST',{tipo:'Inversion',...target(a),xp_gastada:xp})});}));
  document.querySelectorAll('[data-remove]').forEach(b=>b.onclick=guard(async()=>{const a=character.adquisiciones.find(a=>a.id===Number(b.dataset.remove));await confirmAction({message:'¿Retirar este elemento? No devuelve XP.',confirmLabel:'Retirar',onConfirm:()=>mutate('progresion','POST',{tipo:'Retiro',...target(a)})});}));
+ bindOrdersSheet(document,p,mutate,error);
  updateInventory();
  updateMagic();
  document.querySelectorAll('[data-roll-skill]').forEach(b=>b.onclick=()=>rollSkill(Number(b.dataset.rollSkill)));
@@ -165,15 +168,17 @@ function renderSheet(){
  }
 }
 function renderWizard(){
- $('#step-label').textContent=`Paso ${step+1} de ${steps.length} · ${steps[step]}`;$('#previous').disabled=step===0;$('#next').disabled=false;$('#next').textContent=step===4?'Crear y guardar personaje':'Continuar';
+ const skipOrder=Boolean(draft.clase_id&&!needsOrder());
+ $('#step-label').textContent=`Paso ${step+1-(skipOrder&&step>4?1:0)} de ${steps.length-(skipOrder?1:0)} · ${steps[step]}`;$('#previous').disabled=step===0;$('#next').disabled=false;$('#next').textContent=step===5?'Crear y guardar personaje':'Continuar';
  const attrs=orderedAttributes(),fields=[];
  if(step===0)fields.push(`<div class="grid"><label>Nombre<input name="nombre" value="${esc(draft.nombre)}" maxlength="80" required></label><label>Campaña<select name="modo_campana"><option value="enclave" ${draft.modo_campana==='enclave'?'selected':''}>Enclave</option><option value="sandbox" ${draft.modo_campana==='sandbox'?'selected':''}>Sandbox</option></select></label></div>${selectField('Linaje','linaje_id',catalog.linajes)}<div id="initial-lineage"></div><label>Trasfondo narrativo<textarea name="notas" rows="4">${esc(draft.notas)}</textarea></label>`);
  if(step===1)fields.push(attributeEditor(attrs));
  if(step===2)fields.push(`<div class="grid">${selectField('Dedicación / trasfondo','dedicacion_id',catalog.dedicaciones)}${selectField('Nacimiento / origen','nacimiento_id',catalog.nacimientos)}</div><div id="selection-details" class="hint"></div><div id="profession-choice"></div><section id="profession-details" class="profession-summary"></section><div id="origin-traits"></div><div id="background-details"></div>`);
  if(step===3)fields.push(`${selectField('Senda','clase_id',catalog.clases)}<div id="path-details">${pathSummary(catalog,draft)}${creationPathChoices(catalog,draft)}</div>${poolEditor(catalog,draft)}<div id="creation-trait-choices">${creationTraitChoices(catalog,draft)}</div>`);
- if(step===4)fields.push(`<h2>${esc(draft.nombre)}</h2><p>${esc(catalog.linajes.find(l=>l.id===draft.linaje_id)?.nombre)} · ${esc(catalog.clases.find(l=>l.id===draft.clase_id)?.nombre)}</p><p>${esc(catalog.dedicaciones.find(l=>l.id===draft.dedicacion_id)?.nombre)} · ${esc(catalog.nacimientos.find(l=>l.id===draft.nacimiento_id)?.nombre)}</p><p>${initialXP(catalog,draft)} XP inicial · Peso personal ${creationWeight(catalog,draft)} kg</p>${lineageEditor(catalog,draft,{readOnly:true})}${pathSummary(catalog,draft)}${professionReview(catalog,draft)}${originTraitEditor(catalog,draft)}${backgroundReview(catalog,draft)}<p class="hint">Se guardará en SQLite, con sus habilidades y concesiones iniciales. La ficha calculará recursos y mostrará acciones y componentes disponibles.</p>`);
+ if(step===4)fields.push('<div id="creation-orders">'+creationOrders(catalog,draft)+'</div>');
+ if(step===5)fields.push(`<h2>${esc(draft.nombre)}</h2><p>${esc(catalog.linajes.find(l=>l.id===draft.linaje_id)?.nombre)} · ${esc(catalog.clases.find(l=>l.id===draft.clase_id)?.nombre)}</p><p>${esc(catalog.dedicaciones.find(l=>l.id===draft.dedicacion_id)?.nombre)} · ${esc(catalog.nacimientos.find(l=>l.id===draft.nacimiento_id)?.nombre)}</p><p>${initialXP(catalog,draft)} XP inicial · Peso personal ${creationWeight(catalog,draft)} kg</p>${lineageEditor(catalog,draft,{readOnly:true})}${pathSummary(catalog,draft)}${professionReview(catalog,draft)}${originTraitEditor(catalog,draft)}${backgroundReview(catalog,draft)}<p class="hint">Se guardará en SQLite, con sus habilidades y concesiones iniciales. La ficha calculará recursos y mostrará acciones y componentes disponibles.</p>`);
  $('#wizard-body').innerHTML=`<div class="panel stack"><h2>${steps[step]}</h2>${fields.join('')}</div>`;
- if(step===4)$('#wizard-body .panel').insertAdjacentHTML('beforeend',creationPathChoices(catalog,draft,{review:true})+creationTraitChoices(catalog,draft,{review:true}));
+ if(step===5)$('#wizard-body .panel').insertAdjacentHTML('beforeend',creationPathChoices(catalog,draft,{review:true})+creationTraitChoices(catalog,draft,{review:true})+creationOrders(catalog,draft,{review:true}));
  if(step===0){
   const select=$('[name=linaje_id]');
   const refresh=()=>{const id=Number(select.value)||null;if(id!==draft.linaje_id){draft.linaje_id=id;draft.elecciones_linaje={};draft.regalo_moonstone=true;}
@@ -189,10 +194,11 @@ function renderWizard(){
    for(const input of document.querySelectorAll('[data-combat-slot],[data-normal]'))input.addEventListener('change',refreshTraitChoices);
    $('[name=clase_id]').onchange=e=>{
      draft.clase_id=e.target.value?Number(e.target.value):null;
-     draft.elecciones_senda={};draft.elecciones_rasgos={};
+     draft.elecciones_senda={};draft.elecciones_rasgos={};draft.juramento={};delete draft.combo_orden_id;delete draft.orden;
      $('#path-details').innerHTML=pathSummary(catalog,draft)+creationPathChoices(catalog,draft);refreshTraitChoices();
    };
  }
+ if(step===4){const refresh=()=>{const root=$('#creation-orders');root.innerHTML=creationOrders(catalog,draft);bindCreationOrders(root,catalog,draft,refresh);};refresh();}
  if(step===2){
   const selects=[...document.querySelectorAll('#wizard-body .grid select')];
   const details=()=>{
@@ -214,7 +220,7 @@ function renderWizard(){
 }
 function saveStep(){
  for(const [k,v] of new FormData($('#creation-form'))){
-   if(k.startsWith('rasgo_'))continue;
+   if(k.startsWith('rasgo_')||k.startsWith('juramento_')||k==='orden'||k==='combo_orden_id')continue;
    if(k.startsWith('respuesta_senda_')){
      const id=k.slice('respuesta_senda_'.length);
      if(v)(draft.elecciones_senda??={})[id]=Number(v);
@@ -227,9 +233,9 @@ function saveStep(){
    else draft[k]=k.endsWith('_id')?(v?Number(v):null):v;
  }
 }
-function validateStep(){if(step===0)lineageBonuses(catalog,draft,{strict:true});if(step===2){selectedProfession(catalog,draft,{strict:true});}if(step===1&&!sameValues(Object.values(draft.atributos),attributePool()))throw Error('Completa los diez atributos con los valores disponibles.');if(step===3){validateInitialTraitChoices(catalog,draft);const assigned=Object.entries(draft.pools).map(([id,v])=>({s:catalog.skills.find(s=>s.id===Number(id)),v}));if(assigned.filter(a=>a.s.combate&&a.v).map(a=>a.v).sort((a,b)=>a-b).join(',')!=='5,10,15,20'||assigned.filter(a=>!a.s.combate).reduce((n,a)=>n+a.v,0)!==50)throw Error('Completa ambos pools antes de continuar.');}}
-$('#creation-form').addEventListener('submit',guard(async e=>{e.preventDefault();saveStep();validateStep();if(step<4){step++;renderWizard();window.scrollTo(0,0);}else{const b=$('#next');b.disabled=true;try{const created=await api('personajes','POST',{...draft,profesion_id:selectedProfession(catalog,draft)?.id,respuestas_trasfondo:backgroundAnswers(catalog,draft),respuestas_nacimiento:originAnswers(catalog,draft)});saveAccess(created,created.token_acceso);await list(created.id);show('sheet');revealToken();step=0;attributeRoll=null;draft={nombre:'',modo_campana:'enclave',atributos:{},pools:{}};}finally{b.disabled=false;}}}));
-$('#previous').onclick=()=>{saveStep();if(step>0)step--;clearError();renderWizard();};$('#nav-sheet').onclick=()=>show('sheet');$('#nav-create').onclick=()=>{show('create');renderWizard();};$('#nav-shop').onclick=()=>openEquipment('shop');$('#nav-inventory').onclick=()=>{updateInventory();show('inventory');};$('#character-select').onchange=guard(e=>load(Number(e.target.value)));$('#nav-spells').onclick=()=>{updateMagic();show('spells');};$('#nav-dice').onclick=()=>{if(character)openDice({title:'Roller de dados',skills:character.skills,perform:performRoll});};
+function validateStep(){if(step===4)validateCreationOrders(catalog,draft);if(step===0)lineageBonuses(catalog,draft,{strict:true});if(step===2){selectedProfession(catalog,draft,{strict:true});}if(step===1&&!sameValues(Object.values(draft.atributos),attributePool()))throw Error('Completa los diez atributos con los valores disponibles.');if(step===3){validateInitialTraitChoices(catalog,draft);const assigned=Object.entries(draft.pools).map(([id,v])=>({s:catalog.skills.find(s=>s.id===Number(id)),v}));if(assigned.filter(a=>a.s.combate&&a.v).map(a=>a.v).sort((a,b)=>a-b).join(',')!=='5,10,15,20'||assigned.filter(a=>!a.s.combate).reduce((n,a)=>n+a.v,0)!==50)throw Error('Completa ambos pools antes de continuar.');}}
+$('#creation-form').addEventListener('submit',guard(async e=>{e.preventDefault();saveStep();validateStep();if(step<5){step+=step===3&&!needsOrder()?2:1;renderWizard();window.scrollTo(0,0);}else{const b=$('#next');b.disabled=true;try{const created=await api('personajes','POST',{...draft,profesion_id:selectedProfession(catalog,draft)?.id,respuestas_trasfondo:backgroundAnswers(catalog,draft),respuestas_nacimiento:originAnswers(catalog,draft)});saveAccess(created,created.token_acceso);await list(created.id);show('sheet');revealToken();step=0;attributeRoll=null;draft={nombre:'',modo_campana:'enclave',atributos:{},pools:{}};}finally{b.disabled=false;}}}));
+$('#previous').onclick=()=>{saveStep();if(step>0)step-=step===5&&!needsOrder()?2:1;clearError();renderWizard();};$('#nav-sheet').onclick=()=>show('sheet');$('#nav-create').onclick=()=>{show('create');renderWizard();};$('#nav-shop').onclick=()=>openEquipment('shop');$('#nav-inventory').onclick=()=>{updateInventory();show('inventory');};$('#character-select').onchange=guard(e=>load(Number(e.target.value)));$('#nav-spells').onclick=()=>{updateMagic();show('spells');};$('#nav-dice').onclick=()=>{if(character)openDice({title:'Roller de dados',skills:character.skills,perform:performRoll});};
 $('#access-form').addEventListener('submit',guard(async e=>{e.preventDefault();const token=$('#access-token').value.trim(),result=await api('acceso','POST',{token});saveAccess(result.personaje,token);$('#access-token').value='';await list(result.personaje.id);show('sheet');}));
 $('#logout').onclick=endAccess;$('#dismiss-token').onclick=()=>{$('#token-notice').hidden=true;};
 for(const id of ['copy-character-token','copy-created-token'])$('#'+id).onclick=guard(async e=>{const button=e.currentTarget,label=id==='copy-character-token'?'Copiar token del PJ':'Copiar token';if(await copyToken()){button.textContent='Token copiado';setTimeout(()=>button.textContent=label,1800);}else{show('sheet');revealToken();$('#created-token').focus();$('#created-token').select();}});

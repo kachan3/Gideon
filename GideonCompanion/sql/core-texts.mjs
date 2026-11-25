@@ -1,5 +1,6 @@
 import {playerText,playerPathDocument} from '../js/player-text.js';
 import {pathContent} from './paths.mjs';
+import {orderContent} from './orders.mjs';
 import {readFileSync, readdirSync} from 'node:fs';
 import {posix} from 'node:path';
 import {rulebook} from './rulebook.mjs';
@@ -55,6 +56,7 @@ function documents(db) {
     for (const file of readdirSync(new URL(content+dir+'/',root)).filter(n=>n.endsWith('.md')&&!n.includes('_00_'))) add(content+dir+'/'+file,dir.replace('_',' '));
   }
   for (const file of ['Herramientas_del_Lanzador','Accion_Denme_Algo_de_Tiempo']) add(content+file+'.md','Magia y referencias');
+  add(content+'Ordenes_de_Caballeria.md','Órdenes y afiliaciones');
   const existing=new Set(db.prepare('SELECT nombre FROM epifanias UNION SELECT nombre FROM dotes').all().map(r=>key(r.nombre)));
   for (const file of readdirSync(new URL(content+'Dotes/',root))) {
     if (!file.endsWith('.md') || file==='Index.md') continue;
@@ -278,6 +280,7 @@ export function coreTexts(db) {
       add('rasgo',feat.nombre,feat.descripcion,source,[],true);
     }
   }
+  for(const combo of orderContent.combos)add('dote',combo.nombre,'Cada ejecución cuesta 1 Stamina. '+combo.descripcion,{id:combo.fuente},[],true);
   for(const a of atoms.values())a.texto=playerText(a.texto);
   for(const [id,a] of atoms)if(!a.texto)atoms.delete(id);
   const allowedPathFiles=/_(?:01_Habilidades_Insignia|01_Ira_y_Trance|01_Atributo_Honor|02_Juramento_Declarado|03_Compromiso_Solemne|01bis_Mecanica_de_Olvido|02_Artes_Tetricas|02_Dogmas_del_Bien_Mayor)\.md$/;

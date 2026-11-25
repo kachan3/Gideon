@@ -205,7 +205,11 @@ Cada uno tiene **cuatro preguntas narrativas opcionales**, guardadas por separad
 
 Elegí la Senda, sus dotes y sus rasgos iniciales. Repartí el **Pool de Combate** y el **Pool Normal** según los valores y límites de [Sendas — Mecánicas](Core_12_Sendas_Mecanicas.md). Completá el reparto antes de resolver la Dedicación declarada.
 
-Si elegís la **Senda del Honor**, elegí también una **orden de caballería** disponible o empezá como **Caballero Herrante**. Anotá el Honor inicial y los dotes de tu elección según [Atributo Honor — Valor inicial en creación de personaje](Senda_Honor/Honor_01_Atributo_Honor.md#valor-inicial-en-creación-de-personaje).
+### Orden y Juramento Declarado
+
+La Orden se elige y registra en un segmento propio de creación. Las órdenes de caballería están reservadas a seguidores de la Senda del Honor; un seguidor de Honor también puede comenzar como Caballero Herrante, sin pertenecer a una Orden.
+
+Si elegís la **Senda del Honor**, seleccioná una **orden de caballería** disponible o empezá como **Caballero Herrante**. Anotá el Honor inicial y los dotes de tu elección según [Atributo Honor — Valor inicial en creación de personaje](Senda_Honor/Honor_01_Atributo_Honor.md#valor-inicial-en-creación-de-personaje).
 
 ### Regla de Destacado
 

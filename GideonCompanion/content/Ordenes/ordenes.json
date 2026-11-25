@@ -1,0 +1,175 @@
+{
+  "fuente": "20_Contenido/Ordenes_de_Caballeria.md",
+  "ordenes": [
+    {
+      "codigo": "dragon-valeroso",
+      "nombre": "Orden del Dragón Valeroso",
+      "honor": 50,
+      "combo": true,
+      "descripcion": "Honor inicial 50. Recibís un Combo marcial a elección y Portador de Armadura Pesada."
+    },
+    {
+      "codigo": "leones-de-pircar",
+      "nombre": "Leones de Pircar",
+      "honor": 60,
+      "combo": true,
+      "descripcion": "Honor inicial 60. Recibís un Combo marcial a elección y Portador de Armadura Pesada."
+    },
+    {
+      "codigo": "tolfan",
+      "nombre": "Gran Orden Armada de Tolfan",
+      "honor": 55,
+      "combo": false,
+      "descripcion": "Honor inicial 55. Recibís Luchador de Escudo y Portador de Armadura Pesada."
+    },
+    {
+      "codigo": "herrante",
+      "nombre": "Caballero Herrante",
+      "honor": null,
+      "combo": true,
+      "descripcion": "Honor inicial 30 + 5d6 (35 a 60), tirado al guardar el personaje. Recibís un Combo marcial a elección y Portador de Armadura Pesada."
+    }
+  ],
+  "juramento": {
+    "fuente": "20_Contenido/Senda_Honor/Honor_02_Juramento_Declarado.md",
+    "posiciones": [
+      {
+        "codigo": "apertura",
+        "nombre": "Apertura",
+        "xp": 5,
+        "opciones": [
+          {
+            "codigo": "juro-por-mi-vida",
+            "nombre": "Juro por mi vida",
+            "descripcion": "Mientras estés actuando para cumplir tu **Compromiso Solemne** activo, cuando vayas a recibir Heridas, podés **gastar 1 uso de la reserva de ese compromiso** para reducir las Heridas que recibirías en una cantidad igual a tu **Nivel de Honor**, hasta un mínimo de 0."
+          },
+          {
+            "codigo": "me-juro-a-mi-mismo",
+            "nombre": "Me juro a mí mismo",
+            "descripcion": "Esta Apertura es para los caballeros que juran lealtad a sí mismos y a su propio beneficio.\n\nSi abandonar tu **Compromiso Solemne** activo te beneficia más que mantenerlo, podés abandonarlo **sin perder Honor por el abandono**. Podés hacerlo, por ejemplo, cuando el peligro de continuar es demasiado alto o cuando el beneficio esperado ya no justifica seguir. Tu Honor, en este juramento, consiste en ser fiel a tu propio interés."
+          },
+          {
+            "codigo": "por-mi-honor-lo-invoco",
+            "nombre": "Por mi honor lo invoco",
+            "descripcion": "Según la importancia del compromiso, aumentá en **1, 2 o 3 puntos** las ganancias de Honor y aumentá en esa misma cantidad las pérdidas de Honor."
+          }
+        ]
+      },
+      {
+        "codigo": "intencion",
+        "nombre": "Intención",
+        "xp": 10,
+        "opciones": [
+          {
+            "codigo": "ningun-enemigo-conocera-la-tregua",
+            "nombre": "Ningún enemigo conocerá la tregua",
+            "descripcion": "Cuando usás **¡Mi Honor lo Exige!** en un **Golpe** para cumplir tu Compromiso Solemne, ese Golpe puede beneficiarse de [OathBlow](#oathblow) sin pagar sus **2 PM**."
+          },
+          {
+            "codigo": "ningun-hermano-padecera-en-mi-guardia",
+            "nombre": "Ningún hermano padecerá en mi guardia",
+            "descripcion": "Ganás el dote [Protector](#protector). Tu alcance para proteger se extiende **1 unidad más allá de la adyacencia**. Si quedás al lado de la criatura protegida al desplazarte hasta 1 unidad, podés hacer ese desplazamiento como parte de la maniobra defensiva. Se aplican todas las restricciones de la maniobra elegida."
+          },
+          {
+            "codigo": "la-ley-sera-respetada-en-mi-presencia",
+            "nombre": "La ley será respetada en mi presencia",
+            "descripcion": "Mientras actuás activamente para detener un delito, ganás automáticamente los beneficios de **Compromiso Solemne** para detenerlo, sin pagar el Maná correspondiente. Estos beneficios pueden coexistir con otro Compromiso Solemne activo, como excepción al límite general."
+          }
+        ]
+      },
+      {
+        "codigo": "permanencia",
+        "nombre": "Permanencia",
+        "xp": 15,
+        "opciones": [
+          {
+            "codigo": "con-mi-ultimo-aliento-puesto-en-ello",
+            "nombre": "Con mi último aliento puesto en ello",
+            "descripcion": "**Una vez por día**, cuando fueras a caer en combate por una herida que no constituya una [Obliteración](../../10_Reglas/Vida_y_Salud.md#obliteración), podés gastar **1 uso** de tu Compromiso Solemne para quedar con **1 punto de margen de Heridas** y ganar Vida Temporal igual a **un quinto de tu valor de Honor**.\n\nSi te mantenés en la pelea sin huir tras activarlo, ganás **1d4 Honor**. Si aprovechás la supervivencia para huir, perdés **1d4 Honor**."
+          },
+          {
+            "codigo": "mientras-los-inocentes-sufran",
+            "nombre": "Mientras los inocentes sufran",
+            "descripcion": "Cuando un aliado cae en combate y ya no puede pelear por muerte, exceso de heridas o Agonía, ganás **Haste (1)**, que te da **1 acción adicional por turno**, hasta que lo levantes o pongas a salvo. Si lo lográs, ganás **1d4 Honor**.\n\nSi lo abandonás, perdés Haste (1), quedás **Ralentizado (1)** durante **1 minuto** y perdés **1d6 Honor**. Si el aliado muere mientras intentás protegerlo, perdés Haste (1) y conservás tu Honor."
+          },
+          {
+            "codigo": "hasta-que-mi-voluntad-sea-la-ley",
+            "nombre": "Hasta que mi voluntad sea la ley",
+            "descripcion": "Podés usar **Honor** para una tirada de **Carácter** si tu valor de Honor es superior al valor que usarías normalmente.\n\nPodés **imponer una orden** a una criatura como **1 PA**. Hacé una tirada de Honor. Si tenés éxito, la criatura entiende la orden y puede desobedecerla. Si desobedece, en tu próximo turno podés golpearla gratis con **OathBlow**."
+          }
+        ]
+      },
+      {
+        "codigo": "reafirmacion",
+        "nombre": "Reafirmación",
+        "xp": 20,
+        "opciones": [
+          {
+            "codigo": "aunque-tenga-que-ir-a-los-confines-de-la-tierra",
+            "nombre": "Aunque tenga que ir a los confines de la tierra",
+            "descripcion": "Podés **posponer** tu Compromiso Solemne sin perder Honor y mantener otro Compromiso Solemne mientras el anterior está pospuesto. Ganás **2 unidades de Velocidad a pie**.\n\nSi un efecto intenta impedir tu movimiento o reducir tu economía de acciones, podés tirar Honor para resistirlo. Si el efecto admite oposición, podés usar Honor para oponerte. Si no requiere tirada enfrentada, un éxito de Honor elimina el efecto. Cuando el desplazamiento está relacionado con tu Compromiso Solemne, podés caminar o correr indefinidamente sin necesitar descanso."
+          },
+          {
+            "codigo": "sin-importar-las-represalias",
+            "nombre": "Sin importar las represalias",
+            "descripcion": "Si una acción que realizás en combate gatilla que recibas daño, reducí ese daño en una cantidad igual a tu **Nivel de Honor**, cualquiera sea su fuente."
+          },
+          {
+            "codigo": "el-dolor-sera-solo-un-incentivo",
+            "nombre": "El dolor será solo un incentivo",
+            "descripcion": "Cuando ganás una **herida grave**, recuperás **2 usos** de tu Compromiso Solemne. Si ganás una **herida mortal**, recuperás **todos** sus usos."
+          }
+        ]
+      },
+      {
+        "codigo": "remate",
+        "nombre": "Remate",
+        "xp": 25,
+        "opciones": [
+          {
+            "codigo": "ante-gawain-mi-ancestro-lo-prometo",
+            "nombre": "Ante Gawain, mi ancestro, lo prometo",
+            "descripcion": "Al tomar esta frase, si tu Honor es menor a **90**, aumenta a **90**. Si ya era **90**, ganás **Ventaja 3** y **Salvataje 3** en tus tiradas de Honor."
+          },
+          {
+            "codigo": "ante-mis-hermanos-les-demostrare-mi-compromiso",
+            "nombre": "Ante mis hermanos les demostraré mi compromiso",
+            "descripcion": "Cuando declarás un Compromiso Solemne, hasta **6 criaturas** que designes ganan sus beneficios. Cada una tiene una reserva igual a **la mitad de tus usos**, redondeada hacia arriba."
+          },
+          {
+            "codigo": "y-que-el-olvido-y-la-verguenza-me-devoren-sin-piedad-ante-mi-fallo",
+            "nombre": "Y que el olvido y la vergüenza me devoren sin piedad ante mi fallo",
+            "descripcion": "**Una vez por turno**, podés repetir una tirada fallida de Honor. Además, **una vez por mes**, si estás por fallar a tu Compromiso Solemne, podés **reafirmarlo** y recuperar todos sus usos. Cuando lo hacés, ganás **Haste (1)** durante **1 minuto**."
+          }
+        ]
+      }
+    ]
+  },
+  "combos": [
+    {
+      "nombre": "Golpe Insistente",
+      "descripcion": "**Tipo:** Combo, etiqueta Marcial. Ver [reglas de Combos](../../10_Reglas/Combos.md).\n\n**Coste: 1–2 PA.** Repetí la tirada de un ataque fallido. Si invertís 2 PA, podés repetirla hasta dos veces.",
+      "fuente": "20_Contenido/Dotes/Golpe_Insistente.md"
+    },
+    {
+      "nombre": "Multi Ataque",
+      "descripcion": "**Tipo:** Combo, etiqueta Marcial. Ver [reglas de Combos](../../10_Reglas/Combos.md).\n\n**Coste: 2 PA.** Hacé hasta tres ataques en orden contra el mismo objetivo. Un fallo en tu propia tirada de ataque interrumpe la secuencia. Si el defensor evita un ataque con Deflectar, Bloqueo o Evasión, podés continuar.\n\n**Mejora DWE de Multi Ataque.** Podés continuar una vez por ejecución tras una interrupción por fallo propio o por Parry exitoso. El golpe fallido o detenido sigue sin impactar y el máximo sigue siendo tres ataques.",
+      "fuente": "20_Contenido/Dotes/Multi_Ataque.md"
+    },
+    {
+      "nombre": "Golpe Poderoso",
+      "descripcion": "**Tipo:** Combo, etiqueta Marcial. Ver [reglas de Combos](../../10_Reglas/Combos.md).\n\n**Coste: 2–3 PA.** Hacé un solo ataque. **Daño = NE + Daño del Arma + (PA invertidos × Nivel de Fuerza)**. Concentrar el daño en un impacto lo hace útil contra enemigos con Dureza alta. Para defenderse de este golpe con un arma se exige **Parry**.",
+      "fuente": "20_Contenido/Dotes/Golpe_Poderoso.md"
+    },
+    {
+      "nombre": "Danza Dragón",
+      "descripcion": "**Tipo:** Combo, etiqueta Marcial. Ver [reglas de Combos](../../10_Reglas/Combos.md).\n\n**Coste: 2 PA.** Atacá a tres objetivos dentro de tu alcance cuerpo a cuerpo. Resolvé los ataques en orden.",
+      "fuente": "20_Contenido/Dotes/Danza_Dragon.md"
+    },
+    {
+      "nombre": "Golpe Dual",
+      "descripcion": "**Tipo:** Combo, etiqueta Marcial. Ver [reglas de Combos](../../10_Reglas/Combos.md).\n\n**Coste: 2 PA.** Requiere [Dual Wielding Enthusiast](Dual_Wielding_Enthusiast.md) aprendido y **Dual Wielding 85%**. Declarás el Combo antes de realizar el ataque y atacás **en conjunto con ambas armas**. Al daño del ataque con la primera arma sumás únicamente el **Daño del Arma** de la segunda. Combinás ambos aportes antes de aplicar las defensas y resistencias correspondientes. Si el ataque impacta, aplicás también los **efectos de impacto de la segunda arma**.",
+      "fuente": "20_Contenido/Dotes/Golpe_Dual.md"
+    }
+  ]
+}

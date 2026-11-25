@@ -31,6 +31,7 @@
 | `Creacion_de_Personaje.md` | Chargen: techo 80, modos de campaña, Dedicaciones, Nacimiento, Regalos/Perjuicios (C-5 aplicado) | 🟡 (skills garantizadas mayormente esqueleto) |
 | `Feat_Entrenamiento.md` | **Feat canónico de mejora** (marcas al fallar; ≥; 5/2 por sesión; **compra repetible 1 XP por sesión — D-8**; Marca de Vitalidad al sufrir Herida Grave — D-5) — canon C-4, 2026-07-03 | 🟢 |
 | `Core_12_Sendas_Mecanicas.md` | §12: las 10 sendas | 🟡 (niveles 3+/4+ en esqueleto; Honor vacía) |
+| [Órdenes de caballería](../20_Contenido/Ordenes_de_Caballeria.md) | Órdenes exclusivas de Honor, elecciones de creación y beneficios iniciales. | Catálogo vigente |
 | `Core_14_Equipamiento.md` | §14: armas, armaduras x/y/z, escudos | 🔴 (tablas de armas vacías) |
 | `DMs_Blacksmit.md` | Herrería del DM: arma base (palo), 3 categorías (Burda/Cotidiana/Militar), sistema de puntos de balance ±1, plantilla para armar armas a pedido — canon 2026-07-15 | 🟡 (clasificación +/− de propiedades pendiente) |
 | `Core_15_Talentos_y_Dotes.md` | §15: talentos mágicos y de senda | 🔴 (varios "olvidados" pendientes de re-escala 1d100) |

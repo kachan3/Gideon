@@ -1,3 +1,4 @@
+import {ensureOrders} from '../engine/sql/orders.mjs';
 import {applyPlayerCopy} from '../engine/sql/player-copy.mjs';
 import {DatabaseSync} from './sqlite.js';
 import {makeServer} from '../engine/sql/server.mjs';
@@ -63,12 +64,16 @@ function renderLibrary(){
 async function exportBackup(){report('Preparando copia…');await queue;download({format:'gideon-pages-backup',version:1,manifest:collection.manifest,characters:collection.characters,selected:collection.selected,files:exportFiles(),database:bytesToBase64(engine.export()),exported:new Date().toISOString()},'gideon-personajes-'+new Date().toISOString().slice(0,10)+'.json');report('Copia descargada. Guardala para conservar tus fichas.');}
 async function importBackup(file){
  if(!file||file.size>38_000_000)throw Error('Elegí una copia de Gideon de menos de 38 MB.');
- const data=JSON.parse(await file.text()),bytes=validateArchive(data,manifest),candidate=new DatabaseSync(new SQL.Database(bytes));
+ const data=JSON.parse(await file.text());let bytes=validateArchive(data,manifest),candidate=new DatabaseSync(new SQL.Database(bytes));
  try{
   if(candidate.prepare('PRAGMA integrity_check').get().integrity_check!=='ok'||candidate.prepare('PRAGMA foreign_key_check').all().length)throw Error('La copia contiene fichas dañadas.');
+  const actualSchema=candidate.prepare('SELECT MAX(version) n FROM schema_migrations').get().n;
+  if(actualSchema!==data.manifest.schemaVersion)throw Error('La copia declara una versión distinta de su base de datos.');
+  ensureOrders(candidate);
   if(candidate.prepare('SELECT MAX(version) n FROM schema_migrations').get().n!==manifest.schemaVersion)throw Error('La versión de la copia no coincide.');
   const ids=candidate.prepare('SELECT id FROM personajes').all();if(ids.length!==data.characters.length)throw Error('La copia no contiene los accesos de todas las fichas.');
   for(const p of data.characters){const owner=identifyCharacter(candidate,p.token);if(!owner||owner.id!==p.id)throw Error('No coincide el acceso de una ficha de la copia.');p.nombre=owner.nombre;}
+  bytes=candidate.export();data.manifest={...data.manifest,schemaVersion:manifest.schemaVersion};
  }finally{candidate.close();}
  // Import into a NEW collection; never overwrite the visitor's existing sheets.
  const next={id:crypto.randomUUID(),scope,name:'Copia importada · '+new Date().toLocaleDateString('es-AR'),revision:1,bytes,characters:data.characters,selected:data.characters.some(p=>p.token===data.selected)?data.selected:data.characters[0]?.token??'',files:data.files??{},manifest:data.manifest};
@@ -103,8 +108,9 @@ try{
   const response=await networkFetch(new URL('catalogue.sqlite',root));if(!response.ok)throw Error('No se pudo cargar el catálogo.');
   collection={id:crypto.randomUUID(),scope,name:'Mis personajes',revision:0,bytes:new Uint8Array(await response.arrayBuffer()),characters:[],selected:'',files:{},manifest};
  }
- if(collection.manifest.schemaVersion!==manifest.schemaVersion)throw Error('Tus fichas pertenecen a una versión anterior. Conservá el guardado de este navegador para poder migrarlas.');
+ if(![40,manifest.schemaVersion].includes(collection.manifest.schemaVersion))throw Error('Tus fichas pertenecen a una versión anterior. Conservá el guardado de este navegador para poder migrarlas.');
  restoreFiles(collection.files);engine=new DatabaseSync(new SQL.Database(collection.bytes));
+ ensureOrders(engine);collection.manifest={...collection.manifest,schemaVersion:manifest.schemaVersion};
  const copyResponse=await networkFetch(new URL('player-copy.json',root));
  if(!copyResponse.ok)throw Error('No se pudo cargar el contenido de las Sendas.');
  engine.exec('BEGIN IMMEDIATE');

@@ -15,18 +15,7 @@ El Atributo Honor es un Rasgo inicial independiente de los sistemas de Juramento
 
 ### Valor inicial en creación de personaje
 
-Al elegir la **Senda del Honor** en [Creación de personaje](../Creacion_de_Personaje.md#paso-4--senda-clase), elegí **una orden de caballería** disponible o empezá como **Caballero Herrante**. La elección determina tu Honor inicial y los dotes que recibís al crear el personaje, sin gastar XP.
-
-| Elección | Honor inicial | Dotes iniciales |
-|---|---:|---|
-| **Orden del Dragón Valeroso** | 50 | Un [Combo marcial](../../10_Reglas/Combos.md) y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
-| **Leones de Pircar** | 60 | Un [Combo marcial](../../10_Reglas/Combos.md) y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
-| **Gran Orden Armada de Tolfan** | 55 | Luchador de Escudo y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
-| **Caballero Herrante** | `30 + 5d6` (35–60) | Un [Combo marcial](../../10_Reglas/Combos.md) y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
-
-<!-- CUARENTENA. Pendiente de desarrollo y fuera de las opciones de creación.
-Orden de la Serpiente. Honor inicial 40. Recibe un Combo marcial.
--->
+Elegí tu afiliación y los beneficios iniciales correspondientes en [Órdenes de caballería](../Ordenes_de_Caballeria.md). La Orden se registra como una elección propia de creación.
 
 ## Nivel de Honor = ⌈ Honor ÷ 10 ⌉ (Redondeo Arriba)
 

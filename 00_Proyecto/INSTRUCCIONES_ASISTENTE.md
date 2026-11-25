@@ -71,3 +71,12 @@ Cuando hay conflicto entre fuentes, la prioridad es:
 - Los esqueletos, propuestas, cuarentenas, pendientes, historiales, notas de versiones, rutas de organización y comentarios editoriales permanecen en los archivos internos. No mostrarlos como instrucciones para el jugador ni convertirlos en reglas. Conservar las partes vigentes de una capacidad que tenga desarrollos futuros pendientes, sin inventar esos desarrollos.
 - Mantener las mismas reglas en creador, ficha, catálogo y reglamento. Comprobar que las colecciones guardadas reciben las correcciones de lectura sin sustituir fichas, inventarios, elecciones ni historial de XP.
 - No añadir marcas de referencia por iniciativa propia: sigue vigente la selección expresa de Hassan mediante [[destino]] o [[destino|texto visible]].
+
+
+## Orden y Juramento en creación — 2026-11-25
+
+- La Orden tiene catálogo y segmento propios, separados del atributo Honor y de la descripción de la Senda. Su fuente es 20_Contenido/Ordenes_de_Caballeria.md.
+- Las órdenes de caballería son exclusivas de seguidores de Honor. No todos ellos pertenecen a una Orden: Caballero Herrante es la alternativa sin afiliación. Mostrar el paso de Orden y Juramento solo para Honor. Las órdenes no consideran preocupante su escaso número y colaboran con instituciones militares de Pirkar.
+- Ofrecer selectores de Orden, Combo inicial cuando corresponda y componentes del Juramento durante la creación. Mostrar el efecto de cada opción y conservar la elección al avanzar, retroceder, guardar, recargar o exportar.
+- El Juramento puede prepararse en creación, pero preparar una frase no otorga su capacidad antes del umbral de XP invertida en dotes de Honor.
+- No asignar Orden, volver a tirar Honor ni conceder recompensas retroactivas durante la migración de fichas existentes.
