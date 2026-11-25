@@ -1,3 +1,5 @@
+import {exportPlayerCopy} from '../sql/player-copy.mjs';
+import {pathContent} from '../sql/paths.mjs';
 import {mkdir,readFile,writeFile,copyFile,readdir,access} from 'node:fs/promises';
 import {resolve,dirname,join} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -41,6 +43,7 @@ export async function build(){
   db.exec("VACUUM INTO '"+temporary.replaceAll("'","''")+"'");
   await copyFile(temporary,join(output,'catalogue.sqlite'));
   const {unlink}=await import('node:fs/promises');await unlink(temporary);
+  await writeFile(join(output,'player-copy.json'),JSON.stringify(exportPlayerCopy(db,pathContent.sendas)));
   const schemaVersion=db.prepare('SELECT MAX(version) n FROM schema_migrations').get().n;
   await writeFile(join(output,'catalogue-manifest.json'),JSON.stringify({format:'gideon-pages',version:1,schemaVersion,catalogueVersion,created:new Date().toISOString(),personalTables:tables.filter(t=>personal.has(t))},null,2));
  }finally{db.close();}

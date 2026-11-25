@@ -1,5 +1,5 @@
 {
-  "revision": "2026-11-05",
+  "revision": "2026-11-25",
   "sendas": [
     {
       "nombre": "Senda del Arcanista",
@@ -8,33 +8,36 @@
       "rasgos": [
         {
           "nombre": "Eficiencia",
-          "descripcion": "Al lanzar con Spellcasting Modular, activar conjuros de artefactos o redirigir daño con Vigoris Mortis, paga coste original − ⌊coste original / 3⌋. Sólo el maná realmente pagado cuenta para el límite seguro y el daño crónico.",
-          "xp_requerida": 0
+          "descripcion": "Reducí en 1 PM cada grupo completo de 3 PM del coste de lanzar un conjuro con Spellcasting Modular, activar un conjuro almacenado en un Artefacto Arcano o redirigir daño con Vigoris Mortis.\n\nCoste pagado = coste original − redondeo hacia abajo de (coste original ÷ 3). Por ejemplo, un coste de 3 PM pasa a 2 PM y uno de 7 PM pasa a 5 PM. Solo el Maná realmente pagado cuenta para el Límite Seguro y el Daño Crónico.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Arcanista/Arcanista_01_Habilidades_Insignia.md"
         },
         {
           "nombre": "Herencia",
-          "descripcion": "Obtiene los dotes insignia Lanzador de Conjuros y La Herramienta Correcta. Las insignias pueden provenir también de otras fuentes; un duplicado concede +1 XP según la regla general.",
-          "xp_requerida": 0
+          "descripcion": "Al elegir Arcanista, recibís Lanzador de Conjuros y La Herramienta Correcta. El primero te permite lanzar conjuros y elegir una Epifanía; el segundo te vincula con una herramienta del lanzador.\n\nAdemás, podés dedicar el turno completo, 3 PA, a realizar 2 tiradas de Spellweave en ese turno.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Arcanista/Arcanista_01_Habilidades_Insignia.md"
         },
         {
           "nombre": "Epifanía Original",
-          "descripcion": "Elige una Epifanía disponible en la campaña y recibe un Artefacto Arcano inicial. La Epifanía abre su repertorio de módulos, trucos y místicas; no se asigna una elección arbitraria.",
-          "xp_requerida": 0
+          "descripcion": "Elegí una Epifanía del repertorio disponible en la campaña. Sus efectos, trucos, místicas y pasivas forman tu repertorio mágico inicial. La Epifanía inicial concedida por la Senda se obtiene sin pagar su coste de aprendizaje.\n\nTambién recibís un Artefacto Arcano, con PL fijo y una reserva de cargas propia. Puede provenir de tu institución, servicio militar, familia o maestro. No podés modificarlo invirtiendo NE. Si es físicamente compatible con tu herramienta del lanzador, podés reunir ambos en un objeto que conserve las funciones de los dos.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Arcanista/Arcanista_01_Habilidades_Insignia.md"
         }
       ],
       "dotes": [
         {
           "nombre": "Lanzador de Conjuros",
-          "descripcion": "Acceso al Spellcasting Modular y elección de una Epifanía inicial de campaña. No es exclusivo del Arcanista: puede obtenerse por otras fuentes."
+          "descripcion": "Podés lanzar conjuros mediante Spellcasting Modular. Al obtener este dote, elegí una Epifanía que abra tu repertorio inicial de efectos, trucos y místicas.\n\nTambién pueden obtenerlo personajes de otras Sendas. Si ya recibiste una capacidad equivalente, este acceso no genera XP inicial ni una concesión adicional."
         },
         {
           "nombre": "La Herramienta Correcta",
-          "descripcion": "Elige Arma, Libro o Amuleto como herramienta de lanzador dominada y establece un vínculo de Retorno Destinado. El regreso es narrativo, no un teletransporte. Arcanista también dispone de Whole Turn Spellweave: 3 PA para dos tiradas en el turno."
+          "descripcion": "Elegí Libro de Conjuros, Bastón o Espada como tu herramienta del lanzador dominada. Aplicá los beneficios de la herramienta que elijas.\n\nRetorno Destinado: si perdés la herramienta o te la roban, el destino termina reuniéndolos, salvo cuando tu muerte sea inminente y segura. El narrador determina cómo y cuándo vuelve; el retorno puede requerir horas, días o una aventura."
         }
       ],
       "elecciones": [
-        "Elegir la herramienta de lanzador: Arma, Libro o Amuleto.",
-        "Elegir la Epifanía inicial disponible en la campaña y acordar el Artefacto Arcano recibido."
+        "Elegí Libro de Conjuros, Bastón o Espada como herramienta del lanzador.",
+        "Elegí tu Epifanía inicial y el Artefacto Arcano que recibís."
       ],
       "notas": []
     },
@@ -45,28 +48,39 @@
       "rasgos": [
         {
           "nombre": "Pool de Ira",
-          "descripcion": "Reserva máxima igual al Nivel de Voluntad. Empieza el combate con 0 cargas. Al inicio de su turno gana 1 carga, hasta quedar a una del máximo. Después de resolver esa generación, obtiene 1 punto de Vida Temporal por cada carga de Ira que tenga en ese momento. Pierde la Vida Temporal restante de este Rasgo al inicio de su próximo turno, antes de generar la nueva, o al finalizar el combate, lo que ocurra primero. También gana 1 carga cuando él o un aliado recibe una herida grave o mortal. Fuera de combate se drena al calmarse.",
-          "xp_requerida": 0
+          "descripcion": "Tu reserva máxima de Ira es tu Voluntad dividida por 10, redondeada hacia arriba. Comenzás cada combate con 0 cargas, salvo que una capacidad o circunstancia narrativa indique otra cosa.\n\nAl inicio de tu turno, ganás 1 carga si tenés menos que tu máximo menos 1. Cuando vos o un aliado recibe una herida grave o mortal, ganás 1 carga: esta sí puede llenar tu reserva y activar el Trance.\n\nDespués de generar Ira al inicio del turno, obtenés tantos puntos de Vida Temporal como cargas tengas. La Vida Temporal reduce las heridas que recibirías y no se suma con otras fuentes: se aplica la cantidad más alta. La que conserve este rasgo se pierde al inicio de tu próximo turno, antes de generar la nueva, o al terminar el combate.\n\nLa Ira se conserva durante el combate; fuera de él, baja a 0 cuando te calmás.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Berserker/Berserker_01_Ira_y_Trance.md"
         },
         {
           "nombre": "Furia Desatada",
-          "descripcion": "Al inicio del turno puede sumar su Ira actual como daño plano a todos sus ataques melee o arrojadizos del turno. No consume cargas y el decaimiento de Ira se aplica normalmente. Queda Arrebatado hasta su siguiente turno.",
-          "xp_requerida": 0
+          "descripcion": "Al inicio de tu turno, antes de atacar, podés declarar Furia Desatada. Durante ese turno, sumá tu Ira acumulada actual como daño adicional a todos tus ataques con armas cuerpo a cuerpo o arrojadizas.\n\nActivarla no consume cargas de Ira. Como coste, quedás Arrebatado hasta el inicio de tu próximo turno.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Berserker/Berserker_01_Ira_y_Trance.md"
         },
         {
           "nombre": "Desquite",
-          "descripcion": "Una vez por turno, al impactar con un arma, puede gastar 1 carga de Ira para añadir 1d6 de daño del tipo del arma. Si ese daño por sí solo supera el Nivel del arma, el arma gana 1 Contador de Ruptura. Contra su Enemigo Declarado, Desquite no consume Ira.",
-          "xp_requerida": 0
+          "descripcion": "Una vez por turno, cuando impactás con un arma, podés gastar 1 carga de Ira para añadir 1d6 de daño del mismo tipo que el arma. Si el resultado de ese dado supera por sí solo el Nivel del arma, esta gana 1 Contador de Ruptura.\n\nPodés usar Desquite en el mismo turno que Furia Desatada. Contra tu Enemigo Declarado, Desquite no consume Ira.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Dotes/_esqueleto_Desquite.md"
         },
         {
           "nombre": "Trance",
-          "descripcion": "Se activa al llenar la Ira. Cuesta Maná igual al Nivel de Voluntad y el déficit produce Daño Crónico. Dura tantos turnos como el Nivel de Voluntad. Ignora penalizaciones por heridas y Miedo, mantiene Arrebatado e impide conjurar. Al terminar, la Ira baja a 0 y no puede acumularla durante 3 turnos.",
-          "xp_requerida": 0
+          "descripcion": "Entrás en Trance automáticamente al llenar tu reserva de Ira. Pagás tantos PM como cargas tengas; si no alcanza tu Maná, el déficit se convierte en Daño Crónico.\n\nDura tantos turnos como tu Nivel de Voluntad y no podés terminarlo voluntariamente. Durante el Trance ignorás las penalizaciones por heridas y Miedo, permanecés Arrebatado y no podés lanzar conjuros ni iniciar o continuar Spellweave. Si estabas canalizando un hechizo, la canalización se interrumpe y perdés los NE acumulados. Las heridas siguen existiendo y pueden causarte la muerte.\n\nLa Ira se conserva mientras dure el enfrentamiento, salvo las cargas que gastes. El Trance termina al agotarse su duración, cuando ya no percibís enemigos hostiles o cuando todos murieron o huyeron.\n\nAl terminar, tu Ira baja a 0, no podés acumularla durante 3 turnos y vuelven a aplicarse las penalizaciones por heridas.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Berserker/Berserker_01_Ira_y_Trance.md"
         },
         {
           "nombre": "Fuerza Aliota",
-          "descripcion": "Con al menos 4 cargas de Ira, puede gastar 3 puntos de Maná para resolver su próxima acción con un tier de Fuerza superior y una categoría de tamaño mayor. Las cargas se conservan. Al entrar en Trance, si cumple el requisito de Ira, puede aplicar el Rasgo a su próxima acción sin pagar Maná, una vez por Trance.",
-          "xp_requerida": 10
+          "descripcion": "Con al menos 4 cargas de Ira, podés pagar 3 PM para resolver tu próxima acción como si tuvieras un tier de Fuerza superior y una categoría de tamaño mayor. Las cargas de Ira se conservan.\n\nUna vez por Trance, al entrar en él y si cumplís el requisito de Ira, podés aplicar Fuerza Aliota a tu próxima acción sin pagar Maná.",
+          "xp_requerida": 10,
+          "fuente": "20_Contenido/Senda_Berserker/Berserker_02_Dotes_de_Senda.md"
+        },
+        {
+          "nombre": "Enemigo Declarado",
+          "descripcion": "Gastá 1 PA para designar a un enemigo que puedas percibir. La declaración es interna y no requiere hablar; solo podés mantener un Enemigo Declarado a la vez.\n\nGanás +2 unidades de Velocidad al acercarte a él, Desquite no consume Ira contra él y el Miedo no puede impedirte aproximarte.\n\nEl vínculo termina si ese enemigo muere. Mientras siga vivo, necesitás un Descanso Largo meditando para cortar el vínculo y declarar otro.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Berserker/Berserker_03_Enemigo_Declarado.md"
         }
       ],
       "dotes": [],
@@ -80,24 +94,33 @@
       "rasgos": [
         {
           "nombre": "Manifestación Celestial",
-          "descripcion": "Mantiene una Plegaria de su Dogma por jornada. Manifestar Intervención cuesta 2 maná y acciones según el efecto; Manifestar Milagro cuesta 5 maná y 1 Omen, normalmente 3 acciones. No concede todos los Dogmas ni todos sus repertorios.",
-          "xp_requerida": 0
+          "descripcion": "Al amanecer o al concluir un Descanso Largo, entoná la Plegaria de tu Dogma. Solo podés mantener una activa; no consume Maná continuo y dura toda la jornada o hasta el siguiente Descanso Largo.\n\nManifestar Intervención cuesta 2 PM. La intervención elegida indica si requiere 1 acción, 2 acciones o 1 Reacción.\n\nManifestar Milagro cuesta 5 PM y 1 Omen. El milagro determina su coste de acciones; los milagros iniciales requieren 3 acciones.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Hierofante/Hierofante_01_Habilidades_Insignia.md"
         }
       ],
       "dotes": [
         {
           "nombre": "Regalo de Demesteria",
-          "descripcion": "Define su pacto: Emisario del Bien Supremo (etiqueta Bienaventurado y amparo legal imperial) o Emisario del Mal (reservado a campañas clandestinas o antagonistas). El emisario del Bien elige Amor Incondicional, Justicia o Libertad como Dogma inicial."
+          "descripcion": "Definí tu pacto con Demesteria. Como emisario del Bien Supremo recibís la etiqueta Bienaventurado y elegís un Dogma.\n\nTu fe y tus prácticas están protegidas bajo la ley imperial, pero seguís sujeto a las mismas obligaciones legales y morales que los demás ciudadanos.\n\nEl pacto con los Daemonis corresponde al emisario del Mal, perseguido por la ley imperial y reservado a campañas clandestinas o antagonistas."
         },
         {
           "nombre": "¡Fe, Protégeme!",
-          "descripcion": "Contrarresto intrínseco exclusivamente sobre sí mismo, sin acción ni reacción, ante efectos de su antítesis planar: Daemonis para el Bien Supremo, Bienaventurado para el Mal. Enfrenta Fe y resta sus NE a los del agresor; a 0 o menos anula el efecto sobre sí mismo."
+          "descripcion": "Cuando recibís un efecto, objeto, ataque o hechizo de tu antítesis planar, podés contrarrestarlo sobre vos mismo sin gastar acciones ni Reacciones.\n\nSi sos emisario del Bien Supremo, contrarrestás Daemonis; si sos emisario del Mal, contrarrestás Bienaventurado. Hacé una tirada enfrentada de Fe contra la tirada del agresor o la dificultad de la fuente. Restá tus NE a los del agresor: si los reducís a 0 o menos, anulás por completo el efecto sobre vos."
         }
       ],
       "elecciones": [
         "El repertorio del creador corresponde al Bien Supremo. El pacto con los Daemonis depende del tipo de campaña y se acuerda con el narrador."
       ],
-      "notas": []
+      "notas": [],
+      "otros_rasgos": [
+        {
+          "nombre": "Elegir un Dogma",
+          "descripcion": "Si sos emisario del Bien Supremo, elegí un Dogma: Amor Incondicional, Justicia o Libertad. Recibís su Plegaria, sus dos Intervenciones iniciales y su Milagro.\n\nAmor Incondicional se centra en curar heridas y proteger aliados. Justicia concede Faithblow y castiga a los agresores. Libertad rompe ataduras, facilita el movimiento y libera al grupo del control enemigo.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Hierofante/Hierofante_01_Habilidades_Insignia.md"
+        }
+      ]
     },
     {
       "nombre": "Senda del Honor",
@@ -106,27 +129,29 @@
       "rasgos": [
         {
           "nombre": "Atributo Honor",
-          "descripcion": "Atributo extra exclusivo de 0–99. Se usa en chequeos y sólo mejora por decisión del narrador, nunca comprando XP. Su valor inicial depende del trasfondo: independiente, 1d6 × 5 + 25; caballería: Leones/Cabras 60, Dragones 50, Serpientes 40.",
-          "xp_requerida": 0
+          "descripcion": "Honor es un atributo exclusivo de esta Senda, de 0 a 99. Mide la coherencia entre tu palabra y tus actos. Hacé sus tiradas con 1d100 como las de los demás atributos. Tu Nivel de Honor es Honor dividido por 10, redondeado hacia arriba; con Honor 0, su Nivel es 0.\n\nAl crear el personaje, elegí una orden o Caballero Herrante:\n• Orden del Dragón Valeroso: Honor 50, un Combo marcial y Portador de Armadura Pesada.\n• Leones de Pircar: Honor 60, un Combo marcial y Portador de Armadura Pesada.\n• Gran Orden Armada de Tolfan: Honor 55, Luchador de Escudo y Portador de Armadura Pesada.\n• Caballero Herrante: Honor 30 + 5d6, un Combo marcial y Portador de Armadura Pesada.\n\nNo podés comprar Honor con XP. Mejora cuando el narrador lo autoriza por tus actos, mediante una Tirada de Mejora: +1d6, o +1d4 si ya tenés al menos 76. Mentir o romper tu palabra puede reducirlo: un desliz resta 1d4; una mentira, 1d6; una traición menor, 2d6; una traición mayor, de 3d6 a 5d6. Traicionar tu Juramento Declarado puede reducirlo a 0.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Honor/Honor_01_Atributo_Honor.md"
         },
         {
           "nombre": "Juramento Declarado",
-          "descripcion": "Construye su juramento progresivamente mediante dotes que añaden frases y beneficios. No concede de entrada todos los ejemplos de juramento; los requisitos y umbrales pendientes se acuerdan con el narrador.",
-          "xp_requerida": 0
+          "descripcion": "Construí tu juramento eligiendo una frase por cada umbral de XP acumulada en dotes de Honor:\n• 5 XP: Apertura.\n• 10 XP: Intención.\n• 15 XP: Permanencia.\n• 20 XP: Reafirmación.\n• 25 XP: Remate.\n\nCada frase concede el beneficio indicado en su descripción y puede modificar tu Compromiso Solemne. Las frases se añaden a medida que alcanzás cada umbral; cada posición se elige por separado.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Honor/Honor_02_Juramento_Declarado.md"
         },
         {
           "nombre": "Compromiso Solemne",
-          "descripcion": "Declara un propósito en voz alta, pagando maná igual al Nivel de Honor. Sólo puede tener uno activo. ¡Mi Honor lo Exige! permite, una vez por turno y con usos iguales al Nivel de Honor, tirar Honor para reemplazar un fallo relacionado con el voto. Abandonar o reemplazar el compromiso aplica sus consecuencias.",
-          "xp_requerida": 0
+          "descripcion": "Declará en voz alta qué vas a lograr y pagá Maná igual a tu Nivel de Honor. Escribí el compromiso en papel o por mensaje: debe ser una frase clara de unas 20 palabras como máximo, gramaticalmente correcta y sin cláusulas condicionales ni excepciones.\n\nMientras esté activo, podés usar ¡Mi Honor lo Exige! una vez por turno como Acción Gratuita. Si fallás una tirada relacionada con cumplir el compromiso, gastá 1 uso y tirá Honor; un éxito reemplaza el fallo. La reserva tiene tantos usos como tu Nivel de Honor.\n\nComo regla general, mantenés un solo compromiso activo. Si agotás sus usos, declarar otro exige pagar de nuevo y reemplaza el anterior. Las excepciones expresas de tus frases de Juramento se aplican según su texto.\n\nCumplirlo concede Honor según su magnitud: trivial, +1d4; menor, +1d6; significativo, +1d8; mayor o épico, +1d10. Un fallo honesto supone una pérdida de 0 a 1 punto. Abandonarlo voluntariamente resta de 1d6 a 2d6; reemplazarlo antes de cumplirlo resta el doble de la recompensa que habría otorgado.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Honor/Honor_03_Compromiso_Solemne.md"
         }
       ],
       "dotes": [],
       "elecciones": [
-        "Resolver el valor inicial de Honor según el trasfondo y la pertenencia a una escuela de caballería.",
-        "Construir el Juramento Declarado con los dotes que se adquieran; no se asigna una frase automáticamente."
+        "Elegí una orden de caballería o Caballero Herrante para determinar tu Honor y tus dotes iniciales."
       ],
       "notas": [
-        "Honor no mide bondad: mide la coherencia entre palabra y acción."
+        "Tu Nivel de Honor es Honor dividido por 10, redondeado hacia arriba."
       ]
     },
     {
@@ -136,23 +161,27 @@
       "rasgos": [
         {
           "nombre": "Sentidos Tétricos",
-          "descripcion": "Sentido Preciso a través de sombras conectadas, en un radio de 2 × Bono de Instinto. Ignora muros y puertas si la sombra mantiene continuidad; la luz directa interrumpe o recorta el alcance.",
-          "xp_requerida": 5
+          "descripcion": "La penumbra te permite percibir ubicaciones, siluetas y movimientos como un Sentido Preciso, en un radio de 2 × Bono de Instinto. Dentro de ese alcance podés ubicar amenazas sin las penalizaciones de ceguera.\n\nLa percepción atraviesa muros y puertas si una sombra continua conecta ambos espacios. Una fuente de luz intensa que interrumpa la continuidad corta el alcance en esa dirección.",
+          "xp_requerida": 5,
+          "fuente": "20_Contenido/Senda_Sombra/Sombra_01_Habilidades_Insignia.md"
         },
         {
           "nombre": "Acciones de Presteza",
-          "descripcion": "Una vez por turno enemigo, si no estás Sorprendido, podés gastar una de tus Reacciones disponibles al inicio, cuando el enemigo declara una acción o al final de su turno. La misma Reacción permite desplazarte hasta tu velocidad, atacar con un arma Veloz y ejecutar acciones gratuitas.",
-          "xp_requerida": 0
+          "descripcion": "Una vez por turno enemigo, si tenés una Reacción disponible y no estás Sorprendido, podés declarar Presteza cuando ese enemigo comienza su turno, declara una acción o termina su turno.\n\nGastás 1 de tus Reacciones. En esa misma Reacción podés desplazarte hasta tu Velocidad de Movimiento, realizar un ataque con un arma Veloz que portes y ejecutar Acciones Gratuitas.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Sombra/Sombra_01_Habilidades_Insignia.md"
         },
         {
           "nombre": "Conocimiento Técnico",
-          "descripcion": "Recibe 100 puntos para distribuir entre Cerrajería, Alquimia, Disfraz y Falsificación. Se suman a sus valores existentes y están sujetos al Techo Inverso de Olvido. La distribución requiere elección del jugador.",
-          "xp_requerida": 0
+          "descripcion": "Distribuí 100 puntos entre Cerrajería, Alquimia, Disfraz y Falsificación, en cualquier combinación. Se suman a los valores que ya tengas.\n\nEstos valores están sujetos al Techo Inverso de Olvido: ningún atributo o stat puede superar 100 − Olvido.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Sombra/Sombra_01_Habilidades_Insignia.md"
         },
         {
           "nombre": "Artes Sombrías",
-          "descripcion": "Al obtener el Rasgo, elegí una rama para empezar a aprenderla: Acupuntura Sombría, Venomancia o Asesinato.",
-          "xp_requerida": 5
+          "descripcion": "Al obtener este rasgo, elegí una rama para empezar a aprenderla: Acupuntura Sombría, Venomancia o Asesinato.\n\nAcupuntura Sombría emplea estuches de hasta 20 agujas de Nivel 1 a 10. Su actividad requiere 2 acciones. Primero, clavá o arrojá las agujas hasta 5 unidades usando Melee a una mano o Proyectiles (Arrojar). Para anclarlas, NE + Nivel de la aguja + Nivel de Instinto + Nivel de Agilidad debe igualar o superar la defensa. No infligen daño al anclarse; la primera fija la zona corporal a la que quedan vinculadas las demás.\n\nDespués, Dequi permite activar hasta 3 agujas ancladas, pagando 1 PM por aguja. Cada una inflige daño igual al mayor entre tu Nivel de Voluntad y tu Nivel de Olvido; todo el daño se concentra en la zona marcada.\n\nVenomancia se especializa en elaborar e inocular toxinas para presas concretas. Asesinato se especializa en emboscadas y ataques precisos contra objetivos vulnerables.",
+          "xp_requerida": 5,
+          "fuente": "20_Contenido/Senda_Sombra/Sombra_01_Habilidades_Insignia.md"
         }
       ],
       "dotes": [],
@@ -160,7 +189,7 @@
         "Repartir los 100 puntos de Conocimiento Técnico entre sus cuatro habilidades de profesión."
       ],
       "notas": [
-        "Olvido es un entrenamiento comprable de 1 XP: sacrifica 2 puntos de atributos por 1 de Olvido, máximo 10 por sesión. No se compra ni activa automáticamente al elegir Sombra."
+        "Olvido es un entrenamiento repetible de 1 XP. Cada 2 puntos de atributos permanentes sacrificados otorgan 1 punto de Olvido, hasta 10 puntos por sesión. El techo de tus atributos y stats es 100 − Olvido. Las tiradas con la etiqueta Tétrica pueden usar Olvido. Con Olvido 100, perdés definitivamente al personaje."
       ]
     },
     {
@@ -171,17 +200,26 @@
         {
           "nombre": "Danza de Golpes",
           "descripcion": "Si la última acción de tu turno fue un Golpe, un Combo o una acción con la etiqueta Valor, no quedás Arrebatado al final del turno.",
-          "xp_requerida": 0
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Valor/Valor_01_Habilidades_Insignia.md"
         },
         {
           "nombre": "Nervios de Acero",
-          "descripcion": "Al realizar una tirada de Miedo reduce en 1 el valor de miedo obtenido.",
-          "xp_requerida": 0
+          "descripcion": "Cuando hacés una Tirada de Miedo, reducí en 1 el miedo obtenido por esa tirada.",
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Valor/Valor_01_Habilidades_Insignia.md"
         },
         {
           "nombre": "Entrenamiento Superior",
           "descripcion": "Podés adquirir un Dote con la etiqueta Marcial.",
-          "xp_requerida": 0
+          "xp_requerida": 0,
+          "fuente": "20_Contenido/Senda_Valor/Valor_01_Habilidades_Insignia.md"
+        },
+        {
+          "nombre": "As Marcial",
+          "descripcion": "Al acumular 3 XP invertidos en dotes de Valor, recibís 1 punto de As. Ganás otro por cada 3 XP adicionales invertidos en esos dotes.\n\nAsigná cada punto a una habilidad marcial que tenga al menos 80%. Cada punto asignado suma +1 NE a las tiradas exitosas de esa habilidad, hasta un máximo de 5 puntos por habilidad. Podés repartirlos entre distintas habilidades o concentrarlos en una. El porcentaje de la habilidad determina el éxito de la forma habitual.",
+          "xp_requerida": 3,
+          "fuente": "20_Contenido/Senda_Valor/Valor_01_Habilidades_Insignia.md"
         }
       ],
       "dotes": [],

@@ -1,3 +1,4 @@
+import {applyPlayerCopy} from '../engine/sql/player-copy.mjs';
 import {DatabaseSync} from './sqlite.js';
 import {makeServer} from '../engine/sql/server.mjs';
 import {identifyCharacter} from '../engine/sql/access.mjs';
@@ -103,7 +104,12 @@ try{
   collection={id:crypto.randomUUID(),scope,name:'Mis personajes',revision:0,bytes:new Uint8Array(await response.arrayBuffer()),characters:[],selected:'',files:{},manifest};
  }
  if(collection.manifest.schemaVersion!==manifest.schemaVersion)throw Error('Tus fichas pertenecen a una versión anterior. Conservá el guardado de este navegador para poder migrarlas.');
- restoreFiles(collection.files);engine=new DatabaseSync(new SQL.Database(collection.bytes));handler=makeServer(engine,{catalogueToken:'',dmToken:'pages-local'});
+ restoreFiles(collection.files);engine=new DatabaseSync(new SQL.Database(collection.bytes));
+ const copyResponse=await networkFetch(new URL('player-copy.json',root));
+ if(!copyResponse.ok)throw Error('No se pudo cargar el contenido de las Sendas.');
+ engine.exec('BEGIN IMMEDIATE');
+ try{applyPlayerCopy(engine,await copyResponse.json());engine.exec('COMMIT');}catch(e){engine.exec('ROLLBACK');throw e;}
+ handler=makeServer(engine,{catalogueToken:'',dmToken:'pages-local'});
  if(!collection.revision){await persist();localStorage.setItem(activeKey,collection.id);}
  setSession();globalThis.fetch=request;
  await import('../js/companion.js');await setupUI();

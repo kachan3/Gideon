@@ -61,3 +61,13 @@ Cuando hay conflicto entre fuentes, la prioridad es:
 - El destino debe corresponder a un nombre o alias exacto y único del catálogo, o a su ID estable (por ejemplo, `[[estado-aturdimiento|aturdido]]`). No inferir el destino por contexto, similitud, género o número. Si falta o es ambiguo, dejar la marca visible y corregir el destino; no elegir uno automáticamente.
 - Mantener Markdown y HTML existentes. Encabezados, enlaces comunes y palabras sin esta marca no activan recuadros. Los ejemplos dentro de bloques de código se muestran literalmente.
 - Los archivos siguen siendo el Core; conservar las marcas elegidas al sincronizar la base de datos. Las antiguas anotaciones automáticas no autorizan referencias nuevas. No marcar masivamente el contenido existente.
+
+
+## Texto de juego del Companion — 2026-11-25
+
+- Preparar el port para una persona que quiere jugar: explicar efecto, requisitos, coste, momento de activación, duración y límites de cada capacidad cuando estén definidos en el Core.
+- La presentación de una Senda es breve. Sus rasgos iniciales, dotes concedidos y rasgos de progresión se muestran por separado. No usar un apartado completo del índice de Sendas como descripción de sus rasgos.
+- Revisar todas las Sendas disponibles, sus rasgos y sus dotes iniciales. La copia de lectura revisada se mantiene en GideonCompanion/content/Sendas/sendas.json y deriva de los módulos fuente indicados allí. Ante cambios de reglas en esos módulos, actualizar también la copia de lectura; el Core conserva la autoridad.
+- Los esqueletos, propuestas, cuarentenas, pendientes, historiales, notas de versiones, rutas de organización y comentarios editoriales permanecen en los archivos internos. No mostrarlos como instrucciones para el jugador ni convertirlos en reglas. Conservar las partes vigentes de una capacidad que tenga desarrollos futuros pendientes, sin inventar esos desarrollos.
+- Mantener las mismas reglas en creador, ficha, catálogo y reglamento. Comprobar que las colecciones guardadas reciben las correcciones de lectura sin sustituir fichas, inventarios, elecciones ni historial de XP.
+- No añadir marcas de referencia por iniciativa propia: sigue vigente la selección expresa de Hassan mediante [[destino]] o [[destino|texto visible]].

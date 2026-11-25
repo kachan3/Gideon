@@ -23,7 +23,7 @@ test('sólo seis Sendas disponibles y conserva sus Rasgos y Dotes de inicio',()=
   const c=catalogue(db);assert.deepEqual(c.clases.map(p=>p.nombre).sort(),pathContent.sendas.map(p=>p.nombre).sort());
   for(const path of c.clases){
    const src=pathContent.sendas.find(p=>p.nombre===path.nombre),summary=pathSummary(c,{clase_id:path.id});
-   assert(src.rasgos.length>0);assert(summary.includes('Rasgos de Senda'));
+   assert(src.rasgos.length>0);assert(summary.includes('Rasgos iniciales'));
    for(const feature of src.rasgos)assert(summary.includes(feature.nombre));
    assert.equal(summary.includes('Elecciones iniciales'),src.elecciones.length>0);
    const p=transaction(db,()=>createCharacter(db,withChoice(c,path)));
@@ -45,7 +45,7 @@ test('Sombra comienza con dos Rasgos y desbloquea Artes y Sentidos con 5 XP dedi
   const all=[...initial,'Artes Sombrías','Sentidos Tétricos'];
   const active=()=>character(db,p.id).rasgos_clase.map(r=>r.nombre).sort();
   assert.deepEqual(active(),initial);
-  assert.match(p.rasgos_clase.find(r=>r.nombre==='Acciones de Presteza').descripcion,/no estar Sorprendido/);
+  assert.match(p.rasgos_clase.find(r=>r.nombre==='Acciones de Presteza').descripcion,/no est[aá]s Sorprendido/);
   db.prepare('UPDATE personajes SET xp_total=20 WHERE id=?').run(p.id);
   assert.deepEqual(active(),initial);
   const insert=db.prepare("INSERT INTO dotes(nombre,descripcion,clase_id,costo_xp) VALUES(?,'Prueba',?,?)");
@@ -136,6 +136,6 @@ test('Eficiencia figura entre los Rasgos reales del Arcanista y reduce el coste 
  const db=openDatabase(':memory:');try{
   const p=character(db,1);assert(p.rasgos_clase.some(r=>r.nombre==='Eficiencia'));assert(!p.adquisiciones.some(a=>a.elemento?.nombre==='La Herramienta Correcta'));
   const config={efecto_id:p.componentes.efectos[0].id,medium_id:p.componentes.mediums[0].id,shape_id:p.componentes.shapes[0].id,efecto_pl:4,duracion_pl:0,mods:[],herramienta:'Herramienta'};
-  const plan=spellPlan(p,config);assert.equal(plan.pl,5);assert.equal(plan.coste_mana,4);
+  const plan=spellPlan(p,config);assert.equal(plan.pl,6);assert.equal(plan.coste_mana,4);
  }finally{db.close();}
 });

@@ -1,3 +1,6 @@
+import {pathContent} from './paths.mjs';
+import {ensurePathTraits} from './player-copy.mjs';
+import {playerText} from '../js/player-text.js';
 import {readFileSync} from 'node:fs';
 import {coreTexts, key, plain} from './core-texts.mjs';
 import {unmark} from '../js/reference-format.js';
@@ -18,6 +21,7 @@ const nameAliases = {'Conocimiento Mágico':'C. Magico','Escudo Torre':'Torre','
 
 export function synchronizeCore(db) {
   db.exec(readFileSync(new URL('./migrations/039_referencias.sql',import.meta.url),'utf8'));
+  ensurePathTraits(db,pathContent.sendas);
   const {docs,atoms,extraFields}=coreTexts(db);
   const names = new Map();
   for(const a of atoms.values()) for(const alias of a.aliases) names.set(a.kind+':'+key(alias),a);
@@ -34,7 +38,7 @@ export function synchronizeCore(db) {
       const atomForTag=names.get('etiqueta:'+key('Etiqueta '+name))??(name==='Reacción'?names.get('regla:'+key(name)):undefined);
       let atom=tag?atomForTag:kinds.map(k=>names.get(k+':'+key(name))).find(Boolean);
       if(atom&&!tag) atom.aliases.add(row.nombre);
-      let value=atom?displayText(atom.texto):row[field];
+      let value=atom?displayText(atom.texto):playerText(row[field]);
       if (!value) continue;
       if (!atom && row.disponible_demo!==0 && !['rasgos','clases_rasgos'].includes(table)) {
         // Keep usable catalogue-only entries linkable without claiming a Core source.
@@ -66,7 +70,7 @@ export function synchronizeCore(db) {
   for(const f of fields) {
     const {table,id,field,atom,value}=f;
     const source=f.source??atom?.source??'';
-    if(source && f.old!==value) db.prepare('UPDATE '+table+' SET '+field+'=? WHERE id=? AND '+field+' IS NOT ?').run(value,id,value);
+    if(f.old!==value) db.prepare('UPDATE '+table+' SET '+field+'=? WHERE id=? AND '+field+' IS NOT ?').run(value,id,value);
     insertField.run(table,id,field,source,unmark(value));
   }
   db.prepare('INSERT OR IGNORE INTO schema_migrations(version) VALUES(39)').run();

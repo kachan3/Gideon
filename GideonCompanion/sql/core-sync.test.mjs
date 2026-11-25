@@ -4,6 +4,7 @@ import {readFileSync} from 'node:fs';
 import {openDatabase,transaction} from './server.mjs';
 import {synchronizeCore} from './core-sync.mjs';
 import {referenceMatcher,referencePattern,unmark} from '../js/reference-format.js';
+import {playerText} from '../js/player-text.js';
 
 test('el Core restaura el catálogo sin cambiar las fichas y mantiene referencias resolubles',()=>{
   const db=openDatabase(':memory:');
@@ -24,7 +25,7 @@ test('el Core restaura el catálogo sin cambiar las fichas y mantiene referencia
     }
     const doc='10_Reglas/Core_18_Estados_Alterados.md';
     const core=readFileSync(new URL('../../'+doc,import.meta.url),'utf8').replace(/\r\n/g,'\n');
-    assert.equal(unmark(one('SELECT texto FROM documentos_reglas WHERE id=?',doc).texto),core);
+    assert.equal(unmark(one('SELECT texto FROM documentos_reglas WHERE id=?',doc).texto),playerText(core,{keepLinks:true}));
     const mark=referenceMatcher(all('SELECT * FROM alias_reglas'));
     assert.equal(mark('Quedas aturdida. Fuerza. Cortante.'),'Quedas aturdida. Fuerza. Cortante.');
     assert.match(mark('[[Aturdimiento|aturdida]]'),/\u27e6estado-aturdimiento\u00a6aturdida\u27e7/);

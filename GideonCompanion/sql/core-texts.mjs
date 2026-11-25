@@ -1,3 +1,5 @@
+import {playerText,playerPathDocument} from '../js/player-text.js';
+import {pathContent} from './paths.mjs';
 import {readFileSync, readdirSync} from 'node:fs';
 import {posix} from 'node:path';
 import {rulebook} from './rulebook.mjs';
@@ -264,6 +266,43 @@ export function coreTexts(db) {
       .filter(l=>!/^>.*(?:Separado para revisión|Revisión parcial|Módulo extraído)/i.test(l)).join('\n').trim();
     const body=intro || d.sections.find(s=>s.level>1&&s.body&&!s.body.startsWith('#'))?.body;
     if(body) add('tema',d.titulo,body,d);
+  }
+  // Reviewed player copy replaces complete source sections for path summaries.
+  for(const path of pathContent.sendas) {
+    const source={id:path.fuente};
+    add('senda',path.nombre,path.descripcion,source,[],true);
+    for(const trait of [...path.rasgos,...(path.otros_rasgos??[])])
+      add('rasgo',trait.nombre,trait.descripcion,{id:trait.fuente??path.fuente},[],true);
+    for(const feat of path.dotes){
+      add('dote',feat.nombre,feat.descripcion,source,[],true);
+      add('rasgo',feat.nombre,feat.descripcion,source,[],true);
+    }
+  }
+  for(const a of atoms.values())a.texto=playerText(a.texto);
+  for(const [id,a] of atoms)if(!a.texto)atoms.delete(id);
+  const allowedPathFiles=/_(?:01_Habilidades_Insignia|01_Ira_y_Trance|01_Atributo_Honor|02_Juramento_Declarado|03_Compromiso_Solemne|01bis_Mecanica_de_Olvido|02_Artes_Tetricas|02_Dogmas_del_Bien_Mayor)\.md$/;
+  for(const d of docs){
+    if(d.id.includes('/Senda_')){
+      d.publish=allowedPathFiles.test(d.id);
+      // Use the same reviewed copy in the reader and character creation.
+      const path=pathContent.sendas.find(p=>p.fuente===d.id||p.rasgos.some(r=>r.fuente===d.id));
+      if(path && /_(?:01_Habilidades_Insignia|01_Ira_y_Trance)\.md$/.test(d.id))d.texto=playerPathDocument(path);
+      if(d.id.endsWith('/Sombra_02_Artes_Tetricas.md')){
+        const shadow=pathContent.sendas.find(p=>p.nombre==='Senda de la Sombra');
+        d.texto='# Artes Sombrías\n\n'+shadow.rasgos.find(r=>r.nombre==='Artes Sombrías').descripcion;
+      }
+      if(d.id.endsWith('/Arcanista_03_Epifanias_y_Artefactos.md')){
+        d.publish=true;d.titulo='Artefactos arcanos iniciales';
+        d.texto='# Artefactos arcanos iniciales\n\n'+[...atoms.values()].filter(a=>a.kind==='artefacto'&&a.source===d.id)
+          .map(a=>'## '+a.nombre+'\n\n'+a.texto).join('\n\n');
+      }
+    }
+    if(d.id.endsWith('/Core_12_Sendas_Mecanicas.md')){
+      d.texto='# Sendas\n\n'+pathContent.sendas.map(playerPathDocument).join('\n\n---\n\n');
+    }
+    d.texto=playerText(d.texto,{keepLinks:true});
+    d.titulo=playerText(d.titulo);
+    if(!d.texto)d.publish=false;
   }
   for(const a of atoms.values()) {
     if(a.kind==='estado' && /(?:ado|ido|oso)$/.test(a.nombre)) {

@@ -60,7 +60,7 @@ export function migrateValor(db){
  const getLink=name=>one(db,`SELECT id,rasgo_id FROM v_rasgos_senda_catalogo
    WHERE clase_id=? AND es_insignia=1 AND nombre=?`,claseId,name);
  const legacyDanza=getLink('Danza de Golpes / Espíritu Incansable');
- for(const trait of path.rasgos){
+ for(const trait of path.rasgos.filter(t=>t.xp_requerida===0)){
   const link=getLink(trait.nombre)??(trait.nombre==='Danza de Golpes'?legacyDanza:null);
   if(link){
    run(db,'UPDATE rasgos SET nombre=?,descripcion=? WHERE id=?',trait.nombre,trait.descripcion,link.rasgo_id);

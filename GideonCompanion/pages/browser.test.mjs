@@ -37,6 +37,23 @@ try{
  await page.getByRole('button',{name:'Asignar en orden',exact:true}).click();await page.locator('#next').click();
  await page.locator('[name=dedicacion_id]').selectOption({label:'Soldado'});
  await page.locator('[name=nacimiento_id]').selectOption({index:1});await page.locator('#next').click();
+ const reviewedPaths=[
+  ['Senda del Arcanista',['Eficiencia','Herencia','Epifanía Original','Lanzador de Conjuros','La Herramienta Correcta']],
+  ['Senda del Berserker',['Pool de Ira','Furia Desatada','Desquite','Trance','Fuerza Aliota','Enemigo Declarado']],
+  ['Senda del Hierofante',['Manifestación Celestial','Elegir un Dogma','Regalo de Demesteria','¡Fe, Protégeme!']],
+  ['Senda del Honor',['Atributo Honor','Juramento Declarado','Compromiso Solemne']],
+  ['Senda de la Sombra',['Acciones de Presteza','Conocimiento Técnico','Sentidos Tétricos','Artes Sombrías']],
+  ['Senda del Valor',['Danza de Golpes','Nervios de Acero','Entrenamiento Superior','As Marcial']]
+ ];
+ for(const [name,features] of reviewedPaths){
+  await page.locator('[name=clase_id]').selectOption({label:name});
+  const summary=page.locator('.path-summary');await summary.locator('h3').filter({hasText:name}).waitFor();
+  const text=await summary.textContent();
+  for(const feature of features)assert(text.includes(feature),name+': '+feature);
+  assert(!/ESQUELETO|Hassan|\.md\b|placeholder|pendiente de ratific|versiones heredadas|Mecánicas completas/i.test(text),name);
+  const first=summary.locator('details').first();await first.locator('summary').click();
+  assert(await first.locator('.player-description p').first().isVisible(),name+': readable paragraphs');
+ }
  await page.locator('[name=clase_id]').selectOption({label:'Senda del Berserker'});
  const combat=page.locator('[data-combat-slot]'),ids=await combat.first().locator('option').evaluateAll(options=>options.map(o=>o.value).filter(Boolean));
  for(let i=0;i<4;i++)await combat.nth(i).selectOption(ids[i]);
