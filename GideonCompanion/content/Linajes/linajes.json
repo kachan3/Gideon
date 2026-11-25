@@ -1,0 +1,417 @@
+{
+  "revision": "2026-11-05",
+  "linajes": [
+    {
+      "codigo": "hijos_del_viento",
+      "nombre": "Hijos del Viento",
+      "escalado_vital": 2,
+      "movimiento": 8,
+      "descripcion": "Ágiles, veloces y escurridizos, con un cuerpo frágil. Su adaptación favorece los saltos y amortigua las caídas.",
+      "bonos": [
+        [
+          "Evasión",
+          10
+        ],
+        [
+          "Saltar",
+          10
+        ],
+        [
+          "Orientación",
+          5
+        ]
+      ],
+      "rasgos": [
+        {
+          "nombre": "Ligereza",
+          "descripcion": "Resistencia al daño de caída (mitad del daño) y doble distancia antes de empezar a recibirlo: 4 unidades con el umbral general actual de 2 unidades. Conserva las reglas de Acrobacias y Dureza. No concede resistencia al fuego o al trueno.",
+          "efectos": [
+            [
+              "Regla",
+              "umbral_caida_multiplicador",
+              2,
+              ""
+            ],
+            [
+              "Regla",
+              "dano_caida_multiplicador",
+              0.5,
+              ""
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "seres_del_rio",
+      "nombre": "Seres del Río",
+      "escalado_vital": 2,
+      "movimiento": 6,
+      "descripcion": "Adaptados al agua y al esfuerzo sostenido. Nadan a su velocidad terrestre base, conservan aire al combatir y tienen piel escamosa.",
+      "bonos": [
+        [
+          "Cardio",
+          10
+        ],
+        [
+          "Orientación",
+          10
+        ],
+        [
+          "Atletismo",
+          5
+        ]
+      ],
+      "rasgos": [
+        {
+          "nombre": "Adaptación acuática",
+          "descripcion": "Velocidad de nado 6 unidades. Reserva de respiración bajo el agua de 2 × Nivel de Resistir minutos. No hace chequeos de Cardio ni pierde aire adicional por atacar bajo el agua mientras tenga reserva. No respira bajo el agua, no es inmune a Sofocado y conserva los efectos elementales y restricciones vocales por inmersión.",
+          "efectos": [
+            [
+              "Movimiento",
+              "nado",
+              6,
+              "unidades"
+            ],
+            [
+              "Regla",
+              "respiracion_acuatica_multiplicador",
+              2,
+              ""
+            ],
+            [
+              "Regla",
+              "sin_gasto_aire_ataque_acuatico",
+              1,
+              ""
+            ]
+          ]
+        },
+        {
+          "nombre": "Piel escamosa",
+          "descripcion": "Armadura natural: +1 de mitigación plana contra Cortante, Punzante y Contundente, adicional a las protecciones correspondientes.",
+          "efectos": [
+            [
+              "Mitigacion",
+              "Cortante",
+              1,
+              ""
+            ],
+            [
+              "Mitigacion",
+              "Punzante",
+              1,
+              ""
+            ],
+            [
+              "Mitigacion",
+              "Contundente",
+              1,
+              ""
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "hijos_de_las_estrellas",
+      "nombre": "Hijos de las Estrellas",
+      "escalado_vital": 2.5,
+      "movimiento": 6,
+      "descripcion": "Su afinidad con los ciclos, la memoria y el tiempo se expresa en una anticipación intuitiva del peligro.",
+      "bonos": [
+        [
+          "Conocimiento Mágico",
+          10
+        ],
+        [
+          "Historia",
+          10
+        ],
+        [
+          "Cronibor",
+          5
+        ]
+      ],
+      "rasgos": [
+        {
+          "nombre": "Premonición",
+          "descripcion": "Mientras esté consciente cuenta un escalón superior de iniciativa: Distraído → Desprevenido → Preparado → Emboscador, con Emboscador como máximo. No aumenta su tier general ni concede otros beneficios de emboscada. No funciona dormido o inconsciente.",
+          "efectos": [
+            [
+              "Regla",
+              "iniciativa_escalones_consciente",
+              1,
+              ""
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "hijos_del_bosque",
+      "nombre": "Hijos del Bosque",
+      "escalado_vital": 2.5,
+      "movimiento": 6,
+      "descripcion": "Adaptados a la vida en la jungla, trepan árboles instintivamente. Su sangre es difícil de metabolizar. Cuentan como Dríade y Abdríade.",
+      "bonos": [
+        [
+          "Adaptación",
+          10
+        ],
+        [
+          "Naturaleza",
+          10
+        ],
+        [
+          "Escalar",
+          5
+        ]
+      ],
+      "rasgos": [
+        {
+          "nombre": "Escalada vegetal",
+          "descripcion": "Velocidad de escalada 6 unidades en árboles y vegetación, sin chequeo para trepar esas superficies. No sufre desventaja por combatir mientras escala un árbol. No elimina penalizaciones de otras causas.",
+          "efectos": [
+            [
+              "Movimiento",
+              "escalada_vegetal",
+              6,
+              "unidades"
+            ]
+          ]
+        },
+        {
+          "nombre": "Resistencia al veneno para dríades",
+          "descripcion": "Es resistente al veneno para dríades. Usa los umbrales y depuración de criatura resistente del Core: Envenenado a 2 × Tolerancia base, sobredosis a 3 × y depuración de 2 contadores por día.",
+          "efectos": [
+            [
+              "Regla",
+              "resistencia_veneno_driades",
+              1,
+              ""
+            ]
+          ]
+        },
+        {
+          "nombre": "Sangre indigerible",
+          "descripcion": "Las criaturas que beben o consumen sangre no pueden alimentarse ni obtener beneficios de la suya. No evita mordidas ni pérdida de sangre y no daña ni envenena automáticamente. Asimilar y producir venenos requiere dotes posteriores todavía por definir.",
+          "efectos": [
+            [
+              "Regla",
+              "sangre_indigerible",
+              1,
+              ""
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "hijos_de_la_luna",
+      "nombre": "Hijos de la Luna",
+      "escalado_vital": 2.5,
+      "movimiento": 6,
+      "descripcion": "Nocturnos por naturaleza, se desenvuelven en penumbra. El medallón de Moonstone es un regalo común entre ellos.",
+      "bonos": [
+        [
+          "Sigilo",
+          10
+        ],
+        [
+          "Engañar",
+          10
+        ],
+        [
+          "Ivganny",
+          5
+        ]
+      ],
+      "rasgos": [
+        {
+          "nombre": "Visión en la Oscuridad",
+          "descripcion": "Con luz residual trata iluminación Tenue como Clara. Sin ninguna luz no funciona. El radio de luz del medallón no es un límite general de su visión. No concede revelación de ilusiones ni resistencia psíquica de base.",
+          "efectos": [
+            [
+              "Regla",
+              "vision_con_luz_residual",
+              1,
+              ""
+            ]
+          ]
+        }
+      ],
+      "equipo": [
+        {
+          "nombre": "Medallón de Moonstone",
+          "descripcion": "Regalo cultural inicial opcional. Luz residual de aspecto fluorescente en un radio de 10 unidades. Se carga 1 hora al sol y brilla durante 1 día. Permite usar Visión en la Oscuridad en lugares que sin el pendiente estarían totalmente oscuros. Peso y precio pendientes; no establecidos por este catálogo.",
+          "cantidad": 1,
+          "opcional": true
+        }
+      ]
+    },
+    {
+      "codigo": "hijos_del_hielo",
+      "nombre": "Hijos del Hielo",
+      "escalado_vital": 3,
+      "movimiento": 6,
+      "descripcion": "Su adaptación al frío se combina con un temperamento sereno frente al miedo, las distracciones y la presión emocional.",
+      "bonos": [
+        [
+          "Resistir",
+          10
+        ],
+        [
+          "Tenacidad",
+          10
+        ],
+        [
+          "Ignamor",
+          5
+        ]
+      ],
+      "rasgos": [
+        {
+          "nombre": "Adaptación al frío",
+          "descripcion": "+3 de mitigación plana contra Frío, adicional a la Dureza y otras protecciones. No divide el daño entre dos.",
+          "efectos": [
+            [
+              "Mitigacion",
+              "Frío",
+              3,
+              ""
+            ]
+          ]
+        },
+        {
+          "nombre": "Temperamento Calmo",
+          "descripcion": "+1 NE y Salvataje 1 en tiradas de Templanza, Enfoque y Coraje. Salvataje X convierte un fallo con NF ≤ X en éxito cuyo NE es el NF original. Conserva las bandas automáticas y reglas de críticos. No aumenta el valor de habilidad.",
+          "efectos": [
+            [
+              "TiradaNE",
+              "Templanza",
+              1,
+              ""
+            ],
+            [
+              "TiradaNE",
+              "Enfoque",
+              1,
+              ""
+            ],
+            [
+              "TiradaNE",
+              "Coraje",
+              1,
+              ""
+            ],
+            [
+              "Salvataje",
+              "Templanza",
+              1,
+              ""
+            ],
+            [
+              "Salvataje",
+              "Enfoque",
+              1,
+              ""
+            ],
+            [
+              "Salvataje",
+              "Coraje",
+              1,
+              ""
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "codigo": "hijos_de_la_tierra",
+      "nombre": "Hijos de la Tierra",
+      "escalado_vital": 3,
+      "movimiento": 6,
+      "descripcion": "Versátiles y habituados al trabajo material y la construcción. Su afinidad les permite afinar una especialización propia.",
+      "bonos": [
+        [
+          "Carga",
+          10
+        ],
+        [
+          "Mecánica",
+          10
+        ]
+      ],
+      "eleccion": {
+        "codigo": "tierra_combate",
+        "nombre": "Afinidad versátil: +5 a una habilidad de combate",
+        "bono": 5,
+        "padres": [
+          "Melee",
+          "Proyectiles",
+          "Arcana"
+        ]
+      },
+      "rasgos": [
+        {
+          "nombre": "Versatilidad de la Tierra",
+          "descripcion": "Elige una habilidad de combate para recibir su bono de +5. No concede XP inicial ni premios adicionales.",
+          "efectos": []
+        }
+      ]
+    },
+    {
+      "codigo": "hijos_del_sol",
+      "nombre": "Hijos del Sol",
+      "escalado_vital": 3,
+      "movimiento": 6,
+      "descripcion": "Su vínculo con el calor se manifiesta en protección frente al fuego y en la capacidad propia de emitir luz corporal.",
+      "bonos": [
+        [
+          "Entretener",
+          10
+        ],
+        [
+          "Coraje",
+          10
+        ],
+        [
+          "Ignamor",
+          5
+        ]
+      ],
+      "rasgos": [
+        {
+          "nombre": "Adaptación al fuego",
+          "descripcion": "+3 de mitigación plana contra Fuego, adicional a la Dureza y otras protecciones. No divide el daño entre dos.",
+          "efectos": [
+            [
+              "Mitigacion",
+              "Fuego",
+              3,
+              ""
+            ]
+          ]
+        },
+        {
+          "nombre": "Brillo Solar",
+          "descripcion": "Emite luz Clara desde su cuerpo en un radio de 2 unidades. Cuesta 1 maná por 1 hora; no está limitado a una hora diaria. Capacidad inicial exclusiva de Hijos del Sol.",
+          "efectos": [
+            [
+              "Regla",
+              "luz_clara_radio",
+              2,
+              "unidades"
+            ]
+          ],
+          "accion": {
+            "nombre": "Brillo Solar",
+            "mana": 1,
+            "descripcion": "Emite luz Clara en un radio de 2 unidades durante 1 hora. Paga 1 maná por cada hora. La duración se lleva con la mesa; no es un hechizo ni requiere Spellweave."
+          }
+        }
+      ]
+    }
+  ]
+}

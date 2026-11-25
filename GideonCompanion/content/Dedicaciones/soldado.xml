@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dedicacion id="soldado">
   <nombre>Soldado</nombre>
-  <descripcion>Short description</descripcion>
+  <descripcion>Servicio armado, disciplina y entrenamiento para combatir como parte de una organización.</descripcion>
   <skills_garantizadas>
     <skill nombre="Melee" minimo="35"/>
   </skills_garantizadas>
-  <estado>completo</estado>
+  <oficios minimo="50" elegir="0">
+
+  </oficios>
+  <preguntas>
+    <pregunta>¿Para qué ciudad o facción serviste?</pregunta>
+    <pregunta>¿Abandonaste tu servicio? ¿Por qué?</pregunta>
+    <pregunta>¿Tienes aliados o amigos en el ejército?</pregunta>
+    <pregunta>¿Qué momento de tu servicio recordás más?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
 </dedicacion>

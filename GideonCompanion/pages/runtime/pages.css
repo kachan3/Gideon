@@ -1,0 +1,14 @@
+:root:has(.static-mode){font-size:16px}
+.static-mode #pages-toolbar{margin:1rem auto;padding:1rem;max-width:1200px;border:1px solid var(--border,#475569);border-radius:.8rem;background:var(--panel,#172232)}
+.static-mode .pages-tools{display:flex;align-items:center;flex-wrap:wrap;gap:.7rem}
+.static-mode .pages-tools strong{margin-right:auto;font-size:1.05rem}
+.static-mode .pages-tools select{width:auto;max-width:100%;min-width:10rem}
+.static-mode #pages-toolbar p{margin:.65rem 0 0;line-height:1.5}
+.static-mode #pages-status{color:#a7f3d0}.static-mode #pages-status.failure{color:#fecaca}
+.static-mode #pages-home{max-width:52rem;margin:2rem auto;padding:clamp(1.2rem,4vw,2.5rem)}
+.static-mode #pages-home h1{font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.2}
+.static-mode #pages-home p{font-size:1rem;line-height:1.6}
+.static-mode .pages-characters{display:flex;flex-wrap:wrap;gap:.6rem}
+.static-mode #access>.access-panel,.static-mode #nav-dm,.static-mode #copy-character-token,.static-mode #token-notice,.static-mode #copy-created-token{display:none!important}
+.static-mode #character-select{max-width:100%}
+@media(max-width:600px){.static-mode #pages-toolbar{margin:.6rem}.static-mode .pages-tools strong{flex-basis:100%}.static-mode .pages-tools button{flex:1}.static-mode .pages-tools select{width:100%}}

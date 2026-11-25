@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="hijos_del_bosque">
   <nombre>Hijos del Bosque</nombre>
   <nombre_en>Forestkind</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>2.5</escalado_vital>
+  <movimiento>6</movimiento>
   <bonos>
-    <bono habilidad="ProyectilesPlaceholder" valor="5"/>
+    <bono habilidad="Adaptación" valor="10"/>
+    <bono habilidad="Naturaleza" valor="10"/>
+    <bono habilidad="Escalar" valor="5"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <rasgos_iniciales>
+    <rasgo nombre="Escalada vegetal">Velocidad de escalada 6 unidades en árboles y vegetación, sin chequeo para trepar esas superficies. No sufre desventaja por combatir mientras escala un árbol. No elimina penalizaciones de otras causas.</rasgo>
+    <rasgo nombre="Resistencia al veneno para dríades">Es resistente al veneno para dríades. Usa los umbrales y depuración de criatura resistente del Core: Envenenado a 2 × Tolerancia base, sobredosis a 3 × y depuración de 2 contadores por día.</rasgo>
+    <rasgo nombre="Sangre indigerible">Las criaturas que beben o consumen sangre no pueden alimentarse ni obtener beneficios de la suya. No evita mordidas ni pérdida de sangre y no daña ni envenena automáticamente. Asimilar y producir venenos requiere dotes posteriores todavía por definir.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Adaptados a la vida en la jungla, trepan árboles instintivamente. Su sangre es difícil de metabolizar. Cuentan como Dríade y Abdríade.</descripcion>
 </linaje>

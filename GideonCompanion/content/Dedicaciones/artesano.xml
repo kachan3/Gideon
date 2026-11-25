@@ -1,8 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dedicacion id="artesano">
   <nombre>Artesano</nombre>
-  <descripcion>Short description</descripcion>
+  <descripcion>Dominio de un oficio concreto: sus técnicas, herramientas, materiales y problemas prácticos. Elige una artesanía aprendida.</descripcion>
   <skills_garantizadas>
+
   </skills_garantizadas>
-  <estado>esqueleto</estado>
+  <oficios minimo="50" elegir="1">
+    <oficio>Herrería</oficio>
+    <oficio>Carpintería</oficio>
+    <oficio>Joyería</oficio>
+    <oficio>Cerrajería</oficio>
+    <oficio>Albañilería</oficio>
+  </oficios>
+  <preguntas>
+    <pregunta>¿Cuál era tu oficio específico?</pregunta>
+    <pregunta>¿Trabajabas solo, en un taller o bajo un maestro?</pregunta>
+    <pregunta>¿Hay alguna obra tuya de la que estés orgulloso, o que preferirías que no existiera?</pregunta>
+    <pregunta>¿Por qué dejaste el oficio?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
 </dedicacion>

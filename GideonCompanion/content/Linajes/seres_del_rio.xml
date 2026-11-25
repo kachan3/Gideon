@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="seres_del_rio">
   <nombre>Seres del Río</nombre>
   <nombre_en>Riverdwellers</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>2</escalado_vital>
+  <movimiento>6</movimiento>
   <bonos>
-    <!-- placeholder - pendiente de diseño -->
+    <bono habilidad="Cardio" valor="10"/>
+    <bono habilidad="Orientación" valor="10"/>
+    <bono habilidad="Atletismo" valor="5"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <rasgos_iniciales>
+    <rasgo nombre="Adaptación acuática">Velocidad de nado 6 unidades. Reserva de respiración bajo el agua de 2 × Nivel de Resistir minutos. No hace chequeos de Cardio ni pierde aire adicional por atacar bajo el agua mientras tenga reserva. No respira bajo el agua, no es inmune a Sofocado y conserva los efectos elementales y restricciones vocales por inmersión.</rasgo>
+    <rasgo nombre="Piel escamosa">Armadura natural: +1 de mitigación plana contra Cortante, Punzante y Contundente, adicional a las protecciones correspondientes.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Adaptados al agua y al esfuerzo sostenido. Nadan a su velocidad terrestre base, conservan aire al combatir y tienen piel escamosa.</descripcion>
 </linaje>

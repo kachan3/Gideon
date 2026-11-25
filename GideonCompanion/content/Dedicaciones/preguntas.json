@@ -1,0 +1,14 @@
+{
+ "fuente":"20_Contenido/Creacion_de_Personaje.md, §3.1",
+ "dedicaciones":{
+  "Granjero":[["¿A qué te dedicabas: cultivo, ganadería o ambos?",false],["¿La tierra era propia, arrendada o trabajabas para otro?",false],["¿Tienes familia que sigue en el campo? ¿Qué relación mantenés con ellos?",false],["¿Qué te llevó a dejar esa vida?",false]],
+  "Artesano":[["¿Cuál era tu oficio específico?",false],["¿Trabajabas solo, en un taller o bajo un maestro?",true],["¿Hay alguna obra tuya de la que estés orgulloso, o que preferirías que no existiera?",false],["¿Por qué dejaste el oficio?",false]],
+  "Marinero":[["¿En qué tipo de embarcación servías: comercio, exploración o corso?",false],["¿Tenías rango o eras tripulante raso?",false],["¿Tienes vínculos con algún puerto o tripulación?",true],["¿Qué viaje o mar recordás con más intensidad?",false]],
+  "Mercader":[["¿Qué tipo de bienes comerciabas?",false],["¿Operabas solo, para una casa comercial o con socios?",true],["¿Tenés deudas pendientes o contratos sin cerrar?",false],["¿Qué trato te definió, para bien o para mal?",false]],
+  "Académico":[["¿En qué campo se concentraba tu estudio?",false],["¿Dónde estudiaste: institución formal, aprendizaje autodidacta o bajo un mentor?",true],["¿Hay algo que aprendiste que preferirías no saber?",false],["¿Qué te alejó de la academia o la investigación?",false]],
+  "Médico":[["¿Dónde ejercías: ciudad, campo de batalla, institución religiosa?",false],["¿Fue formación formal o aprendiste por necesidad?",false],["¿Hubo un paciente que no pudiste salvar y no has olvidado?",true],["¿Qué te alejó de la práctica?",false]],
+  "Soldado":[["¿Para qué ciudad o facción serviste?",true],["¿Abandonaste tu servicio? ¿Por qué?",false],["¿Tienes aliados o amigos en el ejército?",true],["¿Qué momento de tu servicio recordás más?",false]],
+  "Banderizo":[["¿A qué casa o señor estabas jurado?",true],["¿Ese juramento sigue vigente, fue roto o el señor ha muerto?",false],["¿Había otros banderizos con quienes te sentías hermano?",true],["¿Qué acto de lealtad o traición te define mejor?",false]],
+  "Mercenario":[["¿Trabajabas solo o en una compañía?",true],["¿Hay alguien que te quiera muerto por un trabajo pasado?",false],["¿Tenés algún código personal o sos puramente transaccional?",false],["¿Cuál fue el contrato del que más te arrepentís?",false]]
+ }
+}

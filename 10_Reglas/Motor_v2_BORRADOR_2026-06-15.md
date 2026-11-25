@@ -1,8 +1,12 @@
 # §11 — NÚCLEO DEL SISTEMA DE JUEGO (1d100)
 
+> **Version desactualizada Ignorar**. Consultá [Sistema 1d100](Sistema_1d100.md), [Modificadores de tiradas](Modificadores_a_las_Tiradas.md) y [Rango](Atributos_y_Habilidades.md#rango-tier).
+
 > **Borrador para evaluación — 2026-06-15.** Consolida todo lo trabajado en sesión. Las **🔎 NOTAS DE EVALUACIÓN** marcan decisiones pendientes o una inconsistencia detectada. Los `[ESQUELETO]` son piezas que referenciaste pero dejaste para desarrollar más adelante. Nada de esto reemplaza el Core hasta que lo ratifiques.
 >
 > **Estado D-2 (Hassan 2026-07-03):** de este borrador son canon: las **bandas 00–05/95–99** (Éxito/Fallo **Automático**; la capicúa aplica aparte y siempre — 00 = Portento, 99 = Pifia, aclarado 2026-07-03), el criterio **≤** (C-8), la **ventaja de tier +8 NE** (D-3) y los **nombres Portento/Pifia** para el crítico por capicúa. Las capas de modificadores, Exigencia/Salvataje y la anulación de "NE<0 transforma" **siguen siendo propuesta** y no deben fusionarse al Core sin aprobación explícita.
+>
+> **Actualización parcial — Hassan, 2026-11-05:** Salvataje sí queda definido en el Core §11.1, con umbral **NF ≤ X** (Salvataje 1 salva NF 1). Esta ratificación aislada sustituye el estado pendiente de Salvataje en la nota histórica anterior; no aprueba Exigencia ni las demás capas del borrador.
 
 ---
 
@@ -108,8 +112,8 @@ Las tiradas pueden modificarse de varias formas. Los modificadores se aplican **
 **Paso 5 — Umbrales (única capa que transforma el resultado).**
 
 - **Exigencia (X):** tu NE debe **igualar o superar X**. Si no lo alcanza, el éxito se convierte en **fallo**.
-- **Salvataje (X):** protección contra fallos. Si fallás con **NF < X**, el fallo se convierte en **éxito cuyo NE = el NF original**. Si **NF ≥ X**, el fallo se mantiene.
-  - *Ejemplo:* Espadas 50, Salvataje 3. Sale **72** → fallo, NF = 2. Como 2 < 3, se salva → **éxito de NE 2**. (Se usa el NF, no la decena: leer la decena daría "éxito 7", un resultado absurdo mejor que pasar normal.)
+- **Salvataje (X)** *(actualización canónica aislada — Hassan, 2026-11-05; Core §11.1)*: protección contra fallos. Si fallás con **NF ≤ X**, el fallo se convierte en **éxito cuyo NE = el NF original**. Si **NF > X**, el fallo se mantiene. Sustituye el límite antiguo `NF < X`; no ratifica el resto del borrador y conserva las bandas de fallo automático y las reglas de críticos.
+  - *Ejemplo:* habilidad 40, Salvataje 1. Sale **51** → fallo, NF = 1. Como 1 ≤ 1, se salva → **éxito de NE 1**. Se usa el NF, no la decena.
 
 > **Cambio respecto al Core.** La versión vieja decía que un NE/NF modificado bajo 0 transformaba el resultado. Eso queda **anulado**: las capas 3 y 4 nunca transforman; la transformación vive **sólo** en el Paso 5 (Exigencia / Salvataje).
 

@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="hijos_de_la_luna">
   <nombre>Hijos de la Luna</nombre>
   <nombre_en>Moonchilds</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>2.5</escalado_vital>
+  <movimiento>6</movimiento>
   <bonos>
-    <bono habilidad="Sigilo" valor="5"/>
+    <bono habilidad="Sigilo" valor="10"/>
+    <bono habilidad="Engañar" valor="10"/>
     <bono habilidad="Ivganny" valor="5"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <rasgos_iniciales>
+    <rasgo nombre="Visión en la Oscuridad">Con luz residual trata iluminación Tenue como Clara. Sin ninguna luz no funciona. El radio de luz del medallón no es un límite general de su visión. No concede revelación de ilusiones ni resistencia psíquica de base.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Nocturnos por naturaleza, se desenvuelven en penumbra. El medallón de Moonstone es un regalo común entre ellos.</descripcion>
 </linaje>

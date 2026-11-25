@@ -1,0 +1,48 @@
+import {issueCharacterToken} from './access.mjs';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import {openDatabase,makeServer} from './server.mjs';
+const require=createRequire(import.meta.url),{chromium}=require(process.env.PLAYWRIGHT_PATH||'playwright');
+const db=openDatabase(':memory:'),server=makeServer(db,{random100:()=>31});await new Promise(r=>server.listen(0,'127.0.0.1',r));
+const ep=db.prepare('SELECT epifania_id FROM progresion WHERE epifania_id IS NOT NULL LIMIT 1').get().epifania_id;
+const trick=Number(db.prepare("INSERT INTO trucos(nombre,escuela,recurso,coste_recurso,descripcion) VALUES('Truco de prueba','Ignamor','Stamina',1,'Contenido de prueba del navegador')").run().lastInsertRowid);
+const mystic=Number(db.prepare("INSERT INTO misticas(nombre,escuela,descripcion) VALUES('Mística de prueba','Ignamor','Pasiva de prueba')").run().lastInsertRowid);
+db.prepare('INSERT INTO epifanias_trucos VALUES(?,?)').run(ep,trick);db.prepare('INSERT INTO epifanias_misticas VALUES(?,?)').run(ep,mystic);
+const mod=Number(db.prepare("INSERT INTO mods(nombre,coste_pl,pl_escalable) VALUES('Mod escalable de prueba',1,1)").run().lastInsertRowid);
+const fixed=Number(db.prepare("INSERT INTO mods(nombre,coste_pl,pl_escalable) VALUES('Mod fijo de prueba',1,0)").run().lastInsertRowid);
+db.prepare("UPDATE mods SET escalado_pendiente=0,efecto_base='Base de prueba',aspecto_escalable='Potencia',escalado_texto='Cada PL extra añade una unidad de prueba.' WHERE id IN(?,?)").run(mod,fixed);
+db.prepare('INSERT INTO epifanias_mods VALUES(?,?)').run(ep,mod);db.prepare('INSERT INTO epifanias_mods VALUES(?,?)').run(ep,fixed);
+const cone=db.prepare("SELECT id FROM shapes WHERE nombre='Cono — ejemplo provisional'").get().id;
+const projectile=db.prepare("SELECT id FROM shapes WHERE nombre='Proyectil — ejemplo'").get().id;
+db.prepare('INSERT OR IGNORE INTO epifanias_shapes VALUES(?,?)').run(ep,cone);
+const browser=await chromium.launch({headless:true,executablePath:process.env.CHROME_PATH});
+try{
+ const fixtureToken=issueCharacterToken(db,1,{replace:true});
+ const page=await browser.newPage({viewport:{width:1365,height:950}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.addInitScript(()=>{window.prompt=()=>{throw Error('prompt() is not supported');};window.confirm=()=>{throw Error('confirm() is not supported');};});
+ await page.goto('http://127.0.0.1:'+server.address().port);await page.getByText('● SQLite conectado').waitFor();
+ await page.locator('#access-token').fill(fixtureToken);await page.locator('#access-form button').click();await page.locator('#character-content h1').waitFor();
+ await page.locator('#mana-form [name=cantidad]').fill('45');assert(await page.locator('#mana-form button').isDisabled());await page.locator('#mana-form [name=cantidad]').fill('1');assert(await page.locator('#mana-form button').isEnabled());
+ await page.getByRole('button',{name:'Tirar Fuerza 40',exact:true}).click();let modal=page.getByRole('dialog');await modal.getByRole('button',{name:'Tirar dados',exact:true}).click();await modal.getByText('Éxito · NE 3',{exact:true}).first().waitFor();assert.equal(await modal.locator('.roll-index tbody tr').count(),8);await modal.getByRole('button',{name:'Cerrar dados',exact:true}).click();
+ await page.getByRole('button',{name:'Tirar ataque Desarmado',exact:true}).click();modal=page.getByRole('dialog');await modal.getByRole('button',{name:'Tirar dados',exact:true}).click();await modal.getByText('Daño 7 · NE + 4 (Fuerza)',{exact:true}).waitFor();await modal.screenshot({path:'GideonCompanion/sql/dice-popup.png'});await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'Spellcasting',exact:true}).click();await page.locator('#spellcasting-view').waitFor({state:'visible'});assert(await page.getByText('Truco de prueba',{exact:true}).isVisible());assert(await page.getByText('Mística de prueba',{exact:false}).first().isVisible());
+ assert(await page.locator('[name=shape_pl]').getAttribute('readonly')!==null);assert(!(await page.locator('[data-pl-range=shape_pl]').isVisible()));assert((await page.locator('[data-pl-field=shape_pl]').textContent()).includes('Un único objetivo'));
+ const self=await page.locator('[name=medium_id] option').filter({hasText:'Self'}).getAttribute('value');await page.locator('[name=medium_id]').selectOption(self);assert(!(await page.locator('[data-pl-range=medium_pl]').isVisible()));assert((await page.locator('[data-pl-field=medium_pl]').textContent()).includes('objetivo Self es fijo'));await page.locator('[name=medium_id]').selectOption('1');
+ await page.locator('[data-pl-range=medium_pl]').press('End');assert.equal(await page.locator('[name=medium_pl]').inputValue(),'4');assert((await page.locator('#spell-preview').textContent()).includes('5 PL / NE objetivo'));
+ await page.locator('[name=medium_pl]').fill('3');assert.equal(await page.locator('[data-pl-range=medium_pl]').inputValue(),'3');
+ await page.locator('[name=shape_id]').selectOption(String(cone));assert((await page.locator('[data-pl-field=shape_pl]').textContent()).includes('3 unidades'));await page.locator('[name=shape_pl]').fill('2');await page.locator(`[name=mod][value="${mod}"]`).check();await page.locator(`[name=mod_pl_${mod}]`).fill('3');assert((await page.locator('#spell-preview').textContent()).includes('9 PL / NE objetivo'));
+ await page.locator(`[name=mod][value="${fixed}"]`).check();assert(await page.locator(`[name=mod_pl_${fixed}]`).getAttribute('readonly')!==null);assert(await page.locator(`[data-pl-range=mod_pl_${fixed}]`).isDisabled());
+ await page.locator('[name=shape_pl]').fill('5');assert(await page.locator('#spell-form [type=submit]').isDisabled());await page.locator('[name=shape_id]').selectOption(String(projectile));await page.locator('[name=medium_pl]').fill('1');await page.locator(`[name=mod][value="${mod}"]`).uncheck();await page.locator(`[name=mod][value="${fixed}"]`).uncheck();
+ await page.locator('#spell-form [name=efecto_pl]').fill('4');await page.locator('#spell-form [name=herramienta]').selectOption('Herramienta');await page.locator('#spell-form [name=componentes_disponibles]').check();
+ await page.getByRole('button',{name:'Comenzar lanzamiento',exact:true}).click();modal=page.getByRole('dialog');await modal.getByRole('button',{name:'Tirar dados',exact:true}).click();await modal.getByText('Canalizando · 3 / 5 NE',{exact:true}).waitFor();assert.equal(db.prepare('SELECT mana_consumido FROM personajes WHERE id=1').get().mana_consumido,0);await page.keyboard.press('Escape');
+ await page.reload();await page.getByText('● SQLite conectado').waitFor();await page.getByRole('button',{name:'Spellcasting',exact:true}).click();assert.equal(await page.locator('.spell-progress').getAttribute('value'),'3');
+ await page.getByRole('button',{name:'Spellweave · tirar',exact:true}).click();modal=page.getByRole('dialog');await modal.getByRole('button',{name:'Tirar dados',exact:true}).click();await modal.getByText('Conjuro completado · 6 / 5 NE',{exact:true}).waitFor();assert.equal(db.prepare('SELECT mana_consumido FROM personajes WHERE id=1').get().mana_consumido,4);assert(await modal.getByRole('button',{name:'Tirada registrada',exact:true}).isDisabled());await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'Usar · pagar coste',exact:true}).click();await page.waitForFunction(()=>document.querySelector('#stamina-progress').getAttribute('value')==='3');assert.equal(db.prepare('SELECT stamina_gastada FROM personajes WHERE id=1').get().stamina_gastada,1);
+ await page.screenshot({path:'GideonCompanion/sql/spellcasting-desktop.png'});
+ await page.setViewportSize({width:390,height:844});await page.screenshot({path:'GideonCompanion/sql/spellcasting-mobile.png',fullPage:true});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+ await page.getByRole('button',{name:'Dados',exact:true}).click();modal=page.getByRole('dialog');await modal.getByRole('button',{name:'Tirar dados',exact:true}).click();await modal.getByRole('button',{name:'Volver a tirar',exact:true}).waitFor();assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.keyboard.press('Escape');
+ // El estado antiguo puede estar sobregirado: se conserva, pero no admite más gasto.
+ db.prepare('UPDATE personajes SET mana_consumido=74,dano_cronico=61 WHERE id=1').run();await page.reload();await page.getByText('● SQLite conectado').waitFor();assert(await page.locator('#mana-form button').isDisabled());assert(await page.locator('#mana-form input').isDisabled());
+ db.prepare('UPDATE personajes SET heridas_actuales=8,heridas_graves=1,heridas_mortales=1,mana_consumido=20,dano_cronico=5,stamina_gastada=3 WHERE id=1').run();await page.reload();await page.getByText('● SQLite conectado').waitFor();await page.getByText('Descansos y recuperación',{exact:true}).click();await page.selectOption('#rest-form [name=tipo]','Largo');await page.fill('#rest-form [name=dia]','1');await Promise.all([page.waitForResponse(r=>r.url().endsWith('/descanso')),page.click('#rest-form button')]);assert.equal(db.prepare('SELECT dano_cronico FROM personajes WHERE id=1').get().dano_cronico,5);assert.equal(db.prepare('SELECT heridas_graves+heridas_mortales+heridas_actuales n FROM personajes WHERE id=1').get().n,10);assert.equal(await page.locator('#stamina-progress').getAttribute('value'),'0');
+ assert.deepEqual(errors,[]);console.log('OK: popup d100, índice, ataque desarmado, gasto bloqueado, Spellweave persistente, pago único, trucos, místicas y móvil.');
+}finally{await browser.close();await new Promise(r=>server.close(r));db.close();}

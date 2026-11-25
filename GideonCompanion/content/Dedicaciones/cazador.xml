@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dedicacion id="cazador">
+  <nombre>Cazador</nombre>
+  <descripcion>Leer huellas, seguir presas y reconocer su paso por un territorio.</descripcion>
+  <skills_garantizadas>
+    <skill nombre="Rastreo" minimo="50"/>
+  </skills_garantizadas>
+  <oficios minimo="50" elegir="0">
+    <oficio>Rastreo</oficio>
+  </oficios>
+  <preguntas>
+    <pregunta>¿Qué presa te marcó?</pregunta>
+    <pregunta>¿Qué territorio conoces de memoria?</pregunta>
+    <pregunta>¿Qué trofeo guardas?</pregunta>
+    <pregunta>¿Qué te llevó de la caza a la aventura?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
+</dedicacion>

@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dedicacion id="marinero">
   <nombre>Marinero</nombre>
-  <descripcion>Short description</descripcion>
+  <descripcion>Trabajo a bordo, maniobras y vida en puertos y travesías.</descripcion>
   <skills_garantizadas>
+    <skill nombre="Marinería" minimo="50"/>
   </skills_garantizadas>
-  <estado>esqueleto</estado>
+  <oficios minimo="50" elegir="0">
+    <oficio>Marinería</oficio>
+  </oficios>
+  <preguntas>
+    <pregunta>¿En qué tipo de embarcación servías: comercio, exploración o corso?</pregunta>
+    <pregunta>¿Tenías rango o eras tripulante raso?</pregunta>
+    <pregunta>¿Tienes vínculos con algún puerto o tripulación?</pregunta>
+    <pregunta>¿Qué viaje o mar recordás con más intensidad?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
 </dedicacion>

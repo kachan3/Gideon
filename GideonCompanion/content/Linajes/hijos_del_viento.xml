@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="hijos_del_viento">
   <nombre>Hijos del Viento</nombre>
   <nombre_en>WindChilds</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>2</escalado_vital>
+  <movimiento>8</movimiento>
   <bonos>
     <bono habilidad="Evasión" valor="10"/>
-    <bono habilidad="Saltar" valor="5"/>
+    <bono habilidad="Saltar" valor="10"/>
+    <bono habilidad="Orientación" valor="5"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <rasgos_iniciales>
+    <rasgo nombre="Ligereza">Resistencia al daño de caída (mitad del daño) y doble distancia antes de empezar a recibirlo: 4 unidades con el umbral general actual de 2 unidades. Conserva las reglas de Acrobacias y Dureza. No concede resistencia al fuego o al trueno.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Ágiles, veloces y escurridizos, con un cuerpo frágil. Su adaptación favorece los saltos y amortigua las caídas.</descripcion>
 </linaje>

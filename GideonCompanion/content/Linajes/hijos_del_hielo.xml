@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="hijos_del_hielo">
   <nombre>Hijos del Hielo</nombre>
   <nombre_en>FrostChilds</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>3</escalado_vital>
+  <movimiento>6</movimiento>
   <bonos>
+    <bono habilidad="Resistir" valor="10"/>
+    <bono habilidad="Tenacidad" valor="10"/>
     <bono habilidad="Ignamor" valor="5"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <rasgos_iniciales>
+    <rasgo nombre="Adaptación al frío">+3 de mitigación plana contra Frío, adicional a la Dureza y otras protecciones. No divide el daño entre dos.</rasgo>
+    <rasgo nombre="Temperamento Calmo">+1 NE y Salvataje 1 en tiradas de Templanza, Enfoque y Coraje. Salvataje X convierte un fallo con NF ≤ X en éxito cuyo NE es el NF original. Conserva las bandas automáticas y reglas de críticos. No aumenta el valor de habilidad.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Su adaptación al frío se combina con un temperamento sereno frente al miedo, las distracciones y la presión emocional.</descripcion>
 </linaje>

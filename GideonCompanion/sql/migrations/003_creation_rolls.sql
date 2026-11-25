@@ -1,0 +1,6 @@
+CREATE TABLE creacion_tiradas (
+ id TEXT PRIMARY KEY,
+ estado TEXT NOT NULL,
+ personaje_id INTEGER UNIQUE REFERENCES personajes(id),
+ fecha TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

@@ -31,11 +31,22 @@ Alioth era la **Primogénita Berserker** — su conteo de dragones asesinados no
 
 Un Berserker en furia **no es un humano enojado** — es una manifestación del fragmento de Ira de Naya'il operando sobre carne dríade. Cuando un Berserker entra en Trance, pierde su individualidad y se convierte en la **encarnación de la Furia** misma.
 
+#### Fuerza Aliota
+
+> Tu ancestra Alioth realizó proezas de fuerza descomunales incluso para los Adines. Los relatos de la división de la Cordillera Tigris y del sometimiento de Magnalodon dan cuenta de su poder.
+
+[Fuerza Aliota](Berserker_02_Dotes_de_Senda.md#fuerza-aliota) permite al Berserker heredar por un instante la fuerza de su matriarca.
+
 ## Identidad de Gameplay
+
+### Ciclo de juego
+
+El Berserker toma una decisión táctica cada turno con habilidades sencillas. Puede gastar Ira en **Desquite** para reforzar un impacto en el momento o conservarla para infligir más daño a lo largo del combate con **Furia Desatada** y acercarse al **Trance**. Furia Desatada aprovecha la Ira acumulada sin gastarla y deja al Berserker Arrebatado.
+
+La generación al inicio del turno ayuda a recomponer la reserva después de gastar Ira y la acerca al umbral de Trance. El Trance será más frecuente y durará menos. Su duración acotada hace que funcione como un pico de poder que el Berserker todavía tiene que aprovechar para resolver el combate.
 
 ### Lo que ES
 - **High-Risk / High-Reward**: el jugador toma decisiones activas de sacrificio (Arrebatado, Trance) a cambio de daño devastador.
-- **Decisiones constantes**: cada turno el jugador decide si desata su furia (Furia Desatada), si gasta Ira en un golpe puntual (Desquite), o si la conserva.
 - **Arco dramático dentro del combate**: acumulación de Ira → decisiones de riesgo → Trance como clímax → consecuencia post-Trance.
 
 ### Lo que NO ES

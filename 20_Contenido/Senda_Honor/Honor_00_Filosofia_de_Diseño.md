@@ -11,7 +11,7 @@ Las Sendas son **heredadas** de los Primigenios a los Dríades. Actos que sucedi
 
 | Senda | Primigenio | Evento | Efecto heredado |
 |---|---|---|---|
-| Sombra / Silente | Theledar (No Ser) | Ritual de suicidio → cuerpo muerto, alma persistente en las sombras | Manipulación de sombras |
+| Sombra / Silente | Valin (No Ser) | Ritual de suicidio → cuerpo muerto, alma persistente en las sombras | Manipulación de sombras |
 | Honor | Gawain (Vivo-no-muerto) | Maldición de Naya'il + años sin morir defendiendo | Resistencia sobrenatural |
 | Hierofante | Mirra (Demesteria) | Cruzó a otro plano como emisaria | Canalización divina a distancia planar |
 | Heraldo | Rayan la Elocuente | Redactó el Lexicón Marcial | Corpus doctrinal = fuente de poder táctico |
@@ -27,4 +27,4 @@ Las Sendas son **heredadas** de los Primigenios a los Dríades. Actos que sucedi
 
 ### Conexión con Gawain
 
-Gawain era el **más cercano a la perfección**, pero su rigidez — la misma que lo hizo inquebrantable en Alta Roca — fue lo que le impidió trascender. La Senda del Honor hereda esa **grandeza incompleta**: poder inmenso, pero con una fragilidad inherente. La rigidez del juramento es su fuerza Y su debilidad.
+Gawain fue quien más cerca estuvo de alinearse con la **Voluntad Superior**. Durante su naufragio, su apego a la armadura le impidió soltarla cuando hacerlo era necesario para cumplir su misión (Core §2.8). La Senda del Honor hereda tanto su resistencia extraordinaria como la rigidez de sus juramentos.

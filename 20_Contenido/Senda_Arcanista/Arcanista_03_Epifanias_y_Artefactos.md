@@ -11,51 +11,33 @@
 
 Las **Epifanías** son dotes que desbloquean hechizos, rituales, místicas, trucos y pasivas. Los Dríades obtienen su repertorio mágico eligiendo Epifanías. Todo personaje que posea el dote **"Lanzador de Conjuros"** debe elegir una Epifanía al obtenerlo.
 
-Los **Trucos** — conjuros menores y simples sin esfuerzo de lanzamiento — están incluidos dentro de cada Epifanía como parte de su repertorio desbloqueado.
+Los **Trucos** — hechizos simples, prearmados e inalterables que pueden usar **Maná o Stamina** (o tener usos limitados por hora/día) y cuestan hasta 3 PA (ver `01_Filosofia/Reglas_Diseno_Trucos.md`) — están incluidos dentro de cada Epifanía como parte de su repertorio desbloqueado para servir como navaja suiza de utilidad, soporte y control puntual (mientras que la fuente genérica de daño recae en los Bastones).
 
 > **Acceso universal.** Las Epifanías no son exclusivas de la Senda del Arcanista. Cualquier personaje con el dote "Lanzador de Conjuros" accede a ellas desde la creación.
 
-### Catálogo de Epifanías Iniciales (5 para la Campaña)
+### Catálogo de Epifanías iniciales
 
-#### 1. Memento Mori *(Flujo: Yrgramar)*
-- **Escuela:** Yrgramar (Muerte y Almas).
-- **Concepto:** Despertar de la comprensión sobre la frontera entre la vida, la muerte y la energía necromántica.
-- **Desbloquea:** Trucos y hechizos de Yrgramar. Sirve como **prerrequisito obligatorio** para el dote avanzado **Corpse Tailor** (Nigromancia de animación).
-- `[ESQUELETO: lista exacta de trucos/hechizos que desbloquea — Hassan]`
+**Coste de aprendizaje *(Hassan, 2026-11-23).* Las Epifanías básicas cuestan **3 XP**. La Epifanía inicial concedida por un dote o una Senda se obtiene sin descontar ese coste.**
 
-#### 2. Evocación Tempestuosa *(Flujo: Ignamor)*
-- **Escuela:** Ignamor (Termodinámica, calor, frío, fuego, rayo).
-- **Concepto:** Dominio primario de las manifestaciones térmicas y energéticas.
-- **Desbloquea:** Trucos de Ignamor (Proyectil Ígneo, Chispa Voltaica) y hechizos elementales térmicos.
-- `[ESQUELETO: lista exacta de trucos/hechizos que desbloquea — Hassan]`
+**Alcance del desarrollo inicial *(Hassan, 2026-11-22; selección de Cronibor, 2026-11-23).* Se completará una Epifanía por cada una de las seis escuelas. Cada una tendrá un repertorio de dos efectos, una mística y un truco. Primera Paradoja es la Epifanía de Cronibor elegida para esta primera selección.**
 
-#### 3. Ilusionismo *(Flujo: Ivganny)*
-- **Escuela:** Ivganny (Mente, pensamientos e ilusiones).
-- **Concepto:** Manipulación de la percepción y construcción de velos mentales.
-- **Desbloquea:** Trucos y conjuros de engaño sensorial y alteración mental.
-- `[ESQUELETO: lista exacta de trucos/hechizos que desbloquea — Hassan]`
-
-#### 4. Gelmiromancia *(Flujo: Gelmir)*
-- **Escuela:** Gelmir (Leyes físicas, masa y materia).
-- **Concepto:** Control de la gravedad, la densidad y la inercia del mundo material.
-- **Desbloquea:** Trucos y conjuros de manipulación física (ej.: Tirón de Gravedad, Caída Suave).
-- `[ESQUELETO: lista exacta de trucos/hechizos que desbloquea — Hassan]`
-
-#### 5. Virtud Anima *(Flujo: Naial)*
-- **Escuela:** Naial (Emociones, almas y constructos).
-- **Concepto:** Canalización de la voluntad y los estados emocionales en formas etéreas y barreras.
-- **Desbloquea:** Trucos y conjuros de Naial (ej.: Misil Arcano, Invocar Familiar, barreras por emoción).
-- `[ESQUELETO: lista exacta de trucos/hechizos que desbloquea — Hassan]`
+- [Memento Mori](../Dotes/_esqueleto_Memento_Mori.md)
+- [Sintonía con la Llama](../Dotes/_esqueleto_Sintonia_con_la_Llama.md)
+- [Emaptomancia](../Dotes/_esqueleto_Emaptomancia.md)
+- [Telekinesis](../Dotes/_esqueleto_Telekinesis.md)
+- [Virtud Anima](../Dotes/_esqueleto_Virtud_Anima.md)
+- [Primera Paradoja](../Dotes/_esqueleto_Primera_Paradoja.md)
+- [Eyes for the Ages / Ojos para las Eras](../Dotes/Ojos_para_las_Eras.md)
 
 ---
 
 ## Artefactos Arcanos Iniciales
 
-Al tomar la Senda del Arcanista, el personaje recibe un **Artefacto Arcano** (§13.7).
+Al tomar la Senda del Arcanista, el personaje recibe un **Artefacto Arcano** (§13.7). Esta concesión se compensa con la reducción de su [reserva inicial de oro](../Creacion_de_Personaje.md#oro-y-equipo-inicial).
 
 ### Regla de Compactación: Herramienta + Artefacto *(canónico — Hassan 2026-08-17)*
 Desde la creación de personaje, si tu **Herramienta de Lanzador** (§13.4, elegida por el dote *La Herramienta Correcta*) es físicamente compatible con tu **Artefacto Arcano**, puedes optar por **compactarlos en un solo objeto**.
-- *Ejemplo:* Si tu Herramienta es "El Arma" (un bastón) y tu Artefacto Arcano es el *Bastón de Brasas*, ambos son el mismo objeto. O si tu Herramienta es "El Libro" y tu Artefacto es un báculo/pergamino encuadernado.
+- *Ejemplo:* Si tu herramienta dominada es el **Bastón** y tu artefacto es **Blunderblaze**, puedes compactarlos en un solo objeto compatible.
 - El objeto compacto conserva **tanto los beneficios de la Herramienta dominada (§13.4) como las funciones del Artefacto Arcano (§13.7)**, incluyendo el *Retorno Destinado*.
 
 ### Contexto Narrativo
@@ -63,33 +45,74 @@ Los Artefactos Arcanos son **imperecederos, preciados y raros** — existen apro
 
 Son herramientas poderosas para el aventureo cotidiano, pero **no ganan guerras ni asesinan bestias imponentes** — lo que explica que los gobiernos no los acaparen incondicionalmente.
 
-### Catálogo de Artefactos Arcanos Iniciales (5 para la Campaña)
+### Catálogo de Artefactos Arcanos Iniciales de la Demo
 
-#### 1. Bastón de Brasas
-- **Flujo / Tema:** Ignamor (Calor / Fuego).
-- **Compatible con Herramienta:** El Arma (bastón).
-- **Función:** Almacena conjuros de fuego/calor con PL fijo. Permite lanzar trucos y hechizos ígneos de baja inestabilidad.
-- `[ESQUELETO: hechizo almacenado, PL fijo, cargas máximas, tasa de conversión Maná→cargas, recarga natural]`
+La selección de la demo comprende **Blunderblaze**, **Varita del Amanecer** y **Mastín de Huesos** *(Hassan, 2026-11-23)*.
+
+#### 1. Blunderblaze
+
+*Actualización canónica — Hassan, 2026-11-23.*
+
+Una cazoleta alargada de bronce con un mango de madera, que escupe proyectiles de fuego físico.
+
+- **Escuela:** **Ignamor**.
+- **Compatible con herramienta:** **Bastón**.
+- **Uso:** Sigue las reglas de [Disparar](../../10_Reglas/Acciones_Genericas.md); es un **ataque a distancia**.
+- **Acciones:** **1 acción por disparo**.
+- **Alcance:** **1.2 unidades**.
+- **Categoría de fuente:** **Física**.
+- **Medio de ataque:** **Proyectil**.
+- **Tipo de daño:** **Fuego**.
+- **Daño:** Según la [fórmula de artefactos arcanos](../../10_Reglas/Core_13_Sistema_de_Magia_y_Energia.md#137-artefactos-arcanos-fuente-t--artefactos-arcanos).
+- **Consumo:** **1 carga por disparo**.
+- **Capacidad máxima:** **6 cargas**.
+- **Recarga con Maná:** **3 cargas por cada 1 Maná**.
+- **Recarga natural:** **Una vez al día**, recupera sus cargas si permanece **1 hora en brasas calientes o fuego**.
 
 #### 2. Varita del Amanecer
-- **Flujo / Tema:** Ignamor / Naial (Luz / Calor).
-- **Compatible with Herramienta:** El Arma / El Amuleto (varita).
-- **Función:** Almacena proyectiles arcanos y destellos cegadores o purificadores.
-- `[ESQUELETO: hechizo almacenado, PL fijo, cargas máximas, tasa de conversión Maná→cargas, recarga natural]`
+
+*Actualización canónica — Hassan, 2026-11-23.*
+
+- **Flujo / Tema:** **Ignamor / Naial**, luz.
+- **Capacidad máxima:** **5 cargas**.
+- **Recarga con Maná:** **1 carga por cada 1 Maná**.
+- **Recarga natural:** Recupera sus cargas **la primera vez que recibe luz solar cada día**.
+
+**Iluminar — 1 acción.** Puedes encender o apagar la varita como una acción. Encendida, emite **luz brillante hasta 6 unidades** y consume **1 carga por hora**. Puedes emplearla para iluminar un área o dirigir su luz como un rayo en una dirección. Aplicar las reglas de [Visibilidad, Iluminación y Sentidos](../../10_Reglas/Visibilidad_Iluminacion_y_Sentidos.md).
+
+**Destello — 2 acciones y 3 cargas.** Lanzas un flash de luz desde la varita. Los aliados pueden acordar previamente una señal o patrón para cerrar los ojos o mirar al suelo antes del destello. Las criaturas inadvertidas deben realizar una tirada de **Resistir o Instinto**; si fallan, quedan **Cegadas durante 1 ronda**. Las criaturas con **Darkvision** sufren **1 dado de penalización** en esta tirada.
 
 #### 3. Mastín de Huesos
-- **Flujo / Tema:** Yrgramar (Necromancia / Esbirro no-muerto menor).
-- **Compatible con Herramienta:** El Amuleto / Reliquia.
-- **Función:** Dispositivo arcaico hecho de hueso grabado. Almacena la animación o convocación de una entidad cadavérica menor de rastreo/defensa.
-- `[ESQUELETO: hechizo almacenado, PL fijo, cargas máximas, tasa de conversión Maná→cargas, recarga natural]`
 
-#### 4. Compañero Fiel
+*Actualización canónica — Hassan, 2026-11-23.*
+
+Una vara fabricada con el fémur de un caballo u otro animal grande, rematada por un cráneo. Su interior permite **almacenar un pergamino**.
+
+- **Escuela:** **Yrgramar**.
+- **Compatible con herramienta:** **Libro de Conjuros o Arma**.
+- **Dedicación como Bastón:** La vara también puede servir como **Bastón** si la dedicas como esa [herramienta del lanzador](../Herramientas_del_Lanzador.md#bastón), conforme a la regla de compactación.
+- **Manifestación:** Permite manifestar un **cráneo espectral** que suele tener **personalidad y nombre propios**.
+- **Acciones para manifestarlo:** **2 acciones**.
+- **Concentración:** No requiere.
+- **Distancia máxima:** El cráneo no puede alejarse más de **3 bloques** del portador.
+- **Consumo:** **1 carga por cada minuto** que el cráneo permanece activo.
+- **Capacidad máxima:** **3 cargas**.
+- **Recarga con Maná:** **1 carga por cada 1 Maná**.
+- **Recarga natural:** Genera **1 carga por cada 8 horas de inactividad**, mientras el esqueleto duerme, hasta su capacidad máxima.
+
+**Mordida.** Mientras el cráneo está activo, puedes emplear acciones para morder con él. Es un **ataque Melee de daño Cortante espiritual** que utiliza **Yrgramar** como habilidad de ataque y **Voluntad** para el daño, conforme a la [fórmula de artefactos arcanos](../../10_Reglas/Core_13_Sistema_de_Magia_y_Energia.md#137-artefactos-arcanos-fuente-t--artefactos-arcanos).
+
+**Defensa.** Si el cráneo está a tu lado, puedes emplearlo para realizar **Interceptar**, la maniobra defensiva básica de bloqueo. Se respetan todas sus reglas habituales, incluidas la tirada de **Melee (Bloqueo)**, las restricciones del ataque que puede interceptarse y las reglas de enfoque, percepción y Arrebatado; consultar [Reacciones Defensivas](../../10_Reglas/Reacciones_Defensivas.md#defensa-con-escudo).
+
+### Artefactos pendientes fuera de la Demo
+
+#### Compañero Fiel
 - **Flujo / Tema:** Naial (Vínculo etéreo / Construcción emocional).
 - **Compatible con Herramienta:** El Libro / El Amuleto.
 - **Función:** Almacena encantamientos de protección pasiva y manifestación de familiares o guardianes espirituales.
 - `[ESQUELETO: hechizo almacenado, PL fijo, cargas máximas, tasa de conversión Maná→cargas, recarga natural]`
 
-#### 5. Báculo del Atrapasueños
+#### Báculo del Atrapasueños
 - **Flujo / Tema:** Ivganny (Mente / Sueños).
 - **Compatible con Herramienta:** El Arma (báculo).
 - **Función:** Almacena ilusiones y encantamientos para adormecer o distorsionar la percepción del objetivo.

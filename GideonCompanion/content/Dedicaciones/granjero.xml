@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dedicacion id="granjero">
   <nombre>Granjero</nombre>
-  <descripcion>Short description</descripcion>
+  <descripcion>Cultivo, ganadería y trabajo sostenido con la tierra. Elige el oficio aprendido que practicabas antes de salir de aventuras.</descripcion>
   <skills_garantizadas>
+
   </skills_garantizadas>
-  <estado>esqueleto</estado>
+  <oficios minimo="50" elegir="1">
+    <oficio>Agricultura</oficio>
+    <oficio>Ganadería</oficio>
+  </oficios>
+  <preguntas>
+    <pregunta>¿A qué te dedicabas: cultivo, ganadería o ambos?</pregunta>
+    <pregunta>¿La tierra era propia, arrendada o trabajabas para otro?</pregunta>
+    <pregunta>¿Tienes familia que sigue en el campo? ¿Qué relación mantenés con ellos?</pregunta>
+    <pregunta>¿Qué te llevó a dejar esa vida?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
 </dedicacion>

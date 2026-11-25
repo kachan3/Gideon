@@ -71,10 +71,4 @@ Para manejar el riesgo durante la exploración, el DM administra un **Alert Lv (
 
 ## 22.4 Buildings (Bloqueos Estructurales)
 
-*Buildings* es una mecánica que establece **bloqueos duros** en el juego: ciertas actividades son lógicamente y físicamente imposibles de lograr únicamente con talento, requiriendo **infraestructura especializada**. No se puede engañar a la física con buenas tiradas de dados.
-
-- **Reforje o Forjado Inicial:** Uno puede enderezar una mella o reparar el filo de un arma usando martillos de campo y 1 hora de descanso. Sin embargo, para elevar materiales a 1000 grados Celsius durante horas continuas, fundir, soldar y acoplar aleaciones raras en un arma desde cero o al reforjarla, **es estrictamente necesario estar dentro de una Herrería** apropiada.
-- **Maquinaria Pesada:** Reparar o reemplazar partes masivas (como el brazo o contrapeso de una catapulta) requiere poleas, grúas y espacio, cosas que solo un Taller de Ingeniería u obrador provee.
-- **Heridas Mortales y el Hospital:** En *Crónicas de Gideon*, las Heridas Mortales no sanan con el simple reposo. **Sin magia directa o pociones especiales**, un personaje que arrastre una Herida Mortal estabilizada sólo podrá sanarla internándose en un **Hospital** para un tratamiento clínico sostenido. (El DM determina qué califica como Hospital: una tienda de campaña de sanadores militares bien equipada puede ser un Hospital; un colchón de hojas en una caverna húmeda jamás lo será). 
-
-Este es un recurso que fomenta las misiones logísticas de urgencia: el grupo puede verse forzado a acortar su incursión al calabozo para correr a la ciudad más cercana a fin de evitar que su compañero muera, enlazando mecánicas de daño con giros argumentales naturales.
+Ver [Estructuras](Estructuras.md).

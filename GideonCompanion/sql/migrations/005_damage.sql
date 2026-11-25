@@ -1,0 +1,7 @@
+CREATE TABLE dano_eventos (
+ id INTEGER PRIMARY KEY, personaje_id INTEGER NOT NULL REFERENCES personajes(id),
+ fecha TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, tipo_dano TEXT NOT NULL,
+ recibido INTEGER NOT NULL, mitigacion REAL NOT NULL, fragilidad REAL NOT NULL,
+ heridas REAL NOT NULL, grave INTEGER NOT NULL DEFAULT 0, mortal INTEGER NOT NULL DEFAULT 0,
+ modo TEXT NOT NULL CHECK(modo IN ('Bruto','Final'))
+);

@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="hijos_del_sol">
   <nombre>Hijos del Sol</nombre>
   <nombre_en>Sunchilds</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>3</escalado_vital>
+  <movimiento>6</movimiento>
   <bonos>
+    <bono habilidad="Entretener" valor="10"/>
+    <bono habilidad="Coraje" valor="10"/>
     <bono habilidad="Ignamor" valor="5"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <rasgos_iniciales>
+    <rasgo nombre="Adaptación al fuego">+3 de mitigación plana contra Fuego, adicional a la Dureza y otras protecciones. No divide el daño entre dos.</rasgo>
+    <rasgo nombre="Brillo Solar">Emite luz Clara desde su cuerpo en un radio de 2 unidades. Cuesta 1 maná por 1 hora; no está limitado a una hora diaria. Capacidad inicial exclusiva de Hijos del Sol.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Su vínculo con el calor se manifiesta en protección frente al fuego y en la capacidad propia de emitir luz corporal.</descripcion>
 </linaje>

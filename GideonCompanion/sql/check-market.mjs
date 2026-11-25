@@ -1,0 +1,51 @@
+import assert from 'node:assert/strict';
+import {openDatabase,character,transaction} from './server.mjs';
+import {purchase,assignGear,finishEquipment} from './market.mjs';
+import {makeServer} from './server.mjs';
+import {issueCharacterToken} from './access.mjs';
+const db=openDatabase();
+db.exec('BEGIN');
+try{
+ const person=db.prepare('SELECT id FROM personajes LIMIT 1').get().id;
+ db.prepare('UPDATE personajes SET oro=200 WHERE id=?').run(person);
+ db.prepare("UPDATE inventario SET ubicacion='Campamento',transportado=0,equipado=0,mano=NULL WHERE personaje_id=?").run(person);
+ const dagger=db.prepare("SELECT id FROM armas WHERE nombre='Daga'").get().id;
+ purchase(db,person,{tipo:'arma_id',id:dagger,nivel:1,solicitud:'check-market-a'});
+ purchase(db,person,{tipo:'arma_id',id:dagger,nivel:1,solicitud:'check-market-a'});
+ assert.equal(db.prepare('SELECT oro FROM personajes WHERE id=?').get(person).oro,195);
+ const item=db.prepare("SELECT inventario_id FROM compras_equipo WHERE solicitud='check-market-a'").get().inventario_id;
+ assert.throws(()=>finishEquipment(db,person),/Asigná/);
+ assignGear(db,person,item,{ubicacion:'Mano principal'});
+ let p=character(db,person);
+ assert(p.equipo.ataques.find(a=>a.item_id===item).equipado);
+ assignGear(db,person,item,{ubicacion:'Mochila'});
+ p=character(db,person);assert(!p.equipo.ataques.find(a=>a.item_id===item).equipado);assert(p.equipo.mochila_cargada);
+ assignGear(db,person,item,{ubicacion:'Campamento'});
+ p=character(db,person);assert(!p.equipo.inventario.find(i=>i.id===item).transportado);
+ assert.throws(()=>assignGear(db,person,item,{ubicacion:'Transferir'}),/Indicá/);
+ assignGear(db,person,item,{ubicacion:'Transferir',destinatario:'Mula'});
+ const armor=db.prepare('SELECT id FROM armaduras WHERE es_base=1 LIMIT 1').get().id;
+ assert.throws(()=>purchase(db,person,{tipo:'armadura_id',id:armor,nivel:10,solicitud:'too-expensive'}),/Oro insuficiente/);
+ purchase(db,person,{tipo:'armadura_id',id:armor,nivel:5,solicitud:'armor-check'});
+ const armorItem=db.prepare("SELECT inventario_id FROM compras_equipo WHERE solicitud='armor-check'").get().inventario_id;
+ assignGear(db,person,armorItem,{ubicacion:'Armadura'});
+ p=character(db,person);assert.equal(p.equipo.inventario.find(i=>i.id===armorItem).armadura.nivel_equipo,5);
+ assert(p.equipo.defensas.length>0);
+ assert.equal(db.prepare('PRAGMA foreign_key_check').all().length,0);
+ console.log('OK compras, saldo, reintentos, fondos insuficientes, asignación, equipo, mochila, campamento, transferencia, protección y relaciones.');
+}finally{db.exec('ROLLBACK');db.close();}
+const memory=openDatabase(':memory:');
+const owner=memory.prepare('SELECT id FROM personajes LIMIT 1').get().id;
+const token=issueCharacterToken(memory,owner,{replace:true});
+const server=makeServer(memory);
+await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+try{
+ const endpoint=`http://127.0.0.1:${server.address().port}/api/personajes/${owner}/mercado`;
+ const weapon=memory.prepare('SELECT id FROM armas LIMIT 1').get().id;
+ const payload={tipo:'arma_id',id:weapon,nivel:1,solicitud:'http-check'};
+ const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json',Authorization:`Bearer ${token}`},body:JSON.stringify(payload)});
+ assert.equal(response.status,200);
+ const p=await response.json();assert.equal(p.oro,195);assert(p.equipo.pendientes>0);
+ const denied=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});assert.equal(denied.status,401);
+ console.log('OK: API de compra autenticada y rechazo sin token.');
+}finally{await new Promise(resolve=>server.close(resolve));memory.close();}

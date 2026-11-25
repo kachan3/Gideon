@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dotes>
   <!-- Dotes de Senda y universales. Contenido en desarrollo. -->
+  <dote id="ataque_simultaneo" estado="definido">
+    <nombre>Ataque Simultáneo</nombre>
+    <tipo>Marcial</tipo>
+    <descripcion>Requiere Dual Whielder Enthusiast (DWA), registrado como Dual Wielding Enthusiast (DWE), y empuñar un arma melee sin limitación de dos manos en cada mano. Después de tirar el d100 para un ataque con tu arma principal, podés intercambiar las decenas y las unidades (34 → 43) y elegir el resultado que más te favorezca. Si activás el dote, resolvé ese único ataque con el arma secundaria, incluso si conservás el resultado original.</descripcion>
+  </dote>
   <dote id="golpe_dual" estado="definido">
     <nombre>Golpe Dual</nombre>
-    <tipo>Senda</tipo>
-    <descripcion>Al equipar dos armas con la propiedad Dual, atacas con ambas simultáneamente sumando sus dados de daño.</descripcion>
+    <tipo>Marcial</tipo>
+    <descripcion>Combo Marcial. Requiere Dual Wielding Enthusiast y Dual Wielding 85%. Una vez por turno, declaralo antes de atacar y gastá 2 PA y 1 Stamina. Hacés un ataque conjunto con ambas armas. Sumá al daño del ataque principal únicamente el Daño del Arma de la segunda antes de aplicar defensas y resistencias. Al impactar, aplicá también los efectos de impacto de la segunda arma.</descripcion>
   </dote>
   <dote id="reflejos" estado="definido">
     <nombre>Reflejos</nombre>
     <tipo>Senda</tipo>
     <descripcion>Si no portas armadura pesada, sumas tu Nivel de Instinto a tu valor de Evasión.</descripcion>
   </dote>
-  <dote id="estilo_combate" estado="definido">
-    <nombre>Estilo de Combate</nombre>
-    <tipo>Senda</tipo>
-    <descripcion>Elige un estilo de combate. Re-elegible. Requiere 1 hora de calentamiento para intercambiar.</descripcion>
+  <dote id="dual_wielding_enthusiast" estado="definido">
+    <nombre>Dual Wielding Enthusiast</nombre>
+    <tipo>Marcial</tipo>
+    <descripcion>Requiere Dual Wielding 50%. Permite desbloquear por 1 XP cada versión mejorada de dotes o combos que indiquen una mejora DWE. Multi Ataque mejorado permite tolerar una interrupción por fallo propio o Parry exitoso por ejecución, sin convertir ese ataque en impacto ni superar tres ataques. Empuñar dos armas no concede un ataque extra genérico.</descripcion>
   </dote>
   <dote id="entrenado_armadura_pesada" estado="definido">
     <nombre>Entrenado en Armadura Pesada</nombre>
     <tipo>Universal</tipo>
     <descripcion>Requisito para portar armaduras pesadas sin penalización.</descripcion>
+  </dote>
+  <dote id="riposte" estado="definido">
+    <nombre>Riposte</nombre>
+    <tipo>Marcial</tipo>
+    <costo_xp>2</costo_xp>
+    <requisito_uso habilidad="Paradas" minimo="60"/>
+    <descripcion>Requiere Paradas 60% para usarlo. Tras un Parry exitoso, si el atacante está al alcance del arma con la que hiciste el Parry y no tiene Ventaja de Rango, podés atacarlo con esa misma arma como parte de la misma Reacción.</descripcion>
+  </dote>
+  <dote id="just_a_bad_dream" estado="definido">
+    <nombre>Just a Bad Dream</nombre>
+    <tipo>Avanzado</tipo>
+    <descripcion>Requiere Cronibor 99% e Ivganny 99%. Cuesta 5 XP. Se puede activar una vez al mes. Al activarlo, se revierten por completo todos los acontecimientos ocurridos desde la última vez que dormiste. Despertás en el último lugar donde dormiste, con todo restaurado al estado que tenía en ese momento. A partir de ese despertar, los acontecimientos pueden desarrollarse de otra manera. No podés usar el dote como método fiable para conocer el futuro ni para viajar en el tiempo. Tu personaje queda con la duda de si lo que recuerda realmente ocurrió o fue un sueño.</descripcion>
   </dote>
 </dotes>

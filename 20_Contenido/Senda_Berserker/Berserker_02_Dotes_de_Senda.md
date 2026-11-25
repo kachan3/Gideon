@@ -2,30 +2,24 @@
 
 # Dotes de Senda — Berserker
 
-Todos los dotes listados llevan el **Tag de Senda: `Berserker`**. La XP invertida en ellos alimenta la **Pool de Senda Berserker** y determina el **Grado de Berserker** (`⌊XP en Berserker ÷ 5⌋`).
+Los elementos asociados a esta senda llevan la etiqueta **Berserker**. Consultá la [regla de inversión de XP de clase](../Creacion_de_Personaje.md#xp-de-clase) y el [Grado de Senda](../Core_12_Sendas_Mecanicas.md).
 
 > `[ESQUELETO]` La lista de dotes está en desarrollo. Los aquí listados provienen de §12.3 del Core original y de las directrices de Hassan 2026-08-12.
 
-## Proficiencias Iniciales
-
-*(Del Core §12.3 — sin modificar.)*
-
-- **Atletismo, Supervivencia, Coacción** (1 experto, 2 entrenadas).
-- **+1 arte marcial entrenada.**
-
 ## Dotes Confirmados
 
-### Desquite *(Senda Berserker)*
-Al impactar un ataque, gasta **1 carga de Ira**. Suma **1d6 de daño extra** del mismo tipo del arma. 1 vez por turno.
+- [Desquite](../Dotes/_esqueleto_Desquite.md)
 
-> `[ESQUELETO: escala de Desquite — el dado puede aumentar con Grado de Berserker u otro requisito. Pendiente Hassan.]`
+> [ESQUELETO: dotes adicionales de la Senda por definir.]
 
-### Ataque Temerario *(Senda Berserker)*
-*(Del Core §12.3 — sin modificar.)*
+## Rasgos de progresión
 
-Tu primer ataque del turno con arma **melee o arrojadiza** se realiza con **ventaja**. A cambio, los enemigos tienen **ventaja** para atacarte hasta el inicio de tu próximo turno.
+### Fuerza Aliota
 
-### Enemigo Declarado *(Senda Berserker)*
-*(Desarrollado en `Berserker_03_Enemigo_Declarado.md`.)*
+*Canónico — Hassan, 2026-11-24.*
 
-> `[ESQUELETO: dotes adicionales — pendiente Hassan. El árbol de dotes se expandirá cuando Hassan defina más contenido.]`
+Obtenés este Rasgo automáticamente al invertir **10 XP en Berserker**.
+
+Si tenés al menos **4 cargas de Ira**, podés gastar **3 puntos de Maná** para heredar por un instante la fuerza de tu matriarca. Resolvé tu **próxima acción** como si tuvieras **un [tier de Fuerza](../../10_Reglas/Atributos_y_Habilidades.md#rango-tier) superior** y fueras **una [categoría de tamaño](../../10_Reglas/Tamanos.md) mayor**. Las cargas de Ira son un requisito y se conservan al activar el Rasgo.
+
+Al entrar en [Trance](Berserker_01_Ira_y_Trance.md#trance), si cumplís el requisito de Ira, podés aplicar Fuerza Aliota a tu próxima acción **sin pagar Maná**. Podés hacerlo una vez por Trance.

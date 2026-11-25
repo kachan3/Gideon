@@ -1,21 +1,19 @@
 # Creación de Personaje — Crónicas de Gideon
 
-> **Naturaleza de este documento.** Reglas de creación de personaje jugador. Todo lo aquí contenido ocurre en **Ranking 0** — el espacio de los seres humanos y dríades, incluso en su expresión más excepcional. Los Rankings superiores son consecuencia de la campaña, no del origen.
+> **Naturaleza de este documento.** Reglas de creación de personaje jugador. Todo lo aquí contenido ocurre en **Ranking 0** — el espacio de los dríades, incluso en su expresión más excepcional. Los Rankings superiores son consecuencia de la campaña, no del origen.
 
 ---
 
 ## Flujo de Creación y Techo Numérico
 
-> **Ninguna skill puede superar 80 al finalizar la creación de personaje**, sin importar la combinación de puntos, bonos de background, Regalos o cualquier otro modificador. Este techo aplica a la suma final de todos los factores.
+> **El techo de creación de las habilidades es 80.** Se verifica tras aplicar los puntos y bonos de creación. La excepción que permite a los Regalos superar ese techo es intencional y queda suspendida mientras Regalos y Perjuicios estén en cuarentena.
 
-Para asegurar que los bonos se apliquen correctamente y respeten el techo de 80, los personajes deben crearse siguiendo este estricto orden matemático:
-
-1. **Paso 1: Atributos Base.** Asignar el arreglo base (o tirada) a los atributos. Las Habilidades Hijas heredan este valor.
-2. **Paso 2: Linaje.** Se suman los bonos específicos de la subespecie.
-3. **Paso 3: Origen (Trasfondo).** Se chequean los mínimos garantizados de la Dedicación contra los valores actuales (Base + Linaje). Si la habilidad lo supera, se considera **Destacada** y recibe **+5**. Si no, sube al mínimo.
-4. **Paso 4: Senda (Clase).** Asignar el **Pool de Combate** (+20, +15, +10, +5) y el **Pool Normal** (+50 puntos). 
-5. **Paso 5: Regalo y Desgracia.** Se verifica el **Techo de 80** (puntos excedentes se pierden). Luego se aplican los Regalos y Desgracias (ej. el Regalo *Dotado* tira 1d10 y se suma a todo, ignorando explícitamente el techo de 80).
-6. **Paso 6: Compra de XP.** Asignación de la experiencia inicial y resolución del Mulligan.
+1. Elegí el **Linaje**.
+2. Asigná los **atributos base** y aplicá los bonos de linaje a las habilidades correspondientes.
+3. Declará el **Trasfondo** del personaje, incluida su **Dedicación**.
+4. Elegí la **Senda**, repartí sus puntos y resolvé la [Dedicación](#regla-de-destacado).
+5. Aplicá el **techo de creación**. Los puntos que lo excedan se pierden.
+6. Registrá la **XP inicial** y resolvé el Mulligan si corresponde.
 
 ---
 
@@ -46,38 +44,17 @@ Cada Senda tiene un rol que cumplen en sus misiones, especialmente en los asenta
 
 ---
 
-## Paso 1 — Atributos Base
+## Paso 1 — Especie y Linaje
 
-El núcleo numérico del personaje está compuesto por 10 Atributos, divididos en tres categorías formales más un atributo excepcional *(canónico — Hassan 2026-08-17)*:
+Para esta demo, la única especie jugable es el **Dríade**. El linaje define su adaptación, sus capacidades iniciales, su movimiento y su **Escalado Vital**. **MH = ⌈Escalado Vital × Nivel de Vitalidad⌉**.
 
-* **Mentales:** Inteligencia, Carácter, Instinto.
-* **Físicos:** Fuerza, Agilidad, Vitalidad.
-* **Marciales:** Melee, Proyectiles, Arcana.
-* **Espiritual:** Voluntad (es un atributo íntegro y simbólico de la chispa del alma, que existe en su propia categoría).
+**Revisión canónica — Hassan, 2026-11-05.** Cada linaje concede **25 puntos de bonos de creación (+10/+10/+5) a habilidades concretas**, no a atributos padres. Como máximo se concede **+5 a una habilidad marcial**; Viento tiene la excepción defensiva expresa de **+10 Evasión**. El movimiento es fijo: 6 unidades, salvo Viento 8; no se suma Atletismo.
 
-Todas tus **Habilidades Hijas** nacerán con el mismo valor que su Atributo Padre correspondiente.
+Consultá las fichas del [catálogo de linajes jugables](Linajes_Jugables.md) para elegir los bonos y capacidades del personaje.
 
-Existen dos métodos para obtener los números de tus atributos base:
+Las capacidades y bonos iniciales se registran como **Rasgos de origen**, concedidos automáticamente y **sin coste de XP** al elegir el linaje. La formación de Dedicación, el oficio aprendido y el Nacimiento se catalogan del mismo modo, conservando los efectos definidos para cada uno. No existe un límite rígido de un Rasgo ni se obtiene uno por cada Senda. Los dotes avanzados de linaje podrán adquirirse con XP **durante la progresión**, cuando estén definidos. Luna puede comenzar con un medallón de Moonstone como regalo cultural, separado de Regalo y Perjuicio; el objeto sigue siendo equipo.
 
-1. **Valores Fijos (Arreglo):** Repartes libremente los siguientes 10 valores entre tus atributos: **50, 45, 40, 35, 30, 30, 30, 20, 20, 15**.
-2. **Aleatorio (3d4 × 5):** Tiras 3d4 y multiplicas el resultado por 5 para cada uno de los 10 atributos. (Este método habilita bonos especiales en el Paso 6 de Experiencia Inicial).
-
----
-
-## Paso 2 — Especie y Linaje
-
-Para esta demo, la única especie jugable es el **Dríade**, y el jugador debe elegir uno de los siguientes linajes. El linaje determina el **Escalado Vital** para calcular los puntos de vida máximos (MH = Escalado Vital + Nivel de Vitalidad) y otorga **Bonos de Creación** a ciertas habilidades:
-
-- **Hijos del Viento (WindChilds):** Escalado Vital × 2. **Bono:** +10 a Evasión y +5 a Saltar.
-- **Seres del Río (Riverdwellers):** Escalado Vital × 2. **Bono:** `[ESQUELETO: bono pendiente]`
-- **Hijos de las Estrellas (Starchilds):** Escalado Vital × 2.5. **Bono:** +5 a Cronibor.
-- **Hijos del Bosque (Forestkind):** Escalado Vital × 2.5. **Bono:** +5 a cualquier habilidad de Proyectiles.
-- **Hijos de la Luna (Moonchilds):** Escalado Vital × 2.5. **Bono:** +5 a Sigilo y +5 a Ivganny (Ilusión).
-- **Hijos del Hielo (FrostChilds):** Escalado Vital × 3. **Bono:** +5 a Ignamor.
-- **Hijos de la Tierra (Earthfolks):** Escalado Vital × 3. **Bono:** +5 a una habilidad a elección de Melee, Proyectiles o Arcana.
-- **Hijos del Sol (Sunchilds):** Escalado Vital × 3. **Bono:** +5 a Ignamor.
-
-*(Ver §3 del Core para detalles estadísticos y narrativos de cada linaje).*
+Los rasgos vigentes y las afinidades pendientes se consultan en el [catálogo de linajes jugables](Linajes_Jugables.md). Para nado y respiración, consultá [Combate acuático](../10_Reglas/Combate_Acuatico.md) y [Sofocación](../10_Reglas/Sofocacion.md).
 
 **Personajes Alternativos (Otro tipo de Ser):** 
 Existen otras especies que operan dentro del mismo sistema de juego pero poseen elementos que varían drásticamente (por ejemplo, pueden no tener Senda o poseer estadísticas y progresiones diferentes). Se deben elegir como un "tipo distinto de personaje" desde la primera etapa de creación. 
@@ -85,9 +62,22 @@ Existen otras especies que operan dentro del mismo sistema de juego pero poseen 
 
 ---
 
+## Paso 2 — Atributos Base
+
+El personaje tiene diez atributos, definidos en [Atributos y Habilidades](../10_Reglas/Atributos_y_Habilidades.md).
+
+Cada **Habilidad Hija** parte del valor de su Atributo Padre. Sobre esa base, sumá los bonos del linaje elegido.
+
+Existen dos métodos para obtener los números de tus atributos base:
+
+1. **Valores Fijos (Arreglo):** Repartes libremente los siguientes 10 valores entre tus atributos: **50, 45, 40, 35, 30, 30, 30, 20, 20, 15**.
+2. **Aleatorio (3d4 × 5):** Tiras 3d4 y multiplicas el resultado por 5 para cada uno de los 10 atributos.
+
+---
+
 ## Paso 3 — Origen (Trasfondo)
 
-Todo trasfondo se compone de tres elementos independientes: **Dedicación**, **Nacimiento** y **Regalo & Perjuicio**. Los tres se combinan libremente — un Nacimiento no limita qué Dedicación puede elegirse ni viceversa.
+El trasfondo activo se compone de **Dedicación** y **Nacimiento**, que se combinan libremente. **Regalos y Perjuicios** quedan en cuarentena hasta su revisión.
 
 ---
 
@@ -95,20 +85,17 @@ Todo trasfondo se compone de tres elementos independientes: **Dedicación**, **N
 
 La Dedicación es el oficio o modo de vida del personaje antes de convertirse en aventurero. Define qué practicó, no quién es cosmológicamente ni de dónde viene.
 
-Cada Dedicación otorga:
-- **Skills garantizadas**: valores mínimos en las skills core del oficio. Si el personaje termina la creación por debajo de ese mínimo en alguna de ellas, el sistema la sube automáticamente al piso garantizado.
-- **Destacado (binario)**: si al finalizar la creación el personaje supera el mínimo garantizado en una skill de su Dedicación, recibe **+5 en esa skill**. No hay gradación — se tiene o no se tiene.
+Declará tu Dedicación y anotá las habilidades que garantiza. Sus beneficios se resuelven en el paso de Senda.
+
 - **4 preguntas de trasfondo**: herramienta narrativa que genera hooks para el jugador y el DM. Las respuestas no tienen peso mecánico directo. Las preguntas marcadas con **(\*)** invitan a coordinar con el DM: si el DM quiere introducir ese elemento en la historia, ese es el momento; si no, el jugador usa su propio headcanon.
 
-`[ESQUELETO: puntos de skill asignables en creación y cómo se distribuyen — pendiente de diseño]`
+Consultá la tabla de [Dedicaciones y oficios aprendidos](Origenes_y_Oficios_Demo.md#dedicación-y-oficio-aprendido) para los mínimos y elecciones de cada oficio.
 
 ---
 
 #### Granjero
 
-*Tierra, ciclos y trabajo físico sostenido. El granjero sabe que la tierra no perdona la impaciencia.*
-
-**Skills garantizadas:** `[ESQUELETO: pendiente de Hassan]`
+Cultivo, ganadería y trabajo sostenido con la tierra. Elige el oficio aprendido que practicabas antes de salir de aventuras.
 
 **Preguntas:**
 1. ¿A qué te dedicabas: cultivo, ganadería o ambos?
@@ -120,13 +107,11 @@ Cada Dedicación otorga:
 
 #### Artesano
 
-*Un oficio concreto, una reputación local, manos que saben hacer algo bien.*
-
-**Skills garantizadas:** `[ESQUELETO: pendiente de Hassan]`
+Dominio de un oficio concreto: sus técnicas, herramientas, materiales y problemas prácticos. Elige una artesanía aprendida.
 
 **Preguntas:**
 1. ¿Cuál era tu oficio específico?
-2. ¿Trabajabas solo, en un taller o bajo un maestro? *(\*)*
+2. ¿Trabajabas solo, en un taller o bajo un maestro? (*)
 3. ¿Hay alguna obra tuya de la que estés orgulloso, o que preferirías que no existiera?
 4. ¿Por qué dejaste el oficio?
 
@@ -134,41 +119,35 @@ Cada Dedicación otorga:
 
 #### Marinero
 
-*Agua, viento y la permanente conciencia de que el mar no hace favores.*
-
-**Skills garantizadas:** `[ESQUELETO: pendiente de Hassan]`
+Trabajo a bordo, maniobras y vida en puertos y travesías.
 
 **Preguntas:**
 1. ¿En qué tipo de embarcación servías: comercio, exploración o corso?
 2. ¿Tenías rango o eras tripulante raso?
-3. ¿Tienes vínculos con algún puerto o tripulación? *(\*)*
+3. ¿Tienes vínculos con algún puerto o tripulación? (*)
 4. ¿Qué viaje o mar recordás con más intensidad?
 
 ---
 
 #### Mercader
 
-*Contactos, rutas, riesgo calculado. El mercader vive de que los demás necesiten lo que él tiene.*
-
-**Skills garantizadas:** `[ESQUELETO: pendiente de Hassan]`
+Comercio, acuerdos, tasación y relaciones de intercambio.
 
 **Preguntas:**
 1. ¿Qué tipo de bienes comerciabas?
-2. ¿Operabas solo, para una casa comercial o con socios? *(\*)*
+2. ¿Operabas solo, para una casa comercial o con socios? (*)
 3. ¿Tenés deudas pendientes o contratos sin cerrar?
 4. ¿Qué trato te definió, para bien o para mal?
 
 ---
 
-#### Académico / Erudito
+#### Académico
 
-*Estudio, registro, análisis. Alguien que pasó años aprendiendo más de lo que la mayoría sospecha que existe.*
-
-**Skills garantizadas:** `[ESQUELETO: pendiente de Hassan]`
+Estudio, consulta de fuentes y trabajo de investigación.
 
 **Preguntas:**
 1. ¿En qué campo se concentraba tu estudio?
-2. ¿Dónde estudiaste: institución formal, aprendizaje autodidacta o bajo un mentor? *(\*)*
+2. ¿Dónde estudiaste: institución formal, aprendizaje autodidacta o bajo un mentor? (*)
 3. ¿Hay algo que aprendiste que preferirías no saber?
 4. ¿Qué te alejó de la academia o la investigación?
 
@@ -176,116 +155,94 @@ Cada Dedicación otorga:
 
 #### Médico
 
-*Heridas, enfermedades, decisiones bajo presión. El médico aprende a vivir con los límites de lo que puede hacer.*
-
-**Skills garantizadas:** Medicina 20, Inteligencia 20 *(canónico — Hassan 2026-06-15)*
+Diagnóstico y tratamiento de heridas y enfermedades, con práctica antes de la aventura.
 
 **Preguntas:**
 1. ¿Dónde ejercías: ciudad, campo de batalla, institución religiosa?
 2. ¿Fue formación formal o aprendiste por necesidad?
-3. ¿Hubo un paciente que no pudiste salvar y no has olvidado? *(\*)*
+3. ¿Hubo un paciente que no pudiste salvar y no has olvidado? (*)
 4. ¿Qué te alejó de la práctica?
 
 ---
 
 #### Soldado
 
-*Entrenamiento completo, cadena de mando, experiencia real contra oponentes diversos. Un soldado sabe pelear, no solo atacar.*
-
-**Skills garantizadas:** Melee 35 *(aplica a todos los sub-skills de Melee — canónico, Hassan 2026-06-15)*
-
-`[ESQUELETO: confirmar si Proyectiles también tiene mínimo garantizado para Soldado — pendiente de Hassan]`
+Servicio armado, disciplina y entrenamiento para combatir como parte de una organización.
 
 **Preguntas:**
-1. ¿Para qué ciudad o facción serviste? *(\*)*
+1. ¿Para qué ciudad o facción serviste? (*)
 2. ¿Abandonaste tu servicio? ¿Por qué?
-3. ¿Tienes aliados o amigos en el ejército? *(\*)*
+3. ¿Tienes aliados o amigos en el ejército? (*)
 4. ¿Qué momento de tu servicio recordás más?
 
 ---
 
-#### Banderizo
+#### Cazador
 
-*Juramento, lealtad y el peso de servir a alguien en específico. El banderizo no trabaja por dinero — trabaja por vínculo.*
-
-**Skills garantizadas:** `[ESQUELETO: pendiente de Hassan]`
+Leer huellas, seguir presas y reconocer su paso por un territorio.
 
 **Preguntas:**
-1. ¿A qué casa o señor estabas jurado? *(\*)*
-2. ¿Ese juramento sigue vigente, fue roto o el señor ha muerto?
-3. ¿Había otros banderizos con quienes te sentías hermano? *(\*)*
-4. ¿Qué acto de lealtad o traición te define mejor?
-
----
-
-#### Mercenario
-
-*Sin lealtad institucional. Trabaja por contrato. Bien recibido en las Islas Libres; visto con recelo en Pircar.*
-
-**Skills garantizadas:** `[ESQUELETO: pendiente de Hassan]`
-
-**Preguntas:**
-1. ¿Trabajabas solo o en una compañía? *(\*)*
-2. ¿Hay alguien que te quiera muerto por un trabajo pasado?
-3. ¿Tenés algún código personal o sos puramente transaccional?
-4. ¿Cuál fue el contrato del que más te arrepentís?
+1. ¿Qué presa te marcó?
+2. ¿Qué territorio conoces de memoria?
+3. ¿Qué trofeo guardas?
+4. ¿Qué te llevó de la caza a la aventura?
 
 ---
 
 ### 3.2 Nacimiento
 
-El Nacimiento define la **unidad social de concepción** del personaje y el **nivel económico o cultural** de esa unidad. No es de dónde viene geográficamente —eso surge de la combinación con la Dedicación y la narrativa del jugador— sino en qué tipo de estructura nació.
+El Nacimiento define la **unidad familiar o social de origen** del personaje. No determina su Dedicación ni su lugar geográfico: ambas elecciones se combinan libremente. Las categorías se interpretan según la región.
 
-La tabla usa categorías abstractas universales: el mismo resultado tiene nombre distinto según la región, y el DM lo traduce. Un resultado de *Linaje Comprometido* es un Banderizo en el continente principal, un clan juramentado en las Islas Libres, algo equivalente en el Continente Rojo.
+Las opciones de la demo, sus preguntas y la selección de Nacimiento se encuentran en [Orígenes y oficios](Origenes_y_Oficios_Demo.md#nacimiento). Los orígenes opcionales vinculados a Primigenios quedan fuera de esta selección.
 
-**Tirada:** 1d100. Los resultados marcados con ✦ son entradas de baja frecuencia.
+Cada uno tiene **cuatro preguntas narrativas opcionales**, guardadas por separado de las preguntas de Dedicación. No concede mínimos numéricos adicionales por sí mismo. Ver [Orígenes y oficios de demo](Origenes_y_Oficios_Demo.md).
 
-`[ESQUELETO: confirmar pesos y rangos exactos con Hassan — tabla provisional abajo]`
-
-| Rango | Nacimiento | Descripción |
-|---|---|---|
-| 01–28 | Familia Campesina | Criado en trabajo de la tierra o ganadería. Escasos recursos, comunidad cohesionada. |
-| 29–43 | Familia Artesana | Oficio familiar transmitido. Clase media-baja urbana o rural. |
-| 44–55 | Familia Mercader | Comercio como modo de vida. Movilidad, contactos, cultura del trato. |
-| 56–65 | Familia Militar | Tradición de servicio armado. Disciplina y lealtad institucional como valores centrales. |
-| 66–73 | Linaje Comprometido | Familia de servicio jurado a una casa, señor o institución. Equivale a Banderizo en el continente principal. |
-| 74–78 | Estirpe Elevada ✦ | Nobleza o clase dirigente equivalente. Privilegio, obligaciones y nombre que pesa. |
-| 79–86 | Huérfano Institucional | Criado por una institución: gremio, orfanato civil, capilla, orden militar. Sin familia de origen conocida o presente. |
-| 87–92 | Origen Ilegítimo ✦ | Nacido fuera del reconocimiento formal. Apellido negado o ambiguo. Estatus incierto. |
-| 93–97 | Sin Raíz | Familia nómada, viajera o sin pertenencia fija. Cultura de tránsito, sin comunidad estable. |
-| 98–00 | Enigmático | El personaje no sabe su origen, o no lo quiere definir. Sin implicaciones mecánicas. |
-
-> **Nota.** Los orígenes especiales vinculados a Primigenios (Hijo de Alioth, Hijo de Sulivann, Cordero Liberado) son reglas opcionales separadas que no forman parte de esta tabla.
+**Tirada d100:** pendiente de una nueva distribución para ocho opciones. Los rangos del catálogo anterior quedan históricos y no se aplican a esta selección directa. Los orígenes opcionales vinculados a Primigenios siguen fuera de esta tabla.
 
 ---
 
 ## Paso 4 — Senda (Clase)
 
-En este paso, el jugador elige la Senda de su personaje. Como se detalla en el Core (ver §12 Sendas Mecánicas), el jugador recibe sus dos pools de creación:
-- **Pool de Combate:** Asigna los valores fijos +20, +15, +10 y +5 a cuatro Habilidades Hijas de combate distintas (de Melee, Proyectiles o Arcana).
-- **Pool Normal:** Reparte 50 puntos entre las Habilidades Hijas normales, con un máximo de +20 a una sola habilidad.
+Elegí la Senda, sus dotes y sus rasgos iniciales. Repartí el **Pool de Combate** y el **Pool Normal** según los valores y límites de [Sendas — Mecánicas](Core_12_Sendas_Mecanicas.md). Completá el reparto antes de resolver la Dedicación declarada.
 
-*(Nota: Los dotes y rasgos específicos de la Senda se eligen también en este punto).*
+Si elegís la **Senda del Honor**, elegí también una **orden de caballería** disponible o empezá como **Caballero Herrante**. Anotá el Honor inicial y los dotes de tu elección según [Atributo Honor — Valor inicial en creación de personaje](Senda_Honor/Honor_01_Atributo_Honor.md#valor-inicial-en-creación-de-personaje).
+
+### Regla de Destacado
+
+Tomá los valores que alcanzaste con el reparto y compará cada uno con el [mínimo de tu Dedicación](Origenes_y_Oficios_Demo.md#dedicación-y-oficio-aprendido). Hacé la comparación una sola vez por habilidad.
+
+- **Por debajo del mínimo**, subí la habilidad hasta ese valor.
+- **En el mínimo**, conservá el valor alcanzado.
+- **Por encima del mínimo**, la habilidad recibe **Destacado (+5)**.
+
+Por ejemplo, un Médico con Medicina 40 termina con 50 si asigna 0 o 10 puntos a Medicina. Si asigna 15, alcanza 55 por sus propios medios y Destacado la lleva a **60**.
 
 ### Dotes Insignia *(canónico — Hassan 2026-08-17)*
 
 Los **Dotes Insignia** son los dotes que vienen de base al elegir una Senda. Son las habilidades fundamentales e íntimas de la clase.
 
 - **No se pueden reemplazar** ni optar por no poseer. Son inseparables de la Senda.
-- **No son exclusivos** de la Senda. A diferencia de los **Rasgos** (que son exclusivos de la clase y únicamente de la clase), los Dotes Insignia pueden obtenerse también por **Linaje, Origen o Don**. Lo que los hace "insignia" es que la Senda los garantiza, no que los monopolice.
+- **No son exclusivos** de la Senda. Los Dotes Insignia pueden obtenerse también por **Linaje, Origen o Don**. Lo que los hace "insignia" es que la Senda los garantiza, no que los monopolice.
 - **Duplicado = +1 XP extra.** Si por tu Linaje, Origen o Don **ya posees** un dote que tu Senda te otorgaría como Insignia, recibes **+1 XP extra** para tu personaje en lugar del dote duplicado.
 
-> *Ejemplo: el Origen "Erudito" otorga el dote "Lanzador de Conjuros". Si además eliges la Senda del Arcanista (cuya Herencia incluye "Lanzador de Conjuros"), ya lo tenés — recibes +1 XP extra.*
+<a id="xp-de-clase"></a>
+
+### El Rasgo «Clase» y Desbloqueos Exclusivos *(canónico — Hassan 2026-10-22)*
+
+Algunos **Dotes**, **Hechizos (Epifanías)** o **Armas** (en las que se invierte XP por sintonía) pueden poseer el **Rasgo «Clase»** asociado a una Senda específica.
+- Al invertir puntos de XP en cualquiera de estos elementos (dotes, hechizos o armas con el Rasgo «Clase»), **si el personaje pertenece a dicha clase**, esa inversión de XP se contabiliza para su Senda y **desbloquea Dotes o Rasgos exclusivos de dicha clase** (además de incrementar su Grado de Senda, §12).
 
 ---
 
-## Paso 5 — Regalo y Desgracia (Perjuicios)
+## Paso 5 — Regalos y Perjuicios — EN CUARENTENA
+
+> **CUARENTENA — Hassan, 2026-11-13.** Este contenido queda inactivo hasta su revisión. Se conserva para evaluación. La excepción de los Regalos al techo de 80 es intencional y queda suspendida durante la cuarentena.
 
 > **Terminología *(canónico — Hassan 2026-06-29)*.** Lo que antes se llamaba "Falencia" pasa a llamarse **Perjuicio** —término neutro—: una **desventaja de origen**, no un defecto de carácter (una discapacidad no es una falla individual).
 
 Rasgos **opcionales** de origen. Un **Regalo** es una ventaja; un **Perjuicio**, una desventaja. **Son independientes — NO forman pares obligatorios.** Podés tener un Regalo sin Perjuicio, un Perjuicio sin Regalo, ambos, o ninguno.
 
-Algunos Regalos y Perjuicios tienen un **contrario temático** (Dotado ↔ Anti-Dotado; Carismático ↔ Desagradable), pero es sólo sabor: **tener un opuesto no obliga a tomarlo**, y no todos lo tienen. Las **discapacidades de origen** (Ciego, Sordo, Inmovilidad motriz, Amputación) son Perjuicios: se toman de forma independiente y aplican su estado de §18.
+Algunos Regalos y Perjuicios tienen un **contrario temático** (Dotado ↔ Anti-Dotado; Carismático ↔ Desagradable), pero es sólo sabor: **tener un opuesto no obliga a tomarlo**, y no todos lo tienen. La versión en cuarentena impide elegir a la vez un Regalo y su Perjuicio contrario. Las **discapacidades de origen** (Ciego, Sordo, Inmovilidad motriz, Amputación) son Perjuicios: se toman de forma independiente y aplican su estado de §18.
 
 **Adquisición *(canónico — Hassan 2026-06-29)*.** Por ahora, **un solo Regalo por personaje** (con su Perjuicio si corresponde). Regla anti-min-max: **el jugador nunca elige los dos lados** — si elegís uno, el otro es aleatorio o lo pone el DM. Métodos:
 - **A la suerte:** si **tirás al azar** tu Senda, Linaje y Trasfondo, se te **regala un Regalo aleatorio, sin Perjuicio** — premio por dejarlo al azar.
@@ -316,20 +273,11 @@ Algunos Regalos y Perjuicios tienen un **contrario temático** (Dotado ↔ Anti-
 
 ---
 
-## Regla de Azar
+## Regla de Azar — EN CUARENTENA
+
+> Esta regla requiere elegir Regalos y Perjuicios y queda suspendida junto con ellos.
 
 Si el jugador tira aleatoriamente los **tres elementos del trasfondo** (Dedicación, Nacimiento, y el par de Regalo & Perjuicio) sin elegir ninguno, recibe una **Especialización gratuita adicional** al finalizar la creación. Premia la incertidumbre sin afectar el balance de puntos.
-
----
-
-## Regla de Destacado
-
-**Binario.** Al finalizar la creación, por cada skill garantizada de la Dedicación:
-
-- Si el valor final está **en el mínimo o por debajo**: el sistema lo sube al mínimo garantizado automáticamente.
-- Si el valor final **supera el mínimo garantizado**: el personaje recibe **+5 en esa skill**.
-
-El +5 forma parte del total sujeto al techo de 80%.
 
 ---
 
@@ -337,9 +285,7 @@ El +5 forma parte del total sujeto al techo de 80%.
 
 Todo personaje comienza con **1 XP** por defecto.
 
-**Bono por Aleatoriedad Extrema (+1 XP extra):** 
-Si el jugador elige generar sus atributos base tirando dados (3d4×5) y **los asigna estrictamente en el orden en el que salieron** (es decir, el primer resultado a Fuerza, el segundo a Vitalidad, y así sucesivamente), obligándose a idear el personaje de forma totalmente aleatoria, el personaje comienza el juego con **2 XP** en total en lugar de 1. 
-*Filosofía:* Esto fuerza al jugador a sacar provecho de situaciones atípicas (ej. un personaje con mucha Arcana y Melee, pero poca Inteligencia y Voluntad), recompensando el rolplay adaptativo.
+**Bono por generación aleatoria.** Generar los valores de los atributos con **3d4 × 5** y asignarlos **estrictamente en el orden en que salen** concede **+1 XP inicial**. El personaje comienza así con **2 XP en total**. Tirar los valores y repartirlos libremente conserva el XP inicial general.
 
 **Regla de Re-asignación (Mulligan):**
 La única forma de arrepentirse tras comprometerse a asignar en orden es si la tirada cumple con el criterio de **extrema mala suerte**:
@@ -351,4 +297,21 @@ Si se cumplen todas estas condiciones a la vez, puedes solicitar una re-asignaci
 
 ---
 
-*Canonizado — Hassan 2026-07-30*
+## Peso personal
+
+Calculá y registrá el peso personal según la regla de [Carga y transporte](../10_Reglas/Carga_y_Transporte.md#peso-personal).
+
+*Canonizado - Hassan 2026-07-30*
+
+## Oro y equipo inicial
+
+**Reserva inicial por Senda** *(Hassan, 2026-11-23).* Cada Senda establece la reserva de oro con la que comienza el personaje. La base vigente es **200 de oro**. El **Arcanista comienza con 100 de oro menos** que esa base para compensar el **Artefacto Arcano** que recibe al crear el personaje.
+
+| Senda | Oro inicial |
+|---|---:|
+| Arcanista | **100** |
+| Demás Sendas, salvo una reserva particular indicada en su ficha | **200** |
+
+Antes de comenzar la aventura, el personaje elige su equipo en el mercado del Companion y asigna todos sus objetos en el inventario. Las compras descuentan el precio calculado por categoría, base y Nivel de Equipo. El oro no gastado se conserva.
+
+El inventario se presenta como una ventana modal que requiere asignar ubicación a todos los objetos antes de cerrarse. Después de esta preparación, el mercado permite comprar armas, armaduras y escudos y enviarlos al inventario para asignarlos.

@@ -1,0 +1,36 @@
+import {fixtureFetch,TEST_CATALOGUE_TOKEN} from './http-fixture.mjs';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {openDatabase,makeServer,character} from './server.mjs';
+
+test('inventario, kg, armaduras, ataques, objetos personalizados e inversión por ejemplar',async t=>{
+ const db=openDatabase(':memory:'),server=makeServer(db);await new Promise(r=>server.listen(0,'127.0.0.1',r));
+ t.after(async()=>{await new Promise(r=>server.close(r));db.close();});const url='http://127.0.0.1:'+server.address().port;
+ const fetch=fixtureFetch(db);
+ const request=async(path,method='GET',body)=>{const r=await fetch(url+path,{method,headers:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});return {status:r.status,data:await r.json()};};
+ const create=async b=>request('/api/catalogo/objetos','POST',b),change=async(id,b)=>request('/api/personajes/1/inventario/'+id,'PATCH',b);
+ let p=character(db,1),e=p.equipo;assert.equal(e.peso_kg,17.1);assert.equal(e.capacidad_kg,p.skills.find(s=>s.nombre==='Carga').valor);assert.equal(e.defensas.length,3);assert.equal(e.ataques[0].nivel,4);assert.equal(e.ataques[0].equipado,true);
+ const armor=e.inventario.find(i=>i.armadura_id),sword=e.inventario.find(i=>i.arma_id),ration=e.inventario.find(i=>i.nombre==='Ración de viaje'),torch=e.inventario.find(i=>i.nombre==='Antorcha');
+ assert.equal(ration.cantidad,5);assert.equal(torch.cantidad,3);assert.deepEqual([armor.armadura.reduccion_s,armor.armadura.reduccion_p,armor.armadura.reduccion_b],[2,3,3]);assert((await request('/api/catalogo')).data.items_base.some(i=>i.nombre==='Medallón de Moonstone'));
+ p=(await change(armor.id,{equipado:false})).data;assert.equal(p.equipo.defensas.length,0);assert.equal(p.derivados.dureza,4);
+ p=(await change(armor.id,{equipado:true})).data;assert.equal(p.equipo.defensas.length,3);
+ p=(await change(torch.id,{cantidad:2})).data;assert.equal(p.equipo.peso_kg,16.8);
+ p=(await change(armor.id,{transportado:false})).data;assert.equal(p.equipo.peso_kg,6.8);assert.equal(p.equipo.defensas.length,0);assert.equal(p.inventario.find(i=>i.id===armor.id).equipado,0);
+ p=(await change(armor.id,{equipado:true,transportado:true})).data;assert.equal(p.equipo.defensas.length,3);
+ p=(await request('/api/personajes/1/estado','PATCH',{exceso_espacios:1})).data;assert.equal(p.equipo.sobrecarga,true);
+ const before=db.prepare('SELECT COUNT(*) n FROM armaduras').get().n;
+ let r=await create({tipo:'armadura_id',nombre:'Inválida',peso_kg:10,categoria:'Mediana',nivel:4,puntos_s:2,puntos_p:2,puntos_b:0});assert.equal(r.status,400);assert.equal(db.prepare('SELECT COUNT(*) n FROM armaduras').get().n,before);
+ r=await create({tipo:'armadura_id',nombre:'Coraza personalizada',peso_kg:8,categoria:'Mediana',nivel:4});assert.equal(r.status,201);const customArmor=r.data.item.armadura_id;
+ p=(await request('/api/personajes/1/inventario','POST',{armadura_id:customArmor,equipado:true})).data;assert.equal(p.inventario.filter(i=>i.equipado&&i.armadura).length,1);assert.deepEqual(p.equipo.defensas.map(d=>d.valor),[2,4,4]);
+ const heavy=(await request('/api/catalogo')).data.armaduras.find(a=>a.categoria==='Pesada');p=(await request('/api/personajes/1/inventario','POST',{armadura_id:heavy.id,equipado:true})).data;assert(p.equipo.advertencias.some(w=>w.includes('sin requisitos')));assert.equal(p.equipo.defensas.length,3);
+ const advantages=(await request('/api/catalogo')).data.ventajas_arma;
+ r=await create({tipo:'arma_id',nombre:'Arma sin balance',peso_kg:1,categoria:'Burda',nivel:1,skill_id:sword.arma.skill_id,tipo_dano:'Cortante',propiedades:[{tipo:'Ventaja',id:advantages[0].id,grado:1}]});assert.equal(r.status,400);
+ r=await create({tipo:'item_base_id',nombre:'Piedra personalizada',peso_kg:0.5,descripcion:'Objeto de prueba'});assert.equal(r.status,201);p=(await request('/api/personajes/1/inventario','POST',{...r.data.item,cantidad:4})).data;const stone=p.inventario.at(-1);assert.equal(stone.peso_total_kg,2);p=(await change(stone.id,{cantidad:3})).data;assert.equal(p.inventario.at(-1).peso_total_kg,1.5);
+ r=await create({tipo:'item_magico_id',nombre:'Amuleto ignífugo de prueba',peso_kg:0.2,costo_xp:1,defensas:[{categoria:'Resistencia',tipo_dano:'Fuego'},{categoria:'Fragilidad',tipo_dano:'Frío',valor:2}]});assert.equal(r.status,201);
+ p=(await request('/api/personajes/1/inventario','POST',{...r.data.item,equipado:true})).data;const magic=p.inventario.at(-1);assert(!p.equipo.defensas.some(d=>d.tipo_dano==='Fuego'));
+ p=(await request('/api/personajes/1/progresion','POST',{tipo:'Adquisicion',item_id:magic.id})).data;assert(p.equipo.defensas.some(d=>d.categoria==='Resistencia'&&d.tipo_dano==='Fuego'));assert(p.equipo.defensas.some(d=>d.categoria==='Fragilidad'&&d.valor===2));const spent=p.xp_gastada;
+ p=(await change(magic.id,{equipado:false})).data;assert(!p.equipo.defensas.some(d=>d.tipo_dano==='Fuego'));await change(magic.id,{equipado:true});p=(await change(magic.id,{cantidad:0})).data;assert.equal(p.xp_gastada,spent);assert(!p.equipo.defensas.some(d=>d.tipo_dano==='Fuego'));assert(!p.adquisiciones.some(a=>a.item_id===magic.id));
+ p=(await change(sword.id,{equipado:false})).data;assert.equal(p.equipo.ataques.find(a=>a.item_id===sword.id).equipado,false);
+ db.prepare("INSERT INTO personajes(nombre) VALUES('Otro personaje')").run();const other=db.prepare('SELECT MAX(id) id FROM personajes').get().id;assert.equal((await request(`/api/personajes/${other}/inventario/${sword.id}`,'PATCH',{equipado:true})).status,400);
+ assert.equal(db.prepare('PRAGMA foreign_key_check').all().length,0);assert.equal(db.prepare('PRAGMA integrity_check').get().integrity_check,'ok');assert(db.prepare('SELECT COUNT(*) n FROM progresion').get().n>0);
+});

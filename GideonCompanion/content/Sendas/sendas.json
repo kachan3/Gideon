@@ -1,0 +1,194 @@
+{
+  "revision": "2026-11-05",
+  "sendas": [
+    {
+      "nombre": "Senda del Arcanista",
+      "descripcion": "La curiosidad y la maestría de los flujos guían su formación. Hereda una herramienta de lanzador y un primer repertorio mágico.",
+      "fuente": "20_Contenido/Senda_Arcanista/Arcanista_01_Habilidades_Insignia.md",
+      "rasgos": [
+        {
+          "nombre": "Eficiencia",
+          "descripcion": "Al lanzar con Spellcasting Modular, activar conjuros de artefactos o redirigir daño con Vigoris Mortis, paga coste original − ⌊coste original / 3⌋. Sólo el maná realmente pagado cuenta para el límite seguro y el daño crónico.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Herencia",
+          "descripcion": "Obtiene los dotes insignia Lanzador de Conjuros y La Herramienta Correcta. Las insignias pueden provenir también de otras fuentes; un duplicado concede +1 XP según la regla general.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Epifanía Original",
+          "descripcion": "Elige una Epifanía disponible en la campaña y recibe un Artefacto Arcano inicial. La Epifanía abre su repertorio de módulos, trucos y místicas; no se asigna una elección arbitraria.",
+          "xp_requerida": 0
+        }
+      ],
+      "dotes": [
+        {
+          "nombre": "Lanzador de Conjuros",
+          "descripcion": "Acceso al Spellcasting Modular y elección de una Epifanía inicial de campaña. No es exclusivo del Arcanista: puede obtenerse por otras fuentes."
+        },
+        {
+          "nombre": "La Herramienta Correcta",
+          "descripcion": "Elige Arma, Libro o Amuleto como herramienta de lanzador dominada y establece un vínculo de Retorno Destinado. El regreso es narrativo, no un teletransporte. Arcanista también dispone de Whole Turn Spellweave: 3 PA para dos tiradas en el turno."
+        }
+      ],
+      "elecciones": [
+        "Elegir la herramienta de lanzador: Arma, Libro o Amuleto.",
+        "Elegir la Epifanía inicial disponible en la campaña y acordar el Artefacto Arcano recibido."
+      ],
+      "notas": []
+    },
+    {
+      "nombre": "Senda del Berserker",
+      "descripcion": "La furia nace del agravio y del daño a sus seres queridos. Acumula Ira y la convierte en potencia ofensiva a costa de su defensa.",
+      "fuente": "20_Contenido/Senda_Berserker/Berserker_01_Ira_y_Trance.md",
+      "rasgos": [
+        {
+          "nombre": "Pool de Ira",
+          "descripcion": "Reserva máxima igual al Nivel de Voluntad. Empieza el combate con 0 cargas. Al inicio de su turno gana 1 carga, hasta quedar a una del máximo. Después de resolver esa generación, obtiene 1 punto de Vida Temporal por cada carga de Ira que tenga en ese momento. Pierde la Vida Temporal restante de este Rasgo al inicio de su próximo turno, antes de generar la nueva, o al finalizar el combate, lo que ocurra primero. También gana 1 carga cuando él o un aliado recibe una herida grave o mortal. Fuera de combate se drena al calmarse.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Furia Desatada",
+          "descripcion": "Al inicio del turno puede sumar su Ira actual como daño plano a todos sus ataques melee o arrojadizos del turno. No consume cargas y el decaimiento de Ira se aplica normalmente. Queda Arrebatado hasta su siguiente turno.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Desquite",
+          "descripcion": "Una vez por turno, al impactar con un arma, puede gastar 1 carga de Ira para añadir 1d6 de daño del tipo del arma. Si ese daño por sí solo supera el Nivel del arma, el arma gana 1 Contador de Ruptura. Contra su Enemigo Declarado, Desquite no consume Ira.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Trance",
+          "descripcion": "Se activa al llenar la Ira. Cuesta Maná igual al Nivel de Voluntad y el déficit produce Daño Crónico. Dura tantos turnos como el Nivel de Voluntad. Ignora penalizaciones por heridas y Miedo, mantiene Arrebatado e impide conjurar. Al terminar, la Ira baja a 0 y no puede acumularla durante 3 turnos.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Fuerza Aliota",
+          "descripcion": "Con al menos 4 cargas de Ira, puede gastar 3 puntos de Maná para resolver su próxima acción con un tier de Fuerza superior y una categoría de tamaño mayor. Las cargas se conservan. Al entrar en Trance, si cumple el requisito de Ira, puede aplicar el Rasgo a su próxima acción sin pagar Maná, una vez por Trance.",
+          "xp_requerida": 10
+        }
+      ],
+      "dotes": [],
+      "elecciones": [],
+      "notas": []
+    },
+    {
+      "nombre": "Senda del Hierofante",
+      "descripcion": "Emisario de Demesteria y devoto de Mirra. Su pacto y Dogma definen las plegarias, intervenciones y milagros que manifiesta.",
+      "fuente": "20_Contenido/Senda_Hierofante/Hierofante_01_Habilidades_Insignia.md",
+      "rasgos": [
+        {
+          "nombre": "Manifestación Celestial",
+          "descripcion": "Mantiene una Plegaria de su Dogma por jornada. Manifestar Intervención cuesta 2 maná y acciones según el efecto; Manifestar Milagro cuesta 5 maná y 1 Omen, normalmente 3 acciones. No concede todos los Dogmas ni todos sus repertorios.",
+          "xp_requerida": 0
+        }
+      ],
+      "dotes": [
+        {
+          "nombre": "Regalo de Demesteria",
+          "descripcion": "Define su pacto: Emisario del Bien Supremo (etiqueta Bienaventurado y amparo legal imperial) o Emisario del Mal (reservado a campañas clandestinas o antagonistas). El emisario del Bien elige Amor Incondicional, Justicia o Libertad como Dogma inicial."
+        },
+        {
+          "nombre": "¡Fe, Protégeme!",
+          "descripcion": "Contrarresto intrínseco exclusivamente sobre sí mismo, sin acción ni reacción, ante efectos de su antítesis planar: Daemonis para el Bien Supremo, Bienaventurado para el Mal. Enfrenta Fe y resta sus NE a los del agresor; a 0 o menos anula el efecto sobre sí mismo."
+        }
+      ],
+      "elecciones": [
+        "El repertorio del creador corresponde al Bien Supremo. El pacto con los Daemonis depende del tipo de campaña y se acuerda con el narrador."
+      ],
+      "notas": []
+    },
+    {
+      "nombre": "Senda del Honor",
+      "descripcion": "Lealtad, palabra empeñada y servicio. Su poder se expresa mediante el atributo Honor, los juramentos y el Compromiso Solemne.",
+      "fuente": "20_Contenido/Senda_Honor/",
+      "rasgos": [
+        {
+          "nombre": "Atributo Honor",
+          "descripcion": "Atributo extra exclusivo de 0–99. Se usa en chequeos y sólo mejora por decisión del narrador, nunca comprando XP. Su valor inicial depende del trasfondo: independiente, 1d6 × 5 + 25; caballería: Leones/Cabras 60, Dragones 50, Serpientes 40.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Juramento Declarado",
+          "descripcion": "Construye su juramento progresivamente mediante dotes que añaden frases y beneficios. No concede de entrada todos los ejemplos de juramento; los requisitos y umbrales pendientes se acuerdan con el narrador.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Compromiso Solemne",
+          "descripcion": "Declara un propósito en voz alta, pagando maná igual al Nivel de Honor. Sólo puede tener uno activo. ¡Mi Honor lo Exige! permite, una vez por turno y con usos iguales al Nivel de Honor, tirar Honor para reemplazar un fallo relacionado con el voto. Abandonar o reemplazar el compromiso aplica sus consecuencias.",
+          "xp_requerida": 0
+        }
+      ],
+      "dotes": [],
+      "elecciones": [
+        "Resolver el valor inicial de Honor según el trasfondo y la pertenencia a una escuela de caballería.",
+        "Construir el Juramento Declarado con los dotes que se adquieran; no se asigna una frase automáticamente."
+      ],
+      "notas": [
+        "Honor no mide bondad: mide la coherencia entre palabra y acción."
+      ]
+    },
+    {
+      "nombre": "Senda de la Sombra",
+      "descripcion": "Los Silentes sirven al secreto y al orden. Perciben a través de sombras conectadas y actúan en los huecos de la iniciativa enemiga.",
+      "fuente": "20_Contenido/Senda_Sombra/Sombra_01_Habilidades_Insignia.md",
+      "rasgos": [
+        {
+          "nombre": "Sentidos Tétricos",
+          "descripcion": "Sentido Preciso a través de sombras conectadas, en un radio de 2 × Bono de Instinto. Ignora muros y puertas si la sombra mantiene continuidad; la luz directa interrumpe o recorta el alcance.",
+          "xp_requerida": 5
+        },
+        {
+          "nombre": "Acciones de Presteza",
+          "descripcion": "Una vez por turno enemigo, si no estás Sorprendido, podés gastar una de tus Reacciones disponibles al inicio, cuando el enemigo declara una acción o al final de su turno. La misma Reacción permite desplazarte hasta tu velocidad, atacar con un arma Veloz y ejecutar acciones gratuitas.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Conocimiento Técnico",
+          "descripcion": "Recibe 100 puntos para distribuir entre Cerrajería, Alquimia, Disfraz y Falsificación. Se suman a sus valores existentes y están sujetos al Techo Inverso de Olvido. La distribución requiere elección del jugador.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Artes Sombrías",
+          "descripcion": "Al obtener el Rasgo, elegí una rama para empezar a aprenderla: Acupuntura Sombría, Venomancia o Asesinato.",
+          "xp_requerida": 5
+        }
+      ],
+      "dotes": [],
+      "elecciones": [
+        "Repartir los 100 puntos de Conocimiento Técnico entre sus cuatro habilidades de profesión."
+      ],
+      "notas": [
+        "Olvido es un entrenamiento comprable de 1 XP: sacrifica 2 puntos de atributos por 1 de Olvido, máximo 10 por sesión. No se compra ni activa automáticamente al elegir Sombra."
+      ]
+    },
+    {
+      "nombre": "Senda del Valor",
+      "descripcion": "Coraje marcial, esperanza y dominio de la defensa activa. Sostiene la ofensiva sin abandonar su guardia.",
+      "fuente": "20_Contenido/Senda_Valor/Valor_01_Habilidades_Insignia.md",
+      "rasgos": [
+        {
+          "nombre": "Danza de Golpes",
+          "descripcion": "Si la última acción de tu turno fue un Golpe, un Combo o una acción con la etiqueta Valor, no quedás Arrebatado al final del turno.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Nervios de Acero",
+          "descripcion": "Al realizar una tirada de Miedo reduce en 1 el valor de miedo obtenido.",
+          "xp_requerida": 0
+        },
+        {
+          "nombre": "Entrenamiento Superior",
+          "descripcion": "Podés adquirir un Dote con la etiqueta Marcial.",
+          "xp_requerida": 0
+        }
+      ],
+      "dotes": [],
+      "elecciones": [
+        "Elegir con el narrador qué Dote Marcial adquirir mediante Entrenamiento Superior."
+      ],
+      "notas": []
+    }
+  ]
+}

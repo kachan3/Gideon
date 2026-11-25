@@ -1,6 +1,8 @@
 > **Módulo canónico** — Senda del Honor. Incorporado al Core el 2026-08-06 desde `30_Propuestas_No_Ratificadas/Propuesta_Senda_del_Honor_Filosofia_de_Diseño.md`.
 
-# El Atributo Honor (0–99)
+# Rasgo Inicial 1 — El Atributo Honor (0–99)
+
+El Atributo Honor es un Rasgo inicial independiente de los sistemas de Juramento Declarado y Compromiso Solemne.
 
 ## Mecánica
 
@@ -11,15 +13,20 @@
   - **No se puede usar XP** para comprarlo vía Entrenamiento.
 - **Interactúa con todas las herramientas del Honor** (Juramentos, Compromiso Solemne, feats).
 
-### Valor Inicial en Creación de Personaje
+### Valor inicial en creación de personaje
 
-El valor inicial de Honor se obtiene de una de estas dos formas, dependiendo del trasfondo del personaje:
+Al elegir la **Senda del Honor** en [Creación de personaje](../Creacion_de_Personaje.md#paso-4--senda-clase), elegí **una orden de caballería** disponible o empezá como **Caballero Herrante**. La elección determina tu Honor inicial y los dotes que recibís al crear el personaje, sin gastar XP.
 
-1. **Honor Independiente:** Si el personaje no pertenece formalmente a una orden, tira **`1d6 × 5 + 25`**. Esto genera un valor base aleatorio pero consistente de 30 a 55 (Niveles 3 a 6).
-2. **Origen de Caballería:** Si en la creación eliges como origen o dedicación pertenecer a una de las Cuatro Escuelas de Caballería (herederas de Gawain), recibes un valor fijo que refleja la rigidez de tus votos previos:
-   - **Leones y Cabras:** 60 (Nivel 6)
-   - **Dragones:** 50 (Nivel 5)
-   - **Serpientes:** 40 (Nivel 4)
+| Elección | Honor inicial | Dotes iniciales |
+|---|---:|---|
+| **Orden del Dragón Valeroso** | 50 | Un [Combo marcial](../../10_Reglas/Combos.md) y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
+| **Leones de Pircar** | 60 | Un [Combo marcial](../../10_Reglas/Combos.md) y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
+| **Gran Orden Armada de Tolfan** | 55 | Luchador de Escudo y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
+| **Caballero Herrante** | `30 + 5d6` (35–60) | Un [Combo marcial](../../10_Reglas/Combos.md) y [Portador de Armadura Pesada](../Dotes/_esqueleto_Entrenado_en_Armadura_Pesada.md). |
+
+<!-- CUARENTENA. Pendiente de desarrollo y fuera de las opciones de creación.
+Orden de la Serpiente. Honor inicial 40. Recibe un Combo marcial.
+-->
 
 ## Nivel de Honor = ⌈ Honor ÷ 10 ⌉ (Redondeo Arriba)
 

@@ -2,7 +2,7 @@
 
 # Dotes de Senda — Arcanista
 
-Todos los dotes listados llevan el **Tag de Senda: `Arcanista`**. La XP invertida en ellos alimenta la **Pool de Senda Arcanista** y determina el **Grado de Arcanista** (`⌊XP en Arcanista ÷ 5⌋`).
+Los elementos asociados a esta senda llevan la etiqueta **Arcanista**. Consultá la [regla de inversión de XP de clase](../Creacion_de_Personaje.md#xp-de-clase) y el [Grado de Senda](../Core_12_Sendas_Mecanicas.md).
 
 ---
 
@@ -15,65 +15,59 @@ Todos los dotes listados llevan el **Tag de Senda: `Arcanista`**. La XP invertid
 
 ---
 
-## Dotes Confirmados
+## Especialización Arcana: Nigromancia (Flujo Yrgrammar) *(canónico — Hassan 2026-08-17 / expandido 2026-09-24)*
 
-### Corpse Tailor *(Senda Arcanista / Yrgramar)*
+> *"Yrgrammar sabe con certeza absoluta que todo muere; por ello no tiene prisa. Los nigromantes no desafían el fin con soberbia, sino que habitan su umbral: tejen con los restos del mundo, comandan los ecos de quienes partieron y descubren en la cercanía de la tumba una tenacidad que los vivos jamás comprenderán."*
 
-> *"La carne y los huesos son solo el receptáculo sobrante; el alma del invocador es la aguja que vuelve a unirlos."*
+### Identidad y Filosofía de Diseño
+En Kindremor, un **Nigromante** es un Arcanista especializado en el flujo de **Yrgrammar** (la corriente de la muerte, las almas y la energía necromántica; ver §13.3.4). No es una clase separada ni una rama aislada de hechicería menor: es una especialización profunda de la Senda del Arcanista.
 
-* **Prerrequisito:** Poseer la Epifanía **Memento Mori** (`Arcanista_03_Epifanias_y_Artefactos.md`).
-* **Concepto:** Representa la forma más elemental de Nigromancia (estudiosos de Yrgramar). Invoca espíritus de los muertos para encarnarlos en restos animados.
-* **Tipo de Esbirro:** Opera como Esbirro de tipo **Esclavo** (§18.bis) — cumple las órdenes del Amo sin dudar, pero requiere **1 acción (1 PA)** del Amo para recibir comandos o cambiar de tarea.
+- **Filosofía de Gameplay:** El Nigromante está diseñado para sentirse **poderoso, táctico y gratificante de jugar**, provisto de un abanico generoso de recursos y utilidades ("chiches") que recompensan la preparación y el ingenio.
+- **Equilibrio del Sistema (Sin ser OP):** Su gran versatilidad y poder están estrictamente anclados a los contrapesos de Gideon:
+  - **Economía de Maná y Límite Seguro (§13.1):** La reserva continua de PM para mantener esbirros y el coste de conjuros de ultratumba reducen el margen de maniobra del arcanista, acercándolo peligrosamente al Límite Seguro y arriesgando **Daño Crónico permanente** si se sobreexige.
+  - **Economía de 3 Acciones (§11.7):** Comandar esbirros Esclavos (§18.bis), levantar cadáveres y mantener defensas o suspensiones vitales consume valiosas acciones (PA), exigiendo decisiones tácticas constantes entre accionar directamente o delegar en sus creaciones.
+- **El Hilo del Decaimiento (Ofensiva Primordial — canon 2026-10-11):** Toda la materia en Kindremor siente la tracción de Yrgrammar como un hilo atado a un peso que tira incesantemente hacia abajo (podredumbre, envejecimiento, oxidación, erosión; §13.3.4). La agresión más básica del Nigromante consiste en aferrar y halar ese hilo en los seres vivos para apresurar su fin mediante daño Necrótico, formalizado en el Efecto modular **Force Decay** desbloqueado por *Memento Mori*.
 
-#### Ritual de Anamnesis Cadavérica
-- **Tiempo:** 1 hora de ritual continuo sobre los restos de 1 o 2 animales o criaturas muertas.
-- **Resultado:** Puedes reanimar **1 o 2 cuerpos** con el mismo ritual, generando **Zombis** o **Esqueletos**.
-- **Reserva de Maná:** El coste es de **2 PM** por un cuerpo, o **4 PM** por dos cuerpos. Este Maná queda **reservado de forma continua** (ocupando tu Maná Máximo y Actual) mientras los esbirros sigan operando.
-  - *Interacción con Eficiencia (Senda Arcanista):* Gracias a la Habilidad Insignia *Eficiencia* (paga 2 por cada 3 PM de coste), un Arcanista que reanime 2 cuerpos con un solo ritual **paga y reserva solo 3 PM** en lugar de 4. Esto permite a los Nigromantes Arcanistas comandar más no-muertos con menor riesgo.
-  - *Riesgo espiritual:* Esta reserva obligatoria reduce drásticamente el margen del lanzador. Si la reserva sumada a otros gastos hace que alcances o superes el **Límite Seguro** (§13.1), el exceso causará **Daño Crónico permanentemente** sobre el alma del lanzador por sobreexigencia.
-  - Al destruir o liberar a un esbirro, sus PM reservados correspondientes regresan al lanzador.
+### Los Tres Pilares de Especialización de Yrgrammar
+La maestría de Yrgrammar se estructura en torno a tres grandes ramas o especialidades:
 
-#### Estadísticas del No-Muerto Animado
-
-Los 10 Atributos del sistema se estructuran de la siguiente manera para la cáscara reanimada:
-
-* **Atributos Mentales (Inteligencia, Carácter, Instinto):** **No aplican (0 / N/A)**. La criatura carece de mente, conciencia o percepción propia.
-* **Voluntad (Atributo Espiritual/Simbólico):** **No aplica (0 / N/A)**. Los reanimados por este método no poseen voluntad propia ni chispa del alma autónoma.
-* **Atributos Físicos (Fuerza, Agilidad, Vitalidad):** Sus valores son **iguales al Valor de Voluntad del lanzador** (es la energía del alma del lanzador la que sostiene y mueve la carne y huesos del cadáver).
-* **Atributos Marciales (Melee, Proyectiles, Arcana):** Copian e imitan los valores de las habilidades de **Melee** y **Proyectiles** del lanzador. *Arcana* no aplica (no pueden lanzar conjuros sin un dote avanzado superior).
-* **Dotes:** Imitan los dotes marciales que el lanzador posea.
-
-#### Variantes Cadavéricas
-
-| Propiedad | Zombi | Esqueleto |
-|---|---|---|
-| **Velocidad** | $\lfloor \text{Velocidad Original} / 3 \rfloor$ | Sin penalizador (Velocidad Original) |
-| **Agilidad** | **−20 penalizador** a su Agilidad base | Sin penalizador |
-| **Dureza (Toughness)** | Dureza estándar por Voluntad | **−3 a la Dureza** |
-| **Debilidades** | Ninguna especial | **Debilidad al daño Contundente** |
-| **Resistencias** | Ninguna especial | **Resistencia a daño Punzante y Cortante (Slaying)** |
-
-#### Muerte del Amo y Descontrol Cadavérico *(Lore & Mecánica)*
-Si el lanzador muere mientras mantiene no-muertos reanimados por este dote, ocurre lo siguiente:
-* **Drenaje del Alma:** Su alma es devorada y consumida por sus esbirros. Esto **impide cualquier forma de reanimación o resurrección** sobre el lanzador.
-* **Autonomía Salvaje:** Los no-muertos quedan vagando por el mundo con total autonomía y un instinto violento descontrolado.
-* **Infección Zombi:** Los zombis descontrolados intentarán matar todo lo que topen en su camino, propagando una infección de muertos vivientes. 
-* **Contaminación Ósea:** Los huesos de un esqueleto descontrolado contaminan otros osarios y restos óseos cercanos, haciendo que se alcen espontáneamente como Guerreros Esqueléticos, a menos que la zona sea exorcizada.
-  > *Nota de Lore — Exorcistas:* Contraintuitivamente, el deber de exorcizar y detener estas crisis **no recae en los Hierofantes**, sino en otros Nigromantes (estudiosos de Yrgramar) llamados **Exorcistas**. Su labor sagrada es asegurar que el flujo de las almas no se detenga y continúe su camino natural. Las crisis de zombis o esqueletos en Kindremor no se ven como la obra de mentes maestras, sino como **el uso idiota e irresponsable de nigromantes novatos** que murieron antes de tiempo. Los verdaderos Liches y Señores de los No-Muertos operan de formas mucho más sistemáticas, limpias y cuidadosas.
+1. **Control de Espíritus y Almas:** Sintonía, invocación y manipulación de espectros, almas errantes y entes incorpóreos nacidos de los sueños y emociones de Naya'il (§8). Permite la comunicación con el más allá, la extracción de memorias y el empleo de almas como vigilantes o conductos arcanos.
+   - `[ESQUELETO: catálogo de dotes, místicas y hechizos de control espiritual — Hassan a definir]`
+2. **Hordas Esqueléticas y Reanimación Cadavérica:** El arte del ensamblaje somático. Utiliza el alma del propio lanzador como hilo conductor para reanimar huesos y carne marchita, comandando esbirros de tipo Esclavo (§18.bis) que no temen al dolor ni a la fatiga (materializado en el dote *Corpse Tailor*).
+3. **Fortaleza y Tenacidad ante la Muerte (Insignia de Escuela):** La marca distintiva que define la resistencia del Nigromante. Al estar íntimamente familiarizado con el umbral del fin, el Nigromante no es un hechicero quebradizo: desarrolla una durabilidad y un temple sombrío. Esta especialidad le permite:
+   - **Inhabilitar a Aliados Momentáneamente de Morir:** Habilidad o conjuro insignia que interviene en el umbral vital para retrasar o suspender temporalmente el colapso definitivo de un compañero en estado Agonizante o ante daño letal (§11.4).
+   - **Ganar Fortaleza de Ultratumba:** Canalización de la insensibilidad y la resiliencia cadavérica sobre sí mismo o sobre sus aliados, dotándolos de un blindaje sobrenatural frente al daño físico y el desgaste del combate.
 
 ---
 
-### Eficiencia Avanzada *(Senda Arcanista)*
+## Dotes y Mecánicas de Yrgrammar Confirmados
 
-`[ESQUELETO: Upgrade de la Habilidad Insignia Eficiencia. Reemplaza la fórmula de −1 cada 3 PM por ⌈Coste / 2⌉ (la mitad redondeado arriba). Prerrequisito de Grado de Arcanista por definir. Ver tabla comparativa en Arcanista_01_Habilidades_Insignia.md.]`
+- [Corpse Tailor](../Dotes/Corpse_Tailor.md)
+
+- [Inhabilitación de la Muerte](../Dotes/_esqueleto_Inhabilitacion_de_la_Muerte.md)
+
+- [Fortaleza de Ultratumba](../Dotes/_esqueleto_Fortaleza_de_Ultratumba.md)
+
+- [Vigoris Mortis](../Dotes/_esqueleto_Vigoris_Mortis.md)
+
+### Catálogo de "Chiches" y Herramientas Tácticas de Yrgrammar *(canónico — Hassan 2026-09-24)*
+
+El Nigromante cuenta con recursos tácticos y trucos de utilidad diseñados para enriquecer su desempeño dentro y fuera de combate sin comprometer el balance del sistema:
+* `[ESQUELETO: lista de trucos menores, místicas y utilidades tácticas ("chiches") de Yrgrammar (p. ej. preservación de despojos, visión de espectros, frío sepulcral, manipulación ósea menor, amortiguación de dolor) — Hassan a definir]`
 
 ---
+
+---
+
+- [Eficiencia Avanzada](../Dotes/_esqueleto_Eficiencia_Avanzada.md)
+
+- [Ojo Arcano](../Dotes/_esqueleto_Ojo_Arcano.md)
 
 ## Dotes Descartados / Migrados
 
 - ~~**Conocimiento Prestado.**~~ **Descartado** *(Hassan 2026-08-17)*. Facilita transmisión instantánea de información.
 - ~~**Recuperación Superior.**~~ **En cuarentena** *(Hassan 2026-08-17)*. No se incluye en esta versión.
 - ~~**Expansión de Entendimiento.**~~ **Descartado** *(Hassan 2026-08-17)*. Referenciaba la proficiencia "Novicio", obsoleta en el sistema 00-99.
-- ~~**Todo o Nada.**~~ **Migrado** *(Hassan 2026-08-17)*. Pasa a ser rasgo de la Herramienta "Fuente de Conocimiento" (§13.4).
+- Los beneficios del Libro de Conjuros se consultan en [Herramientas del Lanzador](../Herramientas_del_Lanzador.md#libro-de-conjuros).
 
 ---

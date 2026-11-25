@@ -30,7 +30,7 @@ Las **Cargas Elementales** son un recurso separado del Maná. Sin embargo, los c
 
 ### Con Sombra (§12.7)
 
-`[ESQUELETO: interacción Arcanista-Sombra — pendiente. La Sombra obtiene poderes de Theledar (No Ser), lo cual tiene implicaciones con la naturaleza arcana del Arcanista. ¿La Eficiencia aplica a habilidades de Sombra que consuman Maná?]`
+`[ESQUELETO: interacción Arcanista-Sombra — pendiente. La Sombra obtiene poderes de Valin (No Ser), lo cual tiene implicaciones con la naturaleza arcana del Arcanista. ¿La Eficiencia aplica a habilidades de Sombra que consuman Maná?]`
 
 ### Con Heraldo (§12.8)
 
@@ -42,8 +42,8 @@ El Heraldo posee **Vocalización Maestra** (ignorar componente somático si el c
 
 ---
 
-## Regla General de Dotes Insignia (referencia)
+## Regla General de Rasgos Iniciales (referencia)
 
-Si por Linaje, Origen o Don el personaje **ya posee** el dote "Lanzador de Conjuros" al momento de tomar la Senda del Arcanista, recibe **+1 XP extra** en lugar del dote duplicado (regla general de Dotes Insignia — ver Creación de Personaje).
+**Herencia Arcana** es un Rasgo inicial de la Senda, no un dote concedido de base. Si Linaje, Origen o Don proporciona una capacidad equivalente de lanzamiento, no se concede XP ni una capacidad adicional.
 
 ---

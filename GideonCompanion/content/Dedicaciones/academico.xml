@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dedicacion id="academico">
   <nombre>Académico</nombre>
-  <descripcion>Short description</descripcion>
+  <descripcion>Estudio, consulta de fuentes y trabajo de investigación.</descripcion>
   <skills_garantizadas>
+    <skill nombre="Investigación" minimo="50"/>
   </skills_garantizadas>
-  <estado>esqueleto</estado>
+  <oficios minimo="50" elegir="0">
+    <oficio>Investigación</oficio>
+  </oficios>
+  <preguntas>
+    <pregunta>¿En qué campo se concentraba tu estudio?</pregunta>
+    <pregunta>¿Dónde estudiaste: institución formal, aprendizaje autodidacta o bajo un mentor?</pregunta>
+    <pregunta>¿Hay algo que aprendiste que preferirías no saber?</pregunta>
+    <pregunta>¿Qué te alejó de la academia o la investigación?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
 </dedicacion>

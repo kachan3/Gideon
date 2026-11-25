@@ -1,0 +1,37 @@
+{
+ "revision":"2026-11-05",
+ "dedicaciones":[
+  {"nombre":"Granjero","descripcion":"Cultivo, ganadería y trabajo sostenido con la tierra. Elige el oficio aprendido que practicabas antes de salir de aventuras.","oficios":["Agricultura","Ganadería"]},
+  {"nombre":"Artesano","descripcion":"Dominio de un oficio concreto: sus técnicas, herramientas, materiales y problemas prácticos. Elige una artesanía aprendida.","oficios":["Herrería","Carpintería","Joyería","Cerrajería","Albañilería"]},
+  {"nombre":"Marinero","descripcion":"Trabajo a bordo, maniobras y vida en puertos y travesías.","oficios":["Marinería"]},
+  {"nombre":"Mercader","descripcion":"Comercio, acuerdos, tasación y relaciones de intercambio.","oficios":["Comercio"]},
+  {"nombre":"Académico","descripcion":"Estudio, consulta de fuentes y trabajo de investigación.","oficios":["Investigación"]},
+  {"nombre":"Médico","descripcion":"Diagnóstico y tratamiento de heridas y enfermedades, con práctica antes de la aventura.","oficios":["Medicina"],"garantias":[["Inteligencia",20]]},
+  {"nombre":"Soldado","descripcion":"Servicio armado, disciplina y entrenamiento para combatir como parte de una organización.","oficios":[],"garantias":[["Melee",35]]},
+  {"nombre":"Cazador","descripcion":"Leer huellas, seguir presas y reconocer su paso por un territorio.","oficios":["Rastreo"],"preguntas":["¿Qué presa te marcó?","¿Qué territorio conoces de memoria?","¿Qué trofeo guardas?","¿Qué te llevó de la caza a la aventura?"]}
+ ],
+ "oficios":{
+  "Agricultura":"Cultivar, reconocer necesidades del suelo y los cultivos, organizar cosechas y resolver problemas de producción agrícola.",
+  "Ganadería":"Criar y cuidar ganado, reconocer problemas de manejo y mantener animales de producción.",
+  "Herrería":"Trabajar metales, fabricar y reparar piezas, herramientas y equipo de forja. Los proyectos requieren materiales, herramientas y tiempo acordes.",
+  "Carpintería":"Construir, reparar y evaluar objetos y estructuras de madera; elegir uniones y materiales adecuados.",
+  "Joyería":"Trabajar gemas y metales finos, fabricar y reparar piezas y reconocer su factura.",
+  "Cerrajería":"Comprender y trabajar cerraduras, mecanismos de cierre y sus herramientas; abrirlos o repararlos cuando la situación lo permita.",
+  "Albañilería":"Construir, reparar y evaluar estructuras de piedra y mampostería; reconocer problemas de estabilidad.",
+  "Marinería":"Trabajar con aparejos, maniobras, mantenimiento y tareas de una embarcación.",
+  "Comercio":"Tasar, negociar intercambios, entender mercados y organizar operaciones comerciales.",
+  "Investigación":"Localizar, contrastar y organizar fuentes; desarrollar una investigación y detectar vacíos en la evidencia.",
+  "Medicina":"Diagnóstico y tratamiento de heridas y enfermedades, respetando los límites de los medios disponibles.",
+  "Rastreo":"Seguir y analizar rastros, reconocer señales de paso y reconstruir el recorrido de una presa."
+ },
+ "nacimientos":[
+  {"nombre":"Familia Campesina","descripcion":"Criado en una familia de trabajo rural, cultivo o ganadería.","preguntas":["¿Dónde vivía tu familia y de qué vivía?","¿Qué vínculo conservás con esa comunidad?","¿Qué costumbre familiar seguís practicando?","¿Qué cambió cuando te fuiste?"]},
+  {"nombre":"Familia Artesana","descripcion":"Criado alrededor de un oficio y de un taller familiar, sin que eso obligue a ejercerlo.","preguntas":["¿Qué oficio practicaba tu familia?","¿Qué relación tenías con el taller o sus trabajadores?","¿Qué objeto familiar conservás?","¿Seguiste sus expectativas o elegiste otro camino?"]},
+  {"nombre":"Familia Mercader","descripcion":"Criado entre intercambios, viajes, clientes y vínculos comerciales.","preguntas":["¿Qué comerciaba tu familia?","¿Vivían en un lugar o viajaban?","¿Qué contacto familiar recordás especialmente?","¿Qué deuda, acuerdo o reputación heredaste?"]},
+  {"nombre":"Familia Militar","descripcion":"Familia vinculada al servicio armado, la disciplina y la lealtad institucional.","preguntas":["¿A quién servía tu familia?","¿Cómo afectaba el servicio a la vida de tu hogar?","¿Qué persona de esa tradición fue importante para vos?","¿Compartís su lealtad o te apartaste de ella?"]},
+  {"nombre":"Linaje Comprometido","descripcion":"Familia de servicio jurado a una casa, señor o institución; el vínculo se interpreta según la región.","preguntas":["¿A quién está comprometida tu familia?","¿Qué obligaciones trae ese vínculo?","¿Qué recibieron o perdieron por mantenerlo?","¿Qué lugar querés ocupar dentro de ese compromiso?"]},
+  {"nombre":"Estirpe Elevada","descripcion":"Familia de nobleza o de posición dirigente equivalente, con privilegios y obligaciones.","preguntas":["¿De dónde proviene la posición de tu familia?","¿Qué responsabilidad esperaban que asumieras?","¿Qué relación tenés con quienes carecen de esos privilegios?","¿Tu nombre te abre puertas o te crea enemigos?"]},
+  {"nombre":"Huérfano Institucional","descripcion":"Criado por una institución, sin una familia de origen conocida o presente.","preguntas":["¿Qué institución te crió?","¿Quién cumplió un papel cercano durante tu infancia?","¿Qué aprendiste de vivir allí?","¿Buscás conocer tu origen o construir una pertenencia nueva?"]},
+  {"nombre":"Sin Raíz","descripcion":"Familia nómada, viajera o sin pertenencia fija a una comunidad estable.","preguntas":["¿Con quién creciste y por dónde viajaban?","¿Qué lugar sentiste más cercano a un hogar?","¿Qué vínculo conservás a pesar de la distancia?","¿Querés establecerte o seguir en movimiento?"]}
+ ]
+}

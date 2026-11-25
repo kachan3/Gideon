@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="hijos_de_la_tierra">
   <nombre>Hijos de la Tierra</nombre>
   <nombre_en>Earthfolks</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>3</escalado_vital>
+  <movimiento>6</movimiento>
   <bonos>
-    <bono habilidad="CombatSkillPlaceholder" valor="5" seleccionable="true"/>
+    <bono habilidad="Carga" valor="10"/>
+    <bono habilidad="Mecánica" valor="10"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <eleccion codigo="tierra_combate" valor="5" padres="Melee,Proyectiles,Arcana">Afinidad versátil: +5 a una habilidad de combate</eleccion>
+  <rasgos_iniciales>
+    <rasgo nombre="Versatilidad de la Tierra">Recibe +1 XP inicial, una sola vez. No aumenta los premios de XP posteriores ni se vuelve a conceder al consultar la ficha.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Versátiles y habituados al trabajo material y la construcción. Su experiencia inicial les permite afinar una especialización propia.</descripcion>
 </linaje>

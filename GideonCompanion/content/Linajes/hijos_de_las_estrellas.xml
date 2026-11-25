@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Referencia canónica 2026-11-05; el Companion activo usa linajes.json y migración SQL 010. -->
 <linaje id="hijos_de_las_estrellas">
   <nombre>Hijos de las Estrellas</nombre>
   <nombre_en>Starchilds</nombre_en>
   <especie>Dríade</especie>
   <escalado_vital>2.5</escalado_vital>
+  <movimiento>6</movimiento>
   <bonos>
+    <bono habilidad="Conocimiento Mágico" valor="10"/>
+    <bono habilidad="Historia" valor="10"/>
     <bono habilidad="Cronibor" valor="5"/>
   </bonos>
-  <descripcion>Short description</descripcion>
+  <rasgos_iniciales>
+    <rasgo nombre="Premonición">Mientras esté consciente cuenta un escalón superior de iniciativa: Distraído → Desprevenido → Preparado → Emboscador, con Emboscador como máximo. No aumenta su tier general ni concede otros beneficios de emboscada. No funciona dormido o inconsciente.</rasgo>
+  </rasgos_iniciales>
+  <descripcion>Su afinidad con los ciclos, la memoria y el tiempo se expresa en una anticipación intuitiva del peligro.</descripcion>
 </linaje>

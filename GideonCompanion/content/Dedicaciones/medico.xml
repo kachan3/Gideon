@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dedicacion id="medico">
   <nombre>Médico</nombre>
-  <descripcion>Short description</descripcion>
+  <descripcion>Diagnóstico y tratamiento de heridas y enfermedades, con práctica antes de la aventura.</descripcion>
   <skills_garantizadas>
-    <skill nombre="Medicina" minimo="20"/>
     <skill nombre="Inteligencia" minimo="20"/>
+    <skill nombre="Medicina" minimo="50"/>
   </skills_garantizadas>
-  <estado>completo</estado>
+  <oficios minimo="50" elegir="0">
+    <oficio>Medicina</oficio>
+  </oficios>
+  <preguntas>
+    <pregunta>¿Dónde ejercías: ciudad, campo de batalla, institución religiosa?</pregunta>
+    <pregunta>¿Fue formación formal o aprendiste por necesidad?</pregunta>
+    <pregunta>¿Hubo un paciente que no pudiste salvar y no has olvidado?</pregunta>
+    <pregunta>¿Qué te alejó de la práctica?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
 </dedicacion>

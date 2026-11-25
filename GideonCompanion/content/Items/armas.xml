@@ -8,7 +8,7 @@
     <dado_dano>1d6</dado_dano>
     <tipo_dano>Cortante</tipo_dano>
     <propiedades>
-      <propiedad nombre="Sutil"/>
+      <propiedad nombre="Ágil"/>
       <propiedad nombre="Guardia"/>
     </propiedades>
     <nivel_equipo>1</nivel_equipo>
@@ -46,8 +46,8 @@
     <dado_dano>1d4</dado_dano>
     <tipo_dano>Punzante</tipo_dano>
     <propiedades>
-      <propiedad nombre="Sutil"/>
       <propiedad nombre="Ágil"/>
+      <propiedad nombre="Veloz"/>
     </propiedades>
     <nivel_equipo>1</nivel_equipo>
   </arma>

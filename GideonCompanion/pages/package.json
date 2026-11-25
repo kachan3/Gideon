@@ -1,0 +1,8 @@
+{
+  "name": "gideon-pages",
+  "private": true,
+  "type": "module",
+  "scripts": {"build": "node build.mjs", "test": "node --test pages.test.mjs"},
+  "dependencies": {"sql.js": "1.16.0"},
+  "devDependencies": {"playwright-core": "1.57.0"}
+}

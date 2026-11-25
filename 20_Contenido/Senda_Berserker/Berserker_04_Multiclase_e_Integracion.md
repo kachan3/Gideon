@@ -10,16 +10,17 @@ Un Berserker en furia no ejerce habilidad mundana — es una **manifestación de
 
 ## Pool de Senda
 
-Los dotes con Tag `Berserker` alimentan la **Pool de Senda Berserker**:
+Los dotes, hechizos o armas con el **Rasgo «Clase» (`Berserker`)** alimentan la **Pool de Senda Berserker** (si se es de dicha clase):
+- La XP invertida en esos elementos permite **desbloquear Dotes o Rasgos exclusivos** de Berserker.
 - **Grado de Berserker** = `⌊XP invertida en Berserker ÷ 5⌋`.
 - El Dado de Senda (SD) escala con la **XP total** invertida en el personaje, no con el Grado de Berserker específicamente (§12).
 
 ## Multiclase
 
 ### Berserker + Arcanista / Elementalista
-El **Trance prohíbe lanzar conjuros**. Fuera de Trance, el personaje conjura normalmente. Un "Berserker lanzador de conjuros" (§12.0) es viable: usa conjuros antes de entrar en Trance y Furia Desatada/Desquite durante.
+El **Trance prohíbe lanzar conjuros**. Fuera de Trance, el personaje conjura normalmente. Un "Berserker lanzador de conjuros" (§12.0) es viable: puede iniciar y completar Spellweave antes de entrar en Trance, y usa Furia Desatada/Desquite durante. Debe completar cualquier canalización en curso antes de activar el Trance.
 
 ### Berserker + Valor
-El Trance elimina las reacciones defensivas. La **Danza de Golpes** de Valor (que previene quedar Arrebatado si gastás todas tus acciones atacando/moviéndote) **no previene** la pérdida de reacciones del Trance — son efectos distintos.
+El Trance impone **Arrebatado permanente** y impide usar Maniobras Defensivas mientras dure. Este efecto prevalece sobre la protección de **Danza de Golpes** al final del turno.
 
 > `[ESQUELETO: interacciones específicas con Honor, Cazador, Sombra, Heraldo, Hierofante — pendiente Hassan.]`

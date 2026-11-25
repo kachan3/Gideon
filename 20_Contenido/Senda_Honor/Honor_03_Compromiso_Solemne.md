@@ -1,12 +1,12 @@
 > **Módulo canónico** — Senda del Honor. Incorporado al Core el 2026-08-06 desde `30_Propuestas_No_Ratificadas/Propuesta_Senda_del_Honor_Filosofia_de_Diseño.md`.
 
-# Compromiso Solemne — Juramento Rápido
+# Compromiso Solemne
 
 ## Mecánica Base
 
 - El personaje **declara en voz alta** qué va a lograr.
 - **Coste Dinámico:** Moldear la realidad cuesta **Maná igual a tu Nivel de Honor**.
-- Solo puede tener **1 Compromiso Solemne activo** a la vez. Declarar uno nuevo reemplaza el anterior (ver § Reemplazo).
+- Como regla general, solo podés tener **1 Compromiso Solemne activo** a la vez. Declarar uno nuevo reemplaza el anterior (ver § Reemplazo). Una capacidad que permita expresamente la coexistencia, como [La ley será respetada en mi presencia](Honor_02_Juramento_Declarado.md#la-ley-será-respetada-en-mi-presencia), prevalece sobre ese límite.
 - **Acción Gratuita — "¡Mi Honor lo Exige!":** Mientras el compromiso esté activo, obtienes acceso a esta Free Action (una vez por turno). Si fallas una tirada relacionada con cumplir tu compromiso, puedes usarla para lanzar una **tirada de Honor**. Si tienes éxito, este éxito reemplaza al fallo anterior.
 - **Reserva de Usos:** Tienes un número de usos de "¡Mi Honor lo Exige!" igual a tu **Nivel de Honor**.
 - **Recarga Castigadora:** Si agotas tus usos antes de cumplir el voto, estás atascado. Para recuperar usos debes declarar un Nuevo Compromiso (pagando el Maná), lo que cuenta como un **Abandono** del anterior y aplica su penalización correspondiente.
@@ -19,7 +19,7 @@ El Compromiso Solemne no es un deseo ni un contrato legal. Es una **declaración
 |---|---|
 | **~20 palabras máximo** | La frase debe ser corta y directa. |
 | **Escrita físicamente** | El jugador debe escribirla en papel o enviarla por mensaje. |
-| **1 activa a la vez** | Solo un Compromiso Solemne puede estar vigente. |
+| **1 activa a la vez** | Límite general de Compromisos Solemnes activos. Las excepciones específicas se aplican como se indica en su propia regla. |
 | **Gramaticalmente correcta** | Sin errores ortográficos ni gramaticales. |
 | **Retries permitidos** | Corregir errores no gasta usos, pero no frena la partida. |
 | **SIN cláusulas ni condiciones** | Prohibido "si", "cuando", "siempre que", "en caso de", excepciones. |

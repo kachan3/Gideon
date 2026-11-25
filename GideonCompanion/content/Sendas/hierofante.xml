@@ -2,12 +2,6 @@
 <senda id="hierofante">
   <nombre>Senda del Hierofante</nombre>
   <descripcion>Canalizador divino.</descripcion>
-  <proficiencias>
-    <proficiencia habilidad="Religión" nivel="experto"/>
-    <proficiencia habilidad="Historia" nivel="entrenado"/>
-    <proficiencia habilidad="Medicina" nivel="entrenado"/>
-    <proficiencia habilidad="Arte Marcial o Escuela de Magia" nivel="entrenado" seleccionable="true"/>
-  </proficiencias>
   <pool_combate>
     <asignacion valor="20" descripcion="+20 a una habilidad de combate"/>
     <asignacion valor="15" descripcion="+15 a una habilidad de combate"/>

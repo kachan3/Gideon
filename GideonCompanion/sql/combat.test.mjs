@@ -1,0 +1,26 @@
+import {fixtureFetch,TEST_CATALOGUE_TOKEN} from './http-fixture.mjs';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {openDatabase,makeServer} from './server.mjs';
+import {defenseTotals,damagePreview} from '../js/combat-rules.js';
+test('daño mitigado, heridas, daño resuelto y exceso de maná persistente',async t=>{
+ const db=openDatabase(':memory:'),server=makeServer(db);await new Promise(r=>server.listen(0,'127.0.0.1',r));t.after(async()=>{await new Promise(r=>server.close(r));db.close();});const url='http://127.0.0.1:'+server.address().port;
+ const fetch=fixtureFetch(db);
+ const api=async(path,body)=>{const r=await fetch(url+'/api/personajes/1'+path,{method:body===undefined?'GET':path==='/estado'?'PATCH':'POST',headers:{'Content-Type':'application/json'},body:body===undefined?undefined:JSON.stringify(body)});return {status:r.status,data:await r.json()};};
+ let p=(await api('')).data;const unarmed=p.equipo.ataques.find(a=>a.nombre==='Desarmado');assert.equal(unarmed.dano_base,4);assert.equal(unarmed.formula,'NE + 4 (Fuerza)');assert.equal(unarmed.nivel,null);
+ const totals=defenseTotals(p);assert.deepEqual(totals.map(d=>d.total),[6,7,7]);for(const d of totals)assert.equal(damagePreview(p,{cantidad:20,tipo_dano:d.tipo_dano}).heridas,20-d.total);
+ let r=await api('/dano',{cantidad:8,tipo_dano:'Cortante'});assert.equal(r.status,200);assert.equal(r.data.heridas_actuales,2);assert.equal(r.data.heridas_graves,0);
+ r=await api('/dano',{cantidad:1,tipo_dano:'Cortante'});assert.equal(r.data.heridas_actuales,2);
+ const mh=p.derivados.mh;
+ r=await api('/dano',{cantidad:Math.ceil(mh/2),tipo_dano:'Contundente',modo:'Final'});assert.equal(r.data.heridas_graves,1);assert.equal(r.data.heridas_mortales,0);
+ r=await api('/dano',{cantidad:mh,tipo_dano:'Verdadero',zona:'Brazo derecho'});assert.equal(r.data.heridas_mortales,1);assert.equal(r.data.derivados.estado,'Agonizando');
+ assert.equal((await api('/dano',{cantidad:2,tipo_dano:'Radiante'})).status,400);assert.equal((await api('/dano',{cantidad:2,tipo_dano:'Radiante',modo:'Final'})).status,200);
+ p=(await api('/estado',{heridas_graves:0,heridas_mortales:0,heridas_actuales:0})).data;const safe=p.derivados.limite_seguro;
+ p=(await api('/estado',{mana_consumido:safe})).data;assert.equal(p.dano_cronico,0);
+ p=(await api('/estado',{mana_consumido:safe+3})).data;assert.equal(p.dano_cronico,3);
+ p=(await api('/estado',{mana_consumido:safe+3,dano_cronico:3})).data;assert.equal(p.dano_cronico,3);
+ p=(await api('/estado',{mana_consumido:safe+5})).data;assert.equal(p.dano_cronico,5);
+ p=(await api('/estado',{mana_consumido:0})).data;assert.equal(p.dano_cronico,5);assert(p.derivados.mana_actual<=p.derivados.mana_max);
+ p=(await api('/estado',{omen_actual:1})).data;assert.equal(p.omen_actual,1);
+ assert.equal(db.prepare('SELECT COUNT(*) n FROM dano_eventos').get().n,5);assert.equal(db.prepare('PRAGMA foreign_key_check').all().length,0);
+});

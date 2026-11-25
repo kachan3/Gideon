@@ -37,3 +37,9 @@ Todo Esbirro en Kindremor pertenece a una de las tres tipologías de control seg
 - **Acciones:** No poseen turno ni pool de acciones separada. **Comparten el turno y la pool de 3 acciones (3 PA)** con el Amo. Cualquier acción que realice la Marioneta se descuenta directamente de las acciones del Amo en ese turno.
 
 ---
+
+## Maniobra Defensiva de los Esbirros
+
+Si no está **Arrebatado**, un Esbirro puede realizar únicamente **una Maniobra Defensiva por ronda**, gastando **1 Reacción**. La resuelve siempre en su **versión básica**, salvo que se establezca expresamente lo contrario.
+
+> **Canonización:** 2026-11-22, por Hassan.

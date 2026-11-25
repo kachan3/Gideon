@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dedicacion id="mercader">
   <nombre>Mercader</nombre>
-  <descripcion>Short description</descripcion>
+  <descripcion>Comercio, acuerdos, tasación y relaciones de intercambio.</descripcion>
   <skills_garantizadas>
+    <skill nombre="Comercio" minimo="50"/>
   </skills_garantizadas>
-  <estado>esqueleto</estado>
+  <oficios minimo="50" elegir="0">
+    <oficio>Comercio</oficio>
+  </oficios>
+  <preguntas>
+    <pregunta>¿Qué tipo de bienes comerciabas?</pregunta>
+    <pregunta>¿Operabas solo, para una casa comercial o con socios?</pregunta>
+    <pregunta>¿Tenés deudas pendientes o contratos sin cerrar?</pregunta>
+    <pregunta>¿Qué trato te definió, para bien o para mal?</pregunta>
+  </preguntas>
+  <estado>demo_2026-11-05</estado>
 </dedicacion>

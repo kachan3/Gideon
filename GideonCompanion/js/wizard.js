@@ -145,7 +145,7 @@ const Wizard = {
           </div>
           <p class="form-hint" id="metodo-hint">
             ${char._metodoAtributos === 'aleatorio' 
-              ? 'Valores generados aleatoriamente. Si los asignas en orden estricto, obtienes +1 XP extra.' 
+              ? 'Valores generados aleatoriamente. Asignarlos en orden estricto es una restricción narrativa.'
               : `Distribuye libremente: ${arreglo.join(', ')}`}
           </p>
         </div>
