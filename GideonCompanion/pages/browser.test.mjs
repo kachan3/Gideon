@@ -80,7 +80,7 @@ try{
  await visitor.locator('#pages-file').setInputFiles({name:'gideon.json',mimeType:'application/json',buffer:bytes});
  await visitor.getByRole('heading',{name:'Exploradora de Pages',exact:true}).waitFor();
  await page.locator('#pages-file').setInputFiles({name:'gideon.json',mimeType:'application/json',buffer:bytes});
- await page.locator('#pages-collection').waitFor();assert.equal(await page.locator('#pages-collection option').count(),2,'Importar conserva la colección anterior');
+ await page.waitForFunction(()=>document.querySelector('#pages-toolbar')?.dataset.ready==='true'&&document.querySelector('#pages-collection')?.options.length===2);assert.equal(await page.locator('#pages-collection option').count(),2,'Importar conserva la colección anterior');
  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Desborde en móvil');
  await checkSelectiveReferences(page);
  await checkOrderCreation(browser,url);
