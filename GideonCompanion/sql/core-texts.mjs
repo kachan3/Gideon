@@ -1,14 +1,14 @@
 import {readFileSync, readdirSync} from 'node:fs';
 import {posix} from 'node:path';
 import {rulebook} from './rulebook.mjs';
-import {normalizeName} from '../js/reference-format.js';
+import {normalizeName,referenceLabel,splitReferenceCells} from '../js/reference-format.js';
 
 const root = new URL('../../', import.meta.url);
 const read = path => readFileSync(new URL(path, root), 'utf8').replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
 export const plain = text => text.replace(/<a [^>]*><\/a>/g,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1')
   .replace(/\*\*|__|\x60/g,'').replace(/\*([^*\n]+)\*/g,'$1').trim();
 export const key = text => normalizeName(text).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
-const title = text => plain(text.replace(/\s+\*\(.+$/,'')).replace(/^\d+(?:\.\d+)*[.)]?\s+/, '').trim();
+const title = text => referenceLabel(plain(text.replace(/\s+\*\(.+$/,''))).replace(/^\d+(?:\.\d+)*[.)]?\s+/, '').trim();
 const short = name => name.replace(/\s+\([^)]*\).*$/, '').replace(/[.:]+$/, '').trim();
 const clean = text => text.replace(/^\s*---\s*$/gm,'').trim();
 
@@ -27,10 +27,10 @@ function parse(doc) {
       sections.push(section); stack.push(section);
     }
     if (line.startsWith('|')) {
-      const cells = line.trim().replace(/^\||\|$/g,'').split('|').map(c=>c.trim());
+      const cells = splitReferenceCells(line.trim().replace(/^\||\|$/g,'')).map(c=>c.trim());
       if (!i || !lines[i-1].startsWith('|')) header=cells;
       else if (!cells.every(c=>/^:?-+:?$/.test(c)) && cells.length===header.length)
-        rows.push({name:plain(cells[0]), cells, header, section:stack.at(-1)?.name});
+        rows.push({name:referenceLabel(plain(cells[0])), cells, header, section:stack.at(-1)?.name});
     }
     const item = line.match(/^(?:[-*] |\d+\. )?\*\*(.+?)\*\*([^\n]*)$/);
     if (!item) continue;

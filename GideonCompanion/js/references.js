@@ -2,20 +2,12 @@ import {referenceMatcher,referencePattern,unmark} from './reference-format.js';
 
 export function installReferences(data) {
   const rules=new Map(data.reglas.map(r=>[r.id,r]));
-  const types={dano:'Tipo de daño',medio:'Medio de ataque',fuente:'Categoría de fuente',shape:'Shape',efecto:'Efecto mágico',senda:'Senda',etiqueta:'Etiqueta',maniobra:'Maniobra defensiva',accion:'Acción',habilidad:'Habilidad',atributo:'Atributo',propiedad:'Propiedad de arma',herramienta:'Herramienta del lanzador',regla:'Regla',tema:'Reglamento'};
-  function definition(id,label){
-    if(rules.has(id))return rules.get(id);
-    const options=id.split('+').map(i=>rules.get(i));
-    if(!options.length||options.some(o=>!o))return;
-    const choices=options.map(o=>{
-      const type=o.id.split('-')[0];
-      const category=types[type]??type[0].toUpperCase()+type.slice(1);
-      return '⟦'+o.id+'¦'+category+' · '+o.nombre+'⟧';
-    });
-    return {nombre:label,texto:choices.join('\n')};
-  }
-  const catalog=new Map(data.textos.map(t=>[unmark(t),t]));
-  const match=referenceMatcher(data.aliases);
+  const definition=id=>rules.get(id);
+  const reported=new Set();
+  const match=referenceMatcher(data.aliases, issue=>{
+    const key=issue.reason+':'+issue.target;
+    if(!reported.has(key)){reported.add(key);console.warn('Referencia de Gideon sin resolver:',issue);}
+  });
   const card=document.createElement('aside');
   card.className='reference-card';
   card.id='reference-preview';
@@ -28,7 +20,7 @@ export function installReferences(data) {
 
   function renderText(node, marked) {
     const entries=[...marked.matchAll(referencePattern)];
-    if(!entries.length) return;
+    if(!entries.length) {node.textContent=marked;return;}
     const fragment=document.createDocumentFragment();
     let offset=0;
     for(const part of entries) {
@@ -55,10 +47,8 @@ export function installReferences(data) {
     if(!parent || parent.closest(ignore) || !parent.closest(visibleContent)) return;
     const text=node.data;
     if(!text.trim()) return;
-    if(parent.closest('code,pre')&&!text.includes('⟦'))return;
-    // In the rule reader the server already resolved the source and its links.
-    // Elsewhere some templates combine catalogue text with numbers and labels.
-    const marked=text.includes('⟦') || parent.closest('#rule-reader')?text:catalog.get(text)??match(text);
+    if(parent.closest('code,pre')){node.textContent=unmark(text);return;}
+    const marked=match(text);
     renderText(node,marked);
   }
   function scan(root) {
@@ -114,7 +104,7 @@ export function installReferences(data) {
     }
     const heading=document.createElement('strong'),body=document.createElement('div');
     heading.textContent=entry.nombre;body.textContent=entry.texto;
-    renderText(body.firstChild,entry.texto);
+    if(body.firstChild)renderText(body.firstChild,match(entry.texto));
     card.replaceChildren(heading,body);
     card.scrollTop=0;
     card.hidden=false;

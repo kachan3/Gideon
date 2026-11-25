@@ -41,3 +41,5 @@ Las sugerencias sobre el contenido del proyecto solo se dan si Hassan las pide e
 Ante una sesión de trabajo, primero leo el estado actual del archivo antes de responder.
 Los aportes de Hassan se integran al Core con fecha de canonización.
 Si Hassan resuelve una incongruencia, actualizo el Core inmediatamente con la resolución.
+
+Referencias del Companion (2026-11-25): aplicar la sección "Referencias selectivas del Companion" de 00_Proyecto/INSTRUCCIONES_ASISTENTE.md. Solo usar [[destino]] o [[destino|texto visible]] donde Hassan lo indique expresamente; no detectar ni marcar palabras automáticamente.

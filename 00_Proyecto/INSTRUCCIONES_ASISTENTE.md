@@ -53,3 +53,11 @@ Cuando hay conflicto entre fuentes, la prioridad es:
 - Ante una sesión de trabajo, primero leo el estado actual del archivo antes de responder.
 - Los aportes de Hassan se integran al Core con fecha de canonización.
 - Si Hassan resuelve una incongruencia, actualizo el Core inmediatamente con la resolución.
+
+## Referencias selectivas del Companion — 2026-11-25
+
+- Solo los textos que Hassan seleccione expresamente llevan referencias con recuadro y fade in/fade out. No detectar palabras automáticamente ni marcar contenido por iniciativa del agente.
+- Usar la extensión interna de Markdown `[[destino]]` o `[[destino|texto visible]]`. Ejemplos: `[[Aturdimiento]]` y `[[Aturdimiento|aturdido]]`. Los delimitadores no aparecen al resolver la referencia.
+- El destino debe corresponder a un nombre o alias exacto y único del catálogo, o a su ID estable (por ejemplo, `[[estado-aturdimiento|aturdido]]`). No inferir el destino por contexto, similitud, género o número. Si falta o es ambiguo, dejar la marca visible y corregir el destino; no elegir uno automáticamente.
+- Mantener Markdown y HTML existentes. Encabezados, enlaces comunes y palabras sin esta marca no activan recuadros. Los ejemplos dentro de bloques de código se muestran literalmente.
+- Los archivos siguen siendo el Core; conservar las marcas elegidas al sincronizar la base de datos. Las antiguas anotaciones automáticas no autorizan referencias nuevas. No marcar masivamente el contenido existente.

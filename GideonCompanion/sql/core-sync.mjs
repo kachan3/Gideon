@@ -1,7 +1,6 @@
 import {readFileSync} from 'node:fs';
-import {posix} from 'node:path';
 import {coreTexts, key, plain} from './core-texts.mjs';
-import {referenceMatcher,unmark} from '../js/reference-format.js';
+import {unmark} from '../js/reference-format.js';
 
 const catalogs = {
   estados_alterados:['estado'], dotes:['dote','rasgo'], linajes:['linaje'], clases:['senda'],
@@ -51,34 +50,16 @@ export function synchronizeCore(db) {
     }
   }
   const aliases=[...atoms.values()].flatMap(a=>[...a.aliases].filter(s=>s.length>=2).map(alias=>({alias,regla_id:a.id})));
-  const mark=referenceMatcher(aliases);
-  const context = (source,kind) => source.includes('Dano_y_Defensas')?'medio':source.includes('Core_13_')?'shape':
-    source.includes('Reacciones_Defensivas')?'maniobra':source.includes('Atributos_y_Habilidades')?'habilidad':kind;
-  const targetsBySource=Map.groupBy([...atoms.values()],a=>a.source);
-  function markedMarkdown(text,source,self,keepLinks) {
-    const decorate=s=>mark(s,self?.id,context(source,self?.kind));
-    return text.split(/(\[[^\]\n]+\]\([^)\n]+\)|<a [^>]*><\/a>)/g).map(part=>{
-      const link=part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
-      if(!link) return part.startsWith('<a ')?part:decorate(part);
-      const [,label,url]=link,[file,anchor]=url.split('#');
-      const target=file?posix.normalize(posix.join(posix.dirname(source),file)):source;
-      const options=targetsBySource.get(target)??[];
-      const dest=options.find(a=>anchor&&key(a.nombre)===key(anchor))??
-        options.find(a=>[...a.aliases].some(n=>key(n)===key(label)));
-      const shown=dest&&dest!==self?'⟦'+dest.id+'¦'+label+'⟧':decorate(label);
-      return keepLinks?'['+shown+']('+url+')':shown;
-    }).join('');
-  }
   // Only these derived tables are rebuilt. All character and gameplay IDs survive.
   db.exec('DELETE FROM alias_reglas; DELETE FROM reglas_atomicas; DELETE FROM documentos_reglas; DELETE FROM textos_catalogo;');
   const insertAtom=db.prepare('INSERT INTO reglas_atomicas VALUES(?,?,?)');
-  for(const a of atoms.values()) insertAtom.run(a.id,a.nombre,displayText(markedMarkdown(a.texto,a.source,a,false)));
+  for(const a of atoms.values()) insertAtom.run(a.id,a.nombre,displayText(unmark(a.texto)));
   const insertAlias=db.prepare('INSERT OR IGNORE INTO alias_reglas VALUES(?,?)');
   for(const {alias,regla_id} of aliases) insertAlias.run(alias,regla_id);
   const insertDoc=db.prepare('INSERT INTO documentos_reglas VALUES(?,?,?,?)');
   for(const d of docs.filter(d=>d.publish!==false)) {
     // Keep Markdown headings and URLs intact for existing section navigation.
-    const text=d.texto.split('\n').map(line=>/^#{1,6}\s/.test(line)?line:markedMarkdown(line,d.id,null,true)).join('\n');
+    const text=unmark(d.texto);
     insertDoc.run(d.id,d.titulo,d.grupo,text);
   }
   const insertField=db.prepare('INSERT INTO textos_catalogo VALUES(?,?,?,?,?)');
@@ -86,7 +67,7 @@ export function synchronizeCore(db) {
     const {table,id,field,atom,value}=f;
     const source=f.source??atom?.source??'';
     if(source && f.old!==value) db.prepare('UPDATE '+table+' SET '+field+'=? WHERE id=? AND '+field+' IS NOT ?').run(value,id,value);
-    insertField.run(table,id,field,source,mark(value,atom?.id,context(source,atom?.kind)));
+    insertField.run(table,id,field,source,unmark(value));
   }
   db.prepare('INSERT OR IGNORE INTO schema_migrations(version) VALUES(39)').run();
 }
@@ -95,7 +76,7 @@ export function referenceCatalogue(db) {
   return {
     reglas:db.prepare('SELECT * FROM reglas_atomicas').all(),
     aliases:db.prepare('SELECT alias,regla_id FROM alias_reglas').all(),
-    textos:db.prepare("SELECT DISTINCT texto FROM textos_catalogo WHERE instr(texto,'⟦')>0").all().map(r=>r.texto)
+    textos:db.prepare("SELECT DISTINCT texto FROM textos_catalogo WHERE instr(texto,'[[')>0").all().map(r=>r.texto)
   };
 }
 export function casterToolDescription(db,name) {

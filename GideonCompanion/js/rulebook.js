@@ -1,5 +1,6 @@
+import {referenceLabel,splitReferenceCells} from './reference-format.js';
 const escape=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const slug=s=>s.toLowerCase().replace(/[^\p{L}\p{N} -]/gu,'').trim().replace(/ +/g,'-');
+const slug=s=>referenceLabel(s).toLowerCase().replace(/[^\p{L}\p{N} -]/gu,'').trim().replace(/ +/g,'-');
 const plain=s=>s.replace(/<a [^>]*><\/a>/g,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1').replace(/\*\*|\x60/g,'');
 function markup(doc,docs){
  const inline=s=>escape(s.replace(/<a [^>]*><\/a>/g,'')).replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,label,path)=>{
@@ -10,11 +11,17 @@ function markup(doc,docs){
  const lines=doc.texto.split(/\r?\n/),out=[];
  for(let i=0;i<lines.length;i++){
   const line=lines[i].trim();
+  const fence=line.match(/^(`{3,}|~{3,})/);
+  if(fence){
+   const code=[];
+   while(++i<lines.length&&!lines[i].trim().startsWith(fence[1]))code.push(lines[i]);
+   out.push('<pre><code>'+escape(code.join('\n'))+'</code></pre>');continue;
+  }
   if(!line||line==='---')continue;
   if(line.startsWith('|')){
    const table=[];
    while(i<lines.length&&lines[i].trim().startsWith('|')){
-    const cells=lines[i++].trim().slice(1,-1).split('|');
+    const cells=splitReferenceCells(lines[i++].trim().slice(1,-1));
     if(cells.every(c=>/^\s*:?-+:?\s*$/.test(c)))continue;
     const tag=table.length?'td':'th';table.push('<tr>'+cells.map(c=>'<'+tag+'>'+inline(c.trim())+'</'+tag+'>').join('')+'</tr>');
    }

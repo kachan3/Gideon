@@ -25,15 +25,11 @@ test('el Core restaura el catálogo sin cambiar las fichas y mantiene referencia
     const doc='10_Reglas/Core_18_Estados_Alterados.md';
     const core=readFileSync(new URL('../../'+doc,import.meta.url),'utf8').replace(/\r\n/g,'\n');
     assert.equal(unmark(one('SELECT texto FROM documentos_reglas WHERE id=?',doc).texto),core);
-    const state=one("SELECT texto FROM reglas_atomicas WHERE id='estado-aturdimiento'").texto;
-    assert.match(state,/⟦estado-impedido¦Impedido⟧/);
     const mark=referenceMatcher(all('SELECT * FROM alias_reglas'));
-    assert.equal(mark('Quedás aturdida.'),'Quedás ⟦estado-aturdimiento¦aturdida⟧.');
-    assert.equal(mark('medio Proyectil').split('⟦').at(-1),'medio-proyectil¦Proyectil⟧');
-    assert.match(mark('Shape Proyectil'),/⟦shape-proyectil¦Proyectil⟧/);
-    assert.equal(mark('pseudotumbado'),'pseudotumbado');
+    assert.equal(mark('Quedas aturdida. Fuerza. Cortante.'),'Quedas aturdida. Fuerza. Cortante.');
+    assert.match(mark('[[Aturdimiento|aturdida]]'),/\u27e6estado-aturdimiento\u00a6aturdida\u27e7/);
     const skin=one("SELECT texto FROM textos_catalogo WHERE tabla='rasgos' AND fila=(SELECT id FROM rasgos WHERE nombre='Piel escamosa')").texto;
-    assert.match(skin,/⟦dano-cortante¦Cortante⟧/);
+    assert(!skin.includes('\u27e6'));
     db.prepare("UPDATE rasgos SET descripcion='texto anterior' WHERE nombre='Piel escamosa'").run();
     transaction(db,()=>synchronizeCore(db));
     assert.equal(one("SELECT descripcion FROM rasgos WHERE nombre='Piel escamosa'").descripcion,unmark(skin));

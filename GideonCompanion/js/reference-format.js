@@ -1,36 +1,26 @@
-// The display label is verbatim. IDs contain only ASCII letters, digits and hyphens.
-export const referencePattern = /⟦([a-z0-9-]+(?:\+[a-z0-9-]+)*)¦([^⟦⟧\n]+)⟧/g;
-export const unmark = text => text.replace(referencePattern, (_, id, label) => label);
+// Internal tokens are output only; old automatically annotated text is stripped.
+export const referencePattern = /\u27e6([a-z0-9-]+)\u00a6([^\u27e6\u27e7\n]+)\u27e7/g;
+export const unmark = text => text.replace(/\u27e6[a-z0-9-]+(?:\+[a-z0-9-]+)*\u00a6([^\u27e6\u27e7\n]+)\u27e7/g, (_, label) => label);
+export const explicitReferencePattern = /\[\[([^\[\]|\n]+)(?:\|([^\[\]\n]+))?\]\]/g;
 export const normalizeName = text => text.normalize('NFD').replace(/\p{M}/gu, '').toLowerCase().trim();
-const quote = text => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+export const referenceLabel = text => text.replace(explicitReferencePattern, (_, target, label) => label ?? target);
+// A pipe within a reference is not a Markdown table separator.
+export const splitReferenceCells = line => line.split(/\|(?!(?:[^\[\]]*)\]\])/);
 
-export function referenceMatcher(aliases) {
-  const terms = new Map();
+export function referenceMatcher(aliases, report = () => {}) {
+  const terms = new Map(), ids = new Set(aliases.map(a => a.regla_id));
   for (const {alias, regla_id} of aliases) {
-    const key = alias.toLowerCase();
+    const key = normalizeName(alias);
     if (!terms.has(key)) terms.set(key, new Set());
     terms.get(key).add(regla_id);
   }
-  const alternatives = [...terms.keys()].sort((a,b) => b.length - a.length).map(quote);
-  const words = new RegExp('(?<![\\p{L}\\p{N}_])(' + alternatives.join('|') + ')(?![\\p{L}\\p{N}_])', 'giu');
-  return (text, self = '', context = '') => {
-    if (!alternatives.length) return text;
-    const decorate = part => part.replace(words, (label, _, index) => {
-      const ids = [...terms.get(label.toLowerCase())];
-      const before = normalizeName(part.slice(Math.max(0,index-38),index));
-      let type;
-      if (/\b(shape|configuracion)$/.test(before)) type = 'shape';
-      else if (/\b(medio|medio de ataque)$/.test(before)) type = 'medio';
-      else if (/\b(herramienta|herramienta de lanzador)$/.test(before)) type = 'herramienta';
-      else if (/\b(arma|armas)$/.test(before)) type = 'arma';
-      else if (/\b(estado|queda|quedas|quedo|sufre|nivel de)$/.test(before)) type = 'estado';
-      else if (/\b(tirada de|habilidad de)$/.test(before)) type = 'habilidad';
-      else if (/\b(efecto|efecto de)$/.test(before)) type = 'efecto';
-      const preferred = kind => ids.find(id => kind && id.startsWith(kind + '-'));
-      const id = ids.length === 1 ? ids[0] : preferred(type) || preferred(context) || preferred('dificultad') || ids.filter(id=>id!==self).sort().join('+');
-      return id && id !== self ? '⟦' + id + '¦' + label + '⟧' : label;
-    });
-    if(!text.includes('⟦')) return decorate(text);
-    return text.split(/(⟦[^⟦⟧\n]+⟧)/).map(part=>part.startsWith('⟦')?part:decorate(part)).join('');
-  };
+  return text => unmark(text).replace(explicitReferencePattern, (token, target, label) => {
+    const key = target.trim();
+    const options = ids.has(key) ? [key] : [...(terms.get(normalizeName(key)) ?? [])];
+    if (options.length !== 1) {
+      report({target:key, reason:options.length ? 'ambiguous' : 'missing', candidates:options});
+      return token;
+    }
+    return '\u27e6' + options[0] + '\u00a6' + (label ?? target) + '\u27e7';
+  });
 }

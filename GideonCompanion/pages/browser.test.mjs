@@ -1,3 +1,4 @@
+import {checkSelectiveReferences} from '../sql/reference-browser-checks.test.mjs';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {readFile,access} from 'node:fs/promises';
@@ -63,6 +64,7 @@ try{
  await page.locator('#pages-file').setInputFiles({name:'gideon.json',mimeType:'application/json',buffer:bytes});
  await page.locator('#pages-collection').waitFor();assert.equal(await page.locator('#pages-collection option').count(),2,'Importar conserva la colección anterior');
  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Desborde en móvil');
+ await checkSelectiveReferences(page);
  assert.deepEqual(networkAPI,[],'No debe existir una API HTTP para jugar');assert.deepEqual(errors,[]);
  console.log('OK: creación real con WebAssembly, Pages en subcarpeta, guardado, recarga, visitantes aislados, copia portable, importación sin pérdida y móvil.');
 }catch(error){

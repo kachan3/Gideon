@@ -21,7 +21,7 @@ jobs:
           node-version: '24'
       - run: npm install --ignore-scripts --no-audit --no-fund
         working-directory: GideonCompanion/pages
-      - run: node --test GideonCompanion/pages/pages.test.mjs
+      - run: node --test GideonCompanion/pages/pages.test.mjs GideonCompanion/sql/core-sync.test.mjs GideonCompanion/sql/reference-format.test.mjs
       - run: node GideonCompanion/pages/build.mjs
       - run: node node_modules/playwright-core/cli.js install --with-deps chromium
         working-directory: GideonCompanion/pages
