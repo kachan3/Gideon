@@ -1,3 +1,4 @@
+import {ensureTechnicalSkills,grantTechnicalKnowledge} from './technical-choices.mjs';
 import {ensureOrders,orderCatalogue,validateOrderCreation,recordOrderCreation,orderState,oathState,saveOath} from './orders.mjs';
 import {purchase,assignGear,finishEquipment} from './market.mjs';
 import {migrateInitialEpiphanies} from './epiphanies.mjs';
@@ -244,6 +245,7 @@ export function openDatabase(path=resolve(SQL,'gideon_companion.db')) {
   transaction(db,()=>{
     if(!one(db,'SELECT 1 FROM schema_migrations WHERE version=40'))migrateBerserker(db);
     ensureOrders(db);
+    ensureTechnicalSkills(db);
     synchronizeCore(db);
   });
   return db;
@@ -438,6 +440,7 @@ export function createCharacter(db,b,internal=false){
     for(const g of lineageCatalogue.linajes_elecciones.filter(g=>g.linaje_id===b.linaje_id))run(db,'INSERT INTO personajes_elecciones_linaje VALUES(?,?,?)',id,g.id,b.elecciones_linaje[g.id]);
   }
   if(one(db,"SELECT name FROM sqlite_master WHERE name='clases_skills'"))for(const s of rows(db,'SELECT * FROM clases_skills WHERE clase_id=?',b.clase_id))run(db,'INSERT OR IGNORE INTO personajes_skills VALUES(?,?,?)',id,s.skill_id,s.valor_inicial);
+  grantTechnicalKnowledge(db,lineageCatalogue,b,id);
   if(b.regalo_id!=null||b.perjuicio_id!=null)fail('Los Regalos y Perjuicios están en cuarentena');
   for(const d of rows(db,'SELECT dote_id FROM linajes_dotes WHERE linaje_id=? UNION SELECT dote_id FROM clases_dotes WHERE clase_id=? UNION SELECT dote_otorgado_id FROM dedicaciones WHERE id=? AND dote_otorgado_id IS NOT NULL',b.linaje_id,b.clase_id,b.dedicacion_id))log(db,id,{tipo:'Adquisicion',dote_id:d.dote_id,origen:'Creación'});
   grantLineage(db,id,{moonstone:b.regalo_moonstone!==false});
@@ -557,7 +560,7 @@ export function recordRest(db,id,b){
  if(tipo!=='Curación natural')run(db,"UPDATE canalizaciones SET estado='Interrumpido',actualizada=CURRENT_TIMESTAMP WHERE personaje_id=? AND estado='Canalizando'",id);
  return character(db,id);
 }
-export function makeServer(db,{random100,catalogueToken=process.env.GIDEON_CATALOG_TOKEN,dmToken,npcRoot=NPC_ROOT}={}){initNPCs(db);const failures=new Map();return createServer(async(req,res)=>{
+export function makeServer(db,{random100,catalogueToken=process.env.GIDEON_CATALOG_TOKEN,dmToken,npcRoot=NPC_ROOT}={}){ensureTechnicalSkills(db);initNPCs(db);const failures=new Map();return createServer(async(req,res)=>{
   const send=(status,data)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify(data));};
   try{
     const path=new URL(req.url,'http://localhost').pathname;
@@ -684,8 +687,8 @@ export function makeServer(db,{random100,catalogueToken=process.env.GIDEON_CATAL
     }
     if(!['GET','HEAD'].includes(req.method))return send(405,{error:'Operación no admitida'});
     const file=resolve(BASE,'.'+decodeURIComponent(path==='/'?'/index.html':path));
-    if(!file.startsWith(BASE+sep)||!['.html','.css','.js','.svg','.ico','.xml'].includes(extname(file))||file.startsWith(resolve(BASE,'sql')+sep)||!existsSync(file)||!statSync(file).isFile())return send(404,{error:'Archivo no encontrado'});
-    const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.xml':'application/xml','.svg':'image/svg+xml'};res.writeHead(200,{'Content-Type':(types[extname(file)]??'application/octet-stream')+'; charset=utf-8','Cache-Control':'no-store'});res.end(req.method==='HEAD'?undefined:readFileSync(file));
+    if(!file.startsWith(BASE+sep)||!['.html','.css','.js','.svg','.ico','.xml','.jpg','.jpeg','.png','.webp'].includes(extname(file))||file.startsWith(resolve(BASE,'sql')+sep)||!existsSync(file)||!statSync(file).isFile())return send(404,{error:'Archivo no encontrado'});
+    const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.xml':'application/xml','.svg':'image/svg+xml','.jpg':'image/jpeg','.jpeg':'image/jpeg','.png':'image/png','.webp':'image/webp'};res.writeHead(200,{'Content-Type':(types[extname(file)]??'application/octet-stream')+'; charset=utf-8','Cache-Control':'no-store'});res.end(req.method==='HEAD'?undefined:readFileSync(file));
   }catch(e){send(400,{error:e.message});}
 });}
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){

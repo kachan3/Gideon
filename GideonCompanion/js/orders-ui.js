@@ -11,7 +11,7 @@ function phraseFields(positions,selections={},locked=false){
  }).join('');
 }
 function oathPreview(positions,selections){return positions.map(p=>p.opciones.find(o=>o.codigo===(selections[p.codigo]??p.seleccion))?.nombre).filter(Boolean).join('. ');}
-export function creationOrders(c,d,{review=false}={}){
+export function creationOrders(c,d,{review=false,affiliationOnly=false}={}){
  const data=c.ordenes_y_juramento;if(!data||!honor(c,d))return '';
  const isHonor=honor(c,d),order=data.ordenes.find(o=>o.codigo===d.orden),combo=data.combos.find(o=>o.id===d.combo_orden_id);
  const affiliation=review?'<p><strong>'+esc(order?.nombre??'Sin Orden')+'</strong></p>':
@@ -20,7 +20,7 @@ export function creationOrders(c,d,{review=false}={}){
  const combos=isHonor&&order?.combo?(review?'<p>Combo inicial: '+esc(combo?.nombre??'Sin elegir')+'</p>':
   '<label>Combo marcial inicial<select name="combo_orden_id" required><option value="">Seleccionar.</option>'+data.combos.map(o=>'<option value="'+o.id+'" '+(o.id===d.combo_orden_id?'selected':'')+'>'+esc(o.nombre)+'</option>').join('')+'</select></label>'+playerDescription(combo?.descripcion??'')):'';
  const plan=d.juramento??{},preview=oathPreview(data.posiciones,plan);
- const oath=isHonor?'<section class="order-segment" data-oath-planner><h2>Juramento Declarado</h2><p>Prepará las frases de tu juramento. Cada posición concede su beneficio al alcanzar su requisito de XP en dotes de Honor.</p>'+
+ const oath=isHonor&&!affiliationOnly?'<section class="order-segment" data-oath-planner><h2>Juramento Declarado</h2><p>Prepará las frases de tu juramento. Cada posición concede su beneficio al alcanzar su requisito de XP en dotes de Honor.</p>'+
   (review?'<p>'+esc(preview||'Frases por elegir')+'</p>':phraseFields(data.posiciones,plan))+
   '<div class="hint"><strong>Tu juramento preparado</strong><p data-oath-preview>'+esc(preview||'Seleccioná las frases que quieras preparar.')+'</p></div></section>':'';
  return '<section class="order-segment" data-order-segment><h2>Orden</h2><p>Elegí una Orden de caballería o continuá como Caballero Herrante, sin pertenecer a una Orden.</p>'+affiliation+benefits+combos+'</section>'+oath;

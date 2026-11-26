@@ -2,7 +2,7 @@ import {referenceLabel,splitReferenceCells} from './reference-format.js';
 const escape=s=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const slug=s=>referenceLabel(s).toLowerCase().replace(/[^\p{L}\p{N} -]/gu,'').trim().replace(/ +/g,'-');
 const plain=s=>s.replace(/<a [^>]*><\/a>/g,'').replace(/\[([^\]]+)\]\([^)]+\)/g,'$1').replace(/\*\*|\x60/g,'');
-function markup(doc,docs){
+export function markup(doc,docs=[]){
  const inline=s=>escape(s.replace(/<a [^>]*><\/a>/g,'')).replace(/\[([^\]]+)\]\(([^)]+)\)/g,(_,label,path)=>{
   const dest=new URL(path,'https://gideon.local/'+doc.id);
   const target=docs.find(d=>d.id===dest.pathname.slice(1));

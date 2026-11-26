@@ -8,9 +8,9 @@ export async function checkOrderCreation(browser,url){
   await page.goto(url);await page.locator('#pages-toolbar[data-ready=true]').waitFor();
   await page.getByRole('button',{name:'Crear mi personaje',exact:true}).click();
   await page.locator('[name=nombre]').fill('Caballera de la Orden');await page.locator('[name=linaje_id]').selectOption({label:'Hijos del Sol'});await page.locator('#next').click();
+  await page.locator('[name=clase_id]').selectOption({label:'Senda del Honor'});await page.locator('[name=orden]').selectOption('dragon-valeroso');await page.locator('[name=combo_orden_id]').selectOption({label:'Golpe Poderoso'});await page.locator('#next').click();
   await page.getByRole('button',{name:'Asignar en orden',exact:true}).click();await page.locator('#next').click();
   await page.locator('[name=dedicacion_id]').selectOption({label:'Soldado'});await page.locator('[name=nacimiento_id]').selectOption({index:1});await page.locator('#next').click();
-  await page.locator('[name=clase_id]').selectOption({label:'Senda del Honor'});
   const combat=page.locator('[data-combat-slot]'),ids=await combat.first().locator('option').evaluateAll(options=>options.map(o=>o.value).filter(Boolean));
   for(let i=0;i<4;i++)await combat.nth(i).selectOption(ids[i]);
   const normal=page.locator('[data-normal]');for(let i=0;i<3;i++)await normal.nth(i).fill(String(Number(await normal.nth(i).inputValue())+[20,20,10][i]));

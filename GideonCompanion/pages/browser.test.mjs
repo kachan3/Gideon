@@ -1,3 +1,4 @@
+import {checkArcanistCreation} from '../sql/class-guide-browser.test.mjs';
 import {checkOrderCreation} from '../sql/orders-browser.test.mjs';
 import {checkSelectiveReferences} from '../sql/reference-browser-checks.test.mjs';
 import assert from 'node:assert/strict';
@@ -35,9 +36,6 @@ try{
  await page.locator('[name=nombre]').fill('Exploradora de Pages');
  await page.locator('[name=linaje_id]').selectOption({label:'Hijos del Sol'});
  await page.locator('#next').click();
- await page.getByRole('button',{name:'Asignar en orden',exact:true}).click();await page.locator('#next').click();
- await page.locator('[name=dedicacion_id]').selectOption({label:'Soldado'});
- await page.locator('[name=nacimiento_id]').selectOption({index:1});await page.locator('#next').click();
  const reviewedPaths=[
   ['Senda del Arcanista',['Eficiencia','Herencia','Epifanía Original','Lanzador de Conjuros','La Herramienta Correcta']],
   ['Senda del Berserker',['Pool de Ira','Furia Desatada','Desquite','Trance','Fuerza Aliota','Enemigo Declarado']],
@@ -56,6 +54,11 @@ try{
   assert(await first.locator('.player-description p').first().isVisible(),name+': readable paragraphs');
  }
  await page.locator('[name=clase_id]').selectOption({label:'Senda del Berserker'});
+ await page.locator('#next').click();
+ await page.getByRole('button',{name:'Asignar en orden',exact:true}).click();await page.locator('#next').click();
+ await page.locator('[name=dedicacion_id]').selectOption({label:'Soldado'});
+ await page.locator('[name=nacimiento_id]').selectOption({index:1});await page.locator('#next').click();
+
  const combat=page.locator('[data-combat-slot]'),ids=await combat.first().locator('option').evaluateAll(options=>options.map(o=>o.value).filter(Boolean));
  for(let i=0;i<4;i++)await combat.nth(i).selectOption(ids[i]);
  const normal=page.locator('[data-normal]');for(let i=0;i<3;i++)await normal.nth(i).fill(String(Number(await normal.nth(i).inputValue())+[20,20,10][i]));
@@ -84,6 +87,7 @@ try{
  await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Desborde en móvil');
  await checkSelectiveReferences(page);
  await checkOrderCreation(browser,url);
+ await checkArcanistCreation(browser,url);
  assert.deepEqual(networkAPI,[],'No debe existir una API HTTP para jugar');assert.deepEqual(errors,[]);
  console.log('OK: creación real con WebAssembly, Pages en subcarpeta, guardado, recarga, visitantes aislados, copia portable, importación sin pérdida y móvil.');
 }catch(error){

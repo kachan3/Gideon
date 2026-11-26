@@ -7,7 +7,18 @@ function choiceField(question, selected) {
   ).join('');
   return `<label>${esc(question.texto)}
     <select name="respuesta_senda_${question.id}" required><option value="">Seleccionar…</option>${options}</select>
-  </label>`;
+  </label><p class="description" data-path-choice-description="${question.id}">${esc(question.opciones.find(o=>o.id===selected)?.descripcion??'')}</p>`;
+}
+
+export function bindPathChoices(root,catalog,draft){
+ for(const question of (catalog.preguntas_senda??[]).filter(q=>q.clase_id===draft.clase_id&&q.es_insignia)){
+  const select=root.querySelector(`[name="respuesta_senda_${question.id}"]`);if(!select)continue;
+  select.onchange=()=>{
+   const option=question.opciones.find(o=>String(o.id)===select.value);
+   if(option)(draft.elecciones_senda??={})[question.id]=option.id;else if(draft.elecciones_senda)delete draft.elecciones_senda[question.id];
+   root.querySelector(`[data-path-choice-description="${question.id}"]`).textContent=option?.descripcion??'';
+  };
+ }
 }
 
 export function creationPathChoices(catalog, draft, {review = false} = {}) {

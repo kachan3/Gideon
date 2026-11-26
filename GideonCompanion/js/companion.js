@@ -1,3 +1,5 @@
+import {technicalEditor,bindTechnicalEditor,technicalAllocations} from './technical-choices.js';
+import {classGuide,epiphanyRecommendations,markRecommendedSkills,arcanistSheet} from './class-guide.js';
 import {creationOrders,bindCreationOrders,validateCreationOrders,ordersSheet,bindOrdersSheet} from './orders-ui.js';
 import {setupNPCViews} from './npcs.js';
 import {creationTraitChoices,bindCreationTraitChoices,validateInitialTraitChoices,traitChoicesSheet,bindTraitChoicesSheet} from './trait-choices-ui.js';
@@ -15,7 +17,7 @@ import {renderSpellcasting} from './spellcasting.js';
 import {lineageEditor,bindLineageEditor,lineageSheet,initialXP} from './lineage-ui.js';
 import {lineageBonuses} from './lineage-rules.js';
 import {pathSummary,pathTraitsSheet} from './path-ui.js';
-import {creationPathChoices,devotionSheet,isManifestation} from './path-choices-ui.js';
+import {creationPathChoices,bindPathChoices,devotionSheet,isManifestation} from './path-choices-ui.js';
 import {backgroundAnswers,originAnswers,backgroundEditor,bindBackground,backgroundReview,backgroundSheet} from './background-ui.js';
 import {professionChoice,bindProfession,professionsSheet,professionReview} from './profession-ui.js';
 import {traitSheet,originTraitEditor} from './trait-ui.js';
@@ -25,7 +27,7 @@ const $=s=>document.querySelector(s);
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalog,character,step=0,draft={nombre:'',modo_campana:'enclave',atributos:{},pools:{}};
 const needsOrder=()=>draft.clase_id===catalog?.ordenes_y_juramento?.clase_honor_id;
-const steps=['Identidad y linaje','Atributos','Trasfondo','Senda y habilidades','Orden y juramento','Confirmar'];
+const steps=['Identidad y linaje','Clase y elecciones','Atributos','Trasfondo','Habilidades y capacidades','Orden y juramento','Confirmar'];
 let attributeRoll=null;
 function orderedAttributes(){return catalog.skills.filter(s=>s.tipo==='Atributo').sort((a,b)=>ATTRIBUTE_ORDER.indexOf(a.nombre)-ATTRIBUTE_ORDER.indexOf(b.nombre));}
 function attributePool(){return (draft.generacion_modo??'Fijo')==='Fijo'?FIXED_VALUES:(attributeRoll?.valores??[]);}
@@ -117,7 +119,7 @@ function renderSheet(){
  ${professionsSheet(p)}
  ${traitSheet(p,catalog)}
  ${pathTraitsSheet(p)}${ordersSheet(p)}
- ${devotionSheet(p)}${traitChoicesSheet(p)}
+ ${devotionSheet(p)}${traitChoicesSheet(p)}${arcanistSheet(catalog,p)}
  <div class="layout"><div>
  <section class="panel"><h2>Atributos y habilidades</h2><div class="skill-grid">${groups.map(attr=>{const val=p.skills.find(s=>s.id===attr.id)?.valor??0;return `<div class="skill-group"><button type="button" class="skill-title skill-roll" data-roll-skill="${attr.id}" aria-label="Tirar ${esc(attr.nombre)} ${val}"><span>${esc(attr.nombre)}</span><span>${val} · Nv ${Math.floor(val/10)}</span></button>${p.skills.filter(s=>s.padre_id===attr.id).map(s=>`<button type="button" class="skill-row skill-roll" data-roll-skill="${s.id}" aria-label="Tirar ${esc(s.nombre)} ${s.valor}"><span>${esc(s.nombre)}</span><strong>${s.valor}</strong></button>`).join('')}</div>`;}).join('')}</div><h3 style="margin-top:20px">Skills extra y especiales</h3>${p.skills.filter(s=>['Extra','Especial'].includes(s.tipo)).map(s=>`<button type="button" class="skill-row skill-roll" data-roll-skill="${s.id}" aria-label="Tirar ${esc(s.nombre)} ${s.valor}"><span>${esc(s.nombre)}</span><strong>${s.valor}</strong></button>`).join('')||'<p class="muted">Sin habilidades extra registradas.</p>'}<details><summary>Registrar cambio de habilidad</summary><form id="skill-form" class="stack"><label>Habilidad<select name="skill_id" required>${options(catalog.skills,null)}</select></label><div class="grid"><label>Cambio<select name="change"><option>Add</option><option>Subtract</option></select></label><label>Puntos<input name="valor" type="number" min="1" max="99" value="5" required></label><label>XP gastada<input name="xp_gastada" type="number" min="0" max="${p.xp_disponible}" value="0" required></label></div><button>Registrar</button></form><p class="muted">El narrador determina el coste y las mejoras permitidas.</p></details></section>
  <section class="panel"><h2>Entrenamiento</h2><p>Una sesión cuesta 1 XP. Elegí hasta cinco habilidades y dos atributos marcados.</p>
@@ -169,37 +171,59 @@ function renderSheet(){
 }
 function renderWizard(){
  const skipOrder=Boolean(draft.clase_id&&!needsOrder());
- $('#step-label').textContent=`Paso ${step+1-(skipOrder&&step>4?1:0)} de ${steps.length-(skipOrder?1:0)} · ${steps[step]}`;$('#previous').disabled=step===0;$('#next').disabled=false;$('#next').textContent=step===5?'Crear y guardar personaje':'Continuar';
+ $('#step-label').textContent=`Paso ${step+1-(skipOrder&&step>5?1:0)} de ${steps.length-(skipOrder?1:0)} · ${steps[step]}`;$('#previous').disabled=step===0;$('#next').disabled=false;$('#next').textContent=step===6?'Crear y guardar personaje':'Continuar';
  const attrs=orderedAttributes(),fields=[];
  if(step===0)fields.push(`<div class="grid"><label>Nombre<input name="nombre" value="${esc(draft.nombre)}" maxlength="80" required></label><label>Campaña<select name="modo_campana"><option value="enclave" ${draft.modo_campana==='enclave'?'selected':''}>Enclave</option><option value="sandbox" ${draft.modo_campana==='sandbox'?'selected':''}>Sandbox</option></select></label></div>${selectField('Linaje','linaje_id',catalog.linajes)}<div id="initial-lineage"></div><label>Trasfondo narrativo<textarea name="notas" rows="4">${esc(draft.notas)}</textarea></label>`);
- if(step===1)fields.push(attributeEditor(attrs));
- if(step===2)fields.push(`<div class="grid">${selectField('Dedicación / trasfondo','dedicacion_id',catalog.dedicaciones)}${selectField('Nacimiento / origen','nacimiento_id',catalog.nacimientos)}</div><div id="selection-details" class="hint"></div><div id="profession-choice"></div><section id="profession-details" class="profession-summary"></section><div id="origin-traits"></div><div id="background-details"></div>`);
- if(step===3)fields.push(`${selectField('Senda','clase_id',catalog.clases)}<div id="path-details">${pathSummary(catalog,draft)}${creationPathChoices(catalog,draft)}</div>${poolEditor(catalog,draft)}<div id="creation-trait-choices">${creationTraitChoices(catalog,draft)}</div>`);
- if(step===4)fields.push('<div id="creation-orders">'+creationOrders(catalog,draft)+'</div>');
- if(step===5)fields.push(`<h2>${esc(draft.nombre)}</h2><p>${esc(catalog.linajes.find(l=>l.id===draft.linaje_id)?.nombre)} · ${esc(catalog.clases.find(l=>l.id===draft.clase_id)?.nombre)}</p><p>${esc(catalog.dedicaciones.find(l=>l.id===draft.dedicacion_id)?.nombre)} · ${esc(catalog.nacimientos.find(l=>l.id===draft.nacimiento_id)?.nombre)}</p><p>${initialXP(catalog,draft)} XP inicial · Peso personal ${creationWeight(catalog,draft)} kg</p>${lineageEditor(catalog,draft,{readOnly:true})}${pathSummary(catalog,draft)}${professionReview(catalog,draft)}${originTraitEditor(catalog,draft)}${backgroundReview(catalog,draft)}<p class="hint">Se guardará en SQLite, con sus habilidades y concesiones iniciales. La ficha calculará recursos y mostrará acciones y componentes disponibles.</p>`);
+ if(step===1)fields.push(`${selectField('Senda','clase_id',catalog.clases)}<div id="class-guide">${classGuide(catalog,draft)}</div><div id="class-path-choices">${creationPathChoices(catalog,draft)}</div><div id="class-trait-choices">${creationTraitChoices(catalog,draft,{phase:'class'})}</div><div id="class-technical-choices">${technicalEditor(catalog,draft)}</div><div id="class-orders">${creationOrders(catalog,draft,{affiliationOnly:true})}</div><p class="hint">Elegí las capacidades de tu clase. Los requisitos del Dote Marcial se comprueban al terminar el reparto de habilidades. El Juramento de Honor se prepara en su paso propio.</p>`);
+ if(step===2)fields.push(epiphanyRecommendations(catalog,draft)+attributeEditor(attrs));
+ if(step===3)fields.push(`<div class="grid">${selectField('Dedicación / trasfondo','dedicacion_id',catalog.dedicaciones)}${selectField('Nacimiento / origen','nacimiento_id',catalog.nacimientos)}</div><div id="selection-details" class="hint"></div><div id="profession-choice"></div><section id="profession-details" class="profession-summary"></section><div id="origin-traits"></div><div id="background-details"></div>`);
+ if(step===4)fields.push(`<button type="button" id="edit-class">Revisar clase y elecciones</button><div id="path-details">${pathSummary(catalog,draft)}${creationPathChoices(catalog,draft)}</div><div id="pool-epiphany-advice">${epiphanyRecommendations(catalog,draft,{pool:true})}</div>${poolEditor(catalog,draft)}<div id="creation-trait-choices">${creationTraitChoices(catalog,draft)}</div>`);
+ if(step===5)fields.push('<div id="creation-orders">'+creationOrders(catalog,draft)+'</div>');
+ if(step===6)fields.push(`<h2>${esc(draft.nombre)}</h2><p>${esc(catalog.linajes.find(l=>l.id===draft.linaje_id)?.nombre)} · ${esc(catalog.clases.find(l=>l.id===draft.clase_id)?.nombre)}</p><p>${esc(catalog.dedicaciones.find(l=>l.id===draft.dedicacion_id)?.nombre)} · ${esc(catalog.nacimientos.find(l=>l.id===draft.nacimiento_id)?.nombre)}</p><p>${initialXP(catalog,draft)} XP inicial · Peso personal ${creationWeight(catalog,draft)} kg</p>${lineageEditor(catalog,draft,{readOnly:true})}${pathSummary(catalog,draft)}${professionReview(catalog,draft)}${technicalEditor(catalog,draft,{review:true})}${originTraitEditor(catalog,draft)}${backgroundReview(catalog,draft)}<p class="hint">Se aplicarán tus elecciones y capacidades iniciales. Tu ficha mostrará las habilidades, recursos, acciones y componentes disponibles.</p>`);
  $('#wizard-body').innerHTML=`<div class="panel stack"><h2>${steps[step]}</h2>${fields.join('')}</div>`;
- if(step===5)$('#wizard-body .panel').insertAdjacentHTML('beforeend',creationPathChoices(catalog,draft,{review:true})+creationTraitChoices(catalog,draft,{review:true})+creationOrders(catalog,draft,{review:true}));
+ if(step===6)$('#wizard-body .panel').insertAdjacentHTML('beforeend',creationPathChoices(catalog,draft,{review:true})+creationTraitChoices(catalog,draft,{review:true})+creationOrders(catalog,draft,{review:true}));
  if(step===0){
   const select=$('[name=linaje_id]');
   const refresh=()=>{const id=Number(select.value)||null;if(id!==draft.linaje_id){draft.linaje_id=id;draft.elecciones_linaje={};draft.regalo_moonstone=true;}
    $('#initial-lineage').innerHTML=lineageEditor(catalog,draft);bindLineageEditor($('#initial-lineage'),draft,catalog);};
   refresh();select.onchange=refresh;
  }
- if(step===1)bindAttributeEditor(attrs);
- if(step===3){
+ if(step===1){
+  const refresh=()=>{
+   $('#class-guide').innerHTML=classGuide(catalog,draft);
+   $('#class-path-choices').innerHTML=creationPathChoices(catalog,draft);
+   bindPathChoices($('#class-path-choices'),catalog,draft);
+   $('#class-trait-choices').innerHTML=creationTraitChoices(catalog,draft,{phase:'class'});
+   bindCreationTraitChoices($('#class-trait-choices'),catalog,draft);
+   $('#class-technical-choices').innerHTML=technicalEditor(catalog,draft);bindTechnicalEditor($('#class-technical-choices'),catalog,draft);
+   const refreshOrder=()=>{const root=$('#class-orders');root.innerHTML=creationOrders(catalog,draft,{affiliationOnly:true});bindCreationOrders(root,catalog,draft,refreshOrder);};refreshOrder();
+   document.querySelectorAll('[data-class-id]').forEach(button=>button.onclick=()=>{
+    $('[name=clase_id]').value=button.dataset.classId;
+    $('[name=clase_id]').dispatchEvent(new Event('change'));
+   });
+  };
+  $('[name=clase_id]').onchange=e=>{
+   const id=Number(e.target.value)||null;
+   if(id!==draft.clase_id){draft.clase_id=id;draft.elecciones_senda={};draft.elecciones_rasgos={};draft.juramento={};delete draft.conocimiento_tecnico;delete draft.combo_orden_id;delete draft.orden;}
+   refresh();
+  };
+  refresh();
+ }
+ if(step===2){bindAttributeEditor(attrs);markRecommendedSkills($('#wizard-body'),catalog,draft);}
+ if(step===4){
    draft.elecciones_rasgos??={};
    bindPoolEditor(catalog,draft);
-   const refreshTraitChoices=()=>{const root=$('#creation-trait-choices');root.innerHTML=creationTraitChoices(catalog,draft);bindCreationTraitChoices(root,catalog,draft);};
-   refreshTraitChoices();
+   const refreshTraitChoices=()=>{const root=$('#creation-trait-choices');root.innerHTML=creationTraitChoices(catalog,draft);bindCreationTraitChoices(root,catalog,draft,()=>{
+    $('#pool-epiphany-advice').innerHTML=epiphanyRecommendations(catalog,draft,{pool:true});
+    markRecommendedSkills($('#wizard-body'),catalog,draft);
+   });};
+   refreshTraitChoices();markRecommendedSkills($('#wizard-body'),catalog,draft);
    for(const input of document.querySelectorAll('[data-combat-slot],[data-normal]'))input.addEventListener('change',refreshTraitChoices);
-   $('[name=clase_id]').onchange=e=>{
-     draft.clase_id=e.target.value?Number(e.target.value):null;
-     draft.elecciones_senda={};draft.elecciones_rasgos={};draft.juramento={};delete draft.combo_orden_id;delete draft.orden;
-     $('#path-details').innerHTML=pathSummary(catalog,draft)+creationPathChoices(catalog,draft);refreshTraitChoices();
-   };
+   bindPathChoices($('#path-details'),catalog,draft);
+   $('#edit-class').onclick=()=>{saveStep();step=1;renderWizard();};
  }
- if(step===4){const refresh=()=>{const root=$('#creation-orders');root.innerHTML=creationOrders(catalog,draft);bindCreationOrders(root,catalog,draft,refresh);};refresh();}
- if(step===2){
+ if(step===5){const refresh=()=>{const root=$('#creation-orders');root.innerHTML=creationOrders(catalog,draft);bindCreationOrders(root,catalog,draft,refresh);};refresh();}
+ if(step===3){
   const selects=[...document.querySelectorAll('#wizard-body .grid select')];
   const details=()=>{
    $('#selection-details').textContent=selects.map(select=>{
@@ -207,7 +231,7 @@ function renderWizard(){
     const item=sources.find(x=>x.id===Number(select.value));draft[select.name]=select.value?Number(select.value):null;
     return item?(item.nombre+': '+(item.efecto_mecanico||item.descripcion||'')):'';
    }).filter(Boolean).join('\n');
-   if(step===2){
+   if(step===3){
 
     $('#profession-choice').innerHTML=professionChoice(catalog,draft);bindProfession($('#profession-choice'),catalog,draft,()=>{$('#profession-details').innerHTML=professionMarkup(catalog,draft);$('#origin-traits').innerHTML=originTraitEditor(catalog,draft);});
     $('#profession-details').innerHTML=professionMarkup(catalog,draft);
@@ -220,7 +244,7 @@ function renderWizard(){
 }
 function saveStep(){
  for(const [k,v] of new FormData($('#creation-form'))){
-   if(k.startsWith('rasgo_')||k.startsWith('juramento_')||k==='orden'||k==='combo_orden_id')continue;
+   if(k.startsWith('tecnico_')||k.startsWith('rasgo_')||k.startsWith('juramento_')||k==='orden'||k==='combo_orden_id')continue;
    if(k.startsWith('respuesta_senda_')){
      const id=k.slice('respuesta_senda_'.length);
      if(v)(draft.elecciones_senda??={})[id]=Number(v);
@@ -233,9 +257,9 @@ function saveStep(){
    else draft[k]=k.endsWith('_id')?(v?Number(v):null):v;
  }
 }
-function validateStep(){if(step===4)validateCreationOrders(catalog,draft);if(step===0)lineageBonuses(catalog,draft,{strict:true});if(step===2){selectedProfession(catalog,draft,{strict:true});}if(step===1&&!sameValues(Object.values(draft.atributos),attributePool()))throw Error('Completa los diez atributos con los valores disponibles.');if(step===3){validateInitialTraitChoices(catalog,draft);const assigned=Object.entries(draft.pools).map(([id,v])=>({s:catalog.skills.find(s=>s.id===Number(id)),v}));if(assigned.filter(a=>a.s.combate&&a.v).map(a=>a.v).sort((a,b)=>a-b).join(',')!=='5,10,15,20'||assigned.filter(a=>!a.s.combate).reduce((n,a)=>n+a.v,0)!==50)throw Error('Completa ambos pools antes de continuar.');}}
-$('#creation-form').addEventListener('submit',guard(async e=>{e.preventDefault();saveStep();validateStep();if(step<5){step+=step===3&&!needsOrder()?2:1;renderWizard();window.scrollTo(0,0);}else{const b=$('#next');b.disabled=true;try{const created=await api('personajes','POST',{...draft,profesion_id:selectedProfession(catalog,draft)?.id,respuestas_trasfondo:backgroundAnswers(catalog,draft),respuestas_nacimiento:originAnswers(catalog,draft)});saveAccess(created,created.token_acceso);await list(created.id);show('sheet');revealToken();step=0;attributeRoll=null;draft={nombre:'',modo_campana:'enclave',atributos:{},pools:{}};}finally{b.disabled=false;}}}));
-$('#previous').onclick=()=>{saveStep();if(step>0)step-=step===5&&!needsOrder()?2:1;clearError();renderWizard();};$('#nav-sheet').onclick=()=>show('sheet');$('#nav-create').onclick=()=>{show('create');renderWizard();};$('#nav-shop').onclick=()=>openEquipment('shop');$('#nav-inventory').onclick=()=>{updateInventory();show('inventory');};$('#character-select').onchange=guard(e=>load(Number(e.target.value)));$('#nav-spells').onclick=()=>{updateMagic();show('spells');};$('#nav-dice').onclick=()=>{if(character)openDice({title:'Roller de dados',skills:character.skills,perform:performRoll});};
+function validateStep(){if(step===1){if(!draft.clase_id)throw Error('Elegí tu clase.');validateInitialTraitChoices(catalog,draft,{phase:'class'});validateCreationOrders(catalog,draft);technicalAllocations(catalog,draft,{strict:true});}if(step===5)validateCreationOrders(catalog,draft);if(step===0)lineageBonuses(catalog,draft,{strict:true});if(step===3){selectedProfession(catalog,draft,{strict:true});}if(step===2&&!sameValues(Object.values(draft.atributos),attributePool()))throw Error('Completa los diez atributos con los valores disponibles.');if(step===4){validateInitialTraitChoices(catalog,draft);const assigned=Object.entries(draft.pools).map(([id,v])=>({s:catalog.skills.find(s=>s.id===Number(id)),v}));if(assigned.filter(a=>a.s.combate&&a.v).map(a=>a.v).sort((a,b)=>a-b).join(',')!=='5,10,15,20'||assigned.filter(a=>!a.s.combate).reduce((n,a)=>n+a.v,0)!==50)throw Error('Completa ambos pools antes de continuar.');}}
+$('#creation-form').addEventListener('submit',guard(async e=>{e.preventDefault();saveStep();validateStep();if(step<6){step+=step===4&&!needsOrder()?2:1;renderWizard();window.scrollTo(0,0);}else{const b=$('#next');b.disabled=true;try{const created=await api('personajes','POST',{...draft,profesion_id:selectedProfession(catalog,draft)?.id,respuestas_trasfondo:backgroundAnswers(catalog,draft),respuestas_nacimiento:originAnswers(catalog,draft)});saveAccess(created,created.token_acceso);await list(created.id);show('sheet');revealToken();step=0;attributeRoll=null;draft={nombre:'',modo_campana:'enclave',atributos:{},pools:{}};}finally{b.disabled=false;}}}));
+$('#previous').onclick=()=>{saveStep();if(step>0)step-=step===6&&!needsOrder()?2:1;clearError();renderWizard();};$('#nav-sheet').onclick=()=>show('sheet');$('#nav-create').onclick=()=>{show('create');renderWizard();};$('#nav-shop').onclick=()=>openEquipment('shop');$('#nav-inventory').onclick=()=>{updateInventory();show('inventory');};$('#character-select').onchange=guard(e=>load(Number(e.target.value)));$('#nav-spells').onclick=()=>{updateMagic();show('spells');};$('#nav-dice').onclick=()=>{if(character)openDice({title:'Roller de dados',skills:character.skills,perform:performRoll});};
 $('#access-form').addEventListener('submit',guard(async e=>{e.preventDefault();const token=$('#access-token').value.trim(),result=await api('acceso','POST',{token});saveAccess(result.personaje,token);$('#access-token').value='';await list(result.personaje.id);show('sheet');}));
 $('#logout').onclick=endAccess;$('#dismiss-token').onclick=()=>{$('#token-notice').hidden=true;};
 for(const id of ['copy-character-token','copy-created-token'])$('#'+id).onclick=guard(async e=>{const button=e.currentTarget,label=id==='copy-character-token'?'Copiar token del PJ':'Copiar token';if(await copyToken()){button.textContent='Token copiado';setTimeout(()=>button.textContent=label,1800);}else{show('sheet');revealToken();$('#created-token').focus();$('#created-token').select();}});

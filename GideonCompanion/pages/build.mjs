@@ -67,8 +67,9 @@ export async function build(){
   if(e==='server.mjs')code=code.slice(0,code.indexOf('if(process.argv[1]'));
   await writeFile(join(output,'engine/sql',e),code);
  }
- async function copyTree(from,to){await mkdir(to,{recursive:true});for(const e of await readdir(from,{withFileTypes:true}))if(e.isDirectory())await copyTree(join(from,e.name),join(to,e.name));else if(/\.(js|css|svg|ico)$/.test(e.name))await copyFile(join(from,e.name),join(to,e.name));}
+ async function copyTree(from,to){await mkdir(to,{recursive:true});for(const e of await readdir(from,{withFileTypes:true}))if(e.isDirectory())await copyTree(join(from,e.name),join(to,e.name));else if(/\.(js|css|svg|ico|jpg|jpeg|png|webp)$/i.test(e.name))await copyFile(join(from,e.name),join(to,e.name));}
  await copyTree(join(base,'js'),join(output,'js'));await copyTree(join(base,'js'),join(output,'engine/js'));await copyTree(join(base,'css'),join(output,'css'));
+ await copyTree(join(base,'src'),join(output,'src'));
  let html=await readFile(join(base,'index.html'),'utf8');
  html=html.replace('src="js/companion.js"','src="runtime/bootstrap.js"').replace('</head>','<link rel="stylesheet" href="runtime/pages.css"></head>');
  await writeFile(join(output,'index.html'),html);await writeFile(join(output,'.nojekyll'),'');
