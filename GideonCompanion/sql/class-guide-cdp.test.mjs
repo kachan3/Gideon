@@ -65,6 +65,8 @@ test('Chrome: clases ilustradas, Epifanías, recomendaciones, creación y recarg
  await call('Page.reload',{},sessionId);await wait("document.querySelector('[data-arcanist-guide]')");
  assert.match(await content('[data-arcanist-guide]'),/Force Decay/);assert.match(await content('[data-arcanist-guide]'),/Roting Touch/);
  assert.equal(await evaluate("document.querySelectorAll('[data-arcanist-guide] .flow-grid dt').length"),6);
+ await evaluate("document.querySelector('[data-arcanist-guide] .epiphany-detail').open=true");
+ assert(await evaluate('document.documentElement.scrollWidth<=innerWidth'),JSON.stringify(await evaluate("[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth).map(e=>({tag:e.tagName,cl:e.className,width:e.getBoundingClientRect().width,text:e.textContent.slice(0,100)})).slice(0,20)")));
  assert.deepEqual(errors,[]);
  await click('#nav-create');await evaluate("document.querySelector('[name=nombre]').value='Sombra visual'");await select('[name=linaje_id]',c.linajes.find(l=>l.codigo==='hijos_del_sol').id);await click('#next');
  await select('[name=clase_id]',c.clases.find(p=>p.nombre==='Senda del Hierofante').id);

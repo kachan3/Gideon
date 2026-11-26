@@ -57,7 +57,7 @@ export async function checkArcanistCreation(browser,url){
   const learned=guide.locator('.epiphany-detail').filter({hasText:'Memento Mori'}).first();
   await learned.locator('summary').click();assert.match(await learned.textContent(),/Force Decay/);assert.match(await learned.textContent(),/Roting Touch/);
   assert.equal(await guide.locator('.flow-grid dt').count(),6);
-  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),JSON.stringify(await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth).map(e=>({tag:e.tagName,cl:e.className,width:e.getBoundingClientRect().width,text:e.textContent.slice(0,100)})).slice(0,20))));
   assert.deepEqual(errors,[]);
  }finally{await context.close();}
 }
