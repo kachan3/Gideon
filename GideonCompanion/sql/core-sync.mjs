@@ -5,7 +5,20 @@ import {readFileSync} from 'node:fs';
 import {coreTexts, key, plain} from './core-texts.mjs';
 import {unmark} from '../js/reference-format.js';
 const devotionCopy=JSON.parse(readFileSync(new URL('../content/Sendas/hierofante.json',import.meta.url),'utf8'));
-const miracleCopy=new Map(devotionCopy.dogmas.flatMap(d=>d.acciones).filter(a=>a.tipo==='Milagro').map(a=>[a.nombre,a.descripcion]));
+const devotionFields=new Map();
+const devotionNames=new Set();
+for(const dogma of devotionCopy.dogmas){
+  const prayer=dogma.plegaria;
+  const actionText=a=>a.descripcion.startsWith('**Coste:**')?a.descripcion:
+    `**Coste:** ${a.reaccion?(a.pa?`${a.pa} acciones o 1 Reacción`:'1 Reacción'):`${a.pa} acciones`}, ${a.mana} PM${a.omen?` y ${a.omen} Omen`:''}.\n\n${a.descripcion}`;
+  const description=[dogma.descripcion,`## Plegaria diaria — ${prayer.nombre}`,
+    `**Activación:** ${prayer.activacion}\n\n**Tirada:** ${prayer.tirada}. **Duración:** ${prayer.duracion}\n\n${prayer.descripcion}`,
+    '## Intervenciones',...dogma.acciones.filter(a=>a.tipo==='Intervención').map(a=>`### ${a.nombre}\n\n${actionText(a)}`),
+    ...dogma.acciones.filter(a=>a.tipo==='Milagro').map(a=>`## Milagro — ${a.nombre}\n\n${actionText(a)}`)].join('\n\n');
+  devotionFields.set('rasgos:'+dogma.nombre,description);devotionNames.add(dogma.nombre);
+  devotionFields.set('hierophant_passives:'+prayer.nombre,prayer.descripcion);devotionNames.add(prayer.nombre);
+  for(const action of dogma.acciones){devotionFields.set('acciones:'+action.nombre,actionText(action));devotionNames.add(action.nombre);}
+}
 
 const catalogs = {
   estados_alterados:['estado'], dotes:['dote','rasgo'], linajes:['linaje'], clases:['senda'],
@@ -40,7 +53,7 @@ export function synchronizeCore(db) {
       const atomForTag=names.get('etiqueta:'+key('Etiqueta '+name))??(name==='Reacción'?names.get('regla:'+key(name)):undefined);
       let atom=tag?atomForTag:kinds.map(k=>names.get(k+':'+key(name))).find(Boolean);
       if(atom&&!tag) atom.aliases.add(row.nombre);
-      const miracle=table==='acciones'&&row.tipo==='Milagro'?miracleCopy.get(row.nombre):null;
+      const miracle=devotionFields.get(table+':'+row.nombre);
       let value=miracle??(atom?displayText(atom.texto):playerText(row[field]));
       if(miracle&&atom)atom.texto=miracle;
       if (!value) continue;
@@ -61,7 +74,7 @@ export function synchronizeCore(db) {
   // Only these derived tables are rebuilt. All character and gameplay IDs survive.
   db.exec('DELETE FROM alias_reglas; DELETE FROM reglas_atomicas; DELETE FROM documentos_reglas; DELETE FROM textos_catalogo;');
   const insertAtom=db.prepare('INSERT INTO reglas_atomicas VALUES(?,?,?)');
-  for(const a of atoms.values()) insertAtom.run(a.id,a.nombre,miracleCopy.has(a.nombre)?unmark(a.texto):displayText(unmark(a.texto)));
+  for(const a of atoms.values()) insertAtom.run(a.id,a.nombre,devotionNames.has(a.nombre)?unmark(a.texto):displayText(unmark(a.texto)));
   const insertAlias=db.prepare('INSERT OR IGNORE INTO alias_reglas VALUES(?,?)');
   for(const {alias,regla_id} of aliases) insertAlias.run(alias,regla_id);
   const insertDoc=db.prepare('INSERT INTO documentos_reglas VALUES(?,?,?,?)');

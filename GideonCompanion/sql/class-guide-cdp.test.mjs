@@ -71,7 +71,7 @@ test('Chrome: clases ilustradas, Epifanías, recomendaciones, creación y recarg
  await click('#nav-create');await evaluate("document.querySelector('[name=nombre]').value='Sombra visual'");await select('[name=linaje_id]',c.linajes.find(l=>l.codigo==='hijos_del_sol').id);await click('#next');
  await select('[name=clase_id]',c.clases.find(p=>p.nombre==='Senda del Hierofante').id);
  const question=c.preguntas_senda.find(q=>q.clase_id===c.clases.find(p=>p.nombre==='Senda del Hierofante').id);
- await select('[name=respuesta_senda_'+question.id+']',question.opciones[0].id);assert((await content('[data-path-choice-description]')).includes(question.opciones[0].descripcion));
+ await select('[name=respuesta_senda_'+question.id+']',question.opciones[0].id);assert((await content('[data-path-choice-description]')).includes('Faithblow'));assert(await evaluate("document.querySelectorAll('[data-path-choice-description] h3').length>=3"));assert(!/\\text|Narrativa:|\$/.test(await content('[data-path-choice-description]')));
  await click('#next');await click('#previous');assert.equal(await evaluate(`document.querySelector('[name=respuesta_senda_${question.id}]').value`),String(question.opciones[0].id));
  await select('[name=clase_id]',c.clases.find(p=>p.nombre==='Senda de la Sombra').id);assert.equal(await evaluate("document.querySelectorAll('[data-technical]').length"),4);
  await click('#next');assert.match(await content('#error'),/100 puntos/);

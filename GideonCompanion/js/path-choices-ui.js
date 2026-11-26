@@ -2,13 +2,14 @@ import {markup} from './rulebook.js';
 const esc = value => String(value ?? '').replace(/[&<>"']/g,
   c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'})[c]);
 
+const descriptionMarkup=option=>option?markup({id:'dogma-'+option.id,texto:option.descripcion}):'';
 function choiceField(question, selected) {
   const options = question.opciones.map(option =>
     `<option value="${option.id}" ${option.id === selected ? 'selected' : ''}>${esc(option.nombre)}</option>`
   ).join('');
   return `<label>${esc(question.texto)}
     <select name="respuesta_senda_${question.id}" required><option value="">Seleccionar…</option>${options}</select>
-  </label><p class="description" data-path-choice-description="${question.id}">${esc(question.opciones.find(o=>o.id===selected)?.descripcion??'')}</p>`;
+  </label><div class="player-description" data-path-choice-description="${question.id}">${descriptionMarkup(question.opciones.find(o=>o.id===selected))}</div>`;
 }
 
 export function bindPathChoices(root,catalog,draft){
@@ -17,7 +18,7 @@ export function bindPathChoices(root,catalog,draft){
   select.onchange=()=>{
    const option=question.opciones.find(o=>String(o.id)===select.value);
    if(option)(draft.elecciones_senda??={})[question.id]=option.id;else if(draft.elecciones_senda)delete draft.elecciones_senda[question.id];
-   root.querySelector(`[data-path-choice-description="${question.id}"]`).textContent=option?.descripcion??'';
+   root.querySelector(`[data-path-choice-description="${question.id}"]`).innerHTML=descriptionMarkup(option);
   };
  }
 }
@@ -28,7 +29,7 @@ export function creationPathChoices(catalog, draft, {review = false} = {}) {
     const selected = draft.elecciones_senda?.[question.id];
     if (!review) return choiceField(question, selected);
     const option = question.opciones.find(o => o.id === selected);
-    return option ? `<p><strong>${esc(option.nombre)}</strong> · ${esc(option.descripcion)}</p>` : '';
+    return option ? `<section class="player-description"><h3>${esc(option.nombre)}</h3>${descriptionMarkup(option)}</section>` : '';
   }).join('');
 }
 
@@ -41,7 +42,7 @@ export function devotionSheet(character) {
   if (!questions.length && !prayers.length && !actions.length) return '';
   const choices = questions.map(question => {
     const option = question.opciones.find(o => o.id === question.opcion_id);
-    if (option) return `<p><strong>${esc(option.nombre)}</strong> · ${esc(option.descripcion)}</p>`;
+    if (option) return `<section class="player-description"><h3>${esc(option.nombre)}</h3>${markup({id:"dogma-"+option.id,texto:option.descripcion.split(/\n\n## /)[0]})}</section>`;
     return `<form class="stack" data-senda-choice="${question.id}">
       ${choiceField(question)}<button type="submit">Guardar elección</button>
     </form>`;
@@ -49,7 +50,7 @@ export function devotionSheet(character) {
   const prayerList = prayers.map(p => `<details class="list-item">
     <summary>${esc(p.nombre)}</summary>
     <p>${esc(p.activacion)} Tirada de ${esc(p.tirada)}. ${esc(p.duracion)}</p>
-    <p class="description">${esc(p.descripcion)}</p><small>${esc(p.fuentes.join(', '))}</small>
+    <div class="player-description">${markup({id:"plegaria-"+p.id,texto:p.descripcion})}</div><small>${esc(p.fuentes.join(', '))}</small>
   </details>`).join('');
   const actionList = type => actions.filter(a => a.tipo === type).map(a => {
     const timing = a.es_reaccion
