@@ -4,6 +4,8 @@ import {playerText} from '../js/player-text.js';
 import {readFileSync} from 'node:fs';
 import {coreTexts, key, plain} from './core-texts.mjs';
 import {unmark} from '../js/reference-format.js';
+const devotionCopy=JSON.parse(readFileSync(new URL('../content/Sendas/hierofante.json',import.meta.url),'utf8'));
+const miracleCopy=new Map(devotionCopy.dogmas.flatMap(d=>d.acciones).filter(a=>a.tipo==='Milagro').map(a=>[a.nombre,a.descripcion]));
 
 const catalogs = {
   estados_alterados:['estado'], dotes:['dote','rasgo'], linajes:['linaje'], clases:['senda'],
@@ -38,7 +40,9 @@ export function synchronizeCore(db) {
       const atomForTag=names.get('etiqueta:'+key('Etiqueta '+name))??(name==='Reacción'?names.get('regla:'+key(name)):undefined);
       let atom=tag?atomForTag:kinds.map(k=>names.get(k+':'+key(name))).find(Boolean);
       if(atom&&!tag) atom.aliases.add(row.nombre);
-      let value=atom?displayText(atom.texto):playerText(row[field]);
+      const miracle=table==='acciones'&&row.tipo==='Milagro'?miracleCopy.get(row.nombre):null;
+      let value=miracle??(atom?displayText(atom.texto):playerText(row[field]));
+      if(miracle&&atom)atom.texto=miracle;
       if (!value) continue;
       if (!atom && row.disponible_demo!==0 && !['rasgos','clases_rasgos'].includes(table)) {
         // Keep usable catalogue-only entries linkable without claiming a Core source.
@@ -57,7 +61,7 @@ export function synchronizeCore(db) {
   // Only these derived tables are rebuilt. All character and gameplay IDs survive.
   db.exec('DELETE FROM alias_reglas; DELETE FROM reglas_atomicas; DELETE FROM documentos_reglas; DELETE FROM textos_catalogo;');
   const insertAtom=db.prepare('INSERT INTO reglas_atomicas VALUES(?,?,?)');
-  for(const a of atoms.values()) insertAtom.run(a.id,a.nombre,displayText(unmark(a.texto)));
+  for(const a of atoms.values()) insertAtom.run(a.id,a.nombre,miracleCopy.has(a.nombre)?unmark(a.texto):displayText(unmark(a.texto)));
   const insertAlias=db.prepare('INSERT OR IGNORE INTO alias_reglas VALUES(?,?)');
   for(const {alias,regla_id} of aliases) insertAlias.run(alias,regla_id);
   const insertDoc=db.prepare('INSERT INTO documentos_reglas VALUES(?,?,?,?)');

@@ -32,7 +32,7 @@
           "pa": 3,
           "mana": 5,
           "omen": 1,
-          "descripcion": "Chequeo de Fe. Obtienes NE + 2 Tokens de Favor durante el encuentro. Castigo Radiante inflige Nivel de Fe + 5 de daño radiante a un objetivo hasta 12 unidades. Bendición Bélica concede 3 usos de Faithblow a un aliado. Escudo de Rectitud otorga Nivel de Fe + 3 puntos de golpe temporales a un objetivo hasta 12 unidades. Preservación Vital estabiliza a una criatura moribunda."
+          "descripcion": "**Coste:** 3 acciones, 5 PM y 1 Omen.\n\n**Tirada:** Fe. **Duración:** durante el encuentro.\n\nObtenés **NE + 2 Tokens de Favor** para activar los siguientes efectos durante el encuentro.\n\n### Castigo Radiante\n\nInfligís **Nivel de Fe + 5 de daño radiante** a un objetivo situado a **12 unidades o menos**.\n\n### Bendición Bélica\n\nConcedés **3 usos de Faithblow** a una criatura aliada. Los usos otorgados emplean la Fe del Hierofante y conservan el tipo de daño del ataque original.\n\n### Escudo de Rectitud\n\nOtorgás **Nivel de Fe + 3 puntos de Vida Temporal** a un objetivo situado a **12 unidades o menos**.\n\n### Preservación Vital\n\nEstabilizás instantáneamente a una criatura moribunda."
         }
       ]
     },
@@ -69,7 +69,7 @@
           "pa": 3,
           "mana": 5,
           "omen": 1,
-          "descripcion": "Aplica Curar Heridas Menores a todos los aliados a 6 unidades o menos a la vez. Restaura NE + Voluntad puntos de heridas y cierra una herida grave si supera el Umbral Grave de ese aliado."
+          "descripcion": "**Coste:** 3 acciones, 5 PM y 1 Omen.\n\n**Tirada:** Fe. **Alcance:** todos los aliados situados a **6 unidades o menos** del Hierofante.\n\nAplicás **Curar Heridas Menores** a todos los aliados del área de forma simultánea: cada uno recupera **NE + Voluntad puntos de heridas**.\n\nSi la cantidad restaurada **supera el Umbral Grave** de un aliado, también cerrás **una herida grave** de ese aliado."
         }
       ]
     },
@@ -107,7 +107,7 @@
           "pa": 3,
           "mana": 5,
           "omen": 1,
-          "descripcion": "Chequeo de Fe. A 8 unidades o menos, libera a los aliados de inmovilización, aturdimiento, ralentización y apresamiento, y abre o rompe barreras no mágicas y mágicas de rango inferior a tu Fe. Durante la ronda los aliados en el área duplican su velocidad y son inmunes a ataques de oportunidad y reacciones enemigas mientras se desplazan."
+          "descripcion": "**Coste:** 3 acciones, 5 PM y 1 Omen.\n\n**Tirada:** Fe. **Área:** radio de **8 unidades** alrededor del Hierofante.\n\n### Purga Colectiva\n\nLos aliados del área quedan libres de **Inmovilización, Aturdimiento, Ralentización y Apresamiento**.\n\n### Ruptura de Barreras\n\nLas puertas, barrotes, cadenas, cerrojos y jaulas **no mágicos** del área se abren o se rompen. También afecta a las barreras **mágicas de rango inferior a la Fe del Hierofante**.\n\n### Viento Favorable\n\nDurante la **ronda actual**, los aliados del área **duplican su velocidad de movimiento**. Mientras se desplazan, son **inmunes a ataques de oportunidad y reacciones enemigas**."
         }
       ]
     }
@@ -124,5 +124,6 @@
       "mana": 2,
       "descripcion": "Ataque a distancia de Fe contra un objetivo visible hasta 10 unidades. Puede reaccionar con Evasión o Bloqueo. Inflige 5 + NE + Nivel de Fe de daño contundente o radiante. Contra un objetivo de tu tamaño o hasta una categoría superior puedes empujarlo 2 unidades, derribarlo o apresarlo hasta el final de tu próximo turno."
     }
-  }
+  },
+  "revision_milagros": "2026-11-25"
 }

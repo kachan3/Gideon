@@ -1,3 +1,4 @@
+import {markup} from './rulebook.js';
 const esc = value => String(value ?? '').replace(/[&<>"']/g,
   c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'})[c]);
 
@@ -56,7 +57,7 @@ export function devotionSheet(character) {
       : `${a.nro_acciones_pa} PA`;
     const costs = [timing, a.coste_mana ? `${a.coste_mana} PM` : '', a.coste_omen ? `${a.coste_omen} Omen` : ''].filter(Boolean);
     return `<details class="list-item"><summary>${esc(a.nombre)} · ${esc(costs.join(' · '))}</summary>
-      <p class="description">${esc(a.descripcion)}</p><small>${esc(a.fuentes.join(', '))}</small>
+      <div class="player-description">${markup({id:'accion-'+a.id,texto:a.descripcion})}</div><small>${esc(a.fuentes.join(', '))}</small>
     </details>`;
   }).join('');
   return `<section class="panel"><h2>Devoción</h2>${choices}
